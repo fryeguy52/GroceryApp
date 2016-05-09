@@ -1,0 +1,28 @@
+{
+    "sandwich": [
+        {
+            "name": "sandwich",
+            "difficulty": "medium",
+            "last_used": "",
+            "season": "",
+            "ingredients": [
+                "bread",
+                "meat",
+                "cheese"
+            ]
+        }
+    ],
+    "soup": [
+        {
+            "name": "soup",
+            "difficulty": "easy",
+            "last_used": "",
+            "season": "",
+            "ingredients": [
+                "water",
+                "meat",
+                "veggies"
+            ]
+        }
+    ]
+}

@@ -2,6 +2,10 @@
 Thumbs.db
 ehthumbs.db
 
+# PyCharm Project
+*.idea
+__*
+
 # Folder config file
 Desktop.ini
 

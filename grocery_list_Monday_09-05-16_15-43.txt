@@ -1,0 +1,88 @@
+Groceries for:
+Steak and Mushroom Tacos
+Burgers and Fries
+Chicken Asian Noodles
+*******************************************
+MEAT
+[] groung beef | frozen patties (1)
+[] steak (1)
+[] beef (1)
+[]
+[]
+[]
+*******************************************
+CANNED GOODS
+[] salsa (1)
+[]
+[]
+[]
+*******************************************
+BEANS AND RICE
+[]
+[]
+[]
+*******************************************
+BREAD
+[] hamburger buns (1)
+[] corn tortilla (1)
+[]
+[]
+[]
+*******************************************
+BEVERAGES
+[]
+[]
+[]
+*******************************************
+DAIRY
+[]
+[]
+[]
+*******************************************
+CONDIMENTS
+[] pickles (1)
+[] ketchup (1)
+[] soy sauce (1)
+[]
+[]
+[]
+*******************************************
+FROZEN FOODS
+[]
+[]
+[]
+*******************************************
+SPICES
+[] Mrs. Dash (1)
+[]
+[]
+[]
+*******************************************
+BAKING NEEDS
+[] sesame oil (1)
+[]
+[]
+[]
+*******************************************
+PRODUCE
+[] onion (1)
+[] lettuce (1)
+[] tomato (2)
+[] potato (1)
+[] cole slaw mix (1)
+[] portobello mushrooms (1)
+[] avocado (1)
+[] jalapeno | serrano (1)
+[] onions (1)
+[] bell peppers (1)
+[]
+[]
+[]
+*******************************************
+DRY GOODS
+[] rice (1)
+[] Ramen Noodles (1)
+[] beans (1)
+[]
+[]
+[]
