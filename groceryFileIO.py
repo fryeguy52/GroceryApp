@@ -20,6 +20,7 @@ def read_recipe_file(filename):
         r = recipe.Recipe()
         r.__dict__ = new_dict[entry][0]
         recipe_list.append(r)
+    recipe_list=sorted(recipe_list, key=lambda recipe: recipe.name)
 
     return recipe_list
 

@@ -6,7 +6,8 @@ import datetime
 import groceryFileIO
 import ingedientTools
 import grocery_list
-
+import grocery_options as GO
+import copy
 
 def print_menu_options(current_list):
     print('\n\n\n')
@@ -28,8 +29,36 @@ def print_menu_options(current_list):
     print('*                                               *')
     print('*************************************************')
 
+def filter_recipe_list(master_recipe_list, grocery_opts: GO.grocery_options):
+    filtered_list=[]
+    if len(grocery_opts.include_tags) > 0:
+        for recipe_from_master in master_recipe_list:
+            for tag in grocery_opts.include_tags:
+                if tag in recipe_from_master.tags:
+                    filtered_list.append(recipe_from_master)
+                    break
+    else:
+        filtered_list = copy.deepcopy(master_recipe_list)
+
+    if len(grocery_opts.exclude_tags) > 0:
+        for each_recipe in reversed(filtered_list):
+            for tag in grocery_opts.exclude_tags:
+                if tag in each_recipe.tags:
+                    filtered_list.remove(each_recipe)
+
+    if len(filtered_list) is 0:
+        print("WARNING: no recipes on the list.  check the include_tags and exclude_tags in grocery_options.py")
+
+    return filtered_list
+
+def add_defaults(recipe_list, grocery_list : grocery_list.GroceryList, grocery_opts : GO.grocery_options):
+    for recipe in recipe_list:
+        if recipe.name in grocery_opts.default_recipes:
+            grocery_list.add_from_recipe(recipe)
+    return
 
 def initialize():
+    grocery_opts=GO.grocery_options()
     master_ing_dict = groceryFileIO.read_ingredient_file('master_ingredient_list.json')
     master_recipe_list = groceryFileIO.read_recipe_file('master_recipe_list.json')
     my_grocery_list = grocery_list.GroceryList(master_ing_dict)
@@ -37,22 +66,28 @@ def initialize():
     ingedientTools.add_ingredient_locations(master_ing_dict)
     groceryFileIO.write_ingredient_file(master_ing_dict, 'master_ingredient_list.json')
 
-    return master_recipe_list, my_grocery_list
+    add_defaults(master_recipe_list, my_grocery_list, grocery_opts)
+    master_recipe_list=filter_recipe_list(master_recipe_list, grocery_opts)
+
+    return master_recipe_list, my_grocery_list, grocery_opts
 
 
 def recommend_random(my_grocery_list, master_recipe_list):
     while True:
         rand_index = rand.randint(0, len(master_recipe_list)-1)
-        accept_recipe_choice = input("would you like to eat " + master_recipe_list[rand_index].name + " this week?(y/n)")
+        print("would you like to eat " + master_recipe_list[rand_index].name + " this week?")
+        accept_recipe_choice = input("(a) yes and another (y) yes and go to menu (n) no but suggest another (q) no and go to menu")
         if accept_recipe_choice == 'y':
             my_grocery_list.add_from_recipe(master_recipe_list[rand_index])
             return
+        elif accept_recipe_choice == 'a':
+            my_grocery_list.add_from_recipe(master_recipe_list[rand_index])
+        elif accept_recipe_choice == 'q':
+            return
         elif accept_recipe_choice == 'n':
-            try_another = 'p'
-            while try_another != 'n' and try_another != 'y':
-                try_another = input("would you like a different suggestion? (y/n)")
-                if try_another == 'n':
-                    return
+            pass
+        else:
+            print("Invalid choice.")
 
 def add_specific_recipe(my_grocery_list, master_recipe_list):
     print('\nHere are all of the recipes to choose from:')
@@ -69,21 +104,33 @@ def add_specific_recipe(my_grocery_list, master_recipe_list):
         print('invalid menu choice. no recipe added')
 
 if __name__ == "__main__":
-    master_recipe_list, my_grocery_list = initialize()
+    master_recipe_list, my_grocery_list, grocery_opts = initialize()
+    if grocery_opts.print_config_vars is "yes":
+        grocery_opts.print_options()
 
-    continue_flag = True
-    while continue_flag:
-        print_menu_options(my_grocery_list.recipes_to_make)
-        menu_choice = input('select an option from above: ')
-        if menu_choice == '1':
-            add_specific_recipe(my_grocery_list, master_recipe_list)
-        elif menu_choice == '2':
-            recommend_random(my_grocery_list, master_recipe_list)
-        elif menu_choice == '3':
-            print('save not yet implemented')
-            continue_flag = False
-            my_grocery_list.write_to_file('grocery_list_'+datetime.datetime.now().strftime('%A_%d-%m-%y_%H-%M')+'.txt')
-            my_grocery_list.print_to_screen()
-        elif menu_choice == '4':
-            print('exited without saving')
-            continue_flag = False
+    if grocery_opts.mode is "normal":
+        continue_flag = True
+        while continue_flag:
+            print_menu_options(my_grocery_list.recipes_to_make)
+            menu_choice = input('select an option from above: ')
+            if menu_choice == '1':
+                add_specific_recipe(my_grocery_list, master_recipe_list)
+            elif menu_choice == '2':
+                recommend_random(my_grocery_list, master_recipe_list)
+            elif menu_choice == '3':
+                print('save not yet implemented')
+                continue_flag = False
+                my_grocery_list.write_to_file('grocery_list_'+datetime.datetime.now().strftime('%A_%d-%m-%y_%H-%M')+'.txt', grocery_opts.output_filetype)
+                my_grocery_list.print_to_screen()
+            elif menu_choice == '4':
+                print('exited without saving')
+                continue_flag = False
+    elif grocery_opts.mode is "debug_show_recipe_list":
+        for each_recipe in master_recipe_list:
+            print(each_recipe.name)
+    elif grocery_opts.mode is "debug_make_grocery_list":
+        for i in range(1, 5):
+            my_grocery_list.add_from_recipe(master_recipe_list[i-1])
+        my_grocery_list.write_to_file('DEBUG_grocery_list_'+datetime.datetime.now().strftime('%A_%d-%m-%y_%H-%M')+'.txt', grocery_opts.output_filetype)
+    else:
+        print(grocery_opts.mode + ' mode not found check in grocery_options.py - exited without saving')

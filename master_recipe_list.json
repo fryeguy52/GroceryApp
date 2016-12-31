@@ -11,6 +11,7 @@
                 "sesame oil"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -26,6 +27,7 @@
                 "sesame oil"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -43,6 +45,7 @@
                 "soy sauce"
             ],
             "season": "",
+            "tags": ["b"],
             "last_used": ""
         }
     ],
@@ -62,6 +65,7 @@
                 "Mrs. Dash"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -79,6 +83,30 @@
                 "sour cream"
             ],
             "season": "",
+            "tags": ["c"],
+            "last_used": ""
+        }
+    ],
+    "Irish Beef and Guiness Stew": [
+        {
+            "name": "Irish Beef and Guiness Stew",
+            "difficulty": "",
+            "ingredients": [
+                "beef stew meat",
+                "potatoes",
+                "fresh garlic",
+                "onions",
+                "bacon",
+                "Guinness Beer",
+                "tomato paste",
+                "chicken stock",
+                "carrots",
+                "celery",
+                "bay leaves",
+                "thyme"
+            ],
+            "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -96,6 +124,7 @@
                 "green beans"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -115,6 +144,7 @@
                 "rolls"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -134,6 +164,7 @@
                 "rolls"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -153,6 +184,7 @@
                 "rolls"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -171,6 +203,7 @@
                 "garlic"
             ],
             "season": "",
+            "tags": ["a"],
             "last_used": ""
         }
     ],
@@ -191,6 +224,62 @@
                 "salsa"
             ],
             "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Grocery Staples": [
+        {
+            "name": "Grocery Staples",
+            "difficulty": "",
+            "ingredients": [
+                "milk",
+                "almond milk",
+                "yogurt",
+                "eggs",
+                "oat nut bread",
+                "butter",
+                "soda",
+                "lunch fruit"
+            ],
+            "season": "",
+            "tags": ["hide"],
+            "last_used": ""
+        }
+    ],
+    "Ground Beef Tacos": [
+        {
+            "name": "Ground Beef Tacos",
+            "difficulty": "",
+            "ingredients": [
+                "ground beef",
+                "taco shells",
+                "tomatos",
+                "beans",
+                "rice",
+                "avocado",
+                "onions",
+                "jalapeno | serrano",
+                "salsa"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "New Year Beef Roast": [
+        {
+            "name": "New Year Beef Roast",
+            "difficulty": "",
+            "ingredients": [
+                "Nice Beef for Oven Roast",
+                "mushrooms",
+                "potatoes",
+                "corn",
+                "broccoli"
+            ],
+            "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -212,6 +301,7 @@
                 "salsa"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -232,6 +322,7 @@
                 "salsa"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -252,6 +343,7 @@
                 "salsa"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -268,6 +360,7 @@
                 "pasta"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -284,6 +377,7 @@
                 "black pepper"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -308,6 +402,7 @@
                 "red pepper flakes"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -326,6 +421,7 @@
                 "sesame oil"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -345,6 +441,7 @@
                 "salsa"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -364,6 +461,7 @@
                 "salsa"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -382,6 +480,7 @@
                 "salsa"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -400,12 +499,13 @@
                 "salsa"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
-    "Grilled Chees and Soup": [
+    "Grilled Cheese and Soup": [
         {
-            "name": "Grilled Chees and Soup",
+            "name": "Grilled Cheese and Soup",
             "difficulty": "",
             "ingredients": [
                 "bread",
@@ -414,6 +514,7 @@
                 "canned soup"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -432,6 +533,7 @@
                 "salad"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -446,12 +548,13 @@
                 "bell peppers"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
     "Kielbasa Sausage and Green Beans": [
         {
-            "name": "template",
+            "name": "Kielbasa Sausage and Green Beans",
             "difficulty": "",
             "ingredients": [
                 "kielbasa sausage",
@@ -459,6 +562,7 @@
                 "potatoes"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -479,6 +583,7 @@
                 "soy sauce"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -495,6 +600,7 @@
                 "potatoes"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -512,6 +618,7 @@
                 "garlic"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -528,6 +635,7 @@
                 "potatoes"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -546,6 +654,7 @@
                 "cheese"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -566,6 +675,7 @@
                 "vinegar"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -584,6 +694,7 @@
                 "salad"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -601,6 +712,7 @@
                 "salsa"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -616,6 +728,7 @@
                 "sour cream | greek yogurt"
             ],
             "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -633,6 +746,178 @@
                 "onions"
             ],
             "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Swedish Meatballs": [
+        {
+            "name": "Swedish Meatballs",
+            "difficulty": "easy",
+            "ingredients": [
+                "ground beef",
+                "swedish meatball mix",
+                "noodles"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Lasagna": [
+        {
+            "name": "Lasagna",
+            "difficulty": "easy",
+            "ingredients": [
+                "lasagna",
+                "salad veggies",
+                "french bread"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Cob Salad": [
+        {
+            "name": "Cob Salad",
+            "difficulty": "easy",
+            "ingredients": [
+                "chicken",
+                "salad veggies",
+                "hard boiled eggs"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Chicken Noodle Soup": [
+        {
+            "name": "Chicken Noodle Soup",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "chicken broth",
+                "carrots",
+                "celery",
+                "onions",
+                "noodles"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Chicken, Zucchini, and Prosciutto": [
+        {
+            "name": "Chicken, Zucchini, and Prosciutto",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "prosciutto",
+                "zucchini",
+                "fresh garlic",
+                "lemon"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Chicken Curry in a Hurry": [
+        {
+            "name": "Chicken Curry in a Hurry",
+            "difficulty": "",
+            "ingredients": [
+                "rotisserie chicken",
+                "rice",
+                "onions",
+                "plain yogurt",
+                "heavy cream",
+                "diced tomatos",
+                "curry powder"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Pasta With Turkey and Broccoli": [
+        {
+            "name": "Pasta With Turkey and Broccoli",
+            "difficulty": "",
+            "ingredients": [
+                "pasta",
+                "broccoli",
+                "ground turkey",
+                "fresh garlic",
+                "fennel seed",
+                "crushed red pepper",
+                "parmesan"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "One Pan Autumn Chicken Dinner": [
+        {
+            "name": "One Pan Autumn Chicken Dinner",
+            "difficulty": "",
+            "ingredients": [
+                "chicken thighs",
+                "red wine vinegar",
+                "thyme",
+                "sage",
+                "rosemary",
+                "fresh garlic",
+                "sweet potato",
+                "brussels sprouts",
+                "fuji apples",
+                "shallot bulbs",
+                "bacon"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Healthy Roasted Chicken and Veggies in one pan": [
+        {
+            "name": "Healthy Roasted Chicken and Veggies in one pan",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "bell pepper",
+                "onion",
+                "zucchini",
+                "broccoli",
+                "tomato",
+                "italian seasoning",
+                "paprika"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Cilantro-Lime Black Bean Shrimp and Rice": [
+        {
+            "name": "Cilantro-Lime Black Bean Shrimp and Rice",
+            "difficulty": "",
+            "ingredients": [
+                "peeled and deveined shrimp",
+                "fresh garlic",
+                "red pepper flakes",
+                "chicken broth",
+                "jasmine rice",
+                "limes",
+                "black beans",
+                "cilantro"
+            ],
+            "season": "",
+            "tags": [],
             "last_used": ""
         }
     ],
@@ -647,6 +932,7 @@
                 "potatoes"
             ],
             "season": "",
+            "tags": ["a", "d"],
             "last_used": ""
         }
     ]

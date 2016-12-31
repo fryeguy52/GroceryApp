@@ -31,20 +31,27 @@ class GroceryList:
             print('[]')
             print()
 
-    def write_to_file(self, file_name):
+    def write_to_file(self, file_name, output_type='printed_list'):
         f_out=open(file_name,'w')
         f_out.write('Groceries for:\n')
         for r in self.recipes_to_make:
             f_out.write(r + '\n')
+        #print(output_type)
 
-        for loc in self.needed_grocery_dict:
-            f_out.write('*******************************************\n')
-            f_out.write(loc.upper()+'\n')
-            for i in self.needed_grocery_dict[loc]:
-                f_out.write('[] '+i + ' ('+str(self.needed_grocery_dict[loc][i])+')\n')
-            f_out.write('[]\n')
-            f_out.write('[]\n')
-            f_out.write('[]\n')
+        if output_type is 'trello':
+            for loc in self.needed_grocery_dict:
+                # f_out.write(loc.upper()+'\n')
+                for i in self.needed_grocery_dict[loc]:
+                    f_out.write(loc + ' -- '+i + ' ('+str(self.needed_grocery_dict[loc][i])+')\n')
+        else:
+            for loc in self.needed_grocery_dict:
+                f_out.write('*******************************************\n')
+                f_out.write(loc.upper()+'\n')
+                for i in self.needed_grocery_dict[loc]:
+                    f_out.write('[] '+i + ' ('+str(self.needed_grocery_dict[loc][i])+')\n')
+                f_out.write('[]\n')
+                f_out.write('[]\n')
+                f_out.write('[]\n')
 
 
     def add_from_recipe(self, recipe_to_add):
