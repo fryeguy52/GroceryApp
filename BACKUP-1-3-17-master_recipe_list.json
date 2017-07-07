@@ -85,31 +85,6 @@
             ]
         }
     ],
-    "Beef Burritos": [
-        {
-            "difficulty": "",
-            "ingredients": [
-                "ground beef",
-                "potatoes",
-                "onion",
-                "fresh garlic",
-                "green chile",
-                "rice",
-                "avocado",
-                "flour tortillas",
-                "mexican blend cheese",
-                "tomato"
-            ],
-            "last_used": "",
-            "name": "Beef Burritos",
-            "season": "",
-            "tags": [
-                "beef",
-                "easy",
-                "stove"
-            ]
-        }
-    ],
     "Beef Stew": [
         {
             "difficulty": "",
@@ -178,7 +153,7 @@
         {
             "difficulty": "",
             "ingredients": [
-                "ground beef | frozen patties",
+                "groung beef | frozen patties",
                 "lettuce",
                 "tomatos",
                 "potatoes",
@@ -195,30 +170,6 @@
                 "grill",
                 "medium",
                 "beef"
-            ]
-        }
-    ],
-    "Cajun Chicken and Rice": [
-        {
-            "difficulty": "",
-            "ingredients": [
-                "rice",
-                "chicken broth",
-                "chicken breasts",
-                "Cajun or Creole Seasoning",
-                "olive oil",
-                "onion",
-                "bell pepper",
-                "Ro-Tel Diced Tomatoes and Green Chiles",
-                "cheddar cheese"
-            ],
-            "last_used": "",
-            "name": "Cajun Chicken and Rice",
-            "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "chicken"
             ]
         }
     ],
@@ -459,7 +410,7 @@
                 "red pepper flakes",
                 "chicken broth",
                 "jasmine rice",
-                "lime",
+                "limes",
                 "black beans",
                 "cilantro"
             ],
@@ -584,7 +535,6 @@
             "tags": [
                 "oven",
                 "medium",
-                "dairy",
                 "chicken"
             ]
         }
@@ -678,13 +628,12 @@
             "difficulty": "",
             "ingredients": [
                 "milk",
-                "lunch meat",
+                "almond milk",
                 "yogurt",
                 "eggs",
                 "oat nut bread",
                 "butter",
                 "soda",
-                "sweet potato",
                 "lunch fruit"
             ],
             "last_used": "",
@@ -766,27 +715,6 @@
                 "crockpot",
                 "hard",
                 "beef"
-            ]
-        }
-    ],
-    "Italian Chicken Bake": [
-        {
-            "difficulty": "",
-            "ingredients": [
-                "chicken breasts",
-                "prepared pesto",
-                "roma tomatoes",
-                "mozzarella",
-                "linguine"
-            ],
-            "last_used": "",
-            "name": "Italian Chicken Bake",
-            "season": "",
-            "tags": [
-                "oven",
-                "medium",
-                "chicken",
-                "pasta"
             ]
         }
     ],
@@ -1001,26 +929,6 @@
             ]
         }
     ],
-    "Pork Chops": [
-        {
-            "difficulty": "",
-            "ingredients": [
-                "pork chops",
-                "butter",
-                "sour cream",
-                "potatoes",
-                "garlic"
-            ],
-            "last_used": "",
-            "name": "Pork Chops",
-            "season": "",
-            "tags": [
-                "crockpot",
-                "easy",
-                "pork"
-            ]
-        }
-    ],
     "Pork Roast": [
         {
             "difficulty": "",
@@ -1173,36 +1081,6 @@
                 "stove",
                 "beef",
                 "medium"
-            ]
-        }
-    ],
-    "Sweet and Sticky Chicken": [
-        {
-            "difficulty": "",
-            "ingredients": [
-                "carrots",
-                "potatoes",
-                "onion",
-                "bell pepper",
-                "chicken",
-                "molasses",
-                "ketchup",
-                "honey",
-                "maple syrup",
-                "Italian seasoning",
-                "pepper",
-                "garlic powder",
-                "onion powder",
-                "butter",
-                "cornstarch"
-            ],
-            "last_used": "",
-            "name": "Sweet and Sticky Chicken",
-            "season": "",
-            "tags": [
-                "oven",
-                "medium",
-                "chicken"
             ]
         }
     ],

@@ -7,6 +7,7 @@ class GroceryList:
         self.master_ingredient_dict = master_ingredient_dict
         self.needed_grocery_dict = {}
         self.recipes_to_make = []
+        self.print_order = []
 
         for i in self.master_ingredient_dict:
             if self.master_ingredient_dict[i] not in self.store_location_list:
@@ -37,12 +38,23 @@ class GroceryList:
         for r in self.recipes_to_make:
             f_out.write(r + '\n')
         #print(output_type)
+        for loc in self.needed_grocery_dict:
+            if loc not in self.print_order:
+                self.print_order.append(loc)
 
         if output_type is 'trello':
-            for loc in self.needed_grocery_dict:
+            # for loc in self.needed_grocery_dict:
+            #     # f_out.write(loc.upper()+'\n')
+            #     for i in self.needed_grocery_dict[loc]:
+            #         f_out.write(loc + ' -- '+i + ' ('+str(self.needed_grocery_dict[loc][i])+')\n')
+            for loc in self.print_order:
                 # f_out.write(loc.upper()+'\n')
-                for i in self.needed_grocery_dict[loc]:
-                    f_out.write(loc + ' -- '+i + ' ('+str(self.needed_grocery_dict[loc][i])+')\n')
+                try:
+                    for i in self.needed_grocery_dict[loc]:
+                        f_out.write(loc + ' -- '+i + ' ('+str(self.needed_grocery_dict[loc][i])+')\n')
+                except:
+                    pass
+                    # print(loc+" is not a valid location")
         else:
             for loc in self.needed_grocery_dict:
                 f_out.write('*******************************************\n')

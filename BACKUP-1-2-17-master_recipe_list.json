@@ -1,0 +1,1007 @@
+{
+    "Chicken Asian Noodles": [
+        {
+            "name": "Chicken Asian Noodles",
+            "difficulty": "easy",
+            "ingredients": [
+                "Ramen Noodles",
+                "chicken",
+                "cole slaw mix",
+                "soy sauce",
+                "sesame oil"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Beef Asian Noodles": [
+        {
+            "name": "Chicken Asian Noodles",
+            "difficulty": "easy",
+            "ingredients": [
+                "Ramen Noodles",
+                "beef",
+                "cole slaw mix",
+                "soy sauce",
+                "sesame oil"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Asian Stirfry": [
+        {
+            "name": "Asian Stirfry",
+            "difficulty": "easy",
+            "ingredients": [
+                "rice",
+                "chicken",
+                "broccoli",
+                "bell pepper",
+                "carrots",
+                "zucchini",
+                "soy sauce"
+            ],
+            "season": "",
+            "tags": ["b"],
+            "last_used": ""
+        }
+    ],
+    "Burgers and Fries": [
+        {
+            "name": "Burgers and Fries",
+            "difficulty": "",
+            "ingredients": [
+                "groung beef | frozen patties",
+                "lettuce",
+                "tomatos",
+                "potatoes",
+                "pickles",
+                "onions",
+                "hamburger buns",
+                "ketchup",
+                "Mrs. Dash"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Baked Chicken and Oven Fries": [
+        {
+            "name": "Baked Chicken and Oven Fries",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "bread crumbs",
+                "potatoes",
+                "ketchup",
+                "milk",
+                "butter",
+                "sour cream"
+            ],
+            "season": "",
+            "tags": ["c"],
+            "last_used": ""
+        }
+    ],
+    "Irish Beef and Guiness Stew": [
+        {
+            "name": "Irish Beef and Guiness Stew",
+            "difficulty": "",
+            "ingredients": [
+                "beef stew meat",
+                "potatoes",
+                "fresh garlic",
+                "onions",
+                "bacon",
+                "Guinness Beer",
+                "tomato paste",
+                "chicken stock",
+                "carrots",
+                "celery",
+                "bay leaves",
+                "thyme"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Beef Stew": [
+        {
+            "name": "Beef Stew",
+            "difficulty": "",
+            "ingredients": [
+                "beef stew meat",
+                "potatoes",
+                "celery",
+                "onions",
+                "corn",
+                "canned tomatos",
+                "green beans"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Green Chile Chicken Stew": [
+        {
+            "name": "Green Chile Chicken Stew",
+            "difficulty": "",
+            "ingredients": [
+                "chicken thighs",
+                "green chile",
+                "potatoes",
+                "celery",
+                "onions",
+                "corn",
+                "canned tomatos",
+                "green beans",
+                "rolls"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Green Chile Beef Stew": [
+        {
+            "name": "Green Chile Beef Stew",
+            "difficulty": "",
+            "ingredients": [
+                "beef stew meat",
+                "green chile",
+                "potatoes",
+                "celery",
+                "onions",
+                "corn",
+                "canned tomatos",
+                "green beans",
+                "rolls"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Red Chile Beef Stew": [
+        {
+            "name": "Green Chile Beef Stew",
+            "difficulty": "",
+            "ingredients": [
+                "beef stew meat",
+                "NM red chile powder",
+                "potatoes",
+                "celery",
+                "onions",
+                "corn",
+                "canned tomatos",
+                "green beans",
+                "rolls"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Baked Ziti": [
+        {
+            "name": "Baked Ziti",
+            "difficulty": "",
+            "ingredients": [
+                "pene",
+                "spaghetti sauce",
+                "ground beef",
+                "ricotta",
+                "mozzarella",
+                "italian seasoning",
+                "frozen spinach",
+                "garlic"
+            ],
+            "season": "",
+            "tags": ["a"],
+            "last_used": ""
+        }
+    ],
+    "Chicken Tacos": [
+        {
+            "name": "Chicken Tacos",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "corn tortillas",
+                "bell pepper",
+                "tomatos",
+                "beans",
+                "rice",
+                "avocado",
+                "onions",
+                "jalapeno | serrano",
+                "salsa"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Grocery Staples": [
+        {
+            "name": "Grocery Staples",
+            "difficulty": "",
+            "ingredients": [
+                "milk",
+                "almond milk",
+                "yogurt",
+                "eggs",
+                "oat nut bread",
+                "butter",
+                "soda",
+                "lunch fruit"
+            ],
+            "season": "",
+            "tags": ["hide"],
+            "last_used": ""
+        }
+    ],
+    "Ground Beef Tacos": [
+        {
+            "name": "Ground Beef Tacos",
+            "difficulty": "",
+            "ingredients": [
+                "ground beef",
+                "taco shells",
+                "tomatos",
+                "beans",
+                "rice",
+                "avocado",
+                "onions",
+                "jalapeno | serrano",
+                "salsa"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "New Year Beef Roast": [
+        {
+            "name": "New Year Beef Roast",
+            "difficulty": "",
+            "ingredients": [
+                "Nice Beef for Oven Roast",
+                "mushrooms",
+                "potatoes",
+                "corn",
+                "broccoli"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Steak and Mushroom Tacos": [
+        {
+            "name": "Steak and Mushroom Tacos",
+            "difficulty": "",
+            "ingredients": [
+                "steak",
+                "portobello mushrooms",
+                "corn tortillas",
+                "bell pepper",
+                "tomatos",
+                "beans",
+                "rice",
+                "avocado",
+                "onions",
+                "jalapeno | serrano",
+                "salsa"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Crock Pot Chicken Fajitas": [
+        {
+            "name": "Crock Pot Chicken Fajitas",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "corn tortillas",
+                "bell pepper",
+                "tomatos",
+                "beans",
+                "rice",
+                "avocado",
+                "onions",
+                "jalapeno | serrano",
+                "salsa"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Crock Pot Beef Fajitas": [
+        {
+            "name": "Crock Pot Beef Fajitas",
+            "difficulty": "",
+            "ingredients": [
+                "beef roast",
+                "corn tortillas",
+                "bell pepper",
+                "tomatos",
+                "beans",
+                "rice",
+                "avocado",
+                "onions",
+                "jalapeno | serrano",
+                "salsa"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Chicken-Veggie-Pasta Mixeroo": [
+        {
+            "name": "Chicken-Veggie-Pasta Mixeroo",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "zucchini",
+                "tomatos",
+                "asparagus",
+                "bell pepper",
+                "pasta"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Chicken Nuggets and Oven Fries": [
+        {
+            "name": "Chicken Nuggets and Oven Fries",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "potatoes",
+                "bread crumbs",
+                "ketchup",
+                "Mrs. Dash",
+                "black pepper"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Chicken Pumpkin Soup": [
+        {
+            "name": "Chicken Pumpkin Soup",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "rice",
+                "canned pumpkin",
+                "garlic",
+                "ginger",
+                "lime",
+                "onions",
+                "carrots",
+                "celery",
+                "peanut butter",
+                "chicken broth",
+                "rice vinegar",
+                "coconut milk",
+                "red pepper flakes"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Chicken Fried Rice": [
+        {
+            "name": "Chicken Fried Rice",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "rice",
+                "eggs",
+                "frozen peas and carrots",
+                "garlic",
+                "onions",
+                "soy sauce",
+                "sesame oil"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Green Chile Chicken Enchiladas": [
+        {
+            "name": "Green Chile Chicken Enchiladas",
+            "difficulty": "",
+            "ingredients": [
+                "green chile",
+                "chicken",
+                "mexican blend cheese",
+                "garlic powder",
+                "onions",
+                "corn tortillas",
+                "beans",
+                "rice",
+                "salsa"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Red Chile Beef Enchiladas": [
+        {
+            "name": "Red Chile Beef Enchiladas",
+            "difficulty": "",
+            "ingredients": [
+                "NM red chile powder",
+                "beef",
+                "mexican blend cheese",
+                "garlic powder",
+                "onions",
+                "corn tortillas",
+                "beans",
+                "rice",
+                "salsa"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Green Chile Cheese Enchiladas": [
+        {
+            "name": "Green Chile Chicken Enchiladas",
+            "difficulty": "",
+            "ingredients": [
+                "green chile",
+                "mexican blend cheese",
+                "garlic powder",
+                "onions",
+                "corn tortillas",
+                "beans",
+                "rice",
+                "salsa"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Red Chile Cheese Enchiladas": [
+        {
+            "name": "Red Chile Beef Enchiladas",
+            "difficulty": "",
+            "ingredients": [
+                "NM red chile powder",
+                "mexican blend cheese",
+                "garlic powder",
+                "onions",
+                "corn tortillas",
+                "beans",
+                "rice",
+                "salsa"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Grilled Cheese and Soup": [
+        {
+            "name": "Grilled Cheese and Soup",
+            "difficulty": "",
+            "ingredients": [
+                "bread",
+                "shredded cheese",
+                "butter",
+                "canned soup"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Grilled Pizza": [
+        {
+            "name": "Grilled Pizza",
+            "difficulty": "",
+            "ingredients": [
+                "flour",
+                "yeast",
+                "salt",
+                "mozzarella",
+                "pizza sauce",
+                "veggie pizza toppings",
+                "meaty pizza toppings",
+                "salad"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Grilled Chicken and Wild Rice": [
+        {
+            "name": "Grilled Chicken and Wild Rice",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "wild rice",
+                "zucchini",
+                "bell pepper"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Kielbasa, Pepper, Onion and Potato Hash": [
+        {
+            "name": "Kielbasa, Pepper, Onion and Potato Hash",
+            "difficulty": "",
+            "ingredients": [
+                "kielbasa sausage",
+                "green beans",
+                "bell pepper",
+                "mushrooms",
+                "onion",
+                "potatoes"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "One Pot Woonder Chichen Lo Mein Recipe": [
+        {
+            "name": "One Pot Woonder Chichen Lo Mein Recipe",
+            "difficulty": "",
+            "ingredients": [
+                "chicken breast",
+                "linguini or fettuccini pasta",
+                "carrots",
+                "bell pepper",
+                "green onions",
+                "fresh garlic",
+                "soy sauce",
+                "garlic powder",
+                "corn starch",
+                "sugar",
+                "red pepper flakes",
+                "chicken or vegetable broth",
+                "olive oil"
+            ],
+            "season": "",
+            "tags": ["chicken", "pasta"],
+            "last_used": ""
+        }
+    ],
+    "Lettuce Wraps": [
+        {
+            "name": "Lettuce Wraps",
+            "difficulty": "",
+            "ingredients": [
+                "ground chicken",
+                "peanut sauce",
+                "mushrooms",
+                "peanuts",
+                "lettuce",
+                "rice",
+                "carrots",
+                "cucumber",
+                "water chestnuts",
+                "soy sauce"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Meat Loaf": [
+        {
+            "name": "Meat Loaf",
+            "difficulty": "",
+            "ingredients": [
+                "ground beef",
+                "bread crumbs",
+                "eggs",
+                "seasoning",
+                "ketchup",
+                "potatoes"
+            ],
+            "season": "",
+            "tags": ["beef"],
+            "last_used": ""
+        }
+    ],
+    "Pork Roast": [
+        {
+            "name": "Pork Roast",
+            "difficulty": "",
+            "ingredients": [
+                "pork roast",
+                "onions",
+                "cloves",
+                "bay leaves",
+                "soy sauce",
+                "potatoes",
+                "garlic"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Beef and Mushroom Pot Roast": [
+        {
+            "name": "Beef and Mushroom Pot Roast",
+            "difficulty": "",
+            "ingredients": [
+                "beef pot roast",
+                "mushrooms",
+                "mushroom soup mix",
+                "cauliflower",
+                "carrots",
+                "potatoes"
+            ],
+            "season": "",
+            "tags": ["beef"],
+            "last_used": ""
+        }
+    ],
+    "Potato Soup": [
+        {
+            "name": "Potato Soup",
+            "difficulty": "",
+            "ingredients": [
+                "potatoes",
+                "onions",
+                "carrots",
+                "celery",
+                "ham",
+                "milk",
+                "chives",
+                "cheese"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Chicken Philly Cheese Steak Sandwiches": [
+        {
+            "name": "Chicken Philly Cheese Steak Sandwiches",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "onions",
+                "bell pepper",
+                "rolls",
+                "cheese",
+                "honey",
+                "soy sauce",
+                "garlic",
+                "ginger",
+                "vinegar"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Peach Chicken": [
+        {
+            "name": "Peach Chicken",
+            "difficulty": "",
+            "ingredients": [
+                "chicken thighs",
+                "peaches",
+                "peach preserves",
+                "dijon mustard",
+                "garlic",
+                "jalapeno",
+                "wild rice",
+                "salad"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Quesadillas": [
+        {
+            "name": "Quesadillas",
+            "difficulty": "",
+            "ingredients": [
+                "flour torillas",
+                "cheese",
+                "beans",
+                "rice",
+                "avocado",
+                "tomatos",
+                "salsa"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Steak and Potatoes": [
+        {
+            "name": "Steak and Potatoes",
+            "difficulty": "",
+            "ingredients": [
+                "steak",
+                "potatoes",
+                "grilling veggies",
+                "shredded cheese",
+                "sour cream | greek yogurt"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+
+    "Breakfast": [
+        {
+            "name": "Breakfast",
+            "difficulty": "easy",
+            "ingredients": [
+                "eggs",
+                "pancake mix",
+                "sausage|bacon",
+                "syrup",
+                "potatoes",
+                "onions"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Swedish Meatballs": [
+        {
+            "name": "Swedish Meatballs",
+            "difficulty": "easy",
+            "ingredients": [
+                "ground beef",
+                "swedish meatball mix",
+                "noodles"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Lasagna": [
+        {
+            "name": "Lasagna",
+            "difficulty": "easy",
+            "ingredients": [
+                "lasagna",
+                "salad veggies",
+                "french bread"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Cob Salad": [
+        {
+            "name": "Cob Salad",
+            "difficulty": "easy",
+            "ingredients": [
+                "chicken",
+                "salad veggies",
+                "hard boiled eggs"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Chicken Noodle Soup": [
+        {
+            "name": "Chicken Noodle Soup",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "chicken broth",
+                "carrots",
+                "celery",
+                "onions",
+                "noodles"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Chicken, Zucchini, and Prosciutto": [
+        {
+            "name": "Chicken, Zucchini, and Prosciutto",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "prosciutto",
+                "zucchini",
+                "fresh garlic",
+                "lemon"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Chicken Curry in a Hurry": [
+        {
+            "name": "Chicken Curry in a Hurry",
+            "difficulty": "",
+            "ingredients": [
+                "rotisserie chicken",
+                "rice",
+                "onions",
+                "plain yogurt",
+                "heavy cream",
+                "diced tomatos",
+                "curry powder"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Pasta With Turkey and Broccoli": [
+        {
+            "name": "Pasta With Turkey and Broccoli",
+            "difficulty": "",
+            "ingredients": [
+                "pasta",
+                "broccoli",
+                "ground turkey",
+                "fresh garlic",
+                "fennel seed",
+                "crushed red pepper",
+                "parmesan"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "One Pan Autumn Chicken Dinner": [
+        {
+            "name": "One Pan Autumn Chicken Dinner",
+            "difficulty": "",
+            "ingredients": [
+                "chicken thighs",
+                "red wine vinegar",
+                "thyme",
+                "sage",
+                "rosemary",
+                "fresh garlic",
+                "sweet potato",
+                "brussels sprouts",
+                "butternut squash",
+                "fuji apples",
+                "shallot bulbs",
+                "bacon"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Healthy Roasted Chicken and Veggies in one pan": [
+        {
+            "name": "Healthy Roasted Chicken and Veggies in one pan",
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "bell pepper",
+                "onion",
+                "zucchini",
+                "broccoli",
+                "tomato",
+                "italian seasoning",
+                "paprika"
+            ],
+            "season": "",
+            "tags": [],
+            "last_used": ""
+        }
+    ],
+    "Cilantro-Lime Black Bean Shrimp and Rice": [
+        {
+            "name": "Cilantro-Lime Black Bean Shrimp and Rice",
+            "difficulty": "",
+            "ingredients": [
+                "peeled and deveined shrimp",
+                "fresh garlic",
+                "red pepper flakes",
+                "chicken broth",
+                "jasmine rice",
+                "limes",
+                "black beans",
+                "cilantro"
+            ],
+            "season": "",
+            "tags": ["shrimp"],
+            "last_used": ""
+        }
+    ],
+    "Veggie Curry": [
+        {
+            "name": "Veggie Curry",
+            "difficulty": "",
+            "ingredients": [
+                "rice",
+                "veggies",
+                "zucchini",
+                "broccoli",
+                "cauliflower",
+                "red pepper",
+                "carrots",
+                "mushrooms",
+                "garbanzo beans (aka chickpeas)",
+                "curry powder",
+                "light coconut milk"
+            ],
+            "season": "",
+            "tags": ["meatless"],
+            "last_used": ""
+        }
+    ],
+    "White Bean Pasta": [
+        {
+            "name": "White Bean Pasta",
+            "difficulty": "",
+            "ingredients": [
+                "linguine noodles",
+                "diced tomatoes",
+                "italian seasoning",
+                "can white beans",
+                "package frozen spinach",
+                "fresh garlic",
+                "salad"
+            ],
+            "season": "",
+            "tags": ["meatless", "pasta"],
+            "last_used": ""
+        }
+    ],
+    "BBQ Pork Sandwich": [
+        {
+            "name": "BBQ Pork Sandwich",
+            "difficulty": "medium",
+            "ingredients": [
+                "hamburger buns",
+                "pork roast",
+                "bbq sauce",
+                "potatoes"
+            ],
+            "season": "",
+            "tags": ["pork", "crockpot"],
+            "last_used": ""
+        }
+    ]
+}

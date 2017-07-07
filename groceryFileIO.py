@@ -40,7 +40,7 @@ def write_recipe_file(recipe_list, file_name):
         temp_dict[recipe.name]=[recipe.__dict__]
 
     with open(file_name, 'w') as outfile:
-            json.dump(temp_dict, outfile, indent=4)
+            json.dump(temp_dict, outfile, sort_keys=True, indent=4)
 
 def write_options_file():
     default_file_name = ''

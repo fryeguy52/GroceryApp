@@ -15,8 +15,8 @@
             "name": "Asian Stirfry",
             "season": "",
             "tags": [
+                "stove top",
                 "chicken",
-                "stove",
                 "easy"
             ]
         }
@@ -56,8 +56,8 @@
             "name": "Baked Chicken and Oven Fries",
             "season": "",
             "tags": [
-                "chicken",
                 "oven",
+                "chicken",
                 "easy"
             ]
         }
@@ -79,34 +79,7 @@
             "name": "Baked Ziti",
             "season": "",
             "tags": [
-                "oven",
-                "beef",
-                "easy"
-            ]
-        }
-    ],
-    "Beef Burritos": [
-        {
-            "difficulty": "",
-            "ingredients": [
-                "ground beef",
-                "potatoes",
-                "onion",
-                "fresh garlic",
-                "green chile",
-                "rice",
-                "avocado",
-                "flour tortillas",
-                "mexican blend cheese",
-                "tomato"
-            ],
-            "last_used": "",
-            "name": "Beef Burritos",
-            "season": "",
-            "tags": [
-                "beef",
-                "easy",
-                "stove"
+                "a"
             ]
         }
     ],
@@ -125,11 +98,7 @@
             "last_used": "",
             "name": "Beef Stew",
             "season": "",
-            "tags": [
-                "beef",
-                "easy",
-                "crockpot"
-            ]
+            "tags": []
         }
     ],
     "Beef and Mushroom Pot Roast": [
@@ -147,9 +116,7 @@
             "name": "Beef and Mushroom Pot Roast",
             "season": "",
             "tags": [
-                "beef",
-                "easy",
-                "crockpot"
+                "beef"
             ]
         }
     ],
@@ -167,18 +134,14 @@
             "last_used": "",
             "name": "Breakfast",
             "season": "",
-            "tags": [
-                "breakfast",
-                "hard",
-                "stove"
-            ]
+            "tags": []
         }
     ],
     "Burgers and Fries": [
         {
             "difficulty": "",
             "ingredients": [
-                "ground beef | frozen patties",
+                "groung beef | frozen patties",
                 "lettuce",
                 "tomatos",
                 "potatoes",
@@ -191,43 +154,15 @@
             "last_used": "",
             "name": "Burgers and Fries",
             "season": "",
-            "tags": [
-                "grill",
-                "medium",
-                "beef"
-            ]
-        }
-    ],
-    "Cajun Chicken and Rice": [
-        {
-            "difficulty": "",
-            "ingredients": [
-                "rice",
-                "chicken broth",
-                "chicken breasts",
-                "Cajun or Creole Seasoning",
-                "olive oil",
-                "onion",
-                "bell pepper",
-                "Ro-Tel Diced Tomatoes and Green Chiles",
-                "cheddar cheese"
-            ],
-            "last_used": "",
-            "name": "Cajun Chicken and Rice",
-            "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Chicken Asian Noodles": [
         {
-            "difficulty": "",
+            "difficulty": "easy",
             "ingredients": [
                 "Ramen Noodles",
-                "beef",
+                "chicken",
                 "cole slaw mix",
                 "soy sauce",
                 "sesame oil"
@@ -235,11 +170,7 @@
             "last_used": "",
             "name": "Chicken Asian Noodles",
             "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Chicken Curry in a Hurry": [
@@ -257,11 +188,7 @@
             "last_used": "",
             "name": "Chicken Curry in a Hurry",
             "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Chicken Fried Rice": [
@@ -280,11 +207,7 @@
             "last_used": "",
             "name": "Chicken Fried Rice",
             "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Chicken Noodle Soup": [
@@ -301,11 +224,7 @@
             "last_used": "",
             "name": "Chicken Noodle Soup",
             "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Chicken Nuggets and Oven Fries": [
@@ -322,11 +241,7 @@
             "last_used": "",
             "name": "Chicken Nuggets and Oven Fries",
             "season": "",
-            "tags": [
-                "oven",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Chicken Philly Cheese Steak Sandwiches": [
@@ -347,11 +262,7 @@
             "last_used": "",
             "name": "Chicken Philly Cheese Steak Sandwiches",
             "season": "",
-            "tags": [
-                "crockpot",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Chicken Pumpkin Soup": [
@@ -376,11 +287,7 @@
             "last_used": "",
             "name": "Chicken Pumpkin Soup",
             "season": "",
-            "tags": [
-                "crockpot",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Chicken Tacos": [
@@ -401,11 +308,7 @@
             "last_used": "",
             "name": "Chicken Tacos",
             "season": "",
-            "tags": [
-                "grill",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Chicken, Zucchini, and Prosciutto": [
@@ -421,11 +324,7 @@
             "last_used": "",
             "name": "Chicken, Zucchini, and Prosciutto",
             "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Chicken-Veggie-Pasta Mixeroo": [
@@ -442,12 +341,7 @@
             "last_used": "",
             "name": "Chicken-Veggie-Pasta Mixeroo",
             "season": "",
-            "tags": [
-                "stove",
-                "grill",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Cilantro-Lime Black Bean Shrimp and Rice": [
@@ -459,7 +353,7 @@
                 "red pepper flakes",
                 "chicken broth",
                 "jasmine rice",
-                "lime",
+                "limes",
                 "black beans",
                 "cilantro"
             ],
@@ -467,8 +361,6 @@
             "name": "Cilantro-Lime Black Bean Shrimp and Rice",
             "season": "",
             "tags": [
-                "stove",
-                "medium",
                 "shrimp"
             ]
         }
@@ -484,11 +376,7 @@
             "last_used": "",
             "name": "Cob Salad",
             "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Crock Pot Beef Fajitas": [
@@ -509,11 +397,7 @@
             "last_used": "",
             "name": "Crock Pot Beef Fajitas",
             "season": "",
-            "tags": [
-                "crockpot",
-                "medium",
-                "beef"
-            ]
+            "tags": []
         }
     ],
     "Crock Pot Chicken Fajitas": [
@@ -534,11 +418,7 @@
             "last_used": "",
             "name": "Crock Pot Chicken Fajitas",
             "season": "",
-            "tags": [
-                "crockpot",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Green Chile Beef Stew": [
@@ -546,7 +426,7 @@
             "difficulty": "",
             "ingredients": [
                 "beef stew meat",
-                "NM red chile powder",
+                "green chile",
                 "potatoes",
                 "celery",
                 "onions",
@@ -558,11 +438,7 @@
             "last_used": "",
             "name": "Green Chile Beef Stew",
             "season": "",
-            "tags": [
-                "crockpot",
-                "medium",
-                "beef"
-            ]
+            "tags": []
         }
     ],
     "Green Chile Chicken Enchiladas": [
@@ -570,6 +446,7 @@
             "difficulty": "",
             "ingredients": [
                 "green chile",
+                "chicken",
                 "mexican blend cheese",
                 "garlic powder",
                 "onions",
@@ -581,12 +458,7 @@
             "last_used": "",
             "name": "Green Chile Chicken Enchiladas",
             "season": "",
-            "tags": [
-                "oven",
-                "medium",
-                "dairy",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Green Chile Chicken Stew": [
@@ -606,11 +478,7 @@
             "last_used": "",
             "name": "Green Chile Chicken Stew",
             "season": "",
-            "tags": [
-                "crockpot",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Grilled Cheese and Soup": [
@@ -625,11 +493,7 @@
             "last_used": "",
             "name": "Grilled Cheese and Soup",
             "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "dairy"
-            ]
+            "tags": []
         }
     ],
     "Grilled Chicken and Wild Rice": [
@@ -644,11 +508,7 @@
             "last_used": "",
             "name": "Grilled Chicken and Wild Rice",
             "season": "",
-            "tags": [
-                "grill",
-                "easy",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Grilled Pizza": [
@@ -667,32 +527,7 @@
             "last_used": "",
             "name": "Grilled Pizza",
             "season": "",
-            "tags": [
-                "grill",
-                "hard"
-            ]
-        }
-    ],
-    "Grocery Staples": [
-        {
-            "difficulty": "",
-            "ingredients": [
-                "milk",
-                "lunch meat",
-                "yogurt",
-                "eggs",
-                "oat nut bread",
-                "butter",
-                "soda",
-                "sweet potato",
-                "lunch fruit"
-            ],
-            "last_used": "",
-            "name": "Grocery Staples",
-            "season": "",
-            "tags": [
-                "hide"
-            ]
+            "tags": []
         }
     ],
     "Ground Beef Tacos": [
@@ -712,11 +547,7 @@
             "last_used": "",
             "name": "Ground Beef Tacos",
             "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "beef"
-            ]
+            "tags": []
         }
     ],
     "Healthy Roasted Chicken and Veggies in one pan": [
@@ -735,11 +566,7 @@
             "last_used": "",
             "name": "Healthy Roasted Chicken and Veggies in one pan",
             "season": "",
-            "tags": [
-                "oven",
-                "hard",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Irish Beef and Guiness Stew": [
@@ -762,32 +589,7 @@
             "last_used": "",
             "name": "Irish Beef and Guiness Stew",
             "season": "",
-            "tags": [
-                "crockpot",
-                "hard",
-                "beef"
-            ]
-        }
-    ],
-    "Italian Chicken Bake": [
-        {
-            "difficulty": "",
-            "ingredients": [
-                "chicken breasts",
-                "prepared pesto",
-                "roma tomatoes",
-                "mozzarella",
-                "linguine"
-            ],
-            "last_used": "",
-            "name": "Italian Chicken Bake",
-            "season": "",
-            "tags": [
-                "oven",
-                "medium",
-                "chicken",
-                "pasta"
-            ]
+            "tags": []
         }
     ],
     "Kielbasa, Pepper, Onion and Potato Hash": [
@@ -804,12 +606,7 @@
             "last_used": "",
             "name": "Kielbasa, Pepper, Onion and Potato Hash",
             "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "turkey",
-                "sausage"
-            ]
+            "tags": []
         }
     ],
     "Lasagna": [
@@ -823,12 +620,7 @@
             "last_used": "",
             "name": "Lasagna",
             "season": "",
-            "tags": [
-                "oven",
-                "easy",
-                "beef",
-                "meetless"
-            ]
+            "tags": []
         }
     ],
     "Lettuce Wraps": [
@@ -849,11 +641,7 @@
             "last_used": "",
             "name": "Lettuce Wraps",
             "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "turky"
-            ]
+            "tags": []
         }
     ],
     "Meat Loaf": [
@@ -871,8 +659,6 @@
             "name": "Meat Loaf",
             "season": "",
             "tags": [
-                "oven",
-                "hard",
                 "beef"
             ]
         }
@@ -890,12 +676,7 @@
             "last_used": "",
             "name": "New Year Beef Roast",
             "season": "",
-            "tags": [
-                "oven",
-                "hard",
-                "beef",
-                "special"
-            ]
+            "tags": []
         }
     ],
     "One Pan Autumn Chicken Dinner": [
@@ -918,11 +699,7 @@
             "last_used": "",
             "name": "One Pan Autumn Chicken Dinner",
             "season": "",
-            "tags": [
-                "oven",
-                "hard",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "One Pot Woonder Chichen Lo Mein Recipe": [
@@ -947,10 +724,8 @@
             "name": "One Pot Woonder Chichen Lo Mein Recipe",
             "season": "",
             "tags": [
-                "stove",
-                "hard",
-                "pasta",
-                "chicken"
+                "chicken",
+                "pasta"
             ]
         }
     ],
@@ -969,13 +744,7 @@
             "last_used": "",
             "name": "Pasta With Turkey and Broccoli",
             "season": "",
-            "tags": [
-                "stove",
-                "medium",
-                "pasta",
-                "turkey",
-                "sausage"
-            ]
+            "tags": []
         }
     ],
     "Peach Chicken": [
@@ -994,31 +763,7 @@
             "last_used": "",
             "name": "Peach Chicken",
             "season": "",
-            "tags": [
-                "grill",
-                "medium",
-                "chicken"
-            ]
-        }
-    ],
-    "Pork Chops": [
-        {
-            "difficulty": "",
-            "ingredients": [
-                "pork chops",
-                "butter",
-                "sour cream",
-                "potatoes",
-                "garlic"
-            ],
-            "last_used": "",
-            "name": "Pork Chops",
-            "season": "",
-            "tags": [
-                "crockpot",
-                "easy",
-                "pork"
-            ]
+            "tags": []
         }
     ],
     "Pork Roast": [
@@ -1036,11 +781,7 @@
             "last_used": "",
             "name": "Pork Roast",
             "season": "",
-            "tags": [
-                "crockpot",
-                "easy",
-                "pork"
-            ]
+            "tags": []
         }
     ],
     "Potato Soup": [
@@ -1059,11 +800,7 @@
             "last_used": "",
             "name": "Potato Soup",
             "season": "",
-            "tags": [
-                "crockpot",
-                "medium",
-                "pork"
-            ]
+            "tags": []
         }
     ],
     "Quesadillas": [
@@ -1081,11 +818,7 @@
             "last_used": "",
             "name": "Quesadillas",
             "season": "",
-            "tags": [
-                "stove",
-                "dairy",
-                "easy"
-            ]
+            "tags": []
         }
     ],
     "Red Chile Beef Enchiladas": [
@@ -1093,6 +826,7 @@
             "difficulty": "",
             "ingredients": [
                 "NM red chile powder",
+                "beef",
                 "mexican blend cheese",
                 "garlic powder",
                 "onions",
@@ -1104,12 +838,7 @@
             "last_used": "",
             "name": "Red Chile Beef Enchiladas",
             "season": "",
-            "tags": [
-                "stove",
-                "dairy",
-                "beef",
-                "medium"
-            ]
+            "tags": []
         }
     ],
     "Steak and Mushroom Tacos": [
@@ -1131,11 +860,7 @@
             "last_used": "",
             "name": "Steak and Mushroom Tacos",
             "season": "",
-            "tags": [
-                "grill",
-                "beef",
-                "medium"
-            ]
+            "tags": []
         }
     ],
     "Steak and Potatoes": [
@@ -1151,11 +876,7 @@
             "last_used": "",
             "name": "Steak and Potatoes",
             "season": "",
-            "tags": [
-                "grill",
-                "beef",
-                "medium"
-            ]
+            "tags": []
         }
     ],
     "Swedish Meatballs": [
@@ -1169,41 +890,7 @@
             "last_used": "",
             "name": "Swedish Meatballs",
             "season": "",
-            "tags": [
-                "stove",
-                "beef",
-                "medium"
-            ]
-        }
-    ],
-    "Sweet and Sticky Chicken": [
-        {
-            "difficulty": "",
-            "ingredients": [
-                "carrots",
-                "potatoes",
-                "onion",
-                "bell pepper",
-                "chicken",
-                "molasses",
-                "ketchup",
-                "honey",
-                "maple syrup",
-                "Italian seasoning",
-                "pepper",
-                "garlic powder",
-                "onion powder",
-                "butter",
-                "cornstarch"
-            ],
-            "last_used": "",
-            "name": "Sweet and Sticky Chicken",
-            "season": "",
-            "tags": [
-                "oven",
-                "medium",
-                "chicken"
-            ]
+            "tags": []
         }
     ],
     "Veggie Curry": [
@@ -1226,9 +913,7 @@
             "name": "Veggie Curry",
             "season": "",
             "tags": [
-                "stove",
-                "meatless",
-                "medium"
+                "meatless"
             ]
         }
     ],
@@ -1249,9 +934,7 @@
             "season": "",
             "tags": [
                 "meatless",
-                "pasta",
-                "medium",
-                "stove"
+                "pasta"
             ]
         }
     ]
