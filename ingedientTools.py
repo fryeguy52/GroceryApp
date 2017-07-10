@@ -1,25 +1,26 @@
 __author__ = 'Joe'
 
+
 import recipe
 
 
 def extract_ingredients(recipe_list, ingredient_dict={}):
     for o in recipe_list:
-        if not isinstance(o, recipe.Recipe):
+        if not isinstance(recipe_list[o], recipe.Recipe):
             print("WARNING! object: "+ o + " is not of Recipe type")
-            print(type(o))
-            print(o)
+            print(type(recipe_list[o]))
+            print(recipe_list[o])
             print(recipe_list)
             return
     for r in recipe_list:
-        for i in r.ingredients:
+        for i in recipe_list[r].ingredients:
             if i not in ingredient_dict:
                 ingredient_dict[i]=''
 
     return ingredient_dict
 
+
 def add_ingredient_locations(ingredient_dict):
-    # print(ingredient_dict)
     location_list=[]
     for i in ingredient_dict:
         if ingredient_dict[i] not in location_list:
@@ -47,5 +48,3 @@ def add_ingredient_locations(ingredient_dict):
                     location_list.append(str(user_in))
                     location_list.sort()
                     stay_in_loop = False
-
-    # print(ingredient_dict)
