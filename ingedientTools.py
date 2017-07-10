@@ -6,7 +6,10 @@ import recipe
 def extract_ingredients(recipe_list, ingredient_dict={}):
     for o in recipe_list:
         if not isinstance(o, recipe.Recipe):
-            print("error object: "+ o + "is not of Recipe type")
+            print("WARNING! object: "+ o + " is not of Recipe type")
+            print(type(o))
+            print(o)
+            print(recipe_list)
             return
     for r in recipe_list:
         for i in r.ingredients:

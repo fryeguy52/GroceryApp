@@ -22,7 +22,10 @@ def read_recipe_file(filename):
         recipe_list.append(r)
     recipe_list=sorted(recipe_list, key=lambda recipe: recipe.name)
 
-    return recipe_list
+    rec_dict={}
+    for i in range(0, len(recipe_list)):
+        rec_dict[recipe_list[i].name] = recipe_list[i]
+    return rec_dict
 
 def read_options_file():
     options={}

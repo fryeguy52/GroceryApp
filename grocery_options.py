@@ -31,8 +31,9 @@ class grocery_options:
 
         # debug_show_recipe_list
         # debug_make_grocery_list
-        # normal
-        self.mode="normal"
+        # CLI
+        #GUI
+        self.mode="GUI"
         self.output_filetype="trello"
         self.print_config_vars="no"
 
