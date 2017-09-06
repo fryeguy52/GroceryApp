@@ -1,9 +1,17 @@
 __author__ = 'Joe'
 
 import json
-
+import re
+import glob
 import recipe
 
+def get_recipe_names(recipe_dir):
+    recipe_names=[]
+    for file in glob.glob(recipe_dir+"/*.txt"):
+        file = re.sub('.txt', '', file)
+        file = re.sub("../recipes\\\\", '', file)
+        recipe_names.append(file)
+    return recipe_names
 
 def read_ingredient_file(filename):
     with open(filename, 'r') as fp:
