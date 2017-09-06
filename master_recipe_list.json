@@ -40,6 +40,54 @@
             ]
         }
     ],
+     "One-Pot Pasta Primavera": [
+        {
+            "difficulty": "",
+            "ingredients": [
+                "low-sodium vegetable broth",
+                "linguine",
+                "onion",
+                "broccoli",
+                "asparagus",
+                "mushrooms",
+                "garlic",
+                "crushed red pepper flakes",
+                "frozen peas",
+                "fresh parsley",
+                "heavy whipping cream",
+                "Parmesan cheese",
+                "lemon"
+            ],
+            "last_used": "",
+            "name": "One-Pot Pasta Primavera",
+            "season": "",
+            "tags": [
+                "stove",
+                "easy"
+            ]
+        }
+    ],
+     "Lemon Chicken and Asparagus Foil Packs": [
+        {
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "asparagus",
+                "lemon",
+                "garlic",
+                "butter",
+                "Italian seasoning",
+                "rice"
+            ],
+            "last_used": "",
+            "name": "Lemon Chicken and Asparagus Foil Packs",
+            "season": "",
+            "tags": [
+                "stove",
+                "easy"
+            ]
+        }
+    ],
     "Baked Chicken and Oven Fries": [
         {
             "difficulty": "",
@@ -190,6 +238,30 @@
             ],
             "last_used": "",
             "name": "Burgers and Fries",
+            "season": "",
+            "tags": [
+                "grill",
+                "medium",
+                "beef"
+            ]
+        }
+    ],
+    "Grilled Chicken Sandwich": [
+        {
+            "difficulty": "",
+            "ingredients": [
+                "chicken",
+                "lettuce",
+                "tomatos",
+                "potatoes",
+                "pickles",
+                "onions",
+                "hamburger buns",
+                "ketchup",
+                "avocado"
+            ],
+            "last_used": "",
+            "name": "Grilled Chicken Sandwich",
             "season": "",
             "tags": [
                 "grill",
@@ -537,6 +609,27 @@
             "tags": [
                 "crockpot",
                 "medium",
+                "chicken"
+            ]
+        }
+    ],
+    "Ginger Sesame Chicken Thighs": [
+        {
+            "difficulty": "",
+            "ingredients": [
+                "dark sesame oil",
+                "fresh garlic",
+                "toasted sesame seeds",
+                "fresh ginger",
+                "sambal oelek (ground fresh chile paste)",
+                "boneless chicken thighs",
+                "Cooking spray"
+            ],
+            "last_used": "",
+            "name": "Ginger Sesame Chicken Thighs",
+            "season": "",
+            "tags": [
+                "asian",
                 "chicken"
             ]
         }
