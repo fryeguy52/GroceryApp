@@ -1,5 +1,5 @@
-#
-*txt
+# generated grocery lists
+grocery_list_*.txt
 
 # task api key
 Grocery-72*74.json
