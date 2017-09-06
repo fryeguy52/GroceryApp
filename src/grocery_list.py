@@ -33,7 +33,7 @@ class GroceryList:
             print()
 
     def write_to_file(self, file_name, output_type='printed_list'):
-        f_out=open(file_name,'w')
+        f_out=open("../"+file_name,'w')
         f_out.write('Groceries for:\n')
         for r in self.recipes_to_make:
             f_out.write(r + '\n')
