@@ -23,6 +23,7 @@ def initialize():
 
 if __name__ == "__main__":
     master_recipe_list, my_grocery_list, grocery_opts = initialize()
+    my_grocery_list.add_from_recipe_file("..\\recipes\Kielbasa, Pepper, Onion and Potato Hash.txt")
     if grocery_opts.print_config_vars is "yes":
         grocery_opts.print_options()
 

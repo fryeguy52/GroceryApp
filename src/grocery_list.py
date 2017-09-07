@@ -73,3 +73,43 @@ class GroceryList:
                 self.needed_grocery_dict[self.master_ingredient_dict[i]][i] += 1
             else:
                 self.needed_grocery_dict[self.master_ingredient_dict[i]][i] = 1
+
+    def add_from_recipe_file(self, file):
+        heading=''
+        number=''
+        unit=''
+        ingredient_name=''
+        with open(file,'r') as recipe_file:
+            for line in recipe_file:
+                # print("---------------------------------------------------------------")
+                # print(line)
+                if line.strip() == '':
+                    pass
+                elif line[0] == "#":
+                    heading=line.strip("##").strip()
+                    # print(heading)
+                elif heading == "Ingredients":
+                    number = line.split(",")[0].strip()
+                    unit = line.split(",")[1].strip()
+                    ingredient_name = line.split(",")[2].strip()
+                    print("we need "+number+" "+unit+" "+ingredient_name)
+                else:
+                    pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
