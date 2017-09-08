@@ -7,6 +7,7 @@ import ingedientTools
 import grocery_list
 import grocery_options as GO
 import grocery_gui
+import grocery_functions
 
 def initialize():
     grocery_opts=GO.grocery_options()
@@ -23,7 +24,6 @@ def initialize():
 
 if __name__ == "__main__":
     master_recipe_list, my_grocery_list, grocery_opts = initialize()
-    my_grocery_list.add_from_recipe_file("..\\recipes\Kielbasa, Pepper, Onion and Potato Hash.txt")
     if grocery_opts.print_config_vars is "yes":
         grocery_opts.print_options()
 
