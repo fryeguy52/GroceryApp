@@ -8,6 +8,7 @@ class shopping_item():
     unit=[]
     name=[]
 
+
 def get_recipe_names(recipe_dir):
     """
     return a list of all the .txt files in a directory without the extension
@@ -22,11 +23,12 @@ def get_recipe_names(recipe_dir):
         recipe_names.append(file)
     return recipe_names
 
+
 def get_ingredients_from_recipe_file(file):
     """
     return the ingredient information from a recipe file in the form of a list of shopping_item
     objects
-    :param file: a recipe .txt file to extract indredient information from
+    :param file: a recipe .txt file to extract ingredient information from
     :return: a list of shopping_item objects. one for each line in the recipe section of the file
     """
     heading=''
@@ -46,6 +48,7 @@ def get_ingredients_from_recipe_file(file):
             else:
                 pass
     return ingredient_list
+
 
 def get_tags_from_recipe_file(file):
     """
@@ -67,6 +70,7 @@ def get_tags_from_recipe_file(file):
                 pass
     return tag_list
 
+
 def get_recipe_from_recipe_file(file):
     """
     :param file: a recipe .txt file to extract indredient information from
@@ -85,3 +89,24 @@ def get_recipe_from_recipe_file(file):
             else:
                 pass
     return recipe
+
+
+def matches(string1='', string2=''):
+    """
+    check to see if string1 and string2 refer to the same grocery store item
+    :return True/False
+    """
+
+    string1=string1.lower().strip()
+    string2=string2.lower().strip()
+
+    if string1 is string2:
+        return True
+
+    if string1 == string2:
+        return True
+
+    if string1.rstrip('.s') == string2.rstrip('.s'):
+        return True
+
+    return False

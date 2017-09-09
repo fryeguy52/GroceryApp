@@ -38,8 +38,18 @@ class TestGroceryFuncs(unittest.TestCase):
         self.assertTrue(list[2]=="1 cup bell pepper, chopped (any colors you like)")
         self.assertTrue(list[10]=="1 teaspoon italian seasoning")
         self.assertTrue(list[15]=="Place the chicken and veggies in a medium roasting dish or sheet pan. Add the olive oil, ")
-        # for line in list:
-        #     print(line)
+
+    def test_matches(self):
+        test_string = 'onion'
+        self.assertTrue(grocery_functions.matches(test_string, test_string))
+        self.assertTrue(grocery_functions.matches(test_string, 'onion'))
+        self.assertTrue(grocery_functions.matches(test_string, 'Onion'))
+        self.assertTrue(grocery_functions.matches(test_string, 'ONIONS'))
+        self.assertTrue(grocery_functions.matches('oz', 'oz.'))
+        self.assertTrue(grocery_functions.matches('ozs', 'oZ.'))
+
+        self.assertFalse(grocery_functions.matches(test_string, 'red onion'))
+        self.assertFalse(grocery_functions.matches(test_string, 'sonion'))
 
     def suite(self):
         return unittest.TestLoader().loadTestsFromTestCase(TestGroceryFuncs)
