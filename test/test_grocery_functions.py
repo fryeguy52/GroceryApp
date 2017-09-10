@@ -51,6 +51,14 @@ class TestGroceryFuncs(unittest.TestCase):
         self.assertFalse(grocery_functions.matches(test_string, 'red onion'))
         self.assertFalse(grocery_functions.matches(test_string, 'sonion'))
 
+    def test_condenseList(self):
+        recipe_names = grocery_functions.get_recipe_names("test-recipes")
+        grocery_list=[]
+        for recipe in recipe_names:
+            grocery_list += grocery_functions.get_ingredients_from_recipe_file("test-recipes\\"+recipe+".txt")
+        grocery_list=grocery_functions.condense_grocery_list(grocery_list)
+        grocery_functions.print_grocery_list(grocery_list)
+
     def suite(self):
         return unittest.TestLoader().loadTestsFromTestCase(TestGroceryFuncs)
 

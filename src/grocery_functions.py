@@ -106,7 +106,37 @@ def matches(string1='', string2=''):
     if string1 == string2:
         return True
 
+    if string1=='' and string2 == '':
+        return True
+
+    if string1 is None and string2 is None:
+        return True
+
     if string1.rstrip('.s') == string2.rstrip('.s'):
         return True
 
     return False
+
+def print_grocery_list(list_of_grocery_items):
+    for grocery_item in list_of_grocery_items:
+        # print(grocery_item.number+":"+grocery_item.unit+":"+grocery_item.name)
+        print(grocery_item.name)
+
+def condense_grocery_list(list_of_grocery_items):
+    condensed_list=[]
+    condensed_dict=dict()
+    for grocery_item in list_of_grocery_items:
+        dict_key=grocery_item.unit.strip().lower().rstrip("s.")+"-"+grocery_item.name.strip().lower().rstrip("s.")
+        if dict_key in condensed_dict:
+            condensed_dict[dict_key].number = str(float(condensed_dict[dict_key].number) + float(grocery_item.number))
+        else:
+            condensed_dict[dict_key]=grocery_item
+
+    for item in condensed_dict:
+        condensed_list.append(condensed_dict[item])
+
+    condensed_list.sort(key=lambda x: x.name)
+    # print_grocery_list(condensed_list)
+    print(len(list_of_grocery_items), len(condensed_list))
+
+    return condensed_list

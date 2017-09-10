@@ -11,7 +11,7 @@
 .5, teaspoon, salt
 .5, teaspoon, black pepper
 1, teaspoon, italian seasoning
-.25 teaspoon, paprika
+.25, teaspoon, paprika
 
 ## Recipe
 Ingredients
