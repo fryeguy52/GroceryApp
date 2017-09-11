@@ -39,25 +39,19 @@ class TestGroceryFuncs(unittest.TestCase):
         self.assertTrue(list[10]=="1 teaspoon italian seasoning")
         self.assertTrue(list[15]=="Place the chicken and veggies in a medium roasting dish or sheet pan. Add the olive oil, ")
 
-    def test_matches(self):
-        test_string = 'onion'
-        self.assertTrue(grocery_functions.matches(test_string, test_string))
-        self.assertTrue(grocery_functions.matches(test_string, 'onion'))
-        self.assertTrue(grocery_functions.matches(test_string, 'Onion'))
-        self.assertTrue(grocery_functions.matches(test_string, 'ONIONS'))
-        self.assertTrue(grocery_functions.matches('oz', 'oz.'))
-        self.assertTrue(grocery_functions.matches('ozs', 'oZ.'))
-
-        self.assertFalse(grocery_functions.matches(test_string, 'red onion'))
-        self.assertFalse(grocery_functions.matches(test_string, 'sonion'))
-
     def test_condenseList(self):
         recipe_names = grocery_functions.get_recipe_names("test-recipes")
         grocery_list=[]
         for recipe in recipe_names:
             grocery_list += grocery_functions.get_ingredients_from_recipe_file("test-recipes\\"+recipe+".txt")
         grocery_list=grocery_functions.condense_grocery_list(grocery_list)
-        grocery_functions.print_grocery_list(grocery_list)
+        # grocery_functions.print_grocery_list(grocery_list)
+
+    # def test_makeAllIngredientsFile(self):
+    #     grocery_functions.make_all_ingredients_file()
+
+    def test_getItemDeptDicts(self):
+        grocery_functions.get_item_dept_dicts()
 
     def suite(self):
         return unittest.TestLoader().loadTestsFromTestCase(TestGroceryFuncs)

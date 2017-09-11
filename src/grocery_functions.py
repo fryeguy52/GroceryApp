@@ -41,9 +41,12 @@ def get_ingredients_from_recipe_file(file):
                 heading=line.strip("##").strip()
             elif heading == "Ingredients":
                 current_ingredient=shopping_item()
-                current_ingredient.number = line.split(",")[0].strip()
-                current_ingredient.unit = line.split(",")[1].strip()
-                current_ingredient.name = line.split(",")[2].strip()
+                current_ingredient.number = line.split(",")[0].strip().lower().rstrip("s.")
+                current_ingredient.unit = line.split(",")[1].strip().lower().rstrip("s.")
+                current_ingredient.name = line.split(",")[2].strip().lower().rstrip("s.")
+                if current_ingredient.name.endswith("oe"):
+                    current_ingredient.name = current_ingredient.name.rstrip("e")
+
                 ingredient_list.append(current_ingredient)
             else:
                 pass
@@ -90,33 +93,6 @@ def get_recipe_from_recipe_file(file):
                 pass
     return recipe
 
-
-def matches(string1='', string2=''):
-    """
-    check to see if string1 and string2 refer to the same grocery store item
-    :return True/False
-    """
-
-    string1=string1.lower().strip()
-    string2=string2.lower().strip()
-
-    if string1 is string2:
-        return True
-
-    if string1 == string2:
-        return True
-
-    if string1=='' and string2 == '':
-        return True
-
-    if string1 is None and string2 is None:
-        return True
-
-    if string1.rstrip('.s') == string2.rstrip('.s'):
-        return True
-
-    return False
-
 def print_grocery_list(list_of_grocery_items):
     for grocery_item in list_of_grocery_items:
         # print(grocery_item.number+":"+grocery_item.unit+":"+grocery_item.name)
@@ -126,7 +102,7 @@ def condense_grocery_list(list_of_grocery_items):
     condensed_list=[]
     condensed_dict=dict()
     for grocery_item in list_of_grocery_items:
-        dict_key=grocery_item.unit.strip().lower().rstrip("s.")+"-"+grocery_item.name.strip().lower().rstrip("s.")
+        dict_key=grocery_item.unit+"-"+grocery_item.name
         if dict_key in condensed_dict:
             condensed_dict[dict_key].number = str(float(condensed_dict[dict_key].number) + float(grocery_item.number))
         else:
@@ -140,3 +116,43 @@ def condense_grocery_list(list_of_grocery_items):
     print(len(list_of_grocery_items), len(condensed_list))
 
     return condensed_list
+
+def get_item_dept_dicts():
+    heading=''
+    dept_list_of_ing_dict={}
+    ingredient_dept_dict={}
+    with open('defaultItemDepartments.txt','r') as defaultDeptFile:
+        for line in defaultDeptFile:
+            if line.strip() == '':
+                pass
+            elif line[0] == "#":
+                heading=line.strip("##").strip()
+                dept_list_of_ing_dict[heading]=[]
+            else:
+                dept_list_of_ing_dict[heading].append(line)
+                ingredient_dept_dict[line]=heading
+
+    for dept in dept_list_of_ing_dict:
+        print("\n## "+dept)
+        dept_list_of_ing_dict[dept].sort()
+        for item in dept_list_of_ing_dict[dept]:
+            print(item.rstrip("\n"))
+
+    return ingredient_dept_dict, dept_list_of_ing_dict
+
+def make_all_ingredients_file():
+    recipe_names = get_recipe_names("test-recipes")
+    all_ingredients_in_all_recipes=[]
+    for recipe in recipe_names:
+        all_ingredients_in_all_recipes += get_ingredients_from_recipe_file("test-recipes\\"+recipe+".txt")
+    for ingredient in all_ingredients_in_all_recipes:
+        ingredient.unit=''
+    grocery_list=condense_grocery_list(all_ingredients_in_all_recipes)
+    print_grocery_list(grocery_list)
+
+
+    out_file=open('completeIngredientList.txt', 'w')
+    for ingredient in grocery_list:
+        out_file.write(ingredient.name+"\n")
+    out_file.close()
+
