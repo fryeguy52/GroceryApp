@@ -45,13 +45,34 @@ MoxTr_Smiths=["bakery",
               "soda",
               "snacks"]
 
+EuJt_Smiths=["liquorl",
+              "veggies",
+              "fruit",
+              "root",
+              "condiments",
+              "snacks",
+              "tortillas",
+              "candy/sodas",
+              "frozen",
+              "meat",
+              "lunch meat",
+              "cheese",
+              "dairy",
+              "bread",
+              "peanut butter",
+              "pasta",
+              "international",
+              "canned",
+              "asian food",
+              "breakfast",
+              "baking"]
 
 class grocery_options:
     def __init__(self):
         self.include_tags=[]
         self.exclude_tags=["hide"]
         self.default_recipes=["Grocery Staples"]
-        self.print_order=MoxTr_Smiths
+        self.print_order=EuJt_Smiths
 
         # debug_show_recipe_list
         # debug_make_grocery_list
