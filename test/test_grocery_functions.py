@@ -46,12 +46,14 @@ class TestGroceryFuncs(unittest.TestCase):
             grocery_list += grocery_functions.get_ingredients_from_recipe_file("test-recipes\\"+recipe+".txt")
         grocery_list=grocery_functions.condense_grocery_list(grocery_list)
         # grocery_functions.print_grocery_list(grocery_list)
+        grocery_functions.sort_and_print_grocery_List(grocery_list, "Smiths-Eu-JT-ItemDepartments.txt")
 
     # def test_makeAllIngredientsFile(self):
     #     grocery_functions.make_all_ingredients_file()
 
     def test_getItemDeptDicts(self):
-        grocery_functions.get_item_dept_dicts()
+        grocery_functions.get_item_dept_dicts("Smiths-Eu-JT-ItemDepartments.txt")
+
 
     def suite(self):
         return unittest.TestLoader().loadTestsFromTestCase(TestGroceryFuncs)

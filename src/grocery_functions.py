@@ -99,6 +99,12 @@ def print_grocery_list(list_of_grocery_items):
         print(grocery_item.name)
 
 def condense_grocery_list(list_of_grocery_items):
+    """
+    take a list of grocery items and return a list of grocery items
+    where the ones that share a name and unit have been combined by
+    incrementing the number
+    TODO: implement some kind of unit conversions for popular units
+    """
     condensed_list=[]
     condensed_dict=dict()
     for grocery_item in list_of_grocery_items:
@@ -117,28 +123,45 @@ def condense_grocery_list(list_of_grocery_items):
 
     return condensed_list
 
-def get_item_dept_dicts():
+def get_item_dept_dicts(file_name='defaultItemDepartments.txt'):
+    """
+    return two dictionaries from specified file. one takes itmes
+    as keys and returns a department one takes a department as a
+    key and returns a list of items
+    """
     heading=''
     dept_list_of_ing_dict={}
     ingredient_dept_dict={}
-    with open('defaultItemDepartments.txt','r') as defaultDeptFile:
+    print_order_list=[]
+    with open(file_name,'r') as defaultDeptFile:
         for line in defaultDeptFile:
             if line.strip() == '':
                 pass
             elif line[0] == "#":
-                heading=line.strip("##").strip()
-                dept_list_of_ing_dict[heading]=[]
+                heading=line.strip("##").strip().lower()
+                if heading =='print order':
+                    pass
+                else:
+                    dept_list_of_ing_dict[heading]=[]
+            elif heading == 'print order':
+                print_order_list.append(line.strip().lower())
             else:
-                dept_list_of_ing_dict[heading].append(line)
-                ingredient_dept_dict[line]=heading
+                dept_list_of_ing_dict[heading].append(line.strip())
+                ingredient_dept_dict[line.strip()]=heading
 
-    for dept in dept_list_of_ing_dict:
-        print("\n## "+dept)
-        dept_list_of_ing_dict[dept].sort()
-        for item in dept_list_of_ing_dict[dept]:
-            print(item.rstrip("\n"))
+    # for dept in dept_list_of_ing_dict:
+    #     print("\n## "+dept)
+    #     dept_list_of_ing_dict[dept].sort()
+    #     for item in dept_list_of_ing_dict[dept]:
+    #         print(item)
+    #
+    # for ing in ingredient_dept_dict:
+    #     print(ing+":"+ingredient_dept_dict[ing])
+    #
+    # for dept in print_order_list:
+    #     print(dept)
 
-    return ingredient_dept_dict, dept_list_of_ing_dict
+    return ingredient_dept_dict, dept_list_of_ing_dict, print_order_list
 
 def make_all_ingredients_file():
     recipe_names = get_recipe_names("test-recipes")
@@ -156,3 +179,20 @@ def make_all_ingredients_file():
         out_file.write(ingredient.name+"\n")
     out_file.close()
 
+def sort_and_print_grocery_List(input_list, StoreCofigFileName):
+
+    dict_dept_from_ing_key, dict_ing_list_from_dept_key, print_order = get_item_dept_dicts(StoreCofigFileName)
+
+    for dept in print_order:
+        for item in input_list:
+            if item.name in dict_dept_from_ing_key:
+                if dict_dept_from_ing_key[item.name] == dept:
+                    print(dept + " -- " + item.number +" " + item.unit + " " + item.name)
+            else:
+                pass
+
+    for item in input_list:
+        if item.name not in dict_dept_from_ing_key:
+            print("No Department Listed -- " + item.number +" " + item.unit + " " + item.name)
+
+    pass
