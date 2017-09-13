@@ -7,6 +7,7 @@ class shopping_item():
     number=[]
     unit=[]
     name=[]
+    grocery_list_line=[]
 
 
 def get_recipe_names(recipe_dir):
@@ -119,7 +120,22 @@ def condense_grocery_list(list_of_grocery_items):
 
     condensed_list.sort(key=lambda x: x.name)
     # print_grocery_list(condensed_list)
-    print(len(list_of_grocery_items), len(condensed_list))
+    #print(len(list_of_grocery_items), len(condensed_list))
+    condensed_dict={}
+    for item in condensed_list:
+        if item.name in condensed_dict:
+            condensed_dict[item.name] = condensed_dict[item.name] + ", " + item.number.strip() + " " + item.unit.strip()
+        else:
+            condensed_dict[item.name]=item.name + ": " + item.number.strip() + " " + item.unit.strip()
+    condensed_list=[]
+    for item in condensed_dict:
+        new_item=shopping_item()
+        new_item.name=item
+        new_item.grocery_list_line=condensed_dict[item]
+        condensed_list.append(new_item)
+
+    # for item in condensed_list:
+    #     print(item.grocery_list_line)
 
     return condensed_list
 
@@ -179,20 +195,28 @@ def make_all_ingredients_file():
         out_file.write(ingredient.name+"\n")
     out_file.close()
 
-def sort_and_print_grocery_List(input_list, StoreCofigFileName):
-
-    dict_dept_from_ing_key, dict_ing_list_from_dept_key, print_order = get_item_dept_dicts(StoreCofigFileName)
+def sort_and_print_grocery_List(input_list, StoreCofigFileName=""):
+    defaultStoreFileName = "defaultItemDepartments.txt"
+    default_dept_from_ing_key, default_ing_list_from_dept_key, print_order = get_item_dept_dicts(defaultStoreFileName)
+    if StoreCofigFileName != "":
+        dict_dept_from_ing_key, dict_ing_list_from_dept_key, print_order = get_item_dept_dicts(StoreCofigFileName)
+    else:
+        dict_dept_from_ing_key={}
+        dict_ing_list_from_dept_key={}
 
     for dept in print_order:
         for item in input_list:
             if item.name in dict_dept_from_ing_key:
                 if dict_dept_from_ing_key[item.name] == dept:
-                    print(dept + " -- " + item.number +" " + item.unit + " " + item.name)
+                    print(dept + " -- " + item.grocery_list_line)
+            elif item.name in default_dept_from_ing_key:
+                if default_dept_from_ing_key[item.name] == dept:
+                    print(dept + " -- " + item.grocery_list_line)
             else:
                 pass
 
     for item in input_list:
         if item.name not in dict_dept_from_ing_key:
-            print("No Department Listed -- " + item.number +" " + item.unit + " " + item.name)
+            print("No Department Listed -- " + item.grocery_list_line)
 
     pass
