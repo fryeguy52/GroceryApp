@@ -96,7 +96,6 @@ def get_recipe_from_recipe_file(file):
 
 def print_grocery_list(list_of_grocery_items):
     for grocery_item in list_of_grocery_items:
-        # print(grocery_item.number+":"+grocery_item.unit+":"+grocery_item.name)
         print(grocery_item.name)
 
 def condense_grocery_list(list_of_grocery_items):
@@ -119,8 +118,6 @@ def condense_grocery_list(list_of_grocery_items):
         condensed_list.append(condensed_dict[item])
 
     condensed_list.sort(key=lambda x: x.name)
-    # print_grocery_list(condensed_list)
-    #print(len(list_of_grocery_items), len(condensed_list))
     condensed_dict={}
     for item in condensed_list:
         if item.name in condensed_dict:
@@ -133,9 +130,6 @@ def condense_grocery_list(list_of_grocery_items):
         new_item.name=item
         new_item.grocery_list_line=condensed_dict[item]
         condensed_list.append(new_item)
-
-    # for item in condensed_list:
-    #     print(item.grocery_list_line)
 
     return condensed_list
 
@@ -164,18 +158,6 @@ def get_item_dept_dicts(file_name='defaultItemDepartments.txt'):
             else:
                 dept_list_of_ing_dict[heading].append(line.strip())
                 ingredient_dept_dict[line.strip()]=heading
-
-    # for dept in dept_list_of_ing_dict:
-    #     print("\n## "+dept)
-    #     dept_list_of_ing_dict[dept].sort()
-    #     for item in dept_list_of_ing_dict[dept]:
-    #         print(item)
-    #
-    # for ing in ingredient_dept_dict:
-    #     print(ing+":"+ingredient_dept_dict[ing])
-    #
-    # for dept in print_order_list:
-    #     print(dept)
 
     return ingredient_dept_dict, dept_list_of_ing_dict, print_order_list
 
