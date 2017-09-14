@@ -1,3 +1,22 @@
+##tags
+##ingredients
+4, cups, vegetable broth
+8, ounces, pasta
+1, small, onion
+1, pound, broccoli
+1.5, pounds, asparagus
+4, ounces, mushrooms
+4, cloves, garlic
+.25, teaspoon, crushed red pepper
+1, teaspoon, salt
+0.5, teaspoon, pepper
+2, tablespoons, olive oil
+.75, cup, frozen peas
+.5, cup, parsley
+0.25, cup, heavy whipping cream
+2, tablespoons, Parmesan cheese
+1, , lemon
+##recipe
 One-Pot Pasta Primavera
 
 ingredients:
