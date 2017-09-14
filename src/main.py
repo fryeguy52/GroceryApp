@@ -6,8 +6,8 @@ import grocery_gui
 import grocery_functions
 
 if __name__ == "__main__":
+    grocery_functions.check_recipe_format()
     all_recipes_name_list = grocery_functions.get_recipe_names("..\\recipes")
-    print(all_recipes_name_list)
     selected_recepies = []
     grocery_list=[]
     grocery_gui.recipeGUI(all_recipes_name_list, selected_recepies)

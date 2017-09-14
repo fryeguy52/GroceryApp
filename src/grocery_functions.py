@@ -161,8 +161,8 @@ def get_item_dept_dicts(file_name='defaultItemDepartments.txt'):
 
     return ingredient_dept_dict, dept_list_of_ing_dict, print_order_list
 
-def make_all_ingredients_file():
-    recipe_names = get_recipe_names("test-recipes")
+def make_all_ingredients_file(recipe_dir="..//recipes"):
+    recipe_names = get_recipe_names(recipe_dir)
     all_ingredients_in_all_recipes=[]
     for recipe in recipe_names:
         all_ingredients_in_all_recipes += get_ingredients_from_recipe_file("test-recipes\\"+recipe+".txt")
@@ -202,3 +202,43 @@ def sort_and_print_grocery_List(input_list, StoreCofigFileName=""):
             print("No Department Listed -- " + item.grocery_list_line)
 
     pass
+
+def check_recipe_format(recipe_dir="..//recipes", verbose=True):
+    acceptable_headings=["tags", "ingredients", "recipe"]
+    recipe_names = get_recipe_names(recipe_dir)
+    tmp=""
+    errors=[]
+    for recipe in recipe_names:
+        file=recipe_dir+"//"+recipe+".txt"
+        heading=''
+        ingredient_list=[]
+        with open(file,'r') as recipe_file:
+            recipe_text=get_recipe_from_recipe_file(file)
+            if recipe_text == []:
+                error_string="Blank recipe in: "+file
+                if verbose:
+                    print(error_string)
+                errors.append(error_string)
+            for line in recipe_file:
+                if line.strip() == '':
+                    pass
+                elif line[0] == "#":
+                    heading=line.strip("##").strip().lower()
+                    if heading not in acceptable_headings:
+                        error_string = "invalid heading, \""+heading+"\" in file: "+file
+                        if verbose:
+                            print(error_string)
+                        errors.append(error_string)
+                elif heading == "ingredients":
+                    try:
+                        tmp = line.split(",")[0]
+                        tmp = line.split(",")[1]
+                        tmp = line.split(",")[2]
+                    except IndexError:
+                        error_string="invalid format, \""+line.strip()+"\" in: "+file
+                        if verbose:
+                            print(error_string)
+                        errors.append(error_string)
+                else:
+                    pass
+    return errors
