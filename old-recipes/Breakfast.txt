@@ -1,0 +1,12 @@
+##Tags
+breakfast
+hard
+stove
+##Ingredients
+eggs
+pancake mix
+sausage|bacon
+syrup
+potatoes
+onions
+##Recipe
