@@ -40,7 +40,7 @@ def get_ingredients_from_recipe_file(file):
                 pass
             elif line[0] == "#":
                 heading=line.strip("##").strip()
-            elif heading == "Ingredients":
+            elif heading.lower() == "ingredients":
                 current_ingredient=shopping_item()
                 current_ingredient.number = line.split(",")[0].strip().lower().rstrip("s.")
                 current_ingredient.unit = line.split(",")[1].strip().lower().rstrip("s.")
@@ -88,7 +88,7 @@ def get_recipe_from_recipe_file(file):
                 pass
             elif line[0] == "#":
                 heading=line.strip("##").strip()
-            elif heading == "Recipe":
+            elif heading.lower() == "recipe":
                 recipe.append(line.strip('\n'))
             else:
                 pass
@@ -234,6 +234,11 @@ def check_recipe_format(recipe_dir="..//recipes", verbose=True):
                         tmp = line.split(",")[0]
                         tmp = line.split(",")[1]
                         tmp = line.split(",")[2]
+                        if len(line.split(",")) > 3:
+                            error_string="invalid format, \""+line.strip()+"\" in: "+file
+                            if verbose:
+                                print(error_string)
+                            errors.append(error_string)
                     except IndexError:
                         error_string="invalid format, \""+line.strip()+"\" in: "+file
                         if verbose:
