@@ -215,30 +215,40 @@ def update_default_ing_dept_file(input_list):
 
     out_file.close()
 
-
-def sort_and_print_grocery_List(input_list, StoreCofigFileName=""):
+def sort_and_print_grocery_list_file(recipe_list, grocery_list, StoreCofigFileName=""):
+    output_file_name="..//most_recent_grocery_list.txt"
     defaultStoreFileName = "defaultItemDepartments.txt"
     default_dept_from_ing_key, default_ing_list_from_dept_key, print_order = get_item_dept_dicts(defaultStoreFileName)
+    out_file=open(output_file_name,"w")
+
+    # write the list of recipes to file
+    out_file.write("*** Recipes this Week ***\n")
+    for recipe in recipe_list:
+        out_file.write(recipe+"\n")
+    out_file.write("*************************\n\n")
+
     if StoreCofigFileName != "":
         dict_dept_from_ing_key, dict_ing_list_from_dept_key, print_order = get_item_dept_dicts(StoreCofigFileName)
     else:
         dict_dept_from_ing_key={}
         dict_ing_list_from_dept_key={}
 
+    # check to see if an item is listed in the non-default store file and will
+    # write out items in the the order given in the store config file
     for dept in print_order:
-        for item in input_list:
+        for item in grocery_list:
             if item.name in dict_dept_from_ing_key:
                 if dict_dept_from_ing_key[item.name] == dept:
-                    print(dept + " -- " + item.grocery_list_line)
+                    out_file.write(dept + " -- " + item.grocery_list_line+"\n")
             elif item.name in default_dept_from_ing_key:
                 if default_dept_from_ing_key[item.name] == dept:
-                    print(dept + " -- " + item.grocery_list_line)
+                    out_file.write(dept + " -- " + item.grocery_list_line+"\n")
             else:
                 pass
 
-    for item in input_list:
-        if item.name not in dict_dept_from_ing_key:
-            print("No Department Listed -- " + item.grocery_list_line)
+    for item in grocery_list:
+        if item.name not in dict_dept_from_ing_key and item.name not in default_dept_from_ing_key:
+            out_file.write("No Department Listed -- " + item.grocery_list_line+"\n")
 
     pass
 

@@ -1,38 +1,29 @@
 ## Print order
-Baking
-Canned non-Veggies
-Canned Veggies
-Cheese
-Dairy
-Vegitables
-Fruits
-Roots
-Spices
-Meat
-Soup
-Rice and Beans
-
-## Vegitables
-
-## Fruits
-
-## Roots
-
-## Spices
-
-## Canned Veggies
-
-
-## Canned non-Veggies
-
-## Meat
-
-## Soup
-
-## Dairy
-
-## Cheese
-
-## Rice and Beans
-
-## Baking
+liquor
+vegitables
+fruits
+roots
+condiments
+frozen sea food
+snacks
+tortillas
+candy
+beverages
+frozen desserts
+frozen non-veggies
+frozen veggies
+meat
+cheese
+dairy
+pb&j
+bread
+italian
+mexican
+rice and beans
+canned non-veggies
+soup
+canned veggies
+asian
+breakfast
+baking
+spices

@@ -17,5 +17,5 @@ if __name__ == "__main__":
         for recipe in selected_recepies:
                 grocery_list += grocery_functions.get_ingredients_from_recipe_file("..\\recipes\\"+recipe+".txt")
         grocery_list=grocery_functions.condense_grocery_list(grocery_list)
-        grocery_functions.sort_and_print_grocery_List(grocery_list, "Smiths-Eu-JT-ItemDepartments.txt")
+        grocery_functions.sort_and_print_grocery_list_file(selected_recepies, grocery_list, "Smiths-Eu-JT-ItemDepartments.txt")
 

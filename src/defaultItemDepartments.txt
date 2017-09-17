@@ -4,11 +4,14 @@ baking
 beverages
 bread
 breakfast
+candy
 canned non-veggies
 canned veggies
 cheese
 condiments
 dairy
+frozen desserts
+frozen non-veggies
 frozen sea food
 frozen veggies
 fruits
@@ -19,8 +22,10 @@ mexican
 pb&j
 rice and beans
 roots
+snacks
 soup
 spices
+tortillas
 vegitables
 
 ## asian
@@ -44,6 +49,8 @@ water
 ## breakfast
 maple syrup
 
+## candy
+
 ## canned non-veggies
 ro-tel diced tomatoes and green chile
 
@@ -65,6 +72,10 @@ butter
 heavy cream
 heavy whipping cream
 plain yogurt
+
+## frozen desserts
+
+## frozen non-veggies
 
 ## frozen sea food
 raw shrimp peeled and deveined
@@ -119,6 +130,8 @@ shallot bulb
 sweet potato
 yellow onion
 
+## snacks
+
 ## soup
 chicken broth
 chicken or vegetable broth
@@ -145,6 +158,8 @@ sage
 salt
 thyme
 
+## tortillas
+
 ## vegitables
 asparagu
 bell pepper
@@ -167,3 +182,4 @@ roma tomato
 zucchini
 
 ## NO DEPARTMENT!
+poo
