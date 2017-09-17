@@ -1,3 +1,17 @@
+## Print order
+Baking
+Canned non-Veggies
+Canned Veggies
+Cheese
+Dairy
+Vegitables
+Fruits
+Roots
+Spices
+Meat
+Soup
+Rice and Beans
+
 ## Vegitables
 bell pepper
 broccoli
@@ -12,7 +26,7 @@ tomato
 
 ## Roots
 garlic
-onions
+onion
 yellow onion
 potato
 
@@ -33,7 +47,7 @@ can diced tomato
 ro-tel diced tomatoes and green chile
 
 ## Meat
-chicken breasts
+chicken breast
 rotisserie chicken
 prosciutto
 turkey kielbasa

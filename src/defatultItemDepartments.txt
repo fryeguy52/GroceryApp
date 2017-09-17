@@ -1,48 +1,38 @@
 ## print order
-asian
 baking
-beverages
-bread
-breakfast
 canned non-veggies
 canned veggies
 cheese
-condiments
 dairy
-frozen sea food
-frozen veggies
 fruits
-italian
-liquor
 meat
-mexican
-pb&j
 rice and beans
 roots
 soup
 spices
 vegitables
-
-## asian
-light coconut milk
-soy sauce
+beverages
+frozen veggies
+italian
+frozen sea food
+asian
+condiments
+breakfast
+liquor
+PB&J
+bread
 
 ## baking
+olive oil
 corn starch
 cornstarch
-flour
-molasse
-olive oil
-red wine vinegar
 sugar
+molasse
+flour
+red wine vinegar
 
 ## beverages
 water
-
-## bread
-
-## breakfast
-maple syrup
 
 ## canned non-veggies
 ro-tel diced tomatoes and green chile
@@ -51,104 +41,92 @@ ro-tel diced tomatoes and green chile
 can diced tomato
 tomato paste
 
+
+
 ## cheese
-mozzarella cheese
+shredded cheddar cheese
 parmesan
 parmesan cheese
-shredded cheddar cheese
-
-## condiments
-ketchup
+mozzarella cheese
 
 ## dairy
-butter
 heavy cream
-heavy whipping cream
 plain yogurt
+butter
+heavy whipping cream
 
-## frozen sea food
-raw shrimp peeled and deveined
+## fruits
+lemon
+tomato
+lime
+fuji apple
 
 ## frozen veggies
 frozen pea
 frozen spinach
 
-## fruits
-fuji apple
-lemon
-lime
-tomato
-
-## italian
-linguine
-pasta
-prepared pesto
-
-## liquor
-guinness beer
-
 ## meat
-bacon
-chicken
 chicken breast
+chicken
 chicken thigh
-ground turkey
 prosciutto
 rotisserie chicken
-stew beef (no bone)
 turkey kielbasa
-
-## mexican
-
-## pb&j
-honey
+bacon
+stew beef (no bone)
+ground turkey
 
 ## rice and beans
-black bean
-garbanzo bean
-jasmine rice
 rice
-white bean
 white rice
+garbanzo bean
+white bean
+black bean
+jasmine rice
 
 ## roots
 garlic
 onion
 potato
-shallot bulb
-sweet potato
 yellow onion
+sweet potato
+shallot bulb
 
 ## soup
 chicken broth
-chicken or vegetable broth
 vegetable broth
+chicken or vegetable broth
 
 ## spices
-bay leave
 black pepper
 cajun or creole seasoning
-cilantro
-crushed red pepper
 curry powder
-fennel seed
-garlic powder
 italian seasoning
 kosher salt
-onion powder
 paprika
 pepper
-red pepper
-red pepper flake
+salt
 rosemary
 sage
-salt
+crushed red pepper
+fennel seed
 thyme
+onion powder
+red pepper
+red pepper flake
+bay leave
+cilantro
+garlic powder
 
 ## vegitables
-asparagu
 bell pepper
 broccoli
+fresh cilantro
+green bell pepper
+non-green bell pepper
+zucchini
+asparagu
+asparagus
 broccoli floret
 brussels sprout
 butternut squash
@@ -156,14 +134,36 @@ carrot
 cauliflower
 celery stalk
 diced tomato
-fresh cilantro
-green bell pepper
-green onion
-mushroom
-non-green bell pepper
-parsley
 red bell pepper
 roma tomato
-zucchini
+green onion
+parsley
+mushroom
+
+## italian
+pasta
+prepared pesto
+linguine
+
+## frozen sea food
+raw shrimp peeled and deveined
+
+## asian
+soy sauce
+light coconut milk
+
+## condiments
+ketchup
+
+## breakfast
+maple syrup
+
+## liquor
+guinness beer
+
+## PB&J
+honey
+
+## bread
 
 ## NO DEPARTMENT!

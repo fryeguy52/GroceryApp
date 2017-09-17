@@ -162,20 +162,59 @@ def get_item_dept_dicts(file_name='defaultItemDepartments.txt'):
     return ingredient_dept_dict, dept_list_of_ing_dict, print_order_list
 
 def make_all_ingredients_file(recipe_dir="..//recipes"):
+    defaultStoreFileName = "defaultItemDepartments.txt"
     recipe_names = get_recipe_names(recipe_dir)
+    default_dept_from_ing_key, default_ing_list_from_dept_key, print_order = get_item_dept_dicts(defaultStoreFileName)
     all_ingredients_in_all_recipes=[]
     for recipe in recipe_names:
-        all_ingredients_in_all_recipes += get_ingredients_from_recipe_file("test-recipes\\"+recipe+".txt")
+        all_ingredients_in_all_recipes += get_ingredients_from_recipe_file(recipe_dir+"\\"+recipe+".txt")
     for ingredient in all_ingredients_in_all_recipes:
         ingredient.unit=''
     grocery_list=condense_grocery_list(all_ingredients_in_all_recipes)
-    print_grocery_list(grocery_list)
-
+    # print_grocery_list(grocery_list)
 
     out_file=open('completeIngredientList.txt', 'w')
     for ingredient in grocery_list:
         out_file.write(ingredient.name+"\n")
     out_file.close()
+
+def get_all_ingredients(recipe_dir="..//recipes"):
+    recipe_names = get_recipe_names(recipe_dir)
+    all_ingredients_in_all_recipes=[]
+    for recipe in recipe_names:
+        all_ingredients_in_all_recipes += get_ingredients_from_recipe_file(recipe_dir+"\\"+recipe+".txt")
+    for ingredient in all_ingredients_in_all_recipes:
+        ingredient.unit=''
+    grocery_list=condense_grocery_list(all_ingredients_in_all_recipes)
+    return grocery_list
+
+def update_default_ing_dept_file(input_list):
+    input_list.sort(key=lambda x: x.name)
+    defaultStoreFileName = "defaultItemDepartments.txt"
+    default_dept_from_ing_key, default_ing_list_from_dept_key, print_order = get_item_dept_dicts(defaultStoreFileName)
+    print_order.sort()
+    out_file=open(defaultStoreFileName, "w")
+
+    out_file.write("## print order\n")
+    for dept in print_order:
+        out_file.write(dept+"\n")
+
+    for dept in print_order:
+        out_file.write("\n## "+dept+"\n")
+        for item in input_list:
+            if item.name in default_dept_from_ing_key:
+                if default_dept_from_ing_key[item.name] == dept:
+                    out_file.write(item.name+"\n")
+            else:
+                pass
+
+    out_file.write("\n## NO DEPARTMENT!\n")
+    for item in input_list:
+        if item.name not in default_dept_from_ing_key:
+            out_file.write(item.name+"\n")
+
+    out_file.close()
+
 
 def sort_and_print_grocery_List(input_list, StoreCofigFileName=""):
     defaultStoreFileName = "defaultItemDepartments.txt"

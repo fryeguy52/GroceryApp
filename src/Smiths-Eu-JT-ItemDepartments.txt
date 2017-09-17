@@ -13,58 +13,26 @@ Soup
 Rice and Beans
 
 ## Vegitables
-bell pepper
-broccoli
-fresh cilantro
-green bell pepper
-non-green bell pepper
-zucchini
 
 ## Fruits
-lemon
-tomato
 
 ## Roots
-garlic
-onion
-yellow onion
-potato
 
 ## Spices
-black pepper
-cajun or creole seasoning
-curry powder
-italian seasoning
-kosher salt
-paprika
-pepper
-salt
 
 ## Canned Veggies
-can diced tomato
+
 
 ## Canned non-Veggies
-ro-tel diced tomatoes and green chile
 
 ## Meat
-chicken breast
-rotisserie chicken
-prosciutto
-turkey kielbasa
 
 ## Soup
-chicken broth
 
 ## Dairy
-heavy cream
-plain yogurt
 
 ## Cheese
-shredded cheddar cheese
 
 ## Rice and Beans
-rice
-white rice
 
 ## Baking
-olive oil

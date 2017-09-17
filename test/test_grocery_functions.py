@@ -48,8 +48,8 @@ class TestGroceryFuncs(unittest.TestCase):
         # grocery_functions.print_grocery_list(grocery_list)
         # grocery_functions.sort_and_print_grocery_List(grocery_list, "Smiths-Eu-JT-ItemDepartments.txt")
 
-    # def test_makeAllIngredientsFile(self):
-    #     grocery_functions.make_all_ingredients_file()
+    def test_makeAllIngredientsFile(self):
+        grocery_functions.make_all_ingredients_file()
 
     def test_getItemDeptDicts(self):
         grocery_functions.get_item_dept_dicts("Smiths-Eu-JT-ItemDepartments.txt")
@@ -61,6 +61,9 @@ class TestGroceryFuncs(unittest.TestCase):
         self.assertTrue('invalid format, "1 lb, chicken breasts" in: broken-test-recipes//broken_recipe.txt' in errors)
         self.assertTrue('invalid heading, "wrong_header" in file: broken-test-recipes//broken_recipe.txt' in errors)
         self.assertTrue('Blank recipe in: broken-test-recipes//broken_recipe.txt' in errors)
+
+    def test_update_default_ing_dept_file(self):
+        grocery_functions.update_default_ing_dept_file(grocery_functions.get_all_ingredients("test-recipes"))
 
     def suite(self):
         return unittest.TestLoader().loadTestsFromTestCase(TestGroceryFuncs)
