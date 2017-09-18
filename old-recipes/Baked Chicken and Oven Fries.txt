@@ -3,7 +3,7 @@ chicken
 oven
 easy
 ##Ingredients
-chicken
+chicken breasts
 bread crumbs
 potatoes
 ketchup
