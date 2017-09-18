@@ -30,6 +30,7 @@ vegitables
 
 ## asian
 light coconut milk
+seaseme oil
 soy sauce
 
 ## baking
@@ -38,6 +39,7 @@ cornstarch
 flour
 molasse
 olive oil
+pancake mix
 red wine vinegar
 sugar
 
@@ -45,6 +47,8 @@ sugar
 water
 
 ## bread
+hamburger bun
+oat nut bread
 
 ## breakfast
 maple syrup
@@ -56,22 +60,33 @@ ro-tel diced tomatoes and green chile
 
 ## canned veggies
 can diced tomato
+corn
+green bean
+stewed tomato
 tomato paste
 
 ## cheese
+mexican blend cheese
 mozzarella cheese
 parmesan
 parmesan cheese
+parmesian cheese
 shredded cheddar cheese
 
 ## condiments
+bbq sauce
 ketchup
+pickle
 
 ## dairy
+1% milk
 butter
+egg
 heavy cream
 heavy whipping cream
 plain yogurt
+whole milk
+yogurt
 
 ## frozen desserts
 
@@ -83,12 +98,18 @@ raw shrimp peeled and deveined
 ## frozen veggies
 frozen pea
 frozen spinach
+green chile
 
 ## fruits
+avocado
+bannana
+cherry tomato
 fuji apple
 lemon
 lime
 tomato
+weekly berrie
+weekly tree fruit
 
 ## italian
 linguine
@@ -96,20 +117,29 @@ pasta
 prepared pesto
 
 ## liquor
+beer
 guinness beer
 
 ## meat
 bacon
+beef pot roast
+beef stew meat
+boneless pork roast
 chicken
 chicken breast
 chicken thigh
+ground beef
+ground beef | frozen pattie
 ground turkey
 prosciutto
 rotisserie chicken
+sausage|bacon
 stew beef (no bone)
 turkey kielbasa
 
 ## mexican
+pace picante medium salsa
+refried black bean
 
 ## pb&j
 honey
@@ -123,18 +153,22 @@ white bean
 white rice
 
 ## roots
+fresh garlic
 garlic
 onion
 potato
 shallot bulb
+small white potato
 sweet potato
 yellow onion
 
 ## snacks
 
 ## soup
+beef broth
 chicken broth
 chicken or vegetable broth
+mushroom soup mix
 vegetable broth
 
 ## spices
@@ -143,11 +177,13 @@ black pepper
 cajun or creole seasoning
 cilantro
 crushed red pepper
+cumin
 curry powder
 fennel seed
 garlic powder
 italian seasoning
 kosher salt
+mrs. dash
 onion powder
 paprika
 pepper
@@ -159,6 +195,8 @@ salt
 thyme
 
 ## tortillas
+corn tortilla
+flour tortilla
 
 ## vegitables
 asparagu
@@ -169,41 +207,20 @@ brussels sprout
 butternut squash
 carrot
 cauliflower
+celery
 celery stalk
 diced tomato
 fresh cilantro
 green bell pepper
 green onion
+lettuce
+mini bell pepper
 mushroom
 non-green bell pepper
 parsley
 red bell pepper
 roma tomato
+snacking veggie
 zucchini
 
 ## NO DEPARTMENT!
-1% milk
-bannana
-beef pot roast
-beer
-cherry tomato
-corn tortilla
-egg
-ground beef | frozen pattie
-lettuce
-mini bell pepper
-mrs. dash
-mushroom soup mix
-oat nut bread
-pace picante medium salsa
-pancake mix
-parmesian cheese
-refried black bean
-sausage|bacon
-seaseme oil
-small white potato
-snacking veggie
-weekly berrie
-weekly tree fruit
-whole milk
-yogurt
