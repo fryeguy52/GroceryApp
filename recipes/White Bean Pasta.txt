@@ -1,5 +1,5 @@
 ## tags
-vegetarian
+meatless
 easy
 
 ## ingredients
@@ -9,7 +9,7 @@ easy
 1, can, white beans
 1, package, frozen spinach
 2, clove, garlic
-1, , salad mix
+1, package, salad mix
 1, , tomato
 1, , cucumber
 
