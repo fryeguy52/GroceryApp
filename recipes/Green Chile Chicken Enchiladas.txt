@@ -1,6 +1,6 @@
 ##Tags
 oven
-medium
+hard
 dairy
 chicken
 ##Ingredients
@@ -11,11 +11,21 @@ chicken
 50, , corn tortillas
 1, can, refried black beans
 3, cups, rice
-1, jar, salsa
 2, , avocado
 2, medium, tomato
+1, tub, sour cream
 
 ##Recipe
+3 chicken breast
+12 oz medium chopped NM green chile
+1 lb mexican blend cheese
+garlic powder
+50 corn tortillas
+1 can refried black beans
+3 cups rice
+2 avocado
+2 medium tomato
+1 tub sour cream
 
 * green chile and a bit of water into sauce pan. boil the whole time you are prepping the rest
 * cut chicken in halk (thickwise). season with garlic, salt, and pepper.  grill.
