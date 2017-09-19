@@ -1,6 +1,7 @@
 ## print order
 asian
 baking
+bakery
 beverages
 bread
 breakfast
@@ -10,6 +11,7 @@ canned veggies
 cheese
 condiments
 dairy
+deli
 frozen desserts
 frozen non-veggies
 frozen sea food
@@ -49,6 +51,8 @@ water
 ## bread
 hamburger bun
 oat nut bread
+dinner roll
+french bread
 
 ## breakfast
 maple syrup
@@ -64,14 +68,18 @@ corn
 green bean
 stewed tomato
 tomato paste
+artichoke heart
+black olive
+canned corn
 
 ## cheese
 mexican blend cheese
 mozzarella cheese
 parmesan
 parmesan cheese
-parmesian cheese
 shredded cheddar cheese
+mozzarella
+shredded cheese
 
 ## condiments
 bbq sauce
@@ -87,10 +95,12 @@ heavy whipping cream
 plain yogurt
 whole milk
 yogurt
+sour cream
 
 ## frozen desserts
 
 ## frozen non-veggies
+frozen lasagna
 
 ## frozen sea food
 raw shrimp peeled and deveined
@@ -99,6 +109,8 @@ raw shrimp peeled and deveined
 frozen pea
 frozen spinach
 green chile
+medium chopped nm green chile
+roasted chopped medium nm green chile
 
 ## fruits
 avocado
@@ -115,6 +127,8 @@ weekly tree fruit
 linguine
 pasta
 prepared pesto
+pizza sauce
+white pizza sauce
 
 ## liquor
 beer
@@ -131,11 +145,13 @@ chicken thigh
 ground beef
 ground beef | frozen pattie
 ground turkey
-prosciutto
 rotisserie chicken
 sausage|bacon
 stew beef (no bone)
 turkey kielbasa
+canadian bacon
+pepperoni
+steak
 
 ## mexican
 pace picante medium salsa
@@ -151,6 +167,7 @@ jasmine rice
 rice
 white bean
 white rice
+wild rice
 
 ## roots
 fresh garlic
@@ -161,6 +178,7 @@ shallot bulb
 small white potato
 sweet potato
 yellow onion
+red onion
 
 ## snacks
 
@@ -197,6 +215,7 @@ thyme
 ## tortillas
 corn tortilla
 flour tortilla
+nm red chile powder
 
 ## vegitables
 asparagu
@@ -222,31 +241,10 @@ red bell pepper
 roma tomato
 snacking veggie
 zucchini
+mini pepper
+cucumber
+sliced mushroom
+salad
 
 ## NO DEPARTMENT!
-artichoke heart
-black olive
-canadian bacon
-canned corn
-canned pineapple
-cucumber
-dinner roll
 dion's pizza dough
-french bread
-frozen lasagna
-medium chopped nm green chile
-mini pepper
-mozzarella
-nm red chile powder
-pepperoni
-pizza sauce
-red onion
-roasted chopped medium nm green chile
-salad
-salsa
-shredded cheese
-sliced mushroom
-sour cream
-steak
-white pizza sauce
-wild rice
