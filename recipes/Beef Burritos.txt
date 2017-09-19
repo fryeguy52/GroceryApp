@@ -15,11 +15,26 @@ stove
 2, medium, tomato
 .25, teaspoon, cumin
 1, tablespoon, olive oil
+1, can, black beans
 ##Recipe
+1 pound ground beef
+3 large potatoes
+1 onion
+2 cloves fresh garlic
+4, oz green chile
+3 cups rice
+1 can black beans
+2 avocado
+8 flour tortillas
+8 oz mexican blend cheese
+2 medium tomatoes
+.25 teaspoon cumin
+1 tablespoon olive oil
+
 Potatoes
 * preheat oven to 425
 * chop potatoes into 1/2 cubes
-* coat potatoes in olive oil, salt, and pepper and place on baking sheet.
+* coat potatoes in olive oil, salt, and pepper and place on pamed baking sheet.
 * bake on 425 until done
 
 Rice
