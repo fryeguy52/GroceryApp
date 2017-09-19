@@ -2,6 +2,7 @@
 beef
 easy
 stove
+oven
 ##Ingredients
 1, pound, ground beef
 3, large, potatoes
