@@ -12,8 +12,10 @@ beef
 8, , hamburger buns
 4, oz, ketchup
 1, table spoon, Mrs. Dash
+
 ##Recipe
-*cut potatoes into wedges
-*cover potatoes with olive oil and mrs dash, bake at 425
-*slice tomato, onions, pickles
-*cook meat on the grill
+
+* cut potatoes into wedges
+* cover potatoes with olive oil and mrs dash, bake at 425
+* slice tomato, onions, pickles
+* cook meat on the grill
