@@ -1,6 +1,6 @@
 ##tags
 chicken
-easy
+medium
 oven
 ##ingredients
 6, , chicken thighs
