@@ -1,6 +1,6 @@
 ##Tags
 breakfast
-hard
+medium
 stove
 ##Ingredients
 6, , eggs
@@ -11,6 +11,13 @@ stove
 1, , onions
 1, , olive oil
 ##Recipe
+6 eggs
+2 cups pancake mix
+8 oz sausage|bacon
+1 maple syrup
+4 large, potatoes
+1 onions
+1 olive oil
 *chop potatoes 1/2 inch cubes, dice onion
 *cover potato and onion in olive oil and begin cooking on the stove
 *cook bacon sausage on medium low heat
