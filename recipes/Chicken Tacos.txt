@@ -1,5 +1,6 @@
 ##Tags
 grill
+stove
 medium
 chicken
 ##Ingredients
