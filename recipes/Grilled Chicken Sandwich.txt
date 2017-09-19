@@ -1,21 +1,28 @@
 ##Tags
 grill
 medium
-beef
+chicken
 ##Ingredients
 3, , chicken breasts
 1, , salad
 2, medium, tomatoes
 4, large, potatoes
-10, , pickles
-1, , onions
-5, , hamburger buns
+1, , onion
+6, , hamburger buns
 4, oz, ketchup
 2, , avocado
 
 ##Recipe
+3 chicken breasts
+1 package salad
+2 medium tomatoes
+4 large potatoes
+1 onion
+6 hamburger buns
+4 oz ketchup
+2 avocado
 
-* cut poatoes into wedges, coat in olive oil bake at 425
+* cut poatoes into wedges, coat in olive oil bake on pamed sheet at 425
 * cut chicken in half (thickness). season with garlic, salt, pepper
 * chop tomatoes, onions, avocados, as sandwich fixins
 * grill chicken
