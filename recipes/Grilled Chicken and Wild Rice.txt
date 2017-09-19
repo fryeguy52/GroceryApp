@@ -6,7 +6,7 @@ chicken
 3, , chicken breast
 3, cup, wild rice
 2, , zucchini
-2 pounds, mini bell pepper
+2, pounds, mini bell pepper
 1, tablespoon, olive oil
 ##Recipe
 
