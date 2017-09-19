@@ -2,6 +2,7 @@
 Chicken
 spicy
 easy
+stove
 
 ## Ingredients
 1, cup, rice
