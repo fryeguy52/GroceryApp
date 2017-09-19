@@ -9,13 +9,26 @@ beef
 1, , onions
 1, can, canned corn
 1, can, stewed tomatos
-1, package, dinner rolls
+1, package, flour tortillas
 1, can, black beans
 4, cups, chicken broth
 8, oz, roasted chopped medium NM green chile
+1, tub, sour cream
 ##Recipe
+2 lbs beef stew meat
+2 tablespoons NM red chile powder
+4 large potatoes
+1 onion
+1 can corn
+1 can stewed tomatos
+1 can black beans
+4 cups chicken broth
+8 oz roasted chopped medium NM green chile
+1 tub sour cream
+Flour tortillas
 
  * dice onion
  * potatoes cut to .75" cubes
- * put everything, except rolls, into crock pot.
+ * put everything, except tortillas and sour cream, into crock pot.
  * cook on high for 6-8 hours
+ * serve with sour cream and tortillas
