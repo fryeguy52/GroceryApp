@@ -9,9 +9,15 @@ medium
 1, pound, asparagus
 2, pounds, mini peppers
 8, oz, shredded cheese
-4, dallups, sour cream
+1, tub, sour cream
 
 ## Recipe
+4 pieces steak
+4 large potatoes
+1 pound asparagus
+2 pounds mini peppers
+8 oz shredded cheese
+sour cream
 
 * microwave potatoes after forking them, coat with olive oil, individually wrap in Al foil
 * grill steaks, asparagus, peppers, and potatoes
