@@ -11,7 +11,19 @@ crockpot
 1, can, stewed tomatos
 1, can, green beans
 1, can, beef broth
+1, , dinner rolls
 ##Recipe
-*chop celery, onions, and potatos
-*put everyting in a crockpot and cook on high for 6-8 hours
+2 pounds beef stew meat
+4 large potatoes
+1 celery
+1 onions
+1 can corn
+1 can stewed tomatos
+1 can green beans
+1 can beef broth
+dinner rolls
+
+* chop celery, onions, and potatos
+* put everyting in a crockpot and cook on high for 6-8 hours
+* serve with rolls
 
