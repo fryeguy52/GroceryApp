@@ -2,7 +2,7 @@
 oven
 easy
 beef
-meetless
+meatless
 ##Ingredients
 1, , frozen lasagna
 1, , salad
@@ -12,9 +12,16 @@ meetless
 1, loaf, french bread
 2, oz, butter
 1, , garlic powder
-6, oz, parmesan cheese
 
 ##Recipe
+1 frozen lasagna
+1 salad mix
+1 bell pepper
+1 medium carrot
+1 cucumber
+1 loaf french bread
+butter
+garlic powder
 
 * put lasagna in oven 14 years before you want it
 * chop veggies for salad
