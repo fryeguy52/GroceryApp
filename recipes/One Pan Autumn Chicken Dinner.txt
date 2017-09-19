@@ -1,4 +1,7 @@
 ##tags
+chicken
+easy
+oven
 ##ingredients
 6, , chicken thighs
 4, Tbsp, olive oil
