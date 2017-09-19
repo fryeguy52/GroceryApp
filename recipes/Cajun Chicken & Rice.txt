@@ -14,6 +14,9 @@ easy
 4, cup, bell peppers
 10, oz, Ro-Tel Diced Tomatoes and Green Chiles
 1, cup, shredded cheddar cheese
+1, package, salad mix
+1, , tomato
+1, , cucumber
 
 ## Recipe
 1 cup uncooked rice
@@ -25,6 +28,10 @@ Cajun or Creole Seasoning
 4 cups diced onions and bell peppers
 1 (10-oz) can Ro-Tel Diced Tomatoes and Green Chiles
 1 cup shredded cheddar cheese
+Salax mix
+1 tomato
+1 cucumber
+
 Directions:
 
 Combine rice, water (or broth) and salt in a saucepan. Bring to a boil, then cover, reduce heat to low,
@@ -42,3 +49,5 @@ softened and browned.
 Add the tomatoes to the onions and bell peppers, then add the chicken back in, along with any juices that
 may have collected on the plate. Add the cooked rice and stir until well combined. Add the cheese if
 desired and stir well to combine.
+
+Serve with side salad.
