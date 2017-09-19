@@ -1,6 +1,7 @@
 ## tags
 meatless
 easy
+stove
 
 ## ingredients
 1 , box, linguine
