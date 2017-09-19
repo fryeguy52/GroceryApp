@@ -1,5 +1,6 @@
 ##Tags
 grill
+oven
 medium
 beef
 ##Ingredients
