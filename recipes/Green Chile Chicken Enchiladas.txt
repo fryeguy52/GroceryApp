@@ -1,7 +1,8 @@
 ##Tags
 oven
+grill
 hard
-dairy
+spicy
 chicken
 ##Ingredients
 3, , chicken breast
