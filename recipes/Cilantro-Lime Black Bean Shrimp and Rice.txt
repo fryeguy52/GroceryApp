@@ -1,4 +1,6 @@
 ##tags
+shrimp
+medium
 ##ingredients
 2, tablespoons, olive oil
 1, pound, raw shrimp peeled and deveined
@@ -11,6 +13,9 @@
 1, , lime
 1, can, black beans
 .5,  cup, cilantro
+1, package, salad mix
+1, , tomato
+1, , cucumber
 ##recipe
 Cilantro-Lime Black Bean Shrimp and Rice
 
@@ -30,6 +35,9 @@ Rice
 2 tablespoons lime juice, freshly squeezed + extra
 1 can (15 oz) black beans, rinsed, drained  Coupons
 1/2 cup fresh cilantro, chopped + extra
+Salad mix
+1 tomato
+1 cucumber
 
 Instructions
 
@@ -48,3 +56,5 @@ covered, until the rice is cooked through.
 Mix in the lime juice, rinsed and drained black beans, and fresh cilantro into the cooked rice.
 Add extra lime juice (about 1 tablespoon) and extra chopped fresh cilantro to the plate with shrimp, 
 mix to coat shrimp with lime juice and cilantro. Add the shrimp to the skillet with rice and gently reheat.
+
+Serve with side salad.
