@@ -1,7 +1,7 @@
 ##Tags
 crockpot
 medium
-beef
+chicken
 ##Ingredients
 2, lbs, chicken thighs
 2, tablespoons, NM red chile powder
@@ -9,14 +9,27 @@ beef
 1, , onions
 1, can, canned corn
 1, can, stewed tomatos
-1, package, dinner rolls
+1, package, tortillas
 1, can, black beans
 4, cups, chicken broth
 8, oz, roasted chopped medium NM green chile
+1, tub, sour cream
 ##Recipe
+2 lbs chicken thighs
+2 tablespoons NM red chile powder
+4 large potatoes
+1 onions
+1 can corn
+1 can stewed tomatos
+1 can black beans
+4 cups chicken broth
+8 oz roasted chopped medium NM green chile
+Flour tortillas
+1 tub sour cream
 
  * dice onion
  * potatoes cut to .75" cubes
  * chop chicken
- * put everything, except rolls, into crock pot.
+ * put everything, except sour cream and tortillas, into crock pot.
  * cook on high for 6-8 hours
+ * serve with tortillas and sour cream
