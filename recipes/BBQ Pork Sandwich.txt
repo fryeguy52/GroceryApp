@@ -1,6 +1,7 @@
 ##Tags
 pork
 crockpot
+oven
 easy
 ##Ingredients
 1, package, hamburger buns
