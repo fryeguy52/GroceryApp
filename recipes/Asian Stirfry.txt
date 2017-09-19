@@ -7,12 +7,23 @@ easy
 2, , chicken breasts
 2, cups, broccoli
 2, , bell pepper
-1, medium, carrots
+.5, bag, baby carrots
 2, , zucchini
 1, , soy sauce
 1, tablespoon, seaseme oil
+1, box, egg rolls or pot stickers
 ##Recipe
+2 chicken breasts
+2 cups broccoli
+2 bell peppers
+.5 bag baby carrots
+2 zucchini
+soy sauce to taste
+1 tablespoon seaseme oil
+1 box egg rolls or pot stickers
+
 * start the rice in the rice cooker
 * chop chicken and veggies into small chunks
+* bake egg rolls
 * in a fry pan, cook chicken and veggies with oil
 * add soy sauce to taste
