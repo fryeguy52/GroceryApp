@@ -1,7 +1,7 @@
 ## print order
 asian
-baking
 bakery
+baking
 beverages
 bread
 breakfast
@@ -31,17 +31,36 @@ tortillas
 vegitables
 
 ## asian
+beef ramen noodle
+dark sesame oil
+egg noodle
+egg rolls or pot sticker
 light coconut milk
+peanut sauce
+rice vinegar
+sambal oelek
 seaseme oil
+sesame oil
+sesame seed
 soy sauce
+toasted sesame seed
+water chestnut
+
+## bakery
+country bread
 
 ## baking
+bread crumb
+brown sugar
+cooking spray
 corn starch
 cornstarch
+evaporated milk
 flour
 molasse
 olive oil
 pancake mix
+panko bread crumb
 red wine vinegar
 sugar
 
@@ -49,10 +68,10 @@ sugar
 water
 
 ## bread
-hamburger bun
-oat nut bread
 dinner roll
 french bread
+hamburger bun
+oat nut bread
 
 ## breakfast
 maple syrup
@@ -60,26 +79,33 @@ maple syrup
 ## candy
 
 ## canned non-veggies
-ro-tel diced tomatoes and green chile
 
 ## canned veggies
-can diced tomato
-corn
-green bean
-stewed tomato
-tomato paste
 artichoke heart
+bean
 black olive
 canned corn
+canned pineapple tidbit
+corn
+green bean
+ro-tel diced tomatoes and green chile
+rotel tomatoes and chile
+stewed tomato
+tomato paste
 
 ## cheese
+cheese
 mexican blend cheese
+mozzarella
 mozzarella cheese
 parmesan
 parmesan cheese
+ricotta
 shredded cheddar cheese
-mozzarella
 shredded cheese
+shreddedcheese
+sliced cheese
+swi
 
 ## condiments
 bbq sauce
@@ -90,14 +116,20 @@ pickle
 1% milk
 butter
 egg
+half and half
 heavy cream
 heavy whipping cream
+low-fat sour cream
+milk
 plain yogurt
+sour cream
 whole milk
 yogurt
-sour cream
+
+## deli
 
 ## frozen desserts
+piecrust
 
 ## frozen non-veggies
 frozen lasagna
@@ -106,7 +138,9 @@ frozen lasagna
 raw shrimp peeled and deveined
 
 ## frozen veggies
+frozen corn
 frozen pea
+frozen peas and carrot
 frozen spinach
 green chile
 medium chopped nm green chile
@@ -126,8 +160,10 @@ weekly tree fruit
 ## italian
 linguine
 pasta
-prepared pesto
+penne
 pizza sauce
+prepared pesto
+spaghetti sauce
 white pizza sauce
 
 ## liquor
@@ -136,32 +172,38 @@ guinness beer
 
 ## meat
 bacon
+beef
 beef pot roast
 beef stew meat
+boneless chicken thigh
 boneless pork roast
+canadian bacon
 chicken
 chicken breast
 chicken thigh
+diced ham
 ground beef
 ground beef | frozen pattie
 ground turkey
+pepperoni
+pork roast
 rotisserie chicken
 sausage|bacon
+steak
 stew beef (no bone)
 turkey kielbasa
-canadian bacon
-pepperoni
-steak
 
 ## mexican
 pace picante medium salsa
 refried black bean
+taco shell
 
 ## pb&j
 honey
 
 ## rice and beans
 black bean
+dried white bean
 garbanzo bean
 jasmine rice
 rice
@@ -171,22 +213,28 @@ wild rice
 
 ## roots
 fresh garlic
+fresh ginger
 garlic
+minced garlic
 onion
 potato
+red onion
 shallot bulb
 small white potato
 sweet potato
+white onion
 yellow onion
-red onion
 
 ## snacks
+peanut
 
 ## soup
 beef broth
+broth
 chicken broth
 chicken or vegetable broth
 mushroom soup mix
+swedish meatball mix
 vegetable broth
 
 ## spices
@@ -197,8 +245,12 @@ cilantro
 crushed red pepper
 cumin
 curry powder
+dried oregano
+dried rosemary
 fennel seed
 garlic powder
+ground ginger
+ground nutmeg
 italian seasoning
 kosher salt
 mrs. dash
@@ -211,15 +263,21 @@ rosemary
 sage
 salt
 thyme
+whole clove
 
 ## tortillas
 corn tortilla
 flour tortilla
 nm red chile powder
+tortilla
 
 ## vegitables
 asparagu
+baby carrot
+baby spinach
+babycarrot
 bell pepper
+boston lettuce
 broccoli
 broccoli floret
 brussels sprout
@@ -228,23 +286,26 @@ carrot
 cauliflower
 celery
 celery stalk
+cole slaw mix
+cucumber
 diced tomato
-fresh cilantro
 green bell pepper
 green onion
 lettuce
 mini bell pepper
+mini pepper
 mushroom
 non-green bell pepper
 parsley
 red bell pepper
 roma tomato
-snacking veggie
-zucchini
-mini pepper
-cucumber
-sliced mushroom
 salad
+salad mix
+sliced mushroom
+snacking veggie
+snap pea
+yellow pepper
+zucchini
 
 ## NO DEPARTMENT!
 dion's pizza dough
