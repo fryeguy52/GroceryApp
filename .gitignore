@@ -2,8 +2,8 @@
 *grocery_list_*.txt
 most_recent_grocery_list.txt
 
-# task api key
-Grocery-72*74.json
+# Trello API info
+src/trello_settings.py
 
 # Windows image file caches
 Thumbs.db

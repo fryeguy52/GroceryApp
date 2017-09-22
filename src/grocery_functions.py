@@ -81,7 +81,7 @@ def get_recipe_from_recipe_file(file):
     :return: a list of lines from the recipe
     """
     heading=''
-    recipe=[]
+    recipe=""
     with open(file,'r') as recipe_file:
         for line in recipe_file:
             if line.strip() == '':
@@ -89,7 +89,7 @@ def get_recipe_from_recipe_file(file):
             elif line[0] == "#":
                 heading=line.strip("##").strip()
             elif heading.lower() == "recipe":
-                recipe.append(line.strip('\n'))
+                recipe += line
             else:
                 pass
     return recipe
