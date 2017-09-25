@@ -1,6 +1,6 @@
 ## Print order
 liquor
-vegitables
+vegetables
 fruits
 roots
 condiments
