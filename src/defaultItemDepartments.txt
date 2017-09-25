@@ -33,6 +33,7 @@ zzz not at the grocery store
 
 ## asian
 beef ramen noodle
+coconut milk
 dark sesame oil
 egg noodle
 egg rolls or pot sticker
@@ -120,11 +121,11 @@ pickle
 butter
 egg
 half and half
-heavy cream
+heavy cream (small container)
 heavy whipping cream
 low-fat sour cream
 milk
-plain yogurt
+plain nonfat greek yogurt
 sour cream
 whole milk
 yogurt
@@ -209,6 +210,7 @@ taco shell
 ## pb&j
 honey
 peach preserve
+peanut butter
 
 ## rice and beans
 black bean
@@ -224,6 +226,7 @@ wild rice
 fresh garlic
 fresh ginger
 garlic
+ginger
 minced garlic
 onion
 potato
@@ -307,6 +310,7 @@ mini pepper
 mushroom
 non-green bell pepper
 parsley
+pumpkin
 red bell pepper
 roma tomato
 salad
