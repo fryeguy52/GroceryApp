@@ -1,218 +1,227 @@
-cornstarch
-white pizza sauce
-yogurt
-yellow pepper
-paprika
-dark sesame oil
-cumin
-nm red chile powder
-cooking spray
-roma tomato
-sweet potato
-pepperoni
-white rice
-oat nut bread
-parmesan cheese
-dinner roll
-dried oregano
-molasse
-potato
-white onion
-shredded cheese
-fennel seed
-pace picante medium salsa
-vegetable broth
-flour
-cheese
-thyme
-white bean
-boneless pork roast
-1% milk
-sausage|bacon
-asparagu
-celery
-sage
-fuji apple
-ground ginger
-red wine vinegar
-crushed red pepper
-chicken
-sliced cheese
-ground beef
-mrs. dash
-beef
-rotisserie chicken
-black pepper
-cucumber
-salad mix
-green bean
-red pepper
-green chile
-celery stalk
-red bell pepper
-parsley
-canned corn
-chicken breast
-bbq sauce
-salt
-ro-tel diced tomatoes and green chile
-diced ham
-rice vinegar
-milk
-swi
-french bread
-black olive
-cajun or creole seasoning
-diced tomato
-refried black bean
-beef stew meat
-turkey kielbasa
-garlic powder
-frozen corn
-half and half
-rice
-tomato paste
-tomato
-chicken broth
-maple syrup
-egg rolls or pot sticker
-butternut squash
-sliced mushroom
-shallot bulb
-cherry tomato
-lettuce
-water
-shreddedcheese
-soy sauce
-sesame seed
-chicken thigh
-avocado
-garbanzo bean
-butter
-stewed tomato
-bread crumb
-sesame oil
-seaseme oil
-pepper
-onion powder
-wild rice
-dried rosemary
-steak
-small white potato
-italian seasoning
-cilantro
-canned pineapple tidbit
-bean
-garlic
-parmesan
-black bean
-spaghetti sauce
-snap pea
-onion
-snacking veggie
-whole clove
-egg
-raw shrimp peeled and deveined
-red onion
-egg noodle
-light coconut milk
-frozen pea
-zucchini
-honey
-canadian bacon
-jasmine rice
-ricotta
-whole milk
-weekly berrie
-boneless chicken thigh
-broccoli floret
-rotel tomatoes and chile
-corn
-mini pepper
-kosher salt
-beef broth
-low-fat sour cream
-plain yogurt
-corn tortilla
-linguine
-corn starch
-cole slaw mix
-baby spinach
-fresh ginger
-beef ramen noodle
-peanut
-tortilla
-pickle
-rosemary
-pizza sauce
-weekly tree fruit
-taco shell
-baby carrot
-non-green bell pepper
-boston lettuce
-piecrust
-prepared pesto
-beef pot roast
-frozen lasagna
-ground turkey
-bannana
-sour cream
-guinness beer
-artichoke heart
-brussels sprout
-peanut sauce
-minced garlic
-ground beef | frozen pattie
-pancake mix
-carrot
-panko bread crumb
-dried white bean
-babycarrot
-bell pepper
-toasted sesame seed
-swedish meatball mix
-cauliflower
-mushroom
-flour tortilla
-mushroom soup mix
-frozen spinach
-heavy cream
-mexican blend cheese
-brown sugar
-frozen peas and carrot
-pork roast
-broth
-water chestnut
-salad
-sugar
-dion's pizza dough
-evaporated milk
-olive oil
-curry powder
-shredded cheddar cheese
-hamburger bun
-country bread
-penne
-bay leave
-pasta
-roasted chopped medium nm green chile
-green onion
-broccoli
-chicken or vegetable broth
-green bell pepper
-heavy whipping cream
-yellow onion
-mozzarella
-ground nutmeg
-stew beef (no bone)
 lemon
-beer
-medium chopped nm green chile
-mozzarella cheese
-mini bell pepper
-lime
+baby spinach
+carrot
+artichoke heart
+canadian bacon
+pork roast
+cole slaw mix
+rosemary
+taco shell
 bacon
-red pepper flake
-fresh garlic
-sambal oelek
+beef broth
+boneless chicken thigh
+dried white bean
+beer
+bannana
+red pepper
+paprika
+garbanzo bean
+evaporated milk
+bay leave
+red bell pepper
+corn
+frozen corn
+brussels sprout
+piecrust
+tomato paste
+corn tortilla
+snacking veggie
+milk
+italian seasoning
+spaghetti sauce
+beef
+peaches(optional)
+dried rosemary
+whole milk
+fennel seed
+green onion
+canned corn
+roasted chopped medium nm green chile
+non-green bell pepper
+prepared pesto
+nm red chile powder (medium)
+broth
+white bean
+kosher salt
+black pepper
+minced garlic
+mozzarella
+nice beef for oven roast
+celery
+green bell pepper
+cheese
+bean
+salad mix
+parmesan
+asparagu
+mrs. dash
+white pizza sauce
+sugar
+weekly tree fruit
+butternut squash
+olive oil
+frozen pea
+peanut sauce
+beef roast
+chicken broth
+turkey kielbasa
+ro-tel diced tomatoes and green chile
+peanut
+ground beef
+fuji apple
+whole clove
+tortilla
+butter
+rotisserie chicken
+frozen peas and carrot
+cumin
+yellow onion
+rice vinegar
+fresh ginger
+guinness beer
 ketchup
+black olive
+sambal oelek
+dijon mustard
+water
+shallot bulb
+jasmine rice
+garlic
+flour tortilla
+maple syrup
+beef ramen noodle
+stew beef (no bone)
+shredded cheese
+pepper
+garlic powder
+mexican blend cheese
+weekly berrie
+dried oregano
+refried black bean
+cornstarch
+broccoli
+cilantro
+mini bell pepper
+onion powder
+parmesan cheese
+hamburger bun
+linguine
+pasta
+pizza sauce
+raw shrimp peeled and deveined
+vegetable broth
+cauliflower
+egg
+vegitable oil
+frozen lasagna
+flour
+ground nutmeg
+celery stalk
+steak
+baby carrot
+chicken breast
+lime
+diced tomato
+dion's pizza dough
+1% milk
+bbq sauce
+frozen spinach
+lettuce
+honey
+ricotta
+french bread
+potato
+medium chopped nm green chile
+brown sugar
+penne
+rotel tomatoes and chile
+babycarrot
+bread crumb
+light coconut milk
+sliced cheese
+nm red chile powder
+dinner roll
+sweet potato
+country bread
+swi
+parsley
+mushroom
+molasse
+oat nut bread
+salad
+red onion
+dark sesame oil
+beef stew meat
+pork chop
+pepperoni
+half and half
+panko bread crumb
+sage
+toasted sesame seed
+fresh garlic
+cooking spray
+ground beef | frozen pattie
+yogurt
+red wine vinegar
+green chile
+cherry tomato
+white rice
+egg noodle
+pancake mix
+sesame oil
+sausage|bacon
+broccoli floret
+curry powder
+mini pepper
+crushed red pepper
+boston lettuce
+water chestnut
+sour cream
+snap pea
+seaseme oil
+avocado
+swedish meatball mix
+stewed tomato
+chicken thigh
+wild rice
+beef pot roast
+corn starch
+rice
+black bean
+small white potato
+bell pepper
+ground ginger
+yellow pepper
+shredded cheddar cheese
+sliced mushroom
+white onion
+red pepper flake
+chicken or vegetable broth
+thyme
+sesame seed
+zucchini
+salt
+low-fat sour cream
+cajun or creole seasoning
+pickle
+canned pineapple tidbit
+mushroom soup mix
+diced ham
+peach preserve
+heavy whipping cream
+ground turkey
+tomato
+egg rolls or pot sticker
+salsa
+pace picante medium salsa
+onion
+soy sauce
+green bean
+roma tomato
+plain yogurt
+shreddedcheese
+mozzarella cheese
+heavy cream
+boneless pork roast
+chicken
+cucumber

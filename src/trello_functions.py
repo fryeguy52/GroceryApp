@@ -20,12 +20,12 @@ def post_recipe_to_trello(recipe_name):
     response_array_of_dict = response.json()
 
     for board in response_array_of_dict:
-      if board['name'] == 'TEST':
+      if board['name'] == 'House':
         lists_url = base + '/boards/'+board['id']+'/lists'
         list_response=requests.get(lists_url, params=params_key_and_token)
         response_array_of_dict=list_response.json()
         for i in response_array_of_dict:
-            if i["name"] == "This Week":
+            if i["name"] == "To do this week ...":
                 id_list=i["id"]
 
         name = recipe_name

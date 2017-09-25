@@ -29,6 +29,7 @@ soup
 spices
 tortillas
 vegitables
+zzz not at the grocery store
 
 ## asian
 beef ramen noodle
@@ -63,6 +64,7 @@ pancake mix
 panko bread crumb
 red wine vinegar
 sugar
+vegitable oil
 
 ## beverages
 water
@@ -109,6 +111,7 @@ swi
 
 ## condiments
 bbq sauce
+dijon mustard
 ketchup
 pickle
 
@@ -153,6 +156,7 @@ cherry tomato
 fuji apple
 lemon
 lime
+peaches(optional)
 tomato
 weekly berrie
 weekly tree fruit
@@ -174,6 +178,7 @@ guinness beer
 bacon
 beef
 beef pot roast
+beef roast
 beef stew meat
 boneless chicken thigh
 boneless pork roast
@@ -185,7 +190,9 @@ diced ham
 ground beef
 ground beef | frozen pattie
 ground turkey
+nice beef for oven roast
 pepperoni
+pork chop
 pork roast
 rotisserie chicken
 sausage|bacon
@@ -196,10 +203,12 @@ turkey kielbasa
 ## mexican
 pace picante medium salsa
 refried black bean
+salsa
 taco shell
 
 ## pb&j
 honey
+peach preserve
 
 ## rice and beans
 black bean
@@ -269,6 +278,7 @@ whole clove
 corn tortilla
 flour tortilla
 nm red chile powder
+nm red chile powder (medium)
 tortilla
 
 ## vegitables
@@ -307,5 +317,7 @@ snap pea
 yellow pepper
 zucchini
 
-## NO DEPARTMENT!
+## zzz not at the grocery store
 dion's pizza dough
+
+## NO DEPARTMENT!
