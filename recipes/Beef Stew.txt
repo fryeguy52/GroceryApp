@@ -2,6 +2,7 @@
 beef
 easy
 crockpot
+freezer
 ##Ingredients
 2, pounds, beef stew meat
 4, large, potatoes
@@ -11,6 +12,7 @@ crockpot
 1, can, stewed tomatos
 1, can, green beans
 1, can, beef broth
+1, package, beef stew seasoning mix
 1, , dinner rolls
 ##Recipe
 2 pounds beef stew meat
@@ -21,9 +23,8 @@ crockpot
 1 can stewed tomatos
 1 can green beans
 1 can beef broth
+1 pack beef stew seasoning mix
 dinner rolls
 
-* chop celery, onions, and potatos
-* put everyting in a crockpot and cook on high for 6-8 hours
-* serve with rolls
+Chop celery, onions, and potatoes.  Put everyting in a crockpot and cook on high for 8 hours.  Serve with rolls.
 
