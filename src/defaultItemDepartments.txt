@@ -46,6 +46,7 @@ seaseme oil
 sesame oil
 sesame seed
 soy sauce
+sriracha
 toasted sesame seed
 water chestnut
 
@@ -362,4 +363,3 @@ zucchini
 dion's pizza dough
 
 ## NO DEPARTMENT!
-fake ingredient

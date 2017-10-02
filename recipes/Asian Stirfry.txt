@@ -12,7 +12,7 @@ easy
 1, , soy sauce
 1, tablespoon, seaseme oil
 1, box, egg rolls or pot stickers
-1, , fake ingredient
+
 ##Recipe
 2 chicken breasts
 2 cups broccoli
