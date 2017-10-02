@@ -16,8 +16,9 @@ freezer
 1, tablespoon, sugar
 1.5, tablespoon, fish sauce
 1, teaspoon, crushed red pepper
-Salt and pepper to taste
-rice
+1, , Salt
+1, , pepper
+3, cups, rice
 
 ##recipe
 2 lb of stew meat

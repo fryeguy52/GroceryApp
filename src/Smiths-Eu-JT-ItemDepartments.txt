@@ -27,3 +27,6 @@ asian
 breakfast
 baking
 spices
+bakery
+deli
+zzz not at the grocery store

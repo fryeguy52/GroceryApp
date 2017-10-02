@@ -16,7 +16,8 @@ freezer
 2, , bay leaves
 1, teaspoon, lemon juice
 .25, teaspoon, celery seed
-salt and pepper
+1, ,salt
+1, ,pepper
 3, teaspoons, olive oil
 6, cups, chicken broth
 2, cups, wide egg noodles

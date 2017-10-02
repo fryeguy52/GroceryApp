@@ -28,7 +28,7 @@ snacks
 soup
 spices
 tortillas
-vegitables
+vegetables
 zzz not at the grocery store
 
 ## asian
@@ -37,6 +37,7 @@ coconut milk
 dark sesame oil
 egg noodle
 egg rolls or pot sticker
+fish sauce
 light coconut milk
 peanut sauce
 rice vinegar
@@ -50,12 +51,16 @@ water chestnut
 
 ## bakery
 country bread
+roll
 
 ## baking
+apple cider vinegar
+balsamic vinegar
 bread crumb
 brown sugar
 cooking spray
 corn starch
+cornbread mix
 cornstarch
 evaporated milk
 flour
@@ -65,7 +70,7 @@ pancake mix
 panko bread crumb
 red wine vinegar
 sugar
-vegitable oil
+vegetable oil
 
 ## beverages
 water
@@ -106,6 +111,7 @@ parmesan cheese
 ricotta
 shredded cheddar cheese
 shredded cheese
+shredded parmesan
 shreddedcheese
 sliced cheese
 swi
@@ -156,20 +162,24 @@ bannana
 cherry tomato
 fuji apple
 lemon
+lemon juice
 lime
+orange
 peaches(optional)
 tomato
 weekly berrie
 weekly tree fruit
 
 ## italian
-linguine
 pasta
 penne
 pizza sauce
 prepared pesto
+shell pasta
 spaghetti sauce
+tomato sauce
 white pizza sauce
+wide egg noodle
 
 ## liquor
 beer
@@ -178,6 +188,7 @@ guinness beer
 ## meat
 bacon
 beef
+beef chuck roast
 beef pot roast
 beef roast
 beef stew meat
@@ -187,8 +198,10 @@ canadian bacon
 chicken
 chicken breast
 chicken thigh
+chuck roast
 diced ham
 ground beef
+ground beef (lean)
 ground beef | frozen pattie
 ground turkey
 nice beef for oven roast
@@ -199,9 +212,11 @@ rotisserie chicken
 sausage|bacon
 steak
 stew beef (no bone)
+stew meat
 turkey kielbasa
 
 ## mexican
+chipotle chiles in adobo
 pace picante medium salsa
 refried black bean
 salsa
@@ -214,11 +229,13 @@ peanut butter
 
 ## rice and beans
 black bean
+cannellini bean
+dark red kidney bean
 dried white bean
+dry green lentil
 garbanzo bean
 jasmine rice
 rice
-white bean
 white rice
 wild rice
 
@@ -226,11 +243,14 @@ wild rice
 fresh garlic
 fresh ginger
 garlic
+garlic clove
 ginger
 minced garlic
 onion
 potato
 red onion
+red potato
+shallot
 shallot bulb
 small white potato
 sweet potato
@@ -239,20 +259,29 @@ yellow onion
 
 ## snacks
 peanut
+ritz cracker
 
 ## soup
 beef broth
+beef stew seasoning mix
 broth
 chicken broth
 chicken or vegetable broth
+low-sodium vegetable stock
 mushroom soup mix
 swedish meatball mix
 vegetable broth
+vegetable stock
 
 ## spices
+basil
+bay leaf
 bay leave
 black pepper
 cajun or creole seasoning
+celery seed
+chicken bouillon granule
+chili powder
 cilantro
 crushed red pepper
 cumin
@@ -261,12 +290,17 @@ dried oregano
 dried rosemary
 fennel seed
 garlic powder
+ground black pepper
+ground clove
+ground coriander
+ground cumin
 ground ginger
 ground nutmeg
 italian seasoning
 kosher salt
 mrs. dash
 onion powder
+oregano
 paprika
 pepper
 red pepper
@@ -302,8 +336,10 @@ celery stalk
 cole slaw mix
 cucumber
 diced tomato
+fresh spinach
 green bell pepper
 green onion
+italian green bean
 lettuce
 mini bell pepper
 mini pepper
@@ -318,6 +354,7 @@ salad mix
 sliced mushroom
 snacking veggie
 snap pea
+swiss chard
 yellow pepper
 zucchini
 
@@ -325,3 +362,4 @@ zucchini
 dion's pizza dough
 
 ## NO DEPARTMENT!
+fake ingredient
