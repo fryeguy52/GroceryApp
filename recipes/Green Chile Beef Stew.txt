@@ -9,7 +9,7 @@ spicy
 4, large, potatoes
 1, , onions
 1, can, canned corn
-1, can, stewed tomatos
+1, can, stewed tomatoes
 1, package, flour tortillas
 1, can, black beans
 4, cups, chicken broth
@@ -21,7 +21,7 @@ spicy
 4 large potatoes
 1 onion
 1 can corn
-1 can stewed tomatos
+1 can stewed tomatoes
 1 can black beans
 4 cups chicken broth
 8 oz roasted chopped medium NM green chile
