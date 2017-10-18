@@ -28,8 +28,9 @@ spicy
 1 tub sour cream
 Flour tortillas
 
- * dice onion
- * potatoes cut to .75" cubes
- * put everything, except tortillas and sour cream, into crock pot.
- * cook on high for 6-8 hours
- * serve with sour cream and tortillas
+Directions:
+ - dice onion
+ - potatoes cut to .75" cubes
+ - put everything, except tortillas and sour cream, into crock pot.
+ - cook on high for 6-8 hours
+ - serve with sour cream and tortillas
