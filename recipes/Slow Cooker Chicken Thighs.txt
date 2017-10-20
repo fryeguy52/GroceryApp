@@ -10,9 +10,10 @@
 .25, cups, honey
 3, cloves, garlic
 .5, oz, fresh ginger
-2,  tbsp, sriracha
+2,  teaspoons, sriracha
 1, , lime
 3, cups, rice
+2, heads, broccoli
 
 ##recipe
 **Ingredients**
@@ -25,10 +26,11 @@ Freshly ground black pepper
 1/4 c. honey
 3 cloves garlic, minced
 1/2 oz. freshly chopped ginger
-2 tbsp. sriracha
+2 teaspoons sriracha
 Juice of 1 lime
 Cooked rice, for serving
-Freshly chopped cilantro, for garnish
+Broccoli
+
 
 **Directions**
 In a cast-iron skillet over medium-high heat, heat oil.
@@ -37,4 +39,4 @@ Transfer chicken thighs to slow cooker.
 Whisk together soy sauce, ketchup, honey, garlic, ginger, Sriracha, and lime juice.
 Pour sauce over chicken and toss to combine.
 Cover and cook until no longer pink, on low for 6 hours or high for 2 hours.
-Serve with rice and garnish with cilantro.
+Serve with rice and steamed broccoli.
