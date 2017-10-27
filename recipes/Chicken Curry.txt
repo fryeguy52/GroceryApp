@@ -14,7 +14,7 @@ freezer
 3, tablespoons, honey
 2, tablespoons, curry powder
 1, teaspoon, salt
-1, teaspoon, crushed red pepper
+0.5, teaspoon, crushed red pepper
 3, cups, rice
 ##recipe
 4 lb boneless, skinless chicken breasts, cut into bite-size pieces
@@ -27,7 +27,7 @@ freezer
 3 T honey
 2 T curry powder
 1 t salt
-1 t crushed red pepper
+0.5 t crushed red pepper
 rice
 
 Put everything into crockpot.  Cook on low 8-10 hours.  Serve over rice.
