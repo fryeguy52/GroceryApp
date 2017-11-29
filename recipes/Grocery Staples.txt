@@ -12,5 +12,6 @@ hide
 1, ,weekly tree fruit
 1, ,weekly berries
 1, ,snacking veggies
+5, ,Mighty 4 Pouches
 ##Recipe
 things to buy weekly

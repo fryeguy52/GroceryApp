@@ -10,7 +10,7 @@ class shopping_item():
     grocery_list_line=[]
 
 
-def get_recipe_names(recipe_dir):
+def get_recipe_names(recipe_dir, search_tags=[]):
     """
     return a list of all the .txt files in a directory without the extension
      this list will represent all the available recipes to the user
@@ -18,10 +18,20 @@ def get_recipe_names(recipe_dir):
     :return: a list of strings. each is the name of a txt file in recipe_dir
     """
     recipe_names=[]
-    for file in glob.glob(recipe_dir+"/*.txt"):
-        head, file = ntpath.split(file)
-        file = re.sub('.txt', '', file)
-        recipe_names.append(file)
+
+    if search_tags == []:
+        for file in glob.glob(recipe_dir+"/*.txt"):
+            head, file = ntpath.split(file)
+            file = re.sub('.txt', '', file)
+            recipe_names.append(file)
+    else:
+        for file in glob.glob(recipe_dir+"/*.txt"):
+            head, file = ntpath.split(file)
+            file = re.sub('.txt', '', file)
+            file_tags = get_tags_from_recipe_file(recipe_dir+"/"+file+".txt")
+            if(any(x in file_tags for x in search_tags)):
+                recipe_names.append(file)
+
     return recipe_names
 
 
