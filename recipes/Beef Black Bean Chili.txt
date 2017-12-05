@@ -15,6 +15,7 @@ easy
 2, teaspoon, cumin
 1.5, teaspoon, oregano
 .25, teaspoon, red pepper flakes
+1, bag, shredded cheese
 2, boxes, cornbread mix
 ##recipe
 1 lb of ground beef
@@ -28,6 +29,7 @@ easy
 2 t ground cumin
 1 1/2 t ground oregano
 1/4 t crushed red pepper flakes
+1 bag shredded cheese
 2 boxes corn bread mix
 
-Put everything but corn bread in crockpot.  Cook on low for 8-10 hours.  Make cornbread according to package directions, adding an extra egg to mix.
+Put everything but corn bread in crockpot.  Cook on low for 8-10 hours.  Serve with shredded cheese.  Make cornbread according to package directions, adding an extra egg to mix.
