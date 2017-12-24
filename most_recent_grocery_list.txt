@@ -1,58 +1,27 @@
 *** Recipes this Week ***
-Kielbasa, Pepper, Onion and Potato Hash
-Pesto Chicken
-Grocery Staples
-Grilled Chicken Sandwich
-Ground Beef Tacos
-Asian Stirfry
+Green Bean Casserole with Fried Shallots
+Roasted Garlic Butter Mushrooms
+Creamy Au Gratin Potatoes
 *************************
 
-liquor -- beer: 6 
+liquor -- dry white wine: .5 cup
+vegetables -- fresh green bean: 2 lb
 vegetables -- sliced mushroom: 1 package
-vegetables -- cucumber: 1 
-vegetables -- roma tomato: 2 
-vegetables -- non-green bell pepper: 1 
-vegetables -- snacking veggie: 1 
-vegetables -- zucchini: 2 
-vegetables -- baby carrot: .5 bag
-vegetables -- bell pepper: 2 
-vegetables -- broccoli: 2 cup
-vegetables -- salad mix: 1 package
-vegetables -- salad: 1 
-vegetables -- green bell pepper: 1 
-fruits -- bannana: 7 
-fruits -- weekly berrie: 1 
-fruits -- weekly tree fruit: 1 
-fruits -- tomato: 2 medium, 2.0 
-fruits -- avocado: 3.0 
-roots -- potato: 7.0 large
-roots -- onion: 3.0 
-condiments -- ketchup: 4 oz
-meat -- turkey kielbasa: 14 ounce
-meat -- ground beef: 1 pound
-meat -- chicken breast: 9.0 
-cheese -- mozzarella cheese: 1 cup
-cheese -- cheese: 4 ounce
-dairy -- whole milk: 1 gallon
-dairy -- egg: 1 dozen
-dairy -- butter: 1 pound
-dairy -- yogurt: 3 
-dairy -- 1% milk: 1 gallon
-bread -- hamburger bun: 6 
-bread -- oat nut bread: 1 loaf
-bread -- dinner roll: 1 package
-italian -- prepared pesto: 1 jar
-italian -- pasta: 1 box
-mexican -- taco shell: 1 box
-rice and beans -- rice: 3 cup, 1 
-canned veggies -- bean: 1 can
-canned veggies -- rotel tomatoes and chile: 1 can
-asian -- soy sauce: 1 
-asian -- seaseme oil: 1 tablespoon
-asian -- egg rolls or pot sticker: 1 box
-baking -- panko bread crumb: 1 
-baking -- olive oil: 1 
-spices -- salt: 1 
-spices -- cumin: 1 teaspoon
-spices -- pepper: 1 
-baby food -- mighty 4 pouche: 5 
+vegetables -- mushroom: 1 pound
+roots -- russet potato: 4 
+roots -- onion: 1 
+roots -- shallot: 4 large
+roots -- garlic: 6.0 clove
+roots -- sweet onion: 1 
+condiments -- worcestershire sauce: 2 tsp
+cheese -- parmesan cheese: .5 cup
+cheese -- cheddar cheese: 1.5 cup
+dairy -- butter: .25 cup, 5.0 tablespoon
+dairy -- milk: 2 cup
+dairy -- half-and-half: 1.5 cup
+baking -- panko breadcrumb: 3 tbsp
+baking -- flour: .5 cup, 3 tablespoon
+baking -- canola oil: 2 tablespoon
+spices -- pepper: .5 tsp, .25 teaspoon
+spices -- salt: 1.0 teaspoon, .5 tsp
+spices -- fresh thyme: 2 teaspoon
