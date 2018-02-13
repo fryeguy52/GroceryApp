@@ -10,6 +10,7 @@ easy
 4, large, potatoes
 1, , onion
 1, jar, pickles
+1, bag, coleslaw or broccoli slaw mix
 ##Recipe
 1 package hamburger buns
 1 boneless pork roast
@@ -17,15 +18,19 @@ easy
 4 large potatoes
 1 onion
 1 jar pickles
+1 bag coleslaw mix
+dressing:  .5 c mayo, 2 T sugar, 2 T cider vinegar, pepper, salt
 
-* chop onion
-* place pork roast in crockpot
-* empty entire bottle of bbq sauce on top (rinse bottle with ~1/4
+
+- chop onion
+- place pork roast in crockpot
+- empty entire bottle of bbq sauce on top (rinse bottle with ~1/4
   cup of water and put that in the crock pot too)
-* put onion on top
-* cook on high about 6 hours?
-* preheat over to 425
-* pam cookie sheet
-* cut potatoes into fries, toss with olive oil
-* bake potatoes until crispy, ~ 20 min
+- put onion on top
+- cook on high about 6 hours?
+- preheat over to 425
+- pam cookie sheet
+- cut potatoes into fries, toss with olive oil
+- mix dressing, pour over slaw, refrigerate until serving
+- bake potatoes until crispy, ~ 20 min
 
