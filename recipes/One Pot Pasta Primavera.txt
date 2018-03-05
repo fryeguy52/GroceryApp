@@ -10,7 +10,7 @@ easy
 2, pounds, asparagus
 1, package, sliced mushrooms
 8, cloves, garlic
-.5, teaspoon, crushed red pepper
+.25, teaspoon, crushed red pepper
 1, teaspoon, salt
 0.5, teaspoon, pepper
 2, tablespoons, olive oil
@@ -30,7 +30,7 @@ ingredients:
 2 pounds asparagus, ends snapped off and cut into 2-inch pieces
 8 ounces sliced white button mushrooms
 8 large cloves garlic, minced
-1/2 teaspoon crushed red pepper flakes (less for milder heat; more to increase heat)
+1/4 teaspoon crushed red pepper flakes (less for milder heat; more to increase heat)
 1 teaspoon kosher salt
 1/2 teaspoon freshly ground black pepper
 2 tablespoons olive oil
