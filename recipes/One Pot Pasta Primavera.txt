@@ -3,7 +3,7 @@ meatless
 stove
 easy
 ##ingredients
-8, cups, vegetable broth
+6, cups, vegetable broth
 16, ounces, pasta
 1, large, onion
 2, pound, broccoli
@@ -23,7 +23,7 @@ easy
 
 ingredients:
 
-8 cups low-sodium vegetable broth
+6 cups low-sodium vegetable broth
 16 ounces linguine, uncooked
 1 large onion, halved and sliced thin
 2 pound broccoli crowns, cut into large florets
