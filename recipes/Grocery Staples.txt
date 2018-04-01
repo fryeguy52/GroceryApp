@@ -12,6 +12,7 @@ hide
 1, , weekly tree fruit
 1, , weekly berries
 1, , snacking veggies
+2, , avocados
 1, , peanut butter
 1, , shredded cheddar
 1, , sliced cheese
