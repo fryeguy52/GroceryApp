@@ -3,25 +3,27 @@ meatless
 easy
 stove
 ## ingredients
-3, cups, rice
-1, , zucchini
-1, cup, broccoli
-1, cup, cauliflower
-1, ,red pepper
-2, , carrots
-1, package, mushrooms
+1, box, couscous
+1, head, broccoli
+1, head, cauliflower
+.5, bag, baby carrots
+1, package, sliced mushrooms
 1, can, garbanzo beans
-1, , curry powder
+3, teaspoons, curry powder
+.5, teaspoon, garam masala
 1, can, light coconut milk
+1.5, cups, chicken broth
 
 ## recipe
 Veggie Curry
-- rice
-- veggies - any combination of zucchini, broccoli, cauliflower, red pepper, carrots, mushrooms, 
+- couscous
+- veggies - any combination of zucchini, broccoli, cauliflower, red pepper, carrots, mushrooms 
 - 1 can garbanzo beans (aka chickpeas)
-- curry powder
+- 3 teaspoons curry powder
+- .5 teaspoons garam masala
 - 1 can light coconut milk
+- 1.5 cups chicken broth
 
 
-1) Mix it all except rice in a pot and let it cook until its done
-2) Make rice in a rice cooker
+1) Mix it all except couscous in jumbo fyer and let it simmer until its done (about 30 min).  Can use cornstarch at the end to thicken, and 1/4 cup plain greek yogurt if on hand.
+2) Make couscous
