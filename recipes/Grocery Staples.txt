@@ -16,5 +16,9 @@ hide
 1, , peanut butter
 1, , shredded cheddar
 1, , sliced cheese
+1, package, flour tortillas
+1, box, teddy grahams
+1, bag, animal crackers
+
 ##Recipe
 things to buy weekly
