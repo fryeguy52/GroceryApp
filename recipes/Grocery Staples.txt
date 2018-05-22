@@ -8,7 +8,7 @@ hide
 1, loaf, oat nut bread
 1, pound, butter
 6, , beer
-7, , bannana
+7, , banana
 1, , weekly tree fruit
 1, , weekly berries
 1, , snacking veggies
@@ -19,6 +19,7 @@ hide
 1, package, flour tortillas
 1, box, teddy grahams
 1, bag, animal crackers
+1, , lunch meat
 
 ##Recipe
 things to buy weekly
