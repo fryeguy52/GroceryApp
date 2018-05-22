@@ -10,8 +10,8 @@ hide
 6, , beer
 7, , banana
 1, , weekly tree fruit
-1, , weekly berries
-1, , snacking veggies
+1, , weekly berry
+1, , snacking veg
 2, , avocados
 1, , peanut butter
 1, , shredded cheddar
