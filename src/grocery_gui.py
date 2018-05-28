@@ -2,9 +2,12 @@ __author__ = 'Joe'
 
 from appJar import gui
 import random
+import grocery_functions
 
-def recipeGUI(a_list, selected_items):
+
+def recipeGUI(selected_items):
     ### Load data
+    a_list = grocery_functions.get_recipe_names("..\\recipes", ["chicken", "easy"])
     all_recipes ={}
     for item in a_list:
         all_recipes[item] = False

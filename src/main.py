@@ -11,10 +11,10 @@ if __name__ == "__main__":
     grocery_functions.make_all_ingredients_file()
     grocery_functions.update_default_ing_dept_file(grocery_functions.get_all_ingredients("..\\recipes"))
     if grocery_file_errors == []:
-        all_recipes_name_list = grocery_functions.get_recipe_names("..\\recipes")
+        #all_recipes_name_list = grocery_functions.get_recipe_names("..\\recipes")
         selected_recepies = []
         grocery_list=[]
-        grocery_gui.recipeGUI(all_recipes_name_list, selected_recepies)
+        grocery_gui.recipeGUI(selected_recepies)
         for recipe in selected_recepies:
                 trello_functions.post_recipe_to_trello(recipe)
                 grocery_list += grocery_functions.get_ingredients_from_recipe_file("..\\recipes\\"+recipe+".txt")
