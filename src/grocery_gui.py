@@ -7,7 +7,9 @@ import grocery_functions
 
 def recipeGUI(selected_items):
     ### Load data
-    a_list = grocery_functions.get_recipe_names("..\\recipes", ["chicken", "easy"])
+    filter_tag_list=[]
+    recipe_dir="..\\recipes"
+    a_list = grocery_functions.get_recipe_names(recipe_dir, filter_tag_list)
     all_recipes ={}
     for item in a_list:
         all_recipes[item] = False
@@ -19,17 +21,18 @@ def recipeGUI(selected_items):
     ### Configure
     app_title = "Menu Builder"
 
-    section_1_title="All Recepies"
+    section_1_title="Recepies"
     section_2_title="Random Suggestion"
     section_3_title="Current Menu"
+    section_4_title="Search by Tag"
 
     button_name_add_selected = "Add Selected"
     button_name_new_selection = "New Suggestion"
     button_name_add_selection = "Add Suggestion"
+    button_name_filter = "Filter Recipes"
     button_name_no_save_quit = "Quit"
     button_name_remove_items = "Remove Selected"
     button_name_save_quit = "Save and Quit"
-    button_7 = "b7"
     button_8 = "b8"
 
     ### debug constants
@@ -49,8 +52,8 @@ def recipeGUI(selected_items):
             remove_items_button_action()
         elif button == button_name_save_quit:
             save_quit_button_action()
-        elif button == button_7:
-            print(button)
+        elif button == button_name_filter:
+            filter_recipes_button_action()
         elif button == button_8:
             print(button)
         else:
@@ -75,6 +78,21 @@ def recipeGUI(selected_items):
             if current_menu[item]:
                 app.deleteProperty(section_3_title, item)
 
+    def filter_recipes_button_action():
+        filter_tag_list=app.getEntry(section_4_title).split()
+        a_list = grocery_functions.get_recipe_names(recipe_dir, filter_tag_list)
+#        a_list = grocery_functions.get_recipe_names(recipe_dir, filter_tag_list)
+        filtered_recipes = {}
+        for item in a_list:
+            filtered_recipes[item] = False
+
+        for item in app.getProperties(section_1_title):
+            app.deleteProperty(section_1_title, item)
+
+        app.setProperties(section_1_title, filtered_recipes)
+
+        #suggest_recipes = all_recipes.copy()
+        #rand_suggestion = random.choice(list(suggest_recipes))
 
     def add_selected_button_action():
         all_rec = app.getProperties(section_1_title)
@@ -106,10 +124,11 @@ def recipeGUI(selected_items):
     app.addButton(button_name_save_quit, press, 4,2)
 
     # select recipe panel
-    app.startScrollPane("Pane1", 1, 0)
+    app.addEntry(section_4_title,1,0,1,1)
+    app.startScrollPane("Pane1", 2, 0)
     app.addProperties(section_1_title, all_recipes)
     app.stopScrollPane()
-    app.addButton(button_name_add_selected, press, 2,0)
+    app.addButtons([button_name_add_selected, button_name_filter], press, 3,0)
 
     # random suggestion panel
     app.addLabel(section_2_title, rand_suggestion, 1, 1,)
