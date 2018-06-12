@@ -77,11 +77,13 @@ panko breadcrumb
 red wine vinegar
 sugar
 vegetable oil
+vinegar (balsamic or red wine)
 
 ## beverages
 water
 
 ## bread
+bread
 dinner roll
 french bread
 hamburger bun
@@ -96,6 +98,7 @@ maple syrup
 
 ## canned veggies
 artichoke heart
+artichoke hearts in brine
 bean
 black olive
 canned corn
@@ -127,6 +130,7 @@ swi
 ## condiments
 bbq sauce
 dijon mustard
+kalamata olive
 ketchup
 pickle
 worcestershire sauce
@@ -147,6 +151,8 @@ sour cream
 whole milk
 
 ## deli
+crumbled feta
+lunch meat
 
 ## frozen desserts
 piecrust
@@ -169,7 +175,9 @@ roasted chopped medium nm green chile
 
 ## fruits
 avocado
+banana
 cherry tomato
+fresh lemon juice
 fuji apple
 lemon
 lemon juice
@@ -177,10 +185,12 @@ lime
 orange
 peaches(optional)
 tomato
+weekly berry
 weekly tree fruit
 
 ## italian
 pasta
+pasta (rotini or farfalle)
 penne
 pizza sauce
 prepared pesto
@@ -270,8 +280,10 @@ white onion
 yellow onion
 
 ## snacks
+animal cracker
 peanut
 ritz cracker
+teddy graham
 
 ## soup
 beef broth
@@ -297,8 +309,10 @@ chili powder
 crushed red pepper
 cumin
 curry powder
+dried basil
 dried oregano
 dried rosemary
+dried thyme
 fennel seed
 fresh thyme
 garam masala
@@ -349,6 +363,7 @@ cole slaw mix
 coleslaw or broccoli slaw mix
 cucumber
 diced tomato
+english or persian cucumber (not regular cucumber!)
 fresh green bean
 fresh spinach
 green bell pepper
@@ -366,6 +381,7 @@ roma tomato
 salad
 salad mix
 sliced mushroom
+snacking veg
 snap pea
 swiss chard
 yellow pepper
