@@ -30,4 +30,6 @@ freezer
 0.5 t crushed red pepper
 rice
 
-Put everything into crockpot.  Cook on low 8-10 hours.  Serve over rice.
+
+- Put everything except rice into crockpot.  Cook on low 8-10 hours.  
+- Cook rice.
