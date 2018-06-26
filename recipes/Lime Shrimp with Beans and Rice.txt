@@ -11,11 +11,6 @@ medium
 1, can, black beans
 1, carton, cherry tomatoes
 ##recipe
-Shrimp with Black Beans and Rice
-
-Ingredients
-
-Shrimp
 2 tablespoons olive oil
 1 pound raw shrimp, peeled and deveined
 4 garlic cloves, minced
@@ -24,6 +19,8 @@ rice
 1 can (15 oz) black beans, rinsed, drained 
 cherry tomatoes
 
-Instructions
 
-Skewer shrimp, coat with garlic mixed with oil.  Skewer tomatoes.  Grill.  Make rice in rice cooker, using chicken broth instead of water.  Heat beans.  Serve with lime wedges.
+- Skewer shrimp, coat with garlic mixed with oil.  Skewer tomatoes.  Grill.  
+- Make rice in rice cooker, using chicken broth instead of water.  
+- Heat beans.  
+- Serve with lime wedges.
