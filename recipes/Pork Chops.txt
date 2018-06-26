@@ -9,15 +9,14 @@ pork
 6, large, potatoes
 1, head, garlic
 ##Recipe
-**Ingredients**
-* 4, ,pork chops
-* 1, stick, butter
-* 4, oz, sour cream
-* 6, large, potatoes
-* 1 head, garlic
+4, ,pork chops
+1, stick, butter
+4, oz, sour cream
+6, large, potatoes
+1 head, garlic
 
-**Prep**
-* cut garlic in half, coat in olive oil and wrap in foil
-* chop and boil potatoes
-* grill pork and garlic
-* mix butter, sour cream and roasted garlic into potatoes
+
+- cut garlic in half, coat in olive oil and wrap in foil
+- chop and boil potatoes
+- grill pork and garlic
+- mix butter, sour cream and roasted garlic into potatoes
