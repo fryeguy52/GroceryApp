@@ -15,7 +15,6 @@ crockpot
 .5, cup, heavy cream
 1, package, naan (Trader Joe's)
 ##recipe
-*Ingredients*
 1 can crushed tomatoes
 1 onion, diced
 2 cloves garlic, minced
@@ -28,7 +27,7 @@ crockpot
 .5 cup heavy cream
 naan
 
-*Directions*
+
 - Combine tomatoes, onion, garlic, tomato paste, garam masala, salt, and pepper in bottom of crockpot.  Place chicken on to, cover, and cook on low 7-8 hours.
 - In small bowl, toss the cucumber with lemon juice and salt and pepper.  Refrigerate up to 8 hours.
 - Cook rice.
