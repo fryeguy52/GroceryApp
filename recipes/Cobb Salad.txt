@@ -17,4 +17,9 @@ chicken
 8 eggs, hard boiled
 rolls
 
-Boil eggs. Cook chicken (if not already cooked).  Chop veggies.  Make salad.
+
+- Boil eggs. 
+- Cook chicken (if not already cooked).  
+- Chop veggies.  
+- Make salad.
+- Serve with rolls.
