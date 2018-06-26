@@ -21,10 +21,10 @@ special
 1, can, canned corn
 2, heads, broccoli
 
-**Prep**
-* sear roast in a pan on all sides. season with salt and pepper
-* cook in the oven at 225 until meat is at desired temperature
-* steam brocolli
-* make mashed potatoes
-* saute mushrooms
-* heat corn
+
+- sear roast in a pan on all sides. season with salt and pepper
+- cook in the oven at 225 until meat is at desired temperature
+- steam brocolli
+- make mashed potatoes
+- saute mushrooms
+- heat corn
