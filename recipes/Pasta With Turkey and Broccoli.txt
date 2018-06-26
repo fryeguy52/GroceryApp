@@ -13,10 +13,6 @@ turkey
 1, , kosher salt
 1, , Parmesan
 ##recipe
-Pasta With Turkey and Broccoli
-
-INGREDIENTS
-
 ¾ pound orecchiette (pasta)
 4 cups broccoli florets
 3 tablespoons olive oil
@@ -26,8 +22,9 @@ INGREDIENTS
 ½ teaspoon crushed red pepper
 kosher salt
 Parmesan, for serving
-DIRECTIONS
 
-Cook the pasta according to the package directions, adding the broccoli during the last minute. Drain and return the pasta and broccoli to the pot.
-Meanwhile, heat 1 tablespoon of the oil in a large skillet over medium-high heat. Add the turkey, garlic, fennel seed, and red pepper and cook, breaking up the meat with a spoon, until browned, 3 to 5 minutes; season with ½ teaspoon salt.
-Toss the turkey mixture with the pasta and broccoli and the remaining 2 tablespoons of oil. Serve with Parmesan.
+
+- Cook the pasta according to the package directions, adding the broccoli during the last minute. Drain and return the pasta and broccoli to the pot.
+- Meanwhile, heat 1 tablespoon of the oil in a large skillet over medium-high heat. Add the turkey, garlic, fennel seed, and red pepper and cook, breaking up the meat with a spoon, until browned, 3 to 5 minutes; season with ½ teaspoon salt.
+- Toss the turkey mixture with the pasta and broccoli and the remaining 2 tablespoons of oil. 
+- Serve with Parmesan.
