@@ -19,10 +19,6 @@ oven
 4, slices, bacon
 1, , butternut squash
 ##recipe
-One Pan Autumn Chicken Dinner
-
-Ingredients
-
 4 - 5 (6 - 7 oz) bone-in, skin on chicken thighs
 4 Tbsp olive oil, divided
 1 1/2 Tbsp red wine vinegar
@@ -35,17 +31,18 @@ Salt and freshly ground black pepper
 2 shallot bulbs, peeled and sliced about 1/4-inch thick
 4 slices hickory smoked bacon, chopped into 1-inch pieces
 1 butternut squash
-Directions
 
-Preheat oven to 450 degrees. 
-Pour 2 Tbsp olive oil, red wine vinegar, garlic and herbs into a gallon size resealable bag, 
+
+- Preheat oven to 450 degrees. 
+- Pour 2 Tbsp olive oil, red wine vinegar, garlic and herbs into a gallon size resealable bag, 
 add chicken, season with salt and pepper then seal bag and massage mixture over chicken 
 while working to evenly distribute herbs. Set aside and let rest while chopping veggies.
-
-Place sweet potato, Brussels sprouts, butternut squash, apples and shallot on a large rimmed baking sheet.
-Drizzle with remaining 2 Tbsp olive oil then toss to evenly coat and season with salt and 
+- Place sweet potato, Brussels sprouts, butternut squash, apples and shallot on a large rimmed baking sheet.
+- Drizzle with remaining 2 Tbsp olive oil then toss to evenly coat and season with salt and 
 pepper to taste. Spread into an even layer then set chicken over veggie/fruit mixture. Sprinkle 
-bacon (separate any pieces that stick together) evenly over veggie/fruit mixture. Roast in 
-preheated oven until chicken and veggies are golden brown, about 30 minutes (chicken should 
-register 165 in center). Broil during last few minutes for a more golden skin on chicken if 
-desired. Sprinkle with more herbs and serve immediately.
+bacon (separate any pieces that stick together) evenly over veggie/fruit mixture. 
+- Roast in preheated oven until chicken and veggies are golden brown, about 30 minutes (chicken should 
+register 165 in center). 
+- Broil during last few minutes for a more golden skin on chicken if 
+desired. 
+- Sprinkle with more herbs and serve immediately.
