@@ -19,8 +19,6 @@ oven
 2, teaspoons, olive oil
 1, box, egg rolls or pot stickers
 ##recipe
-
-INGREDIENTS
 ½ lb. boneless skinless chicken breast, cut into small chunks
 1 - 13.25 to 16 oz. box of linguini or fettuccini pasta, broken in half (I used whole wheat)
 4 medium carrots, peeled and cut in thin 3 inch long strips
@@ -36,8 +34,9 @@ INGREDIENTS
 2 teaspoons extra virgin olive oil
 1 box egg rolls or pot stickers
 
-INSTRUCTIONS
-Cook egg rolls according to package instructions.
-Add the chicken, then the pasta, then the remaining ingredients to a large stockpot and cover. Bring to a rolling boil over high heat. Stir and reduce the heat to medium-low.
-Cook covered for about 15 minutes, stirring occasionally. Cook until most of the liquid is gone and the chicken is cooked through.
-Remove the lid and let the dish rest for 5 minutes before serving.
+
+- Cook egg rolls according to package instructions.
+- Add the chicken, then the pasta, then the remaining ingredients to a large stockpot and cover. Bring to a rolling boil over high heat. 
+- Stir and reduce the heat to medium-low.
+- Cook covered for about 15 minutes, stirring occasionally. Cook until most of the liquid is gone and the chicken is cooked through.
+- Remove the lid and let the dish rest for 5 minutes before serving.
