@@ -18,7 +18,6 @@ medium
 1, , avocado
 1, , tomato
 ##Recipe
-**Ingredients:**
 4 tablespoons NM red chile powder (medium)
 16 oz mexican blend cheese
 1 garlic powder
@@ -30,15 +29,17 @@ sour cream
 avocado
 tomato
 
-**Preparation**
-boil red chile powder in 2 cups of water. let it simmer while you do the rest
-brown beef in fry pan. lightly season with salt, pepper, garlic powder
-season red chile sauce to taste.
-oil a baking pan
-layer of tortillas
-layer of meat
-layer of cheese
-layer of sauce
-repeat until pan is full
-final layer has no meat. make sure all the corners are sauced
-Bake at 350 for 45 min.  Cook rice, heat beans.  Serve with tomato and avocado.
+
+- boil red chile powder in 2 cups of water. let it simmer while you do the rest
+- brown beef in fry pan. lightly season with salt, pepper, garlic powder
+- season red chile sauce to taste.
+- oil a baking pan
+- layer of tortillas
+- layer of meat
+- layer of cheese
+- layer of sauce
+- repeat until pan is full
+- final layer has no meat. make sure all the corners are sauced
+- Bake at 350 for 45 min.  
+- Cook rice, heat beans.  
+- Serve with tomato and avocado.
