@@ -28,9 +28,10 @@ spicy
 Flour tortillas
 1 tub sour cream
 
- * dice onion
- * potatoes cut to .75" cubes
- * chop chicken
- * put everything, except sour cream and tortillas, into crock pot.
- * cook on high for 6-8 hours
- * serve with tortillas and sour cream
+
+- dice onion
+- potatoes cut to .75" cubes
+- chop chicken
+- put everything, except sour cream and tortillas, into crock pot.
+- cook on high for 6-8 hours
+- serve with tortillas and sour cream
