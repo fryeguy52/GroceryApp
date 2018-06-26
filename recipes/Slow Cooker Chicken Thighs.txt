@@ -1,5 +1,7 @@
 ##tags
-
+easy
+chicken
+crockpot
 ##ingredients
 1, tbsp, olive oil
 6, , chicken thighs
@@ -16,7 +18,6 @@
 2, heads, broccoli
 
 ##recipe
-**Ingredients**
 1 tbsp. extra-virgin olive oil
 6 bone-in or boneless chicken thighs
 kosher salt
@@ -32,9 +33,9 @@ Cooked rice, for serving
 Broccoli
 
 
-**Directions**
-Put chicken thighs in slow cooker.
-Whisk together soy sauce, ketchup, honey, garlic, ginger, Sriracha, and lime juice.
-Pour sauce over chicken and toss to combine.
-Cover and cook until no longer pink, on low for 6 hours or high for 2 hours.
-Serve with rice and steamed broccoli.
+- Put chicken thighs in slow cooker.
+- Whisk together soy sauce, ketchup, honey, garlic, ginger, Sriracha, and lime juice.
+- Pour sauce over chicken and toss to combine.
+- Cover and cook until no longer pink, on low for 6 hours or high for 2 hours.
+- Cook rice in rice cooker.
+- Cook broccoli.
