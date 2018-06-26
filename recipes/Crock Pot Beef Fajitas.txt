@@ -13,19 +13,18 @@ beef
 1, , onions
 1, , salsa
 ##Recipe
-**Ingredients**
-* 1, , beef roast
-* 15, , corn tortillas
-* 2, , bell pepper
-* 2, medium, tomatos
-* 1, can, refried black beans
-* 3, cups, rice
-* 2, , avocado
-* 1, , onions
-* 1, , salsa
+1, , beef roast
+15, , corn tortillas
+2, , bell pepper
+2, medium, tomatos
+1, can, refried black beans
+3, cups, rice
+2, , avocado
+1, , onions
+1, , salsa
 
-**Prep**
-* cook roast, chopped onion, and chopped bell peppers ion crockpot on high for 6-8 hours
-* about 1 hour before serving.  make rice then make beans
-* chop fixins
-* microwave tortillas wrapped in a moist paper towel
+
+- cook roast, chopped onion, and chopped bell peppers ion crockpot on high for 6-8 hours
+- about 1 hour before serving.  make rice then make beans
+- chop fixins
+- microwave tortillas wrapped in a moist paper towel
