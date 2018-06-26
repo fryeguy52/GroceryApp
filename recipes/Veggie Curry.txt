@@ -16,7 +16,6 @@ instant pot
 0.5, cups, chicken broth
 
 ## recipe
-Veggie Curry
 - couscous
 - veggies - any combination of zucchini, broccoli, cauliflower, red pepper, carrots, mushrooms 
 - 1 can garbanzo beans (aka chickpeas)
@@ -26,5 +25,5 @@ Veggie Curry
 - 0.5 cups chicken broth
 
 
-1) Mix it all except couscous in jumbo fyer and let it simmer until its done (about 30 min).  Can use cornstarch at the end to thicken, and 1/4 cup plain greek yogurt if on hand.  IP - Cook on manual for 2 minutes, natural release for 5 minutes.
-2) Make couscous
+- Mix it all except couscous in jumbo fyer and let it simmer until its done (about 30 min).  Can use cornstarch at the end to thicken, and 1/4 cup plain greek yogurt if on hand.  IP - Cook on manual for 2 minutes, natural release for 5 minutes.
+- Make couscous
