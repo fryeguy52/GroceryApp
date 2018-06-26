@@ -20,9 +20,6 @@ easy
 4, tablespoons, Parmesan cheese
 1, , lemon
 ##recipe
-
-ingredients:
-
 6 cups low-sodium vegetable broth
 16 ounces linguine, uncooked
 1 large onion, halved and sliced thin
@@ -42,18 +39,14 @@ ingredients:
 Additional salt and pepper to taste
 Additional Parmesan cheese for serving, if desired
 
-instructions:
 
-Add the broth, linguine, onion, broccoli, asparagus, mushrooms, garlic, red pepper flakes, salt and pepper to a
+- Add the broth, linguine, onion, broccoli, asparagus, mushrooms, garlic, red pepper flakes, salt and pepper to a
 large pot set over high heat. Drizzle the olive oil over the top.
-
-As soon as it comes to a boil, set the timer for 7 minutes and start tossing constantly with long-handled tongs.
-
-Continue boiling and tossing. As soon as the 7 minutes is up, add the peas, parsley, heavy whipping cream, Parmesan,
+- As soon as it comes to a boil, set the timer for 7 minutes and start tossing constantly with long-handled tongs.
+- Continue boiling and tossing. As soon as the 7 minutes is up, add the peas, parsley, heavy whipping cream, Parmesan,
 and lemon zest and continue cooking, tossing constantly, for 1-2 more minutes, until the pasta and veggies appear
 tender. Remove from heat.
-
-Note that much of the liquid will have evaporated, but not all. And that's okay! Let the pasta sit for a couple of
+- Note that much of the liquid will have evaporated, but not all. And that's okay! Let the pasta sit for a couple of
 minutes to cool; the sauce will continue to thicken during that time. Taste and add additional salt and pepper if
 desired. Garnish with additional Parmesan cheese.
 
