@@ -38,12 +38,11 @@ meatless
 1 tomato
 1 cucumber
 
-low heat is better
 
-* let grill heat up ~400
-* cut dough balls into 1/4s
-* stretch out all dough and cook on one side
-* put toppings on the cooked side
-* return to grill to finish
-* expect to do about 2 rounds
-* serve with salad
+- let grill heat up ~400
+- cut dough balls into 1/4s
+- stretch out all dough and cook on one side
+- put toppings on the cooked side
+- return to grill to finish
+- expect to do about 2 rounds
+- serve with salad
