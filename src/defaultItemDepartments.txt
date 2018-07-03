@@ -113,6 +113,7 @@ tomato paste
 ## cheese
 cheddar cheese
 cheese
+cheese mexican blend
 mexican blend cheese
 mozzarella
 mozzarella cheese
@@ -255,6 +256,7 @@ dark red kidney bean
 dried white bean
 dry green lentil
 garbanzo bean
+refried pinto bean
 rice
 white rice
 wild rice
@@ -334,6 +336,7 @@ red pepper flake
 rosemary
 sage
 salt
+taco seasoning mix
 thyme
 whole clove
 
@@ -368,6 +371,7 @@ fresh green bean
 fresh spinach
 green bell pepper
 green onion
+guacamole
 italian green bean
 lettuce
 mini bell pepper
