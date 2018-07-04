@@ -3,6 +3,11 @@ easy
 stove
 meatless
 mexican
+dinner
+winter
+spring
+summer
+fall
 
 ##Ingredients
 2, , zucchini
