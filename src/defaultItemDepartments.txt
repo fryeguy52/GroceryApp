@@ -55,6 +55,7 @@ water chestnut
 ## baby food
 
 ## bakery
+artisan bread
 country bread
 roll
 
@@ -153,6 +154,7 @@ milk
 plain greek yogurt
 plain nonfat greek yogurt
 sour cream
+unsalted butter
 whole milk
 
 ## deli
@@ -186,6 +188,7 @@ cherry tomato
 fresh lemon juice
 fresh pineapple
 fuji apple
+heirloom tomato
 lemon
 lemon juice
 lime
@@ -242,6 +245,7 @@ sausage|bacon
 steak
 stew beef (no bone)
 stew meat
+sweet italian sausage
 turkey kielbasa
 
 ## mexican
@@ -375,6 +379,7 @@ cole slaw mix
 coleslaw or broccoli slaw mix
 cucumber
 diced tomato
+dried morel mushroom
 english or persian cucumber (not regular cucumber!)
 fresh green bean
 fresh spinach
@@ -390,9 +395,11 @@ non-green bell pepper
 parsley
 pumpkin
 red bell pepper
+red or yellow bell pepper
 roma tomato
 salad
 salad mix
+shiitake cap
 sliced mushroom
 sliced white mushroom
 snacking veg
