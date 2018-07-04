@@ -2,6 +2,15 @@
 breakfast
 medium
 stove
+american
+pork
+summer
+fall
+winter
+spring
+dinner
+breakfast
+
 ##Ingredients
 6, , eggs
 2, cups, pancake mix

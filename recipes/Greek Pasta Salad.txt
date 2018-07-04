@@ -3,6 +3,12 @@ chicken
 stove
 grill
 easy
+greek
+summer
+fall
+spring
+dinner
+
 ##Ingredients
 8, thighs, chicken
 1, , bread

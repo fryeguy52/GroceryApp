@@ -2,7 +2,13 @@
 oven
 easy
 beef
-meatless
+vegetarian
+fall
+winter
+spring
+dinner
+italian
+
 ##Ingredients
 1, , frozen lasagna
 1, , salad

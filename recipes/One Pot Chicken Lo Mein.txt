@@ -3,6 +3,13 @@ easy
 chicken
 stove
 oven
+asian
+pasta
+summer
+fall
+winter
+spring
+dinner
 ##ingredients
 .5, lb, chicken breast
 1, pound, pasta

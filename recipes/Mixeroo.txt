@@ -3,6 +3,13 @@ stove
 grill
 medium
 chicken
+summer
+fall
+winter
+spring
+american
+dinner
+
 ##Ingredients
 2, , chicken breasts
 2, , zucchini

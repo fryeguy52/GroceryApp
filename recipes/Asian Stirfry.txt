@@ -2,6 +2,14 @@
 chicken
 stove
 easy
+summer
+fall
+winter
+spring
+asian
+dinner
+lunch
+
 ##Ingredients
 3, cups, rice
 2, , chicken breasts

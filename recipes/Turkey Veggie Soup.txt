@@ -2,6 +2,14 @@
 turkey
 crockpot
 easy
+fall
+winter
+spring
+crock pot
+lunch
+dinner
+american
+
 ##ingredients
 .5, bag, baby carrots
 3, , zucchini

@@ -1,4 +1,12 @@
 ##tags
+chicken
+american
+grill
+dinner
+summer
+spring
+medium
+
 ##ingredients
 4, , chicken breasts
 1, pound, asparagus

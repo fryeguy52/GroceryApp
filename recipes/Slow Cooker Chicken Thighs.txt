@@ -1,7 +1,14 @@
 ##tags
 easy
 chicken
-crockpot
+crock pot
+american
+summer
+fall
+winter
+spring
+dinner
+
 ##ingredients
 1, tbsp, olive oil
 6, , chicken thighs

@@ -2,6 +2,10 @@
 chicken
 medium
 oven
+fall
+winter
+american
+dinner
 ##ingredients
 6, , chicken thighs
 4, Tbsp, olive oil

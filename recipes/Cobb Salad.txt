@@ -2,6 +2,14 @@
 stove
 easy
 chicken
+summer
+fall
+winter
+spring
+american
+dinner
+lunch
+
 ##Ingredients
 1, pound, chicken
 1, , tomato

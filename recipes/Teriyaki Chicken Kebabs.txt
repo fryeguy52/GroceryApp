@@ -2,6 +2,13 @@
 chicken
 grill
 medium
+asian
+grill
+dinner
+summer
+fall
+winter
+spring
 
 ##Ingredients
 4 , breasts, chicken

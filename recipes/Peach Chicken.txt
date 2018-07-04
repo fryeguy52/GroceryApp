@@ -2,6 +2,12 @@
 grill
 medium
 chicken
+summer
+fall
+winter
+spring
+american
+dinner
 ##Ingredients
 8, , chicken thighs
 3, , peaches(optional)

@@ -274,11 +274,11 @@ def check_recipe_format(recipe_dir="..//recipes", verbose=True):
     acceptable_headings=["tags", "ingredients", "recipe"]
 
     # recipes will be required to contain at least one tag from each of the following sets:
-    required_tag_set_meat   = ['chicken', 'beef', 'pork', 'fish', 'vegetarian']
+    required_tag_set_meat   = ['chicken', 'turkey', 'beef', 'pork', 'fish', 'shrimp', 'vegetarian']
     required_tag_set_season = ['summer', 'fall', 'winter', 'spring']
-    required_tag_set_effort = ['easy', 'medium', 'difficult']
-    required_tag_set_region = ['asian', 'italian', 'mexican', 'american']
-    required_tag_set_method = ['stove', 'grill', 'oven', 'crock pot']
+    required_tag_set_effort = ['easy', 'medium', 'hard']
+    required_tag_set_region = ['asian', 'italian', 'mexican', 'american', 'indian', 'greek', 'european']
+    required_tag_set_method = ['stove', 'grill', 'oven', 'crock pot', 'instant pot']
     required_tag_set_when   = ['breakfast', 'lunch', 'dinner', 'side']
 
     # recipes will be encouraged to contain at least one tag from each of the following sets:
@@ -371,7 +371,7 @@ def no_common_member(list_a=[], list_b=[]):
 def errors_from_missing_tags(file, list_required_tags=[], list_all_tags=[], errors=[]):
     if no_common_member(list_required_tags, list_all_tags):
         # print("MATCHED!")
-        error_string = file + " is missing a tag from the following set: " + str(list_required_tags)
+        error_string = file + " is missing a tag from the following set: " + str(list_required_tags) + str(list_all_tags)
         print(error_string)
         errors.append(error_string)
         pass

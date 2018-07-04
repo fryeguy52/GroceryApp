@@ -2,6 +2,13 @@
 stove
 beef
 medium
+european
+summer
+fall
+winter
+spirng
+dinner
+
 ##Ingredients
 1, pound, ground beef
 .5, cup, bread crumbs

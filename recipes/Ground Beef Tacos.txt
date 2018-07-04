@@ -1,8 +1,14 @@
 ##Tags
 stove
-oven
 easy
 beef
+mexican
+dinner
+summer
+fall
+winter
+spring
+
 ##Ingredients
 1, pound, ground beef
 1, teaspoon, cumin

@@ -1,5 +1,15 @@
 ## Tags
-mexican, meatless, easy, oven
+mexican
+meatless
+easy
+oven
+vegetarian
+summer
+fall
+winter
+spring
+lunch
+dinner
 
 ## Ingredients
 16, oz, refried pinto beans

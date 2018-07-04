@@ -1,7 +1,12 @@
 ##Tags
-crockpot
+crock pot
 medium
 beef
+mexican
+fall
+winter
+dinner
+
 ##Ingredients
 1, , beef roast
 15, , corn tortillas

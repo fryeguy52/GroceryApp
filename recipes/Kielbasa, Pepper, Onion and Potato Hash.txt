@@ -2,6 +2,12 @@
 turkey
 stove
 easy
+dinner
+summer
+fall
+winter
+spring
+european
 
 ## Ingredients
 14, ounce, turkey kielbasa

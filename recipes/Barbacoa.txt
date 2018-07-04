@@ -2,6 +2,13 @@
 medium
 beef
 crockpot
+mexican
+summer
+fall
+winter
+spring
+crock pot
+dinner
 
 ##ingredients
 .5, cup, apple cider vinegar

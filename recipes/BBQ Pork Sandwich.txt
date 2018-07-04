@@ -1,8 +1,15 @@
 ##Tags
 pork
-crockpot
+crock pot
 oven
 easy
+american
+summer
+fall
+winter
+spring
+dinner
+
 ##Ingredients
 1, package, hamburger buns
 1, , boneless pork roast

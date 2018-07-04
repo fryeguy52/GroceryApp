@@ -3,6 +3,13 @@ chicken
 grill
 stove
 medium
+summer
+fall
+winter
+spring
+asian
+dinner
+
 ##ingredients
 .5, cup, green onion
 3, tablespoons, brown sugar

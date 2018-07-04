@@ -1,7 +1,15 @@
 ##Tags
-meatless
+vegetarian
 easy
 stove
+summer
+fall
+winter
+spring
+lunch
+dinner
+greek
+italian
 
 ##Ingredients
 8, oz, linguine or fettuccine

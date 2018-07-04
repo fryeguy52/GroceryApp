@@ -1,8 +1,13 @@
 ## Tags
-Chicken
+chicken
 spicy
 easy
 stove
+american
+winter
+fall
+spring
+dinner
 
 ## Ingredients
 1, cup, rice

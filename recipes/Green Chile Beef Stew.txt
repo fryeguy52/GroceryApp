@@ -1,8 +1,14 @@
 ##Tags
-crockpot
+crock pot
 medium
 beef
 spicy
+mexican
+fall
+winter
+spring
+dinner
+
 ##Ingredients
 2, lbs, beef stew meat
 2, tablespoons, NM red chile powder

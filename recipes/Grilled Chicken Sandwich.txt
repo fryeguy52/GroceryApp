@@ -3,6 +3,12 @@ grill
 oven
 medium
 chicken
+american
+summer
+fall
+spring
+dinner
+
 ##Ingredients
 3, , chicken breasts
 1, , salad

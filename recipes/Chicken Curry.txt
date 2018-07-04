@@ -1,8 +1,15 @@
 ##tags
 chicken
-crockpot
+crock pot
 easy
 freezer
+asian
+dinner
+summer
+fall
+winter
+spring
+
 ##ingredients
 4, pound, chicken thighs
 6, ounce, tomato paste

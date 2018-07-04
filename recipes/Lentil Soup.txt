@@ -1,7 +1,13 @@
 ##tags
-meatless
-crockpot
+vegetarian
+crock pot
 easy
+american
+dinner
+fall
+winter
+spring
+
 ##ingredients
 .5, bag, baby carrots
 2, stalks, celery

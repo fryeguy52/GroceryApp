@@ -2,6 +2,11 @@
 hard
 beef
 stove
+winter
+fall
+dinner
+european
+
 ##ingredients
 2, tbsp, olive oil
 2.5, lb, stew beef (no bone)

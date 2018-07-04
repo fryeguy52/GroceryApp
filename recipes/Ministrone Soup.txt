@@ -1,7 +1,13 @@
 ##tags
-meatless
-crockpot
+vegetarian
+crock pot
 easy
+fall
+winter
+spring
+italian
+dinner
+
 ##ingredients
 4, cups, low-sodium vegetable stock
 2, cans, diced tomatoes

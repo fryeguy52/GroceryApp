@@ -2,6 +2,12 @@
 grill
 easy
 chicken
+american
+summer
+fall
+spring
+dinner
+
 ##Ingredients
 3, breast, chicken
 3, cup, wild rice

@@ -2,6 +2,11 @@
 chicken
 oven
 medium
+dinner
+fall
+winter
+spring
+american
 ## Ingredients
 2, , chicken breasts
 1, cup, bell pepper

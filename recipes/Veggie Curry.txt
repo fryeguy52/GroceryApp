@@ -1,8 +1,14 @@
 ## tags
-meatless
+vegetarian
 easy
 stove
 instant pot
+asian
+dinner
+summer
+fall
+winter
+spring
 ## ingredients
 1, box, couscous
 1, head, broccoli

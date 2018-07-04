@@ -3,6 +3,13 @@ grill
 oven
 medium
 beef
+summer
+spring
+fall
+american
+dinner
+lunch
+
 ##Ingredients
 1, pound, ground beef | frozen patties
 1, head, lettuce

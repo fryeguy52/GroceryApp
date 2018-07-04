@@ -2,6 +2,14 @@
 chicken
 easy
 crockpot
+indian
+summer
+fall
+winter
+spring
+crock pot
+dinner
+
 ##ingredients
 1, can, crushed tomatoes
 1, , onion

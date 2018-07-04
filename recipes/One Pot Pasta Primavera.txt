@@ -1,7 +1,15 @@
 ##tags
-meatless
+vegetarian
 stove
 easy
+italian
+pasta
+summer
+fall
+winter
+spring
+dinner
+
 ##ingredients
 6, cups, vegetable broth
 16, ounces, pasta

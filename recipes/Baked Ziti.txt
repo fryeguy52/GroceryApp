@@ -3,6 +3,12 @@ stove
 oven
 beef
 medium
+summer
+fall
+winter
+spring
+italian
+dinner
 ##Ingredients
 1, box, penne
 1, jar, spaghetti sauce

@@ -2,6 +2,13 @@
 chicken
 oven
 medium
+american
+summer
+fall
+winter
+spring
+dinner
+
 ##ingredients
 2, , carrots
 2, medium, potatoes

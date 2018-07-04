@@ -1,7 +1,16 @@
 ##tags
-meatless
+vegetarian
+summer
+fall
+winter
+spring
+american
 easy
 oven
+breakfast
+lunch
+dinner
+
 ##ingredients
 1, tablespoon, olive oil
 2, , yellow onions

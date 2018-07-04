@@ -1,8 +1,13 @@
 ##tags
 chicken
-crockpot
+crock pot
 easy
 freezer
+american
+dinner
+winter
+spring
+fall
 
 ##ingredients
 1.5, pounds, chicken breast

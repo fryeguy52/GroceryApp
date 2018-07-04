@@ -1,8 +1,14 @@
 ##Tags
-crockpot
+crock pot
 easy
 pork
-meatless
+vegetarian
+fall
+winter
+spring
+american
+dinner
+
 ##Ingredients
 8, , potatoes
 1, , onions

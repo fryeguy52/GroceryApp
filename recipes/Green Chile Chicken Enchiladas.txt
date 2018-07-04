@@ -4,6 +4,12 @@ grill
 hard
 spicy
 chicken
+dinner
+mexican
+winter
+fall
+spring
+
 ##Ingredients
 3, , chicken breast
 12, oz, medium chopped NM green chile

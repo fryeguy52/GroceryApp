@@ -3,6 +3,13 @@ beef
 easy
 stove
 oven
+mexican
+summer
+fall
+winter
+spring
+dinner
+lunch
 ##Ingredients
 1, pound, ground beef
 3, large, potatoes

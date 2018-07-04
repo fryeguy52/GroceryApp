@@ -2,6 +2,14 @@
 stove
 easy
 turkey
+pasta
+summer
+winter
+fall
+spring
+dinner
+italian
+
 ## ingredients
 1, pound, pasta
 4, cups, broccoli florets

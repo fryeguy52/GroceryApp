@@ -2,6 +2,12 @@
 grill
 beef
 medium
+american
+summer
+fall
+winter
+spring
+dinner
 
 ## Ingredients
 4, , steak

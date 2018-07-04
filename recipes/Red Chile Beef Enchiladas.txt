@@ -4,6 +4,13 @@ oven
 dairy
 beef
 medium
+summer
+fall
+winter
+spring
+mexican
+dinner
+
 ##Ingredients
 4, tablespoons, NM red chile powder (medium)
 16, oz, mexican blend cheese

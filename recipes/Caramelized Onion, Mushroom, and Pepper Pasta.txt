@@ -1,5 +1,11 @@
 ##tags
-meatless
+vegetarian
+summer
+fall
+winter
+spring
+dinner
+american
 stove
 medium
 ##ingredients

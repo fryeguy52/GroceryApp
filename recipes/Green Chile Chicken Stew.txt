@@ -1,8 +1,13 @@
 ##Tags
-crockpot
+crock pot
 medium
 chicken
 spicy
+mexican
+dinner
+winter
+fall
+
 ##Ingredients
 2, lbs, chicken thighs
 2, tablespoons, NM red chile powder

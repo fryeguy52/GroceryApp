@@ -1,7 +1,13 @@
 ##Tags
-meatless
+vegetarian
 easy
 stove
+summer
+fall
+winter
+spring
+american
+dinner
 
 ##Ingredients
 
