@@ -269,7 +269,22 @@ def sort_and_print_grocery_list_file(recipe_list, grocery_list, StoreCofigFileNa
     pass
 
 def check_recipe_format(recipe_dir="..//recipes", verbose=True):
+
+    # any headings other than the ones defined here will give an error
     acceptable_headings=["tags", "ingredients", "recipe"]
+
+    # recipes will be required to contain at least one tag from each of the following sets:
+    required_tag_set_meat   = ['chicken', 'beef', 'pork', 'fish', 'vegetarian']
+    required_tag_set_season = ['summer', 'fall', 'winter', 'spring']
+    required_tag_set_effort = ['easy', 'medium', 'difficult']
+    required_tag_set_region = ['asian', 'italian', 'mexican', 'american']
+    required_tag_set_method = ['stove', 'grill', 'oven', 'crock pot']
+    required_tag_set_when   = ['breakfast', 'lunch', 'dinner', 'side']
+
+    # recipes will be encouraged to contain at least one tag from each of the following sets:
+    required_tag_set_category = ['pasta', 'casserole', 'sandwich']
+
+
     recipe_names = get_recipe_names(recipe_dir)
     tmp=""
     errors=[]
@@ -277,6 +292,7 @@ def check_recipe_format(recipe_dir="..//recipes", verbose=True):
         file=recipe_dir+"//"+recipe+".txt"
         heading=''
         ingredient_list=[]
+        all_tags_list=[]
         with open(file,'r') as recipe_file:
             recipe_text=get_recipe_from_recipe_file(file)
             if recipe_text == []:
@@ -284,6 +300,13 @@ def check_recipe_format(recipe_dir="..//recipes", verbose=True):
                 if verbose:
                     print(error_string)
                 errors.append(error_string)
+
+            # check each linein the file
+            # if it is empty, then ignore
+            # if it starts with a '#' then check that a valid heading follows and set variable "heading" to new value
+            # if the new line is not blank or a heading change then switch based on heading:
+            # the ingredient heading needs to be formatted correctly in terms of comma separated values
+            # the tags need to have members of certain tags lists. ie each recipe must have one of :[chicken. beef, vegitarian, etc...]
             for line in recipe_file:
                 if line.strip() == '':
                     pass
@@ -309,6 +332,46 @@ def check_recipe_format(recipe_dir="..//recipes", verbose=True):
                         if verbose:
                             print(error_string)
                         errors.append(error_string)
+                elif heading == "tags":
+                    all_tags_list.append(line.strip())
                 else:
                     pass
+            #check that all required tags are present
+
+            chicken_list=['chicken', 'beef']
+            #print(file, all_tags_list, common_member(chicken_list, all_tags_list))
+            # if no_common_member(chicken_list, all_tags_list):
+            #     #print("MATCHED!")
+            #     error_string=file+" is missing a tag from the following set: "+str(chicken_list)
+            #     if verbose:
+            #         print(error_string)
+            #     errors.append(error_string)
+            #     pass
+            errors_from_missing_tags(file, required_tag_set_meat, all_tags_list, errors)
+            errors_from_missing_tags(file, required_tag_set_season, all_tags_list, errors)
+            errors_from_missing_tags(file, required_tag_set_effort, all_tags_list, errors)
+            errors_from_missing_tags(file, required_tag_set_region, all_tags_list, errors)
+            errors_from_missing_tags(file, required_tag_set_method, all_tags_list, errors)
+            errors_from_missing_tags(file, required_tag_set_when, all_tags_list, errors)
+
     return errors
+
+def no_common_member(list_a=[], list_b=[]):
+# if the two list have at least one member in common then return false
+# else true
+    if list_a == []:
+        return True
+    if list_b == []:
+        return True
+    for i in list_a:
+        if i in list_b:
+            return False
+    return True
+
+def errors_from_missing_tags(file, list_required_tags=[], list_all_tags=[], errors=[]):
+    if no_common_member(list_required_tags, list_all_tags):
+        # print("MATCHED!")
+        error_string = file + " is missing a tag from the following set: " + str(list_required_tags)
+        print(error_string)
+        errors.append(error_string)
+        pass

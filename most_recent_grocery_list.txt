@@ -1,23 +1,3 @@
 *** Recipes this Week ***
-Grocery Staples
 *************************
 
-fruits -- weekly tree fruit: 1 
-fruits -- avocado: 2 
-fruits -- banana: 7 
-fruits -- weekly berry: 1 
-vegetables -- snacking veg: 1 
-deli -- lunch meat: 1 
-liquor -- beer: 6 
-tortillas -- flour tortilla: 1 package
-bread -- oat nut bread: 1 loaf
-pb&j -- peanut butter: 1 
-cheese -- shredded cheddar: 1 
-cheese -- sliced cheese: 1 
-dairy -- butter: 1 pound
-dairy -- egg: 1 dozen
-dairy -- 1% milk: 1 gallon
-dairy -- whole milk: 1 gallon
-dairy -- plain greek yogurt: 1 
-snacks -- animal cracker: 1 bag
-snacks -- teddy graham: 1 box

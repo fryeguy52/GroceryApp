@@ -9,8 +9,8 @@ stove
 1, Tbsp, butter
 3, cloves, garlic
 1, pint, cherry tomatoes
-10 cranks freshly ground pepper $0.03
-1/2 tsp salt $0.02
+10, cranks, freshly ground pepper
+0.5, tsp, salt
 0.5, tsp, dried basil
 1, can, cannellini beans
 4, oz, baby spinach

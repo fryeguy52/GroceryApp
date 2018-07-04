@@ -34,6 +34,7 @@ zzz not at the grocery store
 
 ## asian
 beef ramen noodle
+chili garlic sauce
 coconut milk
 dark sesame oil
 egg noodle
@@ -63,6 +64,7 @@ balsamic vinegar
 bread crumb
 brown sugar
 canola oil
+cooking oil
 cooking spray
 corn starch
 cornbread mix
@@ -104,6 +106,7 @@ black olive
 canned corn
 canned pineapple tidbit
 corn
+crushed tomato
 green bean
 ro-tel diced tomatoes and green chile
 rotel tomatoes and chile
@@ -142,6 +145,7 @@ butter
 egg
 half and half
 half-and-half
+heavy cream
 heavy cream (small container)
 heavy whipping cream
 low-fat sour cream
@@ -166,6 +170,7 @@ frozen lasagna
 raw shrimp peeled and deveined
 
 ## frozen veggies
+frozen broccoli floret
 frozen corn
 frozen pea
 frozen peas and carrot
@@ -179,6 +184,7 @@ avocado
 banana
 cherry tomato
 fresh lemon juice
+fresh pineapple
 fuji apple
 lemon
 lemon juice
@@ -190,6 +196,7 @@ weekly berry
 weekly tree fruit
 
 ## italian
+linguine or fettuccine
 pasta
 pasta (rotini or farfalle)
 penne
@@ -200,6 +207,7 @@ spaghetti sauce
 tomato sauce
 white pizza sauce
 wide egg noodle
+wide rice noodle
 
 ## liquor
 beer
@@ -317,6 +325,7 @@ dried rosemary
 dried thyme
 fennel seed
 fresh thyme
+freshly ground pepper
 garam masala
 garlic powder
 ground black pepper
@@ -385,13 +394,16 @@ roma tomato
 salad
 salad mix
 sliced mushroom
+sliced white mushroom
 snacking veg
 snap pea
 swiss chard
+whole mushroom
 yellow pepper
 zucchini
 
 ## zzz not at the grocery store
 dion's pizza dough
+naan (trader joe's)
 
 ## NO DEPARTMENT!
