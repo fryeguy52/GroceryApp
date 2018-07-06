@@ -1,5 +1,11 @@
 ## tags
-
+vegetarian
+stove
+easy
+fall
+winter
+sprint
+soup
 
 ## ingredients
 2, cans, pinto beans
