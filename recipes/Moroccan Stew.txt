@@ -2,10 +2,12 @@
 vegetarian
 stove
 easy
-stew
+soup
 fall
 winter
 spring
+dinner
+middle eastern
 
 ## ingredients
 1, , yellow onion
@@ -21,6 +23,7 @@ spring
 6, cups, vegetable broth
 1, cup, lentils
 1, , bay leaf
+bread
 
 
 ## recipe
@@ -39,6 +42,7 @@ spring
 6 cups vegetable broth
 1 cup brown lentils
 1 bay leaf
+bread
 
 
 - Dice the onion and mince the garlic. Sauté both in a large pot with olive oil over medium heat until softened. Dice the celery while the onions and garlic are sautéing, then add to the pot and continue to sauté for 2-3 minutes more.
@@ -46,3 +50,4 @@ spring
 - Add the diced tomatoes (with juices), chickpeas (rinsed and drained), and cauliflower florets (no need to thaw). Stir the pot until everything is well mixed.
 - Add the vegetable broth and bay leaf, turn the heat up to high, place a lid on the pot, and allow it to come to a boil. Once it reaches a boil, add the lentils. Stir and let it come back up to a boil, then turn the heat down to low. Let the stew simmer on low, with the lid, for 30 minutes.
 - After simmering for 30 minutes, the lentils should be tender. Remove the bay leaf and give the stew a taste. Add salt if needed, then serve.
+- Serve with bread.
