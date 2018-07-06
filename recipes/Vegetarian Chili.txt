@@ -4,8 +4,9 @@ stove
 easy
 fall
 winter
-sprint
+spring
 soup
+mexican
 
 ## ingredients
 2, cans, pinto beans
