@@ -7,6 +7,8 @@ fall
 winter
 spring
 casserole
+dinner
+american
 
 ## ingredients
 0.5, cup, lentils
