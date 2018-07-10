@@ -84,7 +84,7 @@ def get_tags_from_recipe_file(file):
                 pass
             elif line[0] == "#":
                 heading=line.strip("##").strip()
-            elif heading == "Tags":
+            elif heading.lower() == "tags":
                 tag_list.append(line.strip())
             else:
                 pass
