@@ -14,7 +14,7 @@ american
 0.5, cup, lentils
 2, cloves, garlic
 1, , yellow onion
-3 carrots
+3, ,carrots
 2, stalks, celery
 1, package, sliced mushrooms
 0.75, teaspoon, salt
@@ -23,7 +23,7 @@ american
 1, tablespoon, tomato paste
 1, cup, vegetable broth
 1, cup, frozen peas
-4, cups mashed potatoes
+4, cups, potatoes
 
 ## recipe
 1 cup lentils (*pre-cooked)

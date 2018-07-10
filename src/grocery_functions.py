@@ -277,7 +277,7 @@ def check_recipe_format(recipe_dir="..//recipes", verbose=True):
     required_tag_set_meat   = ['chicken', 'turkey', 'beef', 'pork', 'fish', 'shrimp', 'vegetarian']
     required_tag_set_season = ['summer', 'fall', 'winter', 'spring']
     required_tag_set_effort = ['easy', 'medium', 'hard']
-    required_tag_set_region = ['asian', 'italian', 'mexican', 'american', 'indian', 'greek', 'european']
+    required_tag_set_region = ['asian', 'italian', 'mexican', 'american', 'indian', 'greek', 'european', 'middle eastern']
     required_tag_set_method = ['stove', 'grill', 'oven', 'crock pot', 'instant pot', 'no cooking']
     required_tag_set_when   = ['breakfast', 'lunch', 'dinner', 'side']
 
@@ -338,7 +338,6 @@ def check_recipe_format(recipe_dir="..//recipes", verbose=True):
                     pass
             #check that all required tags are present
 
-            chicken_list=['chicken', 'beef']
             #print(file, all_tags_list, common_member(chicken_list, all_tags_list))
             # if no_common_member(chicken_list, all_tags_list):
             #     #print("MATCHED!")

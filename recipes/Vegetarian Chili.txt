@@ -7,12 +7,14 @@ winter
 spring
 soup
 mexican
+lunch
+dinner
 
 ## ingredients
 2, cans, pinto beans
 28, ounces, crushed tomatoes
 1, can, kidney beans
-1, can, hominy,
+1, can, hominy
 1, can, garbanzo beans or chickpeas
 1, can, tomato paste
 4, ounces, chopped green chile

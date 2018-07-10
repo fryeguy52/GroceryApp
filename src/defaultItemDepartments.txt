@@ -98,6 +98,7 @@ maple syrup
 ## candy
 
 ## canned non-veggies
+tuna
 
 ## canned veggies
 artichoke heart
@@ -106,9 +107,14 @@ bean
 black olive
 canned corn
 canned pineapple tidbit
+chickpea
 corn
 crushed tomato
+garbanzo beans or chickpea
 green bean
+hominy
+kidney bean
+pinto bean
 ro-tel diced tomatoes and green chile
 rotel tomatoes and chile
 stewed tomato
@@ -124,10 +130,12 @@ mozzarella cheese
 parmesan
 parmesan cheese
 ricotta
+sharp shredded cheddar cheese
 shredded cheddar
 shredded cheddar cheese
 shredded cheese
 shredded parmesan
+shredded parmesan cheese
 shreddedcheese
 sliced cheese
 swi
@@ -144,11 +152,13 @@ worcestershire sauce
 1% milk
 butter
 egg
+greek yogurt
 half and half
 half-and-half
 heavy cream
 heavy cream (small container)
 heavy whipping cream
+light cream
 low-fat sour cream
 milk
 plain greek yogurt
@@ -170,9 +180,12 @@ frozen lasagna
 
 ## frozen sea food
 raw shrimp peeled and deveined
+uncooked shrimp
 
 ## frozen veggies
+chopped green chile
 frozen broccoli floret
+frozen cauliflower floret
 frozen corn
 frozen pea
 frozen peas and carrot
@@ -180,6 +193,7 @@ frozen spinach
 green chile
 medium chopped nm green chile
 roasted chopped medium nm green chile
+shelled edamame
 
 ## fruits
 avocado
@@ -199,7 +213,9 @@ weekly berry
 weekly tree fruit
 
 ## italian
+angel hair pasta
 linguine or fettuccine
+lo mein egg noodles or spaghetti noodle
 pasta
 pasta (rotini or farfalle)
 penne
@@ -209,6 +225,7 @@ shell pasta
 spaghetti sauce
 tomato sauce
 white pizza sauce
+whole wheat pasta
 wide egg noodle
 wide rice noodle
 
@@ -268,6 +285,7 @@ dark red kidney bean
 dried white bean
 dry green lentil
 garbanzo bean
+lentil
 refried pinto bean
 rice
 white rice
@@ -304,6 +322,7 @@ beef broth
 beef stew seasoning mix
 broth
 chicken broth
+chicken broth (optional)
 chicken or vegetable broth
 low-sodium vegetable stock
 mushroom soup mix
@@ -317,9 +336,12 @@ bay leaf
 bay leave
 black pepper
 cajun or creole seasoning
+cayenne pepper
+celery salt
 celery seed
 chicken bouillon granule
 chili powder
+cinnamon
 crushed red pepper
 cumin
 curry powder
@@ -337,7 +359,9 @@ ground clove
 ground coriander
 ground cumin
 ground ginger
+ground mustard
 ground nutmeg
+ground thyme
 italian seasoning
 kosher salt
 mrs. dash
@@ -349,8 +373,10 @@ red pepper flake
 rosemary
 sage
 salt
+smoked paprika
 taco seasoning mix
 thyme
+turmeric
 whole clove
 
 ## tortillas
@@ -381,7 +407,9 @@ cucumber
 diced tomato
 dried morel mushroom
 english or persian cucumber (not regular cucumber!)
+fresh broccoli
 fresh green bean
+fresh parsley
 fresh spinach
 green bell pepper
 green onion
@@ -400,6 +428,7 @@ roma tomato
 salad
 salad mix
 shiitake cap
+sliced cremini or button mushroom
 sliced mushroom
 sliced white mushroom
 snacking veg

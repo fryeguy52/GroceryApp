@@ -1,5 +1,6 @@
 ## tags
 seafood
+shrimp
 dinner
 easy
 stove
@@ -8,6 +9,7 @@ fall
 winter
 spring
 pasta
+italian
 
 ## ingredients
 2, tablespoons, butter

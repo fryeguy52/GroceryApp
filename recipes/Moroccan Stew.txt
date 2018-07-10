@@ -23,7 +23,7 @@ middle eastern
 6, cups, vegetable broth
 1, cup, lentils
 1, , bay leaf
-bread
+1, ,bread
 
 
 ## recipe

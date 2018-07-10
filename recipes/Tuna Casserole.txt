@@ -1,5 +1,6 @@
 ## Tags
 seafood
+fish
 dinner
 casserole
 easy
