@@ -11,7 +11,7 @@ spring
 dinner
 
 ##ingredients
-6, cups, vegetable broth
+4, cups, vegetable broth
 16, ounces, pasta
 1, large, onion
 2, pound, broccoli
@@ -28,10 +28,11 @@ dinner
 4, tablespoons, Parmesan cheese
 1, , lemon
 ##recipe
-6 cups low-sodium vegetable broth
+4 cups low-sodium vegetable broth
+1 cup water
 16 ounces linguine, uncooked
 1 large onion, halved and sliced thin
-2 pound broccoli crowns, cut into large florets
+2 pounds broccoli crowns, cut into large florets
 2 pounds asparagus, ends snapped off and cut into 2-inch pieces
 8 ounces sliced white button mushrooms
 8 large cloves garlic, minced
@@ -48,7 +49,8 @@ Additional salt and pepper to taste
 Additional Parmesan cheese for serving, if desired
 
 
-- Add the broth, linguine, onion, broccoli, asparagus, mushrooms, garlic, red pepper flakes, salt and pepper to a
+*liquid amount updated 8/24/2018
+- Add the broth, water, linguine, onion, broccoli, asparagus, mushrooms, garlic, red pepper flakes, salt and pepper to a
 large pot set over high heat. Drizzle the olive oil over the top.
 - As soon as it comes to a boil, set the timer for 7 minutes and start tossing constantly with long-handled tongs.
 - Continue boiling and tossing. As soon as the 7 minutes is up, add the peas, parsley, heavy whipping cream, Parmesan,
