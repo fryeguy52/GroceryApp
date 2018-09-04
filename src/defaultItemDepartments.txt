@@ -40,8 +40,10 @@ dark sesame oil
 egg noodle
 egg rolls or pot sticker
 fish sauce
+jarred pad thai sauce
 light coconut milk
 peanut sauce
+rice noodle
 rice vinegar
 sambal oelek
 seaseme oil
@@ -98,6 +100,7 @@ maple syrup
 ## candy
 
 ## canned non-veggies
+canned tuna packed in oil
 tuna
 
 ## canned veggies
@@ -107,9 +110,11 @@ bean
 black olive
 canned corn
 canned pineapple tidbit
+cannelini bean
 chickpea
 corn
 crushed tomato
+fire roasted diced tomato
 garbanzo beans or chickpea
 green bean
 hominy
@@ -123,7 +128,6 @@ tomato paste
 ## cheese
 cheddar cheese
 cheese
-cheese mexican blend
 mexican blend cheese
 mozzarella
 mozzarella cheese
@@ -146,6 +150,8 @@ dijon mustard
 kalamata olive
 ketchup
 pickle
+pitted kalamata olive
+sliced black olive
 worcestershire sauce
 
 ## dairy
@@ -168,7 +174,9 @@ unsalted butter
 whole milk
 
 ## deli
+bite size mozzarella ball
 crumbled feta
+flatbread
 lunch meat
 
 ## frozen desserts
@@ -202,6 +210,7 @@ cherry tomato
 fresh lemon juice
 fresh pineapple
 fuji apple
+grape or cherry tomato
 heirloom tomato
 lemon
 lemon juice
@@ -305,6 +314,7 @@ red potato
 russet potato
 shallot
 shallot bulb
+small onion
 small white potato
 sweet onion
 sweet potato
@@ -313,6 +323,7 @@ yellow onion
 
 ## snacks
 animal cracker
+chopped peanut
 peanut
 ritz cracker
 teddy graham
@@ -340,6 +351,7 @@ cayenne pepper
 celery salt
 celery seed
 chicken bouillon granule
+chile powder
 chili powder
 cinnamon
 crushed red pepper
@@ -387,7 +399,9 @@ nm red chile powder (medium)
 tortilla
 
 ## vegetables
+arugula or spring mix
 asparagu
+baby arugula
 baby carrot
 baby spinach
 babycarrot
@@ -398,6 +412,7 @@ broccoli floret
 brussels sprout
 butternut squash
 carrot
+carrot matchstick
 cauliflower
 celery
 celery stalk
@@ -405,15 +420,14 @@ cole slaw mix
 coleslaw or broccoli slaw mix
 cucumber
 diced tomato
-dried morel mushroom
 english or persian cucumber (not regular cucumber!)
+fresh basil leave
 fresh broccoli
 fresh green bean
 fresh parsley
 fresh spinach
 green bell pepper
 green onion
-guacamole
 italian green bean
 lettuce
 mini bell pepper
@@ -424,11 +438,12 @@ parsley
 pumpkin
 red bell pepper
 red or yellow bell pepper
+red pepper
 roma tomato
 salad
 salad mix
-shiitake cap
 sliced cremini or button mushroom
+sliced mixed mushroom
 sliced mushroom
 sliced white mushroom
 snacking veg

@@ -4,6 +4,9 @@ fish
 spring
 summer
 fall
+dinner
+no cooking
+italian
 
 ##ingredients
 1, , lemon

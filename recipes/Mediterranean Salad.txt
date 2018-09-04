@@ -6,6 +6,8 @@ spring
 fall
 winter
 mediterranean
+no cooking
+dinner
 
 ##ingredients
 3, tablespoons, balsamic vinegar
