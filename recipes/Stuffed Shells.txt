@@ -7,6 +7,8 @@ summer
 fall
 spring
 freezer
+oven
+dinner
 
 ##ingredients
 2, boxes, jumbo shell pasta

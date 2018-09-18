@@ -7,21 +7,22 @@ summer
 fall
 winter
 spring
+dinner
 
 ##ingredients
-- 2, tablespoons, butter
-- 1.5 - 2, pounds, chicken breast
-- 2, cloves, garlic
-- 1, , onion
-- 1, teaspoon, salt
-- 0.75, teaspoon, Pepper
-- 1, teaspoon, garlic powder
-- 1.33, cups, white rice
-- 1.33, cups, chicken broth
-- 0.5, cup, milk
-- 1.5, tablespoons, flour
-- 2, packages, frozen broccoli
-- 1.5 - 2, cups, shredded cheddar
+2, tablespoons, butter
+2, pounds, chicken breast
+2, cloves, garlic
+1, , onion
+1, teaspoon, salt
+0.75, teaspoon, Pepper
+1, teaspoon, garlic powder
+1.33, cups, white rice
+1.33, cups, chicken broth
+0.5, cup, milk
+1.5, tablespoons, flour
+2, packages, frozen broccoli
+2, cups, shredded cheddar
 
 
 ##recipe

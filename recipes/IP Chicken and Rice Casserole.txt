@@ -8,9 +8,10 @@ spring
 summer
 american
 casserole
+dinner
 
 ##ingredients
-1, , medium onion
+1, medium, onion
 3, cloves, garlic
 1, bag, baby carrots
 2, cups, sliced mushrooms
