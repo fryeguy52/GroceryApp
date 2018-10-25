@@ -18,7 +18,7 @@ dinner
 36, ounces, part-skim ricotta
 3, cups, shredded mozzarella
 1.5, cups, grated parmesan
-3, tablespoons, fresh basil
+1, tablespoons, dried basil
 3, , eggs
 8, cups, marinara sauce
 1, , salad mix
@@ -35,7 +35,7 @@ dinner
 36, ounces, part-skim ricotta
 3, cups, shredded mozzarella
 1.5, cups, grated parmesan
-3, tablespoons, fresh basil
+1, tablespoons, dried basil
 3, , eggs
 8, cups, marinara sauce
 1, , salad mix
