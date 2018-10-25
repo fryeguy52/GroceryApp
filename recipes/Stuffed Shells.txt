@@ -31,7 +31,7 @@ dinner
 2, boxes, jumbo shell pasta
 3, tablespoons, olive oil
 6, cloves, garlic
-10, ounces, fresh spinach
+10, ounces, fresh spinach, chopped
 36, ounces, part-skim ricotta
 3, cups, shredded mozzarella
 1.5, cups, grated parmesan
@@ -49,3 +49,4 @@ dinner
 - Combine spinach, cheeses, eggs, basil in large bowl.  Stuff shells with filling and arrange in baking dish.  Spoon remaining sauce around shells.
 - Freezer - cover tighly with plastic wrap and then foil.  Defrost overnight before baking according to directions below.
 - Preheat oven to 375.  Bake covered with foil for 25 minutes (+10 minutes if coming from fridge), then uncover and bake and additional 15 minutes.
+- Serve with salad.
