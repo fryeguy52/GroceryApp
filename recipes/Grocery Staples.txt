@@ -56,7 +56,6 @@ fall
 winter
 spring
 ##Ingredients
-1, gallon, whole milk
 1, gallon, 1% milk
 1, , plain greek yogurt
 1, dozen, eggs
@@ -72,9 +71,9 @@ spring
 1, , shredded cheddar
 1, , sliced cheese
 1, package, flour tortillas
-1, box, teddy grahams
-1, bag, animal crackers
 1, , lunch meat
+1, carton, oatmeal
+
 
 ##Recipe
 things to buy weekly
