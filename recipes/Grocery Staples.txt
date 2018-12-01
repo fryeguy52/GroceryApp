@@ -80,6 +80,8 @@ spring
 1, container, salad mix
 1, jar, spaghetti sauce
 1, package, spaghetti noodles
+2, cans, green beans
+2, cans, corn
 
 ##Recipe
 things to buy weekly
