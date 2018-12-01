@@ -2,6 +2,7 @@
 crock pot
 medium
 beef
+chicken
 spicy
 mexican
 fall
@@ -10,7 +11,7 @@ spring
 dinner
 
 ##Ingredients
-2, lbs, beef stew meat
+2, lbs, stew meat
 2, tablespoons, NM red chile powder
 4, large, potatoes
 1, , onions
@@ -22,7 +23,7 @@ dinner
 8, oz, roasted chopped medium NM green chile
 1, tub, sour cream
 ##Recipe
-2 lbs beef stew meat
+2 lbs stew meat
 2 tablespoons NM red chile powder
 4 large potatoes
 1 onion
