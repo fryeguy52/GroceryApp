@@ -25,7 +25,7 @@ def post_recipe_to_trello(recipe_name):
         list_response=requests.get(lists_url, params=params_key_and_token)
         response_array_of_dict=list_response.json()
         for i in response_array_of_dict:
-            if i["name"] == "To do this week ...":
+            if i["name"] == "This Week":
                 id_list=i["id"]
 
         name = recipe_name

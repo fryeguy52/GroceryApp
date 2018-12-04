@@ -1,46 +1,74 @@
 *** Recipes this Week ***
-Grocery Staples
+One Pan Autumn Chicken Dinner
 Pad Thai
-IP Chicken and Rice Casserole
+Lettuce Wraps
+Ground Beef Tacos
+Grocery Staples
 *************************
 
+fruits -- avocado: 3.0 
 fruits -- banana: 7 
-fruits -- lime: 2 
 fruits -- weekly tree fruit: 1 
-fruits -- avocado: 2 
+fruits -- lime: 2 
+fruits -- tomato: 1 
+fruits -- fuji apple: 2 
 fruits -- weekly berry: 1 
+vegetables -- boston lettuce: 1 head
 vegetables -- yellow pepper: 1 
-vegetables -- red pepper: 1 
-vegetables -- sliced mushroom: 2 cup
-vegetables -- baby carrot: 1 bag
-vegetables -- green onion: 8 
+vegetables -- babycarrot: .25 bag
+vegetables -- green onion: 1 bunch, 8 
+vegetables -- butternut squash: 1 
+vegetables -- cucumber: 2 
 vegetables -- carrot matchstick: 2 cup
 vegetables -- snacking veg: 1 
-roots -- onion: 1 medium
-roots -- garlic: 9.0 clove
+vegetables -- brussels sprout: 1 lb
+vegetables -- sliced mushroom: 1 package
+vegetables -- red pepper: 1 
+roots -- shallot bulb: 2 
+roots -- onion: 1 
+roots -- garlic: 11.0 clove
+roots -- sweet potato: 1 large
 deli -- lunch meat: 1 
 liquor -- beer: 6 
 tortillas -- flour tortilla: 1 package
-condiments -- worchestershire sauce: 2 tablespoon
-asian -- soy sauce: 4 tbsp
+asian -- peanut sauce: 1 bottle
+asian -- rice vinegar: 4 teaspoon
 asian -- rice noodle: 1 package
+asian -- sesame seed: 1 teaspoon
 asian -- jarred pad thai sauce: 1 cup
+asian -- water chestnut: 1 can
+asian -- soy sauce: 4 tbsp, 3 teaspoon
 bread -- oat nut bread: 1 loaf
-rice and beans -- brown rice: 2 cup
-soup -- chicken broth: 2.25 cup
-soup -- cream of mushroom soup (reduced sodium): 1 can
-baking -- olive oil: 1 tablespoon, 4 tbsp
-spices -- fresh thyme: 1 tablespoon
+mexican -- taco shell: 1 box
+canned veggies -- bean: 1 can
+canned veggies -- rotel tomatoes and chile: 1 can
+rice and beans -- rice: 1 
+baking -- red wine vinegar: 1.5 tbsp
+baking -- olive oil: 8.0 tbsp
+baking -- sugar: 1 teaspoon
+spices -- salt: 1 
+spices -- red pepper flake: .25 teaspoon
+spices -- sage: 1 tbsp
+spices -- pepper: 1 
+spices -- rosemary: 1 tbsp
+spices -- ground ginger: .25 teaspoon
+spices -- thyme: 1 tbsp
+spices -- cumin: 1 teaspoon
 pb&j -- peanut butter: 1 
+meat -- ground turkey: 1 pound
+meat -- bacon: 4 slice
+meat -- ground beef: 1 pound
 meat -- chicken breast: 3 
-meat -- chicken thigh: 2 pound
+meat -- chicken thigh: 6 
+cheese -- cheese: 4 ounce
 cheese -- shredded cheddar: 1 
 cheese -- sliced cheese: 1 
-dairy -- 1% milk: 1 gallon
-dairy -- butter: 1 pound
-dairy -- egg: 1 dozen
 dairy -- plain greek yogurt: 1 
+dairy -- 1% milk: 1 gallon
+dairy -- egg: 1 dozen
 dairy -- whole milk: 1 gallon
-snacks -- chopped peanut: 0.67 cup
+dairy -- butter: 1 pound
 snacks -- teddy graham: 1 box
+snacks -- peanut: 1 
 snacks -- animal cracker: 1 bag
+snacks -- chopped peanut: 0.67 cup
