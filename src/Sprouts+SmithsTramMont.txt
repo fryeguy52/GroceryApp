@@ -27,6 +27,7 @@ dairy
 beverages
 candy
 snacks
+juice
 baby food
 frozen desserts
 frozen non-veggies

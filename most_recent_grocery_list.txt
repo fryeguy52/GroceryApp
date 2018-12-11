@@ -1,74 +1,92 @@
 *** Recipes this Week ***
-One Pan Autumn Chicken Dinner
-Pad Thai
-Lettuce Wraps
-Ground Beef Tacos
-Grocery Staples
+Kielbasa, Pepper, Onion and Potato Hash
+Ginger Sesame Chicken Thighs
+One Pan Healthy Chicken and Veggies
+Chicken Pumpkin Soup
+Green Chile Stew
+Pasta With Turkey and Broccoli
 *************************
 
-fruits -- avocado: 3.0 
-fruits -- banana: 7 
-fruits -- weekly tree fruit: 1 
-fruits -- lime: 2 
-fruits -- tomato: 1 
-fruits -- fuji apple: 2 
+fruits -- tomato: .5 cup
+fruits -- avocado: 2 
 fruits -- weekly berry: 1 
-vegetables -- boston lettuce: 1 head
-vegetables -- yellow pepper: 1 
-vegetables -- babycarrot: .25 bag
-vegetables -- green onion: 1 bunch, 8 
-vegetables -- butternut squash: 1 
-vegetables -- cucumber: 2 
-vegetables -- carrot matchstick: 2 cup
+fruits -- banana: 7 
+fruits -- lime: 4 
+fruits -- weekly tree fruit: 1 
+vegetables -- zucchini: 1 
+vegetables -- baby carrot: .5 bag
+vegetables -- broccoli: 1 cup
 vegetables -- snacking veg: 1 
-vegetables -- brussels sprout: 1 lb
+vegetables -- bell pepper: 1 cup
+vegetables -- celery: 2 stalk
+vegetables -- snap pea: 1 pound
+vegetables -- pumpkin: 1 can
+vegetables -- green onion: .5 cup
 vegetables -- sliced mushroom: 1 package
-vegetables -- red pepper: 1 
-roots -- shallot bulb: 2 
-roots -- onion: 1 
-roots -- garlic: 11.0 clove
-roots -- sweet potato: 1 large
+vegetables -- broccoli floret: 4 cup
+vegetables -- non-green bell pepper: 1 
+vegetables -- salad mix: 1 container
+vegetables -- green bell pepper: 1 
+roots -- ginger: 1 tablespoon
+roots -- fresh garlic: 1 tablespoon
+roots -- onion: 3.5 
+roots -- potato: 7.0 large
+roots -- garlic: 5.0 clove
+roots -- fresh ginger: 1 teaspoon
 deli -- lunch meat: 1 
 liquor -- beer: 6 
-tortillas -- flour tortilla: 1 package
-asian -- peanut sauce: 1 bottle
-asian -- rice vinegar: 4 teaspoon
-asian -- rice noodle: 1 package
-asian -- sesame seed: 1 teaspoon
-asian -- jarred pad thai sauce: 1 cup
-asian -- water chestnut: 1 can
-asian -- soy sauce: 4 tbsp, 3 teaspoon
+tortillas -- flour tortilla: 2.0 package
+tortillas -- nm red chile powder: 2 tablespoon
+asian -- rice vinegar: 3 tablespoon
+asian -- dark sesame oil: 1 tablespoon
+asian -- coconut milk: .5 can
+asian -- toasted sesame seed: 2 teaspoon
+asian -- soy sauce: 2.5 tablespoon
+asian -- sambal oelek: 1 teaspoon
 bread -- oat nut bread: 1 loaf
-mexican -- taco shell: 1 box
-canned veggies -- bean: 1 can
-canned veggies -- rotel tomatoes and chile: 1 can
-rice and beans -- rice: 1 
-baking -- red wine vinegar: 1.5 tbsp
-baking -- olive oil: 8.0 tbsp
-baking -- sugar: 1 teaspoon
-spices -- salt: 1 
-spices -- red pepper flake: .25 teaspoon
-spices -- sage: 1 tbsp
+bread -- mini bagel: 1 bag
+bread -- dinner roll: 1 package
+italian -- spaghetti sauce: 1 jar
+italian -- pasta: 1 pound
+italian -- spaghetti noodle: 1 package
+canned veggies -- green bean: 2 can
+canned veggies -- corn: 2 can
+canned veggies -- canned corn: 1 can
+canned veggies -- stewed tomato: 1 can
+canned non-veggies -- tuna: 5 can
+rice and beans -- black bean: 1 can
+rice and beans -- rice: 4 cup, 2.0 
+soup -- chicken broth: 8.0 cup
+baking -- cooking spray: 1 
+baking -- olive oil: 1 , 5.0 tablespoon
+baking -- brown sugar: 3 tablespoon
+spices -- crushed red pepper: .5 teaspoon
 spices -- pepper: 1 
-spices -- rosemary: 1 tbsp
-spices -- ground ginger: .25 teaspoon
-spices -- thyme: 1 tbsp
-spices -- cumin: 1 teaspoon
-pb&j -- peanut butter: 1 
+spices -- salt: 1 , .5 teaspoon
+spices -- black pepper: .5 teaspoon
+spices -- kosher salt: 1 
+spices -- fennel seed: 1 teaspoon
+spices -- italian seasoning: 1 teaspoon
+spices -- paprika: .25 teaspoon
+spices -- red pepper flake: .5 teaspoon
+breakfast -- oatmeal: 1 carton
+pb&j -- peanut butter: .5 cup, 1 
+meat -- turkey kielbasa: 14 ounce
+meat -- stew meat: 2 lb
+meat -- chicken: 6 breast
 meat -- ground turkey: 1 pound
-meat -- bacon: 4 slice
-meat -- ground beef: 1 pound
-meat -- chicken breast: 3 
-meat -- chicken thigh: 6 
-cheese -- cheese: 4 ounce
-cheese -- shredded cheddar: 1 
+meat -- chicken breast: 2 
+meat -- boneless chicken thigh: 1.5 lb
 cheese -- sliced cheese: 1 
-dairy -- plain greek yogurt: 1 
-dairy -- 1% milk: 1 gallon
+cheese -- shredded cheddar: 1 
+cheese -- parmesan: 1 
+dairy -- plain almond milk: 1 half gallon
+dairy -- whipped cream cheese: 1 container
 dairy -- egg: 1 dozen
-dairy -- whole milk: 1 gallon
-dairy -- butter: 1 pound
-snacks -- teddy graham: 1 box
-snacks -- peanut: 1 
-snacks -- animal cracker: 1 bag
-snacks -- chopped peanut: 0.67 cup
+dairy -- sour cream: 1 tub
+dairy -- 1% milk: 1 gallon
+snacks -- rice cake: 1 package
+snacks -- mini rice cake: 1 package
+snacks -- peanut: 3 tablespoon
+juice -- orange juice: 1 half gallon
+frozen veggies -- roasted chopped medium nm green chile: 8 oz

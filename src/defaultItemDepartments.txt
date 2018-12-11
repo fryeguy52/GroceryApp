@@ -19,6 +19,7 @@ frozen sea food
 frozen veggies
 fruits
 italian
+juice
 liquor
 meat
 mexican
@@ -34,19 +35,14 @@ zzz not at the grocery store
 
 ## asian
 beef ramen noodle
-chili garlic sauce
 coconut milk
 dark sesame oil
-egg noodle
 egg rolls or pot sticker
-fish sauce
 jarred pad thai sauce
-light coconut milk
 peanut sauce
 rice noodle
 rice vinegar
 sambal oelek
-seaseme oil
 sesame oil
 sesame seed
 soy sauce
@@ -57,31 +53,18 @@ water chestnut
 ## baby food
 
 ## bakery
-artisan bread
-country bread
 roll
 
 ## baking
-apple cider vinegar
 balsamic vinegar
-bread crumb
 brown sugar
-canola oil
-cooking oil
 cooking spray
-corn starch
 cornbread mix
-cornstarch
 evaporated milk
 flour
-molasse
 olive oil
-pancake mix
-panko bread crumb
-panko breadcrumb
 red wine vinegar
 sugar
-vegetable oil
 vinegar (balsamic or red wine)
 
 ## beverages
@@ -90,12 +73,12 @@ water
 ## bread
 bread
 dinner roll
-french bread
 hamburger bun
+mini bagel
 oat nut bread
 
 ## breakfast
-maple syrup
+oatmeal
 
 ## candy
 
@@ -120,27 +103,20 @@ green bean
 hominy
 kidney bean
 pinto bean
-ro-tel diced tomatoes and green chile
 rotel tomatoes and chile
 stewed tomato
 tomato paste
 
 ## cheese
-cheddar cheese
 cheese
-grated parmesan
 mexican blend cheese
 mozzarella
-mozzarella cheese
 parmesan
 parmesan cheese
-part-skim ricotta
-ricotta
 sharp shredded cheddar cheese
 shredded cheddar
 shredded cheddar cheese
 shredded cheese
-shredded mozzarella
 shredded parmesan
 shredded parmesan cheese
 shreddedcheese
@@ -155,7 +131,6 @@ ketchup
 pickle
 pitted kalamata olive
 sliced black olive
-worcestershire sauce
 worchestershire sauce
 
 ## dairy
@@ -164,18 +139,17 @@ butter
 egg
 greek yogurt
 half and half
-half-and-half
 heavy cream
 heavy cream (small container)
 heavy whipping cream
 light cream
 low-fat sour cream
 milk
-plain greek yogurt
+plain almond milk
 plain nonfat greek yogurt
 sour cream
 unsalted butter
-whole milk
+whipped cream cheese
 
 ## deli
 bite size mozzarella ball
@@ -188,7 +162,6 @@ piecrust
 
 ## frozen non-veggies
 egg roll
-frozen lasagna
 
 ## frozen sea food
 raw shrimp peeled and deveined
@@ -197,16 +170,13 @@ uncooked shrimp
 ## frozen veggies
 chopped green chile
 frozen broccoli
-frozen broccoli floret
 frozen cauliflower floret
 frozen corn
 frozen pea
 frozen peas and carrot
 frozen spinach
 green chile
-medium chopped nm green chile
 roasted chopped medium nm green chile
-shelled edamame
 
 ## fruits
 avocado
@@ -216,7 +186,6 @@ fresh lemon juice
 fresh pineapple
 fuji apple
 grape or cherry tomato
-heirloom tomato
 lemon
 lemon juice
 lime
@@ -228,35 +197,29 @@ weekly tree fruit
 
 ## italian
 angel hair pasta
-jumbo shell pasta
 linguine or fettuccine
-lo mein egg noodles or spaghetti noodle
-marinara sauce
 pasta
 pasta (rotini or farfalle)
-penne
 pizza sauce
-prepared pesto
 shell pasta
+spaghetti noodle
 spaghetti sauce
 tomato sauce
-uncooked whole wheat pasta
 white pizza sauce
 whole wheat pasta
 wide egg noodle
-wide rice noodle
+
+## juice
+orange juice
 
 ## liquor
 beer
-dry white wine
-guinness beer
 
 ## meat
 bacon
 beef
 beef chuck roast
 beef pot roast
-beef roast
 beef stew meat
 boneless chicken thigh
 boneless pork roast
@@ -264,26 +227,19 @@ canadian bacon
 chicken
 chicken breast
 chicken thigh
-chuck roast
 diced ham
 ground beef
-ground beef (lean)
 ground beef | frozen pattie
 ground turkey
-nice beef for oven roast
 pepperoni
 pork chop
-pork roast
 rotisserie chicken
-sausage|bacon
 steak
-stew beef (no bone)
 stew meat
 sweet italian sausage
 turkey kielbasa
 
 ## mexican
-chipotle chiles in adobo
 pace picante medium salsa
 refried black bean
 salsa
@@ -298,10 +254,7 @@ peanut butter
 black bean
 brown rice
 cannellini bean
-couscou
 dark red kidney bean
-dried white bean
-dry green lentil
 garbanzo bean
 lentil
 refried pinto bean
@@ -313,29 +266,25 @@ wild rice
 fresh garlic
 fresh ginger
 garlic
-garlic clove
 ginger
 minced garlic
 onion
 potato
 red onion
 red potato
-russet potato
 shallot
 shallot bulb
 small onion
 small white potato
-sweet onion
 sweet potato
 white onion
 yellow onion
 
 ## snacks
-animal cracker
 chopped peanut
+mini rice cake
 peanut
-ritz cracker
-teddy graham
+rice cake
 
 ## soup
 beef broth
@@ -343,20 +292,16 @@ beef stew seasoning mix
 broth
 chicken broth
 chicken broth (optional)
-chicken or vegetable broth
 cream of mushroom soup (reduced sodium)
 low-sodium vegetable stock
 mushroom soup mix
-swedish meatball mix
 vegetable broth
-vegetable stock
 
 ## spices
 basil
 bay leaf
 bay leave
 black pepper
-cajun or creole seasoning
 cayenne pepper
 celery salt
 celery seed
@@ -369,17 +314,12 @@ cumin
 curry powder
 dried basil
 dried oregano
-dried rosemary
 dried thyme
 fennel seed
 fresh thyme
 freshly ground pepper
 garam masala
 garlic powder
-ground black pepper
-ground clove
-ground coriander
-ground cumin
 ground ginger
 ground mustard
 ground nutmeg
@@ -399,14 +339,11 @@ smoked paprika
 taco seasoning mix
 thyme
 turmeric
-whole clove
 
 ## tortillas
 corn tortilla
 flour tortilla
 nm red chile powder
-nm red chile powder (medium)
-tortilla
 
 ## vegetables
 arugula or spring mix
@@ -425,7 +362,6 @@ carrot
 carrot matchstick
 cauliflower
 celery
-celery stalk
 cole slaw mix
 coleslaw or broccoli slaw mix
 cucumber
@@ -433,7 +369,6 @@ diced tomato
 english or persian cucumber (not regular cucumber!)
 fresh basil leave
 fresh broccoli
-fresh green bean
 fresh parsley
 fresh spinach
 green bell pepper
@@ -447,19 +382,13 @@ non-green bell pepper
 parsley
 pumpkin
 red bell pepper
-red or yellow bell pepper
 red pepper
-roma tomato
 salad
 salad mix
-sliced cremini or button mushroom
 sliced mixed mushroom
 sliced mushroom
-sliced white mushroom
 snacking veg
 snap pea
-swiss chard
-whole mushroom
 yellow pepper
 zucchini
 
