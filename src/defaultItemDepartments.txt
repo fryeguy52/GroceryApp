@@ -36,18 +36,15 @@ zzz not at the grocery store
 ## asian
 beef ramen noodle
 coconut milk
-dark sesame oil
 egg rolls or pot sticker
 jarred pad thai sauce
 peanut sauce
 rice noodle
 rice vinegar
-sambal oelek
 sesame oil
 sesame seed
 soy sauce
 sriracha
-toasted sesame seed
 water chestnut
 
 ## baby food
@@ -58,7 +55,6 @@ roll
 ## baking
 balsamic vinegar
 brown sugar
-cooking spray
 cornbread mix
 evaporated milk
 flour
@@ -221,7 +217,6 @@ beef
 beef chuck roast
 beef pot roast
 beef stew meat
-boneless chicken thigh
 boneless pork roast
 canadian bacon
 chicken
@@ -388,7 +383,6 @@ salad mix
 sliced mixed mushroom
 sliced mushroom
 snacking veg
-snap pea
 yellow pepper
 zucchini
 
