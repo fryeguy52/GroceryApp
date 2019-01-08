@@ -5,7 +5,7 @@ fall
 winter
 spring
 mexican
-crockpot
+crock pot
 dinner
 vegetarian
 
@@ -16,7 +16,7 @@ vegetarian
 0.5, bag, shredded carrots
 1, pound, dry uncooked black beans
 1, cup, salsa
-1, Tbsp, chili powder* 
+1, Tbsp, chili powder
 0.5, Tbsp, cumin
 1, tsp, oregano
 4, cups, vegetable broth

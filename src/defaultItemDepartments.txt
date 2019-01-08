@@ -91,6 +91,7 @@ canned corn
 canned pineapple tidbit
 cannelini bean
 chickpea
+chopped tomato
 corn
 crushed tomato
 fire roasted diced tomato
@@ -144,6 +145,7 @@ milk
 plain almond milk
 plain nonfat greek yogurt
 sour cream
+sour cream / greek yogurt
 unsalted butter
 whipped cream cheese
 
@@ -246,10 +248,12 @@ peach preserve
 peanut butter
 
 ## rice and beans
+basmati rice
 black bean
 brown rice
 cannellini bean
 dark red kidney bean
+dry uncooked black bean
 garbanzo bean
 lentil
 refried pinto bean
@@ -291,6 +295,7 @@ cream of mushroom soup (reduced sodium)
 low-sodium vegetable stock
 mushroom soup mix
 vegetable broth
+vegetable stock
 
 ## spices
 basil
@@ -304,6 +309,7 @@ chicken bouillon granule
 chile powder
 chili powder
 cinnamon
+coriander powder
 crushed red pepper
 cumin
 curry powder
@@ -339,6 +345,7 @@ turmeric
 corn tortilla
 flour tortilla
 nm red chile powder
+tortilla
 
 ## vegetables
 arugula or spring mix
@@ -380,9 +387,10 @@ red bell pepper
 red pepper
 salad
 salad mix
+salad veg
+shredded carrot
 sliced mixed mushroom
 sliced mushroom
-snacking veg
 yellow pepper
 zucchini
 

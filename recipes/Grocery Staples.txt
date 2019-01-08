@@ -55,6 +55,7 @@ summer
 fall
 winter
 spring
+
 ##Ingredients
 1, gallon, 1% milk
 1, half gallon, plain almond milk
@@ -65,7 +66,7 @@ spring
 7, , banana
 1, , weekly tree fruit
 1, , weekly berry
-1, , snacking veg
+1, , salad veg
 2, , avocados
 1, , peanut butter
 1, , shredded cheddar
