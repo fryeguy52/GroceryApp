@@ -7,6 +7,7 @@ summer
 fall
 winter
 beef
+instant pot
 
 ##ingredients
 2, Tbsp, soy sauce
@@ -18,10 +19,10 @@ beef
 3, , green onions
 0.5, pound, lean ground beef
 2, cloves, garlic
-1, Tbsp, fresh grated ginger
+1, Tbsp, fresh ginger
 3, cups, rice
 
-##receipe
+##recipe
 STIR FRY SAUCE
 2 Tbsp soy sauce
 1 Tbsp toasted sesame oil

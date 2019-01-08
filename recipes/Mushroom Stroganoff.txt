@@ -9,14 +9,15 @@ winter
 pasta
 american
 vegetarian
+instant pot
 
 ##ingredients
 1, tablespoon, butter
-1, , large onion diced
-16, ounces, sliced white mushrooms
+1, , onion
+16, ounces, sliced mushrooms
 2, cups, broth (beef or veggie)
 0.5, teaspoon, salt
-0.25 teaspoon, black pepper
+0.25, teaspoon, black pepper
 2, teaspoons, Dijon mustard
 2, teaspoons, Worcestershire sauce
 2, teaspoons, flour

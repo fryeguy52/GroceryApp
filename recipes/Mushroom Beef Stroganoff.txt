@@ -8,6 +8,7 @@ winter
 spring
 summer
 fall
+stove
 
 ##ingredients
 2, Tbsp, butter
@@ -18,7 +19,7 @@ fall
 2, cups, beef broth*
 8, oz, wide egg noodles
 0.33, cup, plain greek yogurt
-handful, , fresh parsley for garnish (optional)
+1, handful, fresh parsley
 
 ##recipe
 2 Tbsp butter

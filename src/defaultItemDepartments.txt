@@ -53,6 +53,7 @@ water chestnut
 roll
 
 ## baking
+all-purpose flour
 balsamic vinegar
 brown sugar
 cornbread mix
@@ -61,6 +62,7 @@ flour
 olive oil
 red wine vinegar
 sugar
+toasted sesame oil
 vinegar (balsamic or red wine)
 
 ## beverages
@@ -128,6 +130,7 @@ ketchup
 pickle
 pitted kalamata olive
 sliced black olive
+worcestershire sauce
 worchestershire sauce
 
 ## dairy
@@ -143,6 +146,7 @@ light cream
 low-fat sour cream
 milk
 plain almond milk
+plain greek yogurt
 plain nonfat greek yogurt
 sour cream
 sour cream / greek yogurt
@@ -195,6 +199,7 @@ weekly tree fruit
 
 ## italian
 angel hair pasta
+egg noodle
 linguine or fettuccine
 pasta
 pasta (rotini or farfalle)
@@ -228,6 +233,7 @@ diced ham
 ground beef
 ground beef | frozen pattie
 ground turkey
+lean ground beef
 pepperoni
 pork chop
 rotisserie chicken
@@ -287,8 +293,10 @@ rice cake
 
 ## soup
 beef broth
+beef broth*
 beef stew seasoning mix
 broth
+broth (beef or veggie)
 chicken broth
 chicken broth (optional)
 cream of mushroom soup (reduced sodium)
@@ -313,6 +321,7 @@ coriander powder
 crushed red pepper
 cumin
 curry powder
+dill
 dried basil
 dried oregano
 dried thyme
@@ -374,9 +383,11 @@ fresh broccoli
 fresh parsley
 fresh spinach
 green bell pepper
+green cabbage
 green onion
 italian green bean
 lettuce
+matchstick carrot
 mini bell pepper
 mini pepper
 mushroom
