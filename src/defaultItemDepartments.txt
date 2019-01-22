@@ -72,6 +72,7 @@ water
 bread
 dinner roll
 hamburger bun
+hotdog bun
 mini bagel
 oat nut bread
 
@@ -87,6 +88,7 @@ tuna
 ## canned veggies
 artichoke heart
 artichoke hearts in brine
+baked bean
 bean
 black olive
 canned corn
@@ -127,8 +129,10 @@ bbq sauce
 dijon mustard
 kalamata olive
 ketchup
+mustard
 pickle
 pitted kalamata olive
+saurkraut
 sliced black olive
 worcestershire sauce
 worchestershire sauce
@@ -225,6 +229,7 @@ beef chuck roast
 beef pot roast
 beef stew meat
 boneless pork roast
+brat
 canadian bacon
 chicken
 chicken breast
@@ -236,6 +241,7 @@ ground turkey
 lean ground beef
 pepperoni
 pork chop
+pork roast
 rotisserie chicken
 steak
 stew meat
