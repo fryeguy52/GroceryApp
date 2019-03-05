@@ -1,80 +1,31 @@
 *** Recipes this Week ***
 Grocery Staples
-Mushroom-Sausage Ragu
-Carnitas
-Greek Pasta Salad
-Brats_and_Beans
 *************************
 
-fruits -- weekly berry: 1 
-fruits -- avocado: 3.0 
-fruits -- tomato: 1 
-fruits -- fresh lemon juice: 3 tbsp
 fruits -- weekly tree fruit: 1 
+fruits -- weekly berry: 1 
 fruits -- banana: 7 
-fruits -- cherry tomato: 2 cup
-vegetables -- english or persian cucumber (not regular cucumber!): 1 
+fruits -- avocado: 2 
 vegetables -- salad mix: 1 container
 vegetables -- salad veg: 1 
-vegetables -- sliced mixed mushroom: 2 container
-vegetables -- parsley: 1 
-roots -- onion: 2.0 
-roots -- red onion: .5 
-roots -- potato: 4 large
-roots -- shallot: 2 
-roots -- garlic: 4 clove
 deli -- lunch meat: 1 
-deli -- crumbled feta: 1 container
 liquor -- beer: 6 
-tortillas -- tortilla: 1 package
 tortillas -- flour tortilla: 1 package
-condiments -- saurkraut: 1 jar
-condiments -- pickle: 1 jar
-condiments -- mustard: 1 bottle
-condiments -- ketchup: 1 bottle
-condiments -- dijon mustard: 1 tsp
-condiments -- kalamata olive: 1 jar
-bread -- bread: 1 
-bread -- hotdog bun: 8 
 bread -- mini bagel: 1 bag
 bread -- oat nut bread: 1 loaf
 italian -- spaghetti sauce: 1 jar
 italian -- spaghetti noodle: 1 package
-italian -- pasta: 1 pound
-italian -- pasta (rotini or farfalle): .5 box
 canned veggies -- corn: 2 can
-canned veggies -- artichoke hearts in brine: 1 14 oz can
-canned veggies -- tomato paste: 1 tablespoon
-canned veggies -- rotel tomatoes and chile: 1 can
-canned veggies -- baked bean: 1 large can
 canned veggies -- green bean: 2 can
-canned veggies -- bean: 1 can
 canned non-veggies -- tuna: 5 can
-rice and beans -- rice: 1 
-rice and beans -- garbanzo bean: .5 can
-baking -- olive oil: 2 tablespoon, 6 tbsp
-baking -- vinegar (balsamic or red wine): 3 tbsp
-spices -- dried basil: 1 tsp
-spices -- cumin: 1 teaspoon
-spices -- dried oregano: 1.5 tsp
-spices -- pepper: 1 
-spices -- dried thyme: 1 tsp
-spices -- salt: 1 tsp
 breakfast -- oatmeal: 1 carton
 pb&j -- peanut butter: 1 
-meat -- sweet italian sausage: 2 
-meat -- brat: 1 package
-meat -- chicken: 8 thigh
-meat -- pork roast: 1 
-cheese -- sliced cheese: 1 
-cheese -- cheese: 4 ounce
 cheese -- shredded cheddar: 1 
-dairy -- whipped cream cheese: 1 container
-dairy -- unsalted butter: 1 tablespoon
-dairy -- plain almond milk: 1 half gallon
-dairy -- 1% milk: 1 gallon
+cheese -- sliced cheese: 1 
 dairy -- egg: 1 dozen
+dairy -- 1% milk: 1 gallon
+dairy -- plain almond milk: 1 half gallon
+dairy -- whipped cream cheese: 1 container
 snacks -- rice cake: 1 package
 snacks -- mini rice cake: 1 package
 juice -- orange juice: 1 half gallon
-frozen veggies -- green chile: 8 oz

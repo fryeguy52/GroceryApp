@@ -1,5 +1,5 @@
 ##tags
-crockpot
+crock pot
 vegetarian
 asian
 spring
@@ -8,17 +8,18 @@ fall
 winter
 dinner
 lunch
+easy
 
 #ingredients
 1, , yellow onion
 2, cloves, garlic
 2, cups, brown lentils
-1, , sweet potato (about 3/4 lb.)
+1, , sweet potato
 2, , carrots
 3, Tbsp, curry powder (hot or mild)
 0.25, tsp, ground clove
 1, can, petite diced tomatoes
-1, can, can tomato sauce (15 oz)
+1, can, tomato sauce
 3, cups, vegetable broth
 1, can, coconut milk (full fat)
 3, cups, rice

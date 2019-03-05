@@ -36,6 +36,7 @@ zzz not at the grocery store
 ## asian
 beef ramen noodle
 coconut milk
+coconut milk (full fat)
 egg rolls or pot sticker
 jarred pad thai sauce
 peanut sauce
@@ -50,6 +51,7 @@ water chestnut
 ## baby food
 
 ## bakery
+naan
 roll
 
 ## baking
@@ -103,10 +105,12 @@ garbanzo beans or chickpea
 green bean
 hominy
 kidney bean
+petite diced tomato
 pinto bean
 rotel tomatoes and chile
 stewed tomato
 tomato paste
+tomato puree
 
 ## cheese
 cheese
@@ -156,6 +160,7 @@ sour cream
 sour cream / greek yogurt
 unsalted butter
 whipped cream cheese
+whipping cream
 
 ## deli
 bite size mozzarella ball
@@ -262,6 +267,7 @@ peanut butter
 ## rice and beans
 basmati rice
 black bean
+brown lentil
 brown rice
 cannellini bean
 dark red kidney bean
@@ -323,10 +329,12 @@ chicken bouillon granule
 chile powder
 chili powder
 cinnamon
+coriander ground
 coriander powder
 crushed red pepper
 cumin
 curry powder
+curry powder (hot or mild)
 dill
 dried basil
 dried oregano
@@ -336,6 +344,7 @@ fresh thyme
 freshly ground pepper
 garam masala
 garlic powder
+ground clove
 ground ginger
 ground mustard
 ground nutmeg
