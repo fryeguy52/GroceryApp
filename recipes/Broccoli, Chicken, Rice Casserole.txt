@@ -18,11 +18,12 @@ dinner
 0.75, teaspoon, Pepper
 1, teaspoon, garlic powder
 1.33, cups, white rice
-1.33, cups, chicken broth
+1.5, cups, chicken broth
 0.5, cup, milk
 1.5, tablespoons, flour
 2, packages, frozen broccoli
 2, cups, shredded cheddar
+1, loaf, bread
 
 
 ##recipe
@@ -30,20 +31,21 @@ dinner
 - 1.5 - 2 lbs Boneless Skinless Chicken Breast cut into cubes
 - 2 Cloves Garlic
 - 1 Small Onion
-- 1 Tsp Salt
 - 0.75 Tsp Pepper
 - 1 Tsp Garlic Powder
 - 1.33 Cups Long Grain Rice
-- 1.33 Cups Chicken Broth
+- 1.5 Cups Chicken Broth
 - 0.5 Cup Milk
 - 1.5 Tbls Flour
 - 2 packages frozen broccoli
-- 1.5 - 2 Cups Mild Shredded Cheddar Cheese
+- 1.5 cups Shredded Cheddar Cheese
+- loaf bread
 
 
+- Turn oven to 350.  Thaw broccoli.  
 - Turn Instant Pot onto saute. Add butter and heat until hot. When hot, add chicken, onion, and garlic.
 - Cook chicken mixture until onion starts to get translucent. Add rice, broth and seasonings. Stir well.
 - Whisk together milk an flour and set aside.
 - Cook on manual high pressure for 5 minutes. When the timer is up perform a quick release.
 - Immediately add milk and flour mixture and mix until it is well combined.
-- Add broccoli and cheese and stir until well combined. Serve immediately.
+- Add thawed broccoli and cheese and stir until well combined. Serve immediately.
