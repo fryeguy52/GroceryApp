@@ -83,6 +83,7 @@ spring
 2, cans, green beans
 2, cans, corn
 1, package, butter
+1, container, applesauce
 
 ##Recipe
 things to buy weekly
