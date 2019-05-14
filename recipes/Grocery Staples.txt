@@ -71,7 +71,7 @@ spring
 1, , shredded cheddar
 1, , sliced cheese
 1, package, flour tortillas
-1, , lunch meat
+2, , lunch meat
 1, carton, oatmeal
 1, package, rice cakes
 1, package, mini rice cakes
@@ -84,6 +84,7 @@ spring
 2, cans, corn
 1, package, butter
 1, container, applesauce
+1, , plain yogurt
 
 ##Recipe
 things to buy weekly

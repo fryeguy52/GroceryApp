@@ -1,40 +1,82 @@
 *** Recipes this Week ***
-Grocery Staples
-Burgers and Fries
+Lime Shrimp with Beans and Rice
+Ministrone Soup
+Mixeroo
+Lettuce Wraps
+Mediterranean Salad
+Kielbasa, Pepper, Onion and Potato Hash
+Moroccan Stew
 *************************
 
-fruits -- banana: 7 
-fruits -- weekly berry: 1 
-fruits -- weekly tree fruit: 1 
-fruits -- avocado: 2 
-fruits -- tomato: 2 large
-vegetables -- lettuce: 1 head
-vegetables -- salad veg: 1 
-vegetables -- salad mix: 1 container
-roots -- onion: 1 
-roots -- potato: 4 large
-deli -- lunch meat: 1 
-liquor -- beer: 6 
-tortillas -- flour tortilla: 1 package
-condiments -- pickle: 1 jar
-condiments -- ketchup: 1 bottle
-bread -- hamburger bun: 8 
-bread -- mini bagel: 1 bag
-bread -- oat nut bread: 1 loaf
-italian -- spaghetti noodle: 1 package
-italian -- spaghetti sauce: 1 jar
-canned veggies -- corn: 2 can
-canned veggies -- green bean: 2 can
-spices -- mrs. dash: 1 tablespoon
-breakfast -- oatmeal: 1 carton
-pb&j -- peanut butter: 1 
-meat -- ground beef | frozen pattie: 1 pound
-cheese -- shredded cheddar: 1 
-cheese -- sliced cheese: 1 pack, 1 
-dairy -- 1% milk: 1 gallon
-dairy -- egg: 1 dozen
-dairy -- whipped cream cheese: 1 container
-dairy -- butter: 1 package
-snacks -- mini rice cake: 1 package
-snacks -- rice cake: 1 package
-juice -- orange juice: 1 half gallon
+deli -- bite size mozzarella ball: 8 ounce
+deli -- flatbread: 1 package
+fruits -- cherry tomato: 1 carton, 1 pound
+fruits -- lime: 1 
+vegetables -- baby arugula: 4 cup
+vegetables -- zucchini: 3.0 
+vegetables -- green bell pepper: 1 
+vegetables -- non-green bell pepper: 1 
+vegetables -- fresh basil leave: 0.5 cup
+vegetables -- babycarrot: .25 bag
+vegetables -- mini bell pepper: 2 pound
+vegetables -- asparagu: 1 pound
+vegetables -- boston lettuce: 1 head
+vegetables -- parsley: 2 teaspoon
+vegetables -- diced tomato: 2 can, 28 ounce
+vegetables -- cucumber: 2 
+vegetables -- fresh spinach: 2 cup
+vegetables -- baby carrot: .5 bag
+vegetables -- sliced mushroom: 2.0 package
+vegetables -- celery: 7.0 stalk
+vegetables -- italian green bean: 1 can
+vegetables -- green onion: 1 bunch
+roots -- onion: 2.0 
+roots -- potato: 3 large
+roots -- yellow onion: 1 
+roots -- garlic: 14.0 clove
+snacks -- peanut: 1 
+bread -- bread: 1 
+bread -- dinner roll: 6 , 1 package
+meat -- ground turkey: 1 pound
+meat -- chicken breast: 2 
+meat -- turkey kielbasa: 14 ounce
+cheese -- shredded parmesan: 1 tub
+cheese -- parmesan cheese: 6 oz
+condiments -- pitted kalamata olive: 0.5 cup
+asian -- sesame seed: 1 teaspoon
+asian -- water chestnut: 1 can
+asian -- peanut sauce: 1 bottle
+asian -- rice vinegar: 4 teaspoon
+asian -- soy sauce: 3 teaspoon
+pb&j -- honey: 1 tablespoon
+soup -- chicken broth: 3 cup
+soup -- vegetable broth: 6 cup
+soup -- low-sodium vegetable stock: 4 cup
+rice and beans -- garbanzo bean: 1 can
+rice and beans -- cannellini bean: 1 can
+rice and beans -- dark red kidney bean: 1 can
+rice and beans -- black bean: 1 can
+rice and beans -- lentil: 1 cup
+rice and beans -- rice: 3 cup
+canned veggies -- chickpea: 1 can
+italian -- pasta: 1 pound
+italian -- shell pasta: 1.5 cup
+spices -- turmeric: 1 teaspoon
+spices -- cumin: 0.5 tablespoon
+spices -- red pepper flake: .25 teaspoon
+spices -- dried oregano: 1 teaspoon
+spices -- ground ginger: .25 teaspoon
+spices -- bay leave: 2 
+spices -- basil: 2 teaspoon
+spices -- cinnamon: 1 teaspoon
+spices -- thyme: .5 teaspoon
+spices -- cayenne pepper: 0.25 teaspoon
+spices -- bay leaf: 1 
+spices -- rosemary: .75 teaspoon
+spices -- salt: 1 , 0.5 teaspoon
+spices -- pepper: 1 
+baking -- olive oil: 1 , 7.0 tablespoon
+baking -- balsamic vinegar: 3 tablespoon
+baking -- sugar: 1.5 teaspoon
+frozen veggies -- frozen cauliflower floret: 0.5 pound
+frozen sea food -- raw shrimp peeled and deveined: 1 pound

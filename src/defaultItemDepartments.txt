@@ -155,6 +155,7 @@ low-fat sour cream
 milk
 plain greek yogurt
 plain nonfat greek yogurt
+plain yogurt
 sour cream
 sour cream / greek yogurt
 unsalted butter
@@ -259,6 +260,7 @@ salsa
 taco shell
 
 ## pb&j
+applesauce
 honey
 peach preserve
 peanut butter
