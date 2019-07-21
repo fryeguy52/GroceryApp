@@ -9,6 +9,7 @@ soup
 mexican
 lunch
 dinner
+leftovers
 
 ## ingredients
 2, cans, pinto beans

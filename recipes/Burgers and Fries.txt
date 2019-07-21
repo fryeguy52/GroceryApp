@@ -9,9 +9,10 @@ fall
 american
 dinner
 lunch
+leftovers
 
 ##Ingredients
-1, pound, ground beef | frozen patties
+2.5, pound, ground beef | frozen patties
 1, head, lettuce
 2, large, tomatos
 4, large, potatoes
