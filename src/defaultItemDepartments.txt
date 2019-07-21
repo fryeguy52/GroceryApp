@@ -66,6 +66,7 @@ red wine vinegar
 sugar
 toasted sesame oil
 vinegar (balsamic or red wine)
+white vinegar
 
 ## beverages
 water
@@ -118,6 +119,7 @@ mexican blend cheese
 mozzarella
 parmesan
 parmesan cheese
+ricotta
 sharp shredded cheddar cheese
 shredded cheddar
 shredded cheddar cheese
@@ -202,6 +204,7 @@ lemon juice
 lime
 orange
 peaches(optional)
+pineapple
 tomato
 weekly berry
 weekly tree fruit
@@ -212,6 +215,7 @@ egg noodle
 linguine or fettuccine
 pasta
 pasta (rotini or farfalle)
+penne
 pizza sauce
 shell pasta
 spaghetti noodle
@@ -223,6 +227,7 @@ wide egg noodle
 
 ## juice
 orange juice
+pineapple juice
 
 ## liquor
 beer
@@ -234,6 +239,7 @@ beef chuck roast
 beef pot roast
 beef stew meat
 boneless pork roast
+boneless pork shoulder
 brat
 canadian bacon
 chicken
@@ -254,6 +260,8 @@ sweet italian sausage
 turkey kielbasa
 
 ## mexican
+achiote paste
+guajillo chili powder
 pace picante medium salsa
 refried black bean
 salsa
