@@ -61,10 +61,13 @@ brown sugar
 cornbread mix
 evaporated milk
 flour
+masa harina
 olive oil
+panko bread crumb
 red wine vinegar
 sugar
 toasted sesame oil
+vegetable oil
 vinegar (balsamic or red wine)
 white vinegar
 
@@ -116,7 +119,9 @@ tomato puree
 ## cheese
 cheese
 mexican blend cheese
+mexican crumbling cheese
 mozzarella
+mozzarella cheese
 parmesan
 parmesan cheese
 ricotta
@@ -205,6 +210,7 @@ lime
 orange
 peaches(optional)
 pineapple
+roma tomato
 tomato
 weekly berry
 weekly tree fruit
@@ -217,6 +223,7 @@ pasta
 pasta (rotini or farfalle)
 penne
 pizza sauce
+prepared pesto
 shell pasta
 spaghetti noodle
 spaghetti sauce
@@ -228,6 +235,7 @@ wide egg noodle
 ## juice
 orange juice
 pineapple juice
+poop juice
 
 ## liquor
 beer
@@ -237,6 +245,7 @@ bacon
 beef
 beef chuck roast
 beef pot roast
+beef roast
 beef stew meat
 boneless pork roast
 boneless pork shoulder
@@ -261,7 +270,9 @@ turkey kielbasa
 
 ## mexican
 achiote paste
+ancho peppers in adobo
 guajillo chili powder
+knorr chicken tomato bouillon
 pace picante medium salsa
 refried black bean
 salsa
@@ -311,6 +322,7 @@ chopped peanut
 mini rice cake
 peanut
 rice cake
+tortilla chip
 
 ## soup
 beef broth
@@ -409,6 +421,7 @@ fresh spinach
 green bell pepper
 green cabbage
 green onion
+green pepper
 italian green bean
 lettuce
 matchstick carrot
@@ -424,8 +437,10 @@ salad
 salad mix
 salad veg
 shredded carrot
+shredded lettuce
 sliced mixed mushroom
 sliced mushroom
+tomatillo
 yellow pepper
 zucchini
 
