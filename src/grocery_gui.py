@@ -100,6 +100,7 @@ def recipeGUI(selected_items):
             if all_rec[item]:
                 app.setProperty(section_3_title, item)
                 app.setProperty(section_1_title, item, False)
+                print(app.getAllCheckBoxes(section_3_title))
 
     def no_save_quit_button_action():
         app.stop()
