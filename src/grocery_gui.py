@@ -76,7 +76,9 @@ def recipeGUI(selected_items):
         current_menu = app.getProperties(section_3_title)
         for item in current_menu:
             if current_menu[item]:
+                selected_items.remove(item)
                 app.deleteProperty(section_3_title, item)
+
 
     def filter_recipes_button_action():
         filter_tag_list=app.getEntry(section_4_title).split()
@@ -98,17 +100,20 @@ def recipeGUI(selected_items):
         all_rec = app.getProperties(section_1_title)
         for item in all_rec:
             if all_rec[item]:
+                if item in selected_items:
+                    while item in selected_items:
+                        item=item+"*"
+                selected_items.append(item)
                 app.setProperty(section_3_title, item)
-                app.setProperty(section_1_title, item, False)
-                print(app.getAllCheckBoxes(section_3_title))
+                app.setProperty(section_1_title, item.strip('*'), False)
 
     def no_save_quit_button_action():
         app.stop()
 
     def save_quit_button_action():
         nonlocal selected_items
-        for i in list(app.getProperties(section_3_title)):
-            selected_items.append(i)
+        for i in range(0, len(selected_items)):
+            selected_items[i]=selected_items[i].strip('*')
         app.stop()
 
 
