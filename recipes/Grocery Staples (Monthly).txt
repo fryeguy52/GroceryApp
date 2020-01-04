@@ -43,7 +43,6 @@ side
 2, cans, corn
 2, cans, black beans
 2, cans, garbanzo beans
-1, container, applesauce
 
 ##Recipe
 things to buy monthly
