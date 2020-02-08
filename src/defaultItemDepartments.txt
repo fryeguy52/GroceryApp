@@ -34,7 +34,6 @@ vegetables
 zzz not at the grocery store
 
 ## asian
-beef ramen noodle
 coconut milk
 coconut milk (full fat)
 egg rolls or pot sticker
@@ -55,24 +54,18 @@ naan
 roll
 
 ## baking
-all-purpose flour
-balsamic vinegar
 brown sugar
 cornbread mix
 evaporated milk
 flour
-masa harina
 olive oil
 panko bread crumb
 red wine vinegar
 sugar
 toasted sesame oil
-vegetable oil
 vinegar (balsamic or red wine)
-white vinegar
 
 ## beverages
-water
 
 ## bread
 bread
@@ -88,18 +81,12 @@ oatmeal
 ## candy
 
 ## canned non-veggies
-canned tuna packed in oil
-tuna
 
 ## canned veggies
-artichoke heart
 artichoke hearts in brine
 baked bean
 bean
-black olive
 canned corn
-canned pineapple tidbit
-cannelini bean
 chickpea
 chopped tomato
 corn
@@ -119,21 +106,15 @@ tomato puree
 ## cheese
 cheese
 mexican blend cheese
-mexican crumbling cheese
-mozzarella
 mozzarella cheese
 parmesan
 parmesan cheese
-ricotta
-sharp shredded cheddar cheese
 shredded cheddar
 shredded cheddar cheese
 shredded cheese
 shredded parmesan
-shredded parmesan cheese
 shreddedcheese
 sliced cheese
-swi
 
 ## condiments
 bbq sauce
@@ -142,7 +123,6 @@ kalamata olive
 ketchup
 mustard
 pickle
-pitted kalamata olive
 saurkraut
 sliced black olive
 worcestershire sauce
@@ -153,15 +133,11 @@ worchestershire sauce
 butter
 egg
 greek yogurt
-half and half
 heavy cream
-heavy cream (small container)
 heavy whipping cream
-light cream
 low-fat sour cream
 milk
 plain greek yogurt
-plain nonfat greek yogurt
 plain yogurt
 sour cream
 sour cream / greek yogurt
@@ -170,16 +146,12 @@ whipped cream cheese
 whipping cream
 
 ## deli
-bite size mozzarella ball
 crumbled feta
-flatbread
 lunch meat
 
 ## frozen desserts
-piecrust
 
 ## frozen non-veggies
-egg roll
 
 ## frozen sea food
 raw shrimp peeled and deveined
@@ -187,12 +159,9 @@ uncooked shrimp
 
 ## frozen veggies
 chopped green chile
-frozen broccoli
-frozen cauliflower floret
 frozen corn
 frozen pea
 frozen peas and carrot
-frozen spinach
 green chile
 roasted chopped medium nm green chile
 
@@ -203,13 +172,10 @@ cherry tomato
 fresh lemon juice
 fresh pineapple
 fuji apple
-grape or cherry tomato
 lemon
 lemon juice
 lime
-orange
 peaches(optional)
-pineapple
 roma tomato
 tomato
 weekly berry
@@ -221,20 +187,15 @@ egg noodle
 linguine or fettuccine
 pasta
 pasta (rotini or farfalle)
-penne
-pizza sauce
 prepared pesto
 shell pasta
 spaghetti noodle
 spaghetti sauce
 tomato sauce
-white pizza sauce
-whole wheat pasta
 wide egg noodle
 
 ## juice
 orange juice
-pineapple juice
 poop juice
 
 ## liquor
@@ -242,15 +203,8 @@ beer
 
 ## meat
 bacon
-beef
-beef chuck roast
-beef pot roast
-beef roast
-beef stew meat
 boneless pork roast
-boneless pork shoulder
 brat
-canadian bacon
 chicken
 chicken breast
 chicken thigh
@@ -259,27 +213,17 @@ ground beef
 ground beef | frozen pattie
 ground turkey
 lean ground beef
-pepperoni
-pork chop
-pork roast
-rotisserie chicken
-steak
 stew meat
 sweet italian sausage
 turkey kielbasa
 
 ## mexican
-achiote paste
-ancho peppers in adobo
-guajillo chili powder
-knorr chicken tomato bouillon
 pace picante medium salsa
 refried black bean
 salsa
 taco shell
 
 ## pb&j
-applesauce
 honey
 peach preserve
 peanut butter
@@ -293,10 +237,8 @@ cannellini bean
 dark red kidney bean
 dry uncooked black bean
 garbanzo bean
-lentil
 refried pinto bean
 rice
-white rice
 wild rice
 
 ## roots
@@ -308,11 +250,9 @@ minced garlic
 onion
 potato
 red onion
-red potato
 shallot
 shallot bulb
 small onion
-small white potato
 sweet potato
 white onion
 yellow onion
@@ -322,34 +262,25 @@ chopped peanut
 mini rice cake
 peanut
 rice cake
-tortilla chip
 
 ## soup
-beef broth
-beef broth*
-beef stew seasoning mix
 broth
 broth (beef or veggie)
 chicken broth
 chicken broth (optional)
 cream of mushroom soup (reduced sodium)
 low-sodium vegetable stock
-mushroom soup mix
 vegetable broth
 vegetable stock
 
 ## spices
 basil
-bay leaf
 bay leave
 black pepper
 cayenne pepper
-celery salt
 celery seed
-chicken bouillon granule
 chile powder
 chili powder
-cinnamon
 coriander ground
 coriander powder
 crushed red pepper
@@ -367,9 +298,6 @@ garam masala
 garlic powder
 ground clove
 ground ginger
-ground mustard
-ground nutmeg
-ground thyme
 italian seasoning
 kosher salt
 mrs. dash
@@ -393,9 +321,7 @@ nm red chile powder
 tortilla
 
 ## vegetables
-arugula or spring mix
 asparagu
-baby arugula
 baby carrot
 baby spinach
 babycarrot
@@ -407,27 +333,20 @@ brussels sprout
 butternut squash
 carrot
 carrot matchstick
-cauliflower
 celery
-cole slaw mix
 coleslaw or broccoli slaw mix
 cucumber
 diced tomato
 english or persian cucumber (not regular cucumber!)
-fresh basil leave
-fresh broccoli
 fresh parsley
 fresh spinach
 green bell pepper
 green cabbage
 green onion
-green pepper
 italian green bean
 lettuce
 matchstick carrot
 mini bell pepper
-mini pepper
-mushroom
 non-green bell pepper
 parsley
 pumpkin
@@ -437,15 +356,12 @@ salad
 salad mix
 salad veg
 shredded carrot
-shredded lettuce
 sliced mixed mushroom
 sliced mushroom
-tomatillo
 yellow pepper
 zucchini
 
 ## zzz not at the grocery store
-dion's pizza dough
 naan (trader joe's)
 
 ## NO DEPARTMENT!

@@ -99,7 +99,9 @@ def get_recipe_from_recipe_file(file):
     heading=''
     recipe=""
     with open(file,'r') as recipe_file:
+        print(file)
         for line in recipe_file:
+            print(line)
             if line.strip() == '':
                 pass
             elif line[0] == "#":
