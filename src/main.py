@@ -10,6 +10,7 @@ if __name__ == "__main__":
     grocery_file_errors=grocery_functions.check_recipe_format()
     grocery_functions.make_all_ingredients_file()
     grocery_functions.update_default_ing_dept_file(grocery_functions.get_all_ingredients("..\\recipes"))
+
     if grocery_file_errors == []:
         #all_recipes_name_list = grocery_functions.get_recipe_names("..\\recipes")
         selected_recepies = []
@@ -20,4 +21,6 @@ if __name__ == "__main__":
                 grocery_list += grocery_functions.get_ingredients_from_recipe_file("..\\recipes\\"+recipe+".txt")
         grocery_list=grocery_functions.condense_grocery_list(grocery_list)
         grocery_functions.sort_and_print_grocery_list_file(selected_recepies, grocery_list, "Sprouts+JT_Alb.txt")
+    else:
+        print(grocery_file_errors)
 

@@ -50,7 +50,7 @@ def get_ingredients_from_recipe_file(file):
     """
     heading=''
     ingredient_list=[]
-    with open(file,'r') as recipe_file:
+    with open(file, 'r') as recipe_file:
         for line in recipe_file:
             if line.strip() == '':
                 pass
@@ -78,7 +78,7 @@ def get_tags_from_recipe_file(file):
     """
     heading=''
     tag_list=[]
-    with open(file,'r') as recipe_file:
+    with open(file, 'r') as recipe_file:
         for line in recipe_file:
             if line.strip() == '':
                 pass
@@ -98,10 +98,10 @@ def get_recipe_from_recipe_file(file):
     """
     heading=''
     recipe=""
-    with open(file,'r') as recipe_file:
-        print(file)
+    with open(file, 'r') as recipe_file:
+        #print(file)
         for line in recipe_file:
-            print(line)
+            #print(line)
             if line.strip() == '':
                 pass
             elif line[0] == "#":

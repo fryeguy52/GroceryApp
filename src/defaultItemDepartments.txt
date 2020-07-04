@@ -54,6 +54,7 @@ naan
 roll
 
 ## baking
+all-purpose flour
 brown sugar
 cornbread mix
 evaporated milk
@@ -105,6 +106,7 @@ tomato puree
 
 ## cheese
 cheese
+grated parmesan
 mexican blend cheese
 mozzarella cheese
 parmesan
@@ -144,6 +146,7 @@ sour cream / greek yogurt
 unsalted butter
 whipped cream cheese
 whipping cream
+whole milk ricotta
 
 ## deli
 crumbled feta
@@ -159,6 +162,7 @@ uncooked shrimp
 
 ## frozen veggies
 chopped green chile
+frozen broccoli floret
 frozen corn
 frozen pea
 frozen peas and carrot
@@ -183,6 +187,8 @@ weekly tree fruit
 
 ## italian
 angel hair pasta
+bowtie pasta
+dry fettuccine
 egg noodle
 linguine or fettuccine
 pasta
@@ -234,6 +240,7 @@ black bean
 brown lentil
 brown rice
 cannellini bean
+couscou
 dark red kidney bean
 dry uncooked black bean
 garbanzo bean
@@ -242,6 +249,7 @@ rice
 wild rice
 
 ## roots
+cloves garlic
 fresh garlic
 fresh ginger
 garlic
@@ -259,6 +267,7 @@ yellow onion
 
 ## snacks
 chopped peanut
+frito
 mini rice cake
 peanut
 rice cake
@@ -301,6 +310,7 @@ ground ginger
 italian seasoning
 kosher salt
 mrs. dash
+nutmeg
 onion powder
 oregano
 paprika
@@ -322,12 +332,14 @@ tortilla
 
 ## vegetables
 asparagu
+baby bella mushroom
 baby carrot
 baby spinach
 babycarrot
 bell pepper
 boston lettuce
 broccoli
+broccoli crown
 broccoli floret
 brussels sprout
 butternut squash
