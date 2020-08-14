@@ -43,6 +43,8 @@ side
 2, cans, corn
 2, cans, black beans
 2, cans, garbanzo beans
+1, box, black tea
+1, box, green tea
 
 ##Recipe
 things to buy monthly
