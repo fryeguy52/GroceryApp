@@ -21,7 +21,7 @@ dinner
 1, teaspoon, onion powder
 2, teaspoons, chile powder
 1, teaspoon, cumin
-2.25, cups, chicken broth
+2, cups, chicken broth
 2, cups, shredded cheese
 1, , tomato
 4, , green onions
@@ -52,7 +52,7 @@ dinner
 - When chicken is browned, add onions until they start to soften.
 - Add 1 T olive oil and uncooked rice; toast for 2 min.
 - Stir in black beans, canned tomatoes, chicken broth, garlic powder, onion powder, chili powder, paprika, and cumin.
-- Lock IP and set to manual, high pressure for 7 minutes.
+- Lock IP and set to manual, high pressure for 8 minutes.
 - Use Quick Pressure Release, open IP and fluff with fork.
 - Sprinkle with cheese, recover, and let set for 2-3 min to melt cheese.
 - Garnish with tomatoes, green onions, and avocado.
