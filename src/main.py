@@ -8,7 +8,7 @@ import trello_functions
 
 if __name__ == "__main__":
     grocery_file_errors=grocery_functions.check_recipe_format()
-    grocery_functions.make_all_ingredients_file()
+    #grocery_functions.make_all_ingredients_file()
     grocery_functions.update_default_ing_dept_file(grocery_functions.get_all_ingredients("..\\recipes"))
 
     if grocery_file_errors == []:
