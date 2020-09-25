@@ -138,6 +138,9 @@ def condense_grocery_list(list_of_grocery_items):
     condensed_list.sort(key=lambda x: x.name)
     condensed_dict={}
     for item in condensed_list:
+        print(item.name)
+        print(item.number)
+        print(item.unit)
         if item.name in condensed_dict:
             condensed_dict[item.name] = condensed_dict[item.name] + ", " + item.number.strip() + " " + item.unit.strip()
         else:
@@ -161,6 +164,7 @@ def get_item_dept_dicts(file_name='defaultItemDepartments.txt'):
     dept_list_of_ing_dict={}
     ingredient_dept_dict={}
     print_order_list=[]
+    all_ingredients_list=[]
     with open(file_name,'r') as defaultDeptFile:
         for line in defaultDeptFile:
             if line.strip() == '':
@@ -176,25 +180,26 @@ def get_item_dept_dicts(file_name='defaultItemDepartments.txt'):
             else:
                 dept_list_of_ing_dict[heading].append(line.strip())
                 ingredient_dept_dict[line.strip()]=heading
+                all_ingredients_list.append(line.strip())
 
-    return ingredient_dept_dict, dept_list_of_ing_dict, print_order_list
+    return ingredient_dept_dict, dept_list_of_ing_dict, print_order_list, all_ingredients_list
 
-def make_all_ingredients_file(recipe_dir="..//recipes"):
-    defaultStoreFileName = "defaultItemDepartments.txt"
-    recipe_names = get_recipe_names(recipe_dir)
-    default_dept_from_ing_key, default_ing_list_from_dept_key, print_order = get_item_dept_dicts(defaultStoreFileName)
-    all_ingredients_in_all_recipes=[]
-    for recipe in recipe_names:
-        all_ingredients_in_all_recipes += get_ingredients_from_recipe_file(recipe_dir+"\\"+recipe+".txt")
-    for ingredient in all_ingredients_in_all_recipes:
-        ingredient.unit=''
-    grocery_list=condense_grocery_list(all_ingredients_in_all_recipes)
-    # print_grocery_list(grocery_list)
-
-    out_file=open('completeIngredientList.txt', 'w')
-    for ingredient in grocery_list:
-        out_file.write(ingredient.name+"\n")
-    out_file.close()
+#def make_all_ingredients_file(recipe_dir="..//recipes"):
+#    defaultStoreFileName = "defaultItemDepartments.txt"
+#    recipe_names = get_recipe_names(recipe_dir)
+#    default_dept_from_ing_key, default_ing_list_from_dept_key, print_order = get_item_dept_dicts(defaultStoreFileName)
+#    all_ingredients_in_all_recipes=[]
+#    for recipe in recipe_names:
+#        all_ingredients_in_all_recipes += get_ingredients_from_recipe_file(recipe_dir+"\\"+recipe+".txt")
+#    for ingredient in all_ingredients_in_all_recipes:
+#        ingredient.unit=''
+#    grocery_list=condense_grocery_list(all_ingredients_in_all_recipes)
+#    # print_grocery_list(grocery_list)
+#
+#    out_file=open('completeIngredientList.txt', 'w')
+#    for ingredient in grocery_list:
+#        out_file.write(ingredient.name+"\n")
+#    out_file.close()
 
 def get_all_ingredients(recipe_dir="..//recipes"):
     recipe_names = get_recipe_names(recipe_dir)
@@ -203,16 +208,26 @@ def get_all_ingredients(recipe_dir="..//recipes"):
         all_ingredients_in_all_recipes += get_ingredients_from_recipe_file(recipe_dir+"\\"+recipe+".txt")
     for ingredient in all_ingredients_in_all_recipes:
         ingredient.unit=''
+
+
+    default_item_dept_file_name = "defaultItemDepartments.txt"
+    default_dept_from_ing_key, default_ing_list_from_dept_key, print_order, all_ingredients_from_default_dept_file = get_item_dept_dicts(default_item_dept_file_name)
+    for ingredient_name in all_ingredients_from_default_dept_file:
+        current_ingredient = shopping_item()
+        current_ingredient.number = '0'
+        current_ingredient.unit = ''
+        current_ingredient.name = ingredient_name.strip().lower().rstrip("s.")
+        all_ingredients_in_all_recipes.append(current_ingredient)
+
     grocery_list=condense_grocery_list(all_ingredients_in_all_recipes)
     return grocery_list
 
 def update_default_ing_dept_file(input_list):
     input_list.sort(key=lambda x: x.name)
     defaultStoreFileName = "defaultItemDepartments.txt"
-    default_dept_from_ing_key, default_ing_list_from_dept_key, print_order = get_item_dept_dicts(defaultStoreFileName)
+    default_dept_from_ing_key, default_ing_list_from_dept_key, print_order, all_ingredients_from_default_dept_file = get_item_dept_dicts(defaultStoreFileName)
     print_order.sort()
     out_file=open(defaultStoreFileName, "w")
-
     out_file.write("## print order\n")
     for dept in print_order:
         out_file.write(dept+"\n")
@@ -226,7 +241,7 @@ def update_default_ing_dept_file(input_list):
             else:
                 pass
 
-    out_file.write("\n## NO DEPARTMENT!\n")
+    #out_file.write("\n## NO DEPARTMENT!\n")
     for item in input_list:
         if item.name not in default_dept_from_ing_key:
             out_file.write(item.name+"\n")
@@ -236,7 +251,7 @@ def update_default_ing_dept_file(input_list):
 def sort_and_print_grocery_list_file(recipe_list, grocery_list, StoreCofigFileName=""):
     output_file_name="..//most_recent_grocery_list.txt"
     defaultStoreFileName = "defaultItemDepartments.txt"
-    default_dept_from_ing_key, default_ing_list_from_dept_key, print_order = get_item_dept_dicts(defaultStoreFileName)
+    default_dept_from_ing_key, default_ing_list_from_dept_key, print_order, all_ingredients_from_default_dept_file  = get_item_dept_dicts(defaultStoreFileName)
     out_file=open(output_file_name,"w")
 
     # write the list of recipes to file
@@ -246,7 +261,7 @@ def sort_and_print_grocery_list_file(recipe_list, grocery_list, StoreCofigFileNa
     out_file.write("*************************\n\n")
 
     if StoreCofigFileName != "":
-        dict_dept_from_ing_key, dict_ing_list_from_dept_key, print_order = get_item_dept_dicts(StoreCofigFileName)
+        dict_dept_from_ing_key, dict_ing_list_from_dept_key, print_order, all_ingredients_from_default_dept_file  = get_item_dept_dicts(StoreCofigFileName)
     else:
         dict_dept_from_ing_key={}
         dict_ing_list_from_dept_key={}

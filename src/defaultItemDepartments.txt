@@ -32,6 +32,7 @@ spices
 tortillas
 vegetables
 zzz not at the grocery store
+zzzz no department specified
 
 ## asian
 coconut milk
@@ -78,6 +79,8 @@ mini bagel
 oat nut bread
 
 ## breakfast
+black tea
+green tea
 oatmeal
 
 ## candy
@@ -382,4 +385,5 @@ zucchini
 ## zzz not at the grocery store
 naan (trader joe's)
 
-## NO DEPARTMENT!
+## zzzz no department specified
+not a real ingredient
