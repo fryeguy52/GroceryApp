@@ -65,6 +65,7 @@ red wine vinegar
 sugar
 toasted sesame oil
 vinegar (balsamic or red wine)
+white vinegar
 
 ## beverages
 
@@ -180,6 +181,7 @@ lemon
 lemon juice
 lime
 peaches(optional)
+pineapple
 roma tomato
 tomato
 weekly berry
@@ -202,6 +204,7 @@ wide egg noodle
 
 ## juice
 orange juice
+pineapple juice
 poop juice
 
 ## liquor
@@ -210,6 +213,7 @@ beer
 ## meat
 bacon
 boneless pork roast
+boneless pork shoulder
 brat
 chicken
 chicken breast
@@ -224,6 +228,8 @@ sweet italian sausage
 turkey kielbasa
 
 ## mexican
+achiote paste
+guajillo chili powder
 pace picante medium salsa
 refried black bean
 salsa

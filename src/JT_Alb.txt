@@ -1,0 +1,35 @@
+## Print order
+liquor
+deli
+snacks
+bread
+bakery
+meat
+tortillas
+beverages
+cheese
+dairy
+fruits
+vegetables
+roots
+baby food
+juice
+condiments
+asian
+mexican
+pb&j
+soup
+rice and beans
+canned non-veggies
+canned veggies
+italian
+spices
+baking
+candy
+breakfast
+Tea and coffee
+frozen veggies
+frozen non-veggies
+frozen desserts
+frozen sea food
+zzz not at the grocery store
