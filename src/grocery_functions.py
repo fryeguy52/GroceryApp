@@ -9,7 +9,6 @@ class shopping_item():
     name=[]
     grocery_list_line=[]
 
-
 def get_recipe_names(recipe_dir, search_tags=[]):
     """
     return a list of all the .txt files in a directory without the extension
@@ -99,9 +98,7 @@ def get_recipe_from_recipe_file(file):
     heading=''
     recipe=""
     with open(file, 'r') as recipe_file:
-        #print(file)
         for line in recipe_file:
-            #print(line)
             if line.strip() == '':
                 pass
             elif line[0] == "#":
@@ -138,9 +135,6 @@ def condense_grocery_list(list_of_grocery_items):
     condensed_list.sort(key=lambda x: x.name)
     condensed_dict={}
     for item in condensed_list:
-        print(item.name)
-        print(item.number)
-        print(item.unit)
         if item.name in condensed_dict:
             condensed_dict[item.name] = condensed_dict[item.name] + ", " + item.number.strip() + " " + item.unit.strip()
         else:
@@ -183,23 +177,6 @@ def get_item_dept_dicts(file_name='defaultItemDepartments.txt'):
                 all_ingredients_list.append(line.strip())
 
     return ingredient_dept_dict, dept_list_of_ing_dict, print_order_list, all_ingredients_list
-
-#def make_all_ingredients_file(recipe_dir="..//recipes"):
-#    defaultStoreFileName = "defaultItemDepartments.txt"
-#    recipe_names = get_recipe_names(recipe_dir)
-#    default_dept_from_ing_key, default_ing_list_from_dept_key, print_order = get_item_dept_dicts(defaultStoreFileName)
-#    all_ingredients_in_all_recipes=[]
-#    for recipe in recipe_names:
-#        all_ingredients_in_all_recipes += get_ingredients_from_recipe_file(recipe_dir+"\\"+recipe+".txt")
-#    for ingredient in all_ingredients_in_all_recipes:
-#        ingredient.unit=''
-#    grocery_list=condense_grocery_list(all_ingredients_in_all_recipes)
-#    # print_grocery_list(grocery_list)
-#
-#    out_file=open('completeIngredientList.txt', 'w')
-#    for ingredient in grocery_list:
-#        out_file.write(ingredient.name+"\n")
-#    out_file.close()
 
 def get_all_ingredients(recipe_dir="..//recipes"):
     recipe_names = get_recipe_names(recipe_dir)
@@ -353,16 +330,6 @@ def check_recipe_format(recipe_dir="..//recipes", verbose=True):
                     all_tags_list.append(line.strip())
                 else:
                     pass
-            #check that all required tags are present
-
-            #print(file, all_tags_list, common_member(chicken_list, all_tags_list))
-            # if no_common_member(chicken_list, all_tags_list):
-            #     #print("MATCHED!")
-            #     error_string=file+" is missing a tag from the following set: "+str(chicken_list)
-            #     if verbose:
-            #         print(error_string)
-            #     errors.append(error_string)
-            #     pass
             errors_from_missing_tags(file, required_tag_set_meat, all_tags_list, errors)
             errors_from_missing_tags(file, required_tag_set_season, all_tags_list, errors)
             errors_from_missing_tags(file, required_tag_set_effort, all_tags_list, errors)
@@ -386,7 +353,6 @@ def no_common_member(list_a=[], list_b=[]):
 
 def errors_from_missing_tags(file, list_required_tags=[], list_all_tags=[], errors=[]):
     if no_common_member(list_required_tags, list_all_tags):
-        # print("MATCHED!")
         error_string = file + " is missing a tag from the following set: " + str(list_required_tags) + str(list_all_tags)
         print(error_string)
         errors.append(error_string)
