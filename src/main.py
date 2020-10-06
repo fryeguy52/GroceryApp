@@ -11,14 +11,14 @@ if __name__ == "__main__":
     grocery_functions.update_default_ing_dept_file(grocery_functions.get_all_ingredients("..\\recipes"))
 
     if grocery_file_errors == []:
-        selected_recepies = []
+        selected_recepes = []
         grocery_list=[]
-        grocery_gui.recipeGUI(selected_recepies)
-        for recipe in selected_recepies:
+        grocery_gui.recipeGUI(selected_recepes)
+        for recipe in selected_recepes:
                 trello_functions.post_recipe_to_trello(recipe)
                 grocery_list += grocery_functions.get_ingredients_from_recipe_file("..\\recipes\\"+recipe+".txt")
         grocery_list=grocery_functions.condense_grocery_list(grocery_list)
-        grocery_functions.sort_and_print_grocery_list_file(selected_recepies, grocery_list, "JT_Alb.txt")
+        grocery_functions.sort_and_print_grocery_list_file(selected_recepes, grocery_list, "JT_Alb.txt")
     else:
         print(grocery_file_errors)
 
