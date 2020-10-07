@@ -9,6 +9,43 @@ class shopping_item():
     name=[]
     grocery_list_line=[]
 
+class Ingredient():
+    """
+    Currently unused the idea is to replace code in this file with more OO design
+    """
+    def __init__(self, input_string):
+        if len(input_string.split(",")) == 3:
+          self.name   = input_string.split(",")[2].strip().lower().rstrip("s.")
+          self.unit   = input_string.split(",")[1].strip().lower().rstrip("s.")
+          self.number = input_string.split(",")[2].strip().lower().rstrip("s.")
+          if self.name.endswith("oe"):
+              self.name = self.name.rstrip("e")
+
+          return True
+        else:
+            print("invalid input line:")
+            print(input_string)
+            return False
+
+    def getName(self):
+        return self.name
+
+    def getUnit(self):
+        return self.unit
+
+    def getNumber(self):
+        return self.number
+
+class Recipe():
+    """
+    currently not used at all
+    """
+    def __init__(self):
+        self.name = "Default Name"
+        self.last_date="Jan 1, 1945"
+
+
+
 def get_recipe_names(recipe_dir, search_tags=[]):
     """
     return a list of all the .txt files in a directory without the extension

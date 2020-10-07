@@ -1,36 +1,58 @@
-## Print order
-Baking
-Canned non-Veggies
-Canned Veggies
-Cheese
-Dairy
-Vegitables
-Fruits
-Roots
-Spices
-Meat
-Soup
-Rice and Beans
+## print order
+baking
+canned non-veggies
+canned veggies
+cheese
+dairy
+fruits
+meat
+rice and beans
+roots
+soup
+spices
+vegitables
 
-## Vegitables
-bell pepper
-broccoli
-fresh cilantro
-green bell pepper
-non-green bell pepper
-zucchini
+## baking
+olive oil
 
-## Fruits
+## canned non-veggies
+ro-tel diced tomatoes and green chile
+
+## canned veggies
+can diced tomato
+
+## cheese
+shredded cheddar cheese
+
+## dairy
+heavy cream
+plain yogurt
+
+## fruits
 lemon
 tomato
 
-## Roots
+## meat
+chicken breast
+prosciutto
+rotisserie chicken
+turkey kielbasa
+
+## rice and beans
+rice
+white rice
+
+## roots
 garlic
 onion
-yellow onion
 potato
+yellow onion
 
-## Spices
+## soup
+chicken broth
+poo
+
+## spices
 black pepper
 cajun or creole seasoning
 curry powder
@@ -40,32 +62,10 @@ paprika
 pepper
 salt
 
-## Canned Veggies
-can diced tomato
-
-## Canned non-Veggies
-ro-tel diced tomatoes and green chile
-
-## Meat
-chicken breast
-rotisserie chicken
-prosciutto
-turkey kielbasa
-
-## Soup
-chicken broth
-poo
-
-## Dairy
-heavy cream
-plain yogurt
-
-## Cheese
-shredded cheddar cheese
-
-## Rice and Beans
-rice
-white rice
-
-## Baking
-olive oil
+## vegitables
+bell pepper
+broccoli
+fresh cilantro
+green bell pepper
+non-green bell pepper
+zucchini

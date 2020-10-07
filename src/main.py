@@ -15,7 +15,7 @@ if __name__ == "__main__":
         grocery_list=[]
         grocery_gui.recipeGUI(selected_recepes)
         for recipe in selected_recepes:
-                trello_functions.post_recipe_to_trello(recipe)
+                #trello_functions.post_recipe_to_trello(recipe)
                 grocery_list += grocery_functions.get_ingredients_from_recipe_file("..\\recipes\\"+recipe+".txt")
         grocery_list=grocery_functions.condense_grocery_list(grocery_list)
         grocery_functions.sort_and_print_grocery_list_file(selected_recepes, grocery_list, "JT_Alb.txt")

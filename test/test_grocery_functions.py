@@ -34,10 +34,10 @@ class TestGroceryFuncs(unittest.TestCase):
         self.assertTrue(list[2] == 'stove')
 
     def test_getRecipeFromFile(self):
-        list=grocery_functions.get_recipe_from_recipe_file("test-recipes\Healthy Roasted Chicken and Veggies (one pan).txt")
-        self.assertTrue(list[2]=="1 cup bell pepper, chopped (any colors you like)")
-        self.assertTrue(list[10]=="1 teaspoon italian seasoning")
-        self.assertTrue(list[15]=="Place the chicken and veggies in a medium roasting dish or sheet pan. Add the olive oil, ")
+        recipe=grocery_functions.get_recipe_from_recipe_file("test-recipes\Healthy Roasted Chicken and Veggies (one pan).txt")
+        self.assertTrue("1, cup, bell pepper chopped (any colors you like)" in recipe)
+        self.assertTrue("1 teaspoon italian seasoning" in recipe)
+        self.assertTrue("Place the chicken and veggies in a medium roasting dish or sheet pan. Add the olive oil, " in recipe)
 
     def test_condenseList(self):
         recipe_names = grocery_functions.get_recipe_names("test-recipes")
@@ -48,9 +48,6 @@ class TestGroceryFuncs(unittest.TestCase):
         # grocery_functions.print_grocery_list(grocery_list)
         # grocery_functions.sort_and_print_grocery_List(grocery_list, "Smiths-Eu-JT-ItemDepartments.txt")
 
-    def test_makeAllIngredientsFile(self):
-        grocery_functions.make_all_ingredients_file()
-
     def test_getItemDeptDicts(self):
         grocery_functions.get_item_dept_dicts("Smiths-Eu-JT-ItemDepartments.txt")
 
@@ -60,7 +57,7 @@ class TestGroceryFuncs(unittest.TestCase):
         errors=grocery_functions.check_recipe_format("broken-test-recipes", False)
         self.assertTrue('invalid format, "1 lb, chicken breasts" in: broken-test-recipes//broken_recipe.txt' in errors)
         self.assertTrue('invalid heading, "wrong_header" in file: broken-test-recipes//broken_recipe.txt' in errors)
-        self.assertTrue('Blank recipe in: broken-test-recipes//broken_recipe.txt' in errors)
+        self.assertTrue('invalid heading, "misspelled" in file: broken-test-recipes//broken_recipe.txt' in errors)
 
     def test_update_default_ing_dept_file(self):
         grocery_functions.update_default_ing_dept_file(grocery_functions.get_all_ingredients("test-recipes"))
