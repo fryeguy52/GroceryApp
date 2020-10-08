@@ -14,16 +14,18 @@ class Ingredient():
     Currently unused the idea is to replace code in this file with more OO design
     """
     def __init__(self, input_string):
+        self.original_input_string=input_string
         if len(input_string.split(",")) == 3:
-          self.name   = input_string.split(",")[2].strip().lower().rstrip("s.")
-          self.unit   = input_string.split(",")[1].strip().lower().rstrip("s.")
-          self.number = input_string.split(",")[0].strip().lower().rstrip("s.")
-          if self.name.endswith("oe"):
-              self.name = self.name.rstrip("e")
+            self.name = input_string.split(",")[2].strip().lower().rstrip("s.")
+            self.unit = input_string.split(",")[1].strip().lower().rstrip("s.")
+            self.number = input_string.split(",")[0].strip().lower().rstrip("s.")
+            if self.name.endswith("oe"):
+                self.name = self.name.rstrip("e")
         else:
             self.name = "invalid input line: " + input_string
             self.unit = self.name
             self.number = self.name
+
 
     def getName(self):
         return self.name
@@ -45,9 +47,9 @@ class Recipe():
         self.file_name = recipe_file_name
         self.instructional_text = ""
         self.ingredient_list = []
+        self.tags = []
 
         heading = ''
-        ingredient_list = []
         with open(recipe_file_name, 'r') as recipe_file:
             for line in recipe_file:
                 if line.strip() == '':
@@ -59,6 +61,8 @@ class Recipe():
                     self.ingredient_list.append(current_ingredient)
                 elif heading.lower() == "recipe":
                     self.instructional_text += line
+                elif heading.lower() == "tags":
+                    self.tags.append(line.strip())
                 else:
                     pass
 
@@ -96,14 +100,32 @@ class RecipeCollection():
     def get_grocery_list(self):
         return self.grocery_list
 
-    def get_recipe_names(self):
-        recipe_names=[]
-        for recipe in self.recipe_list:
-            recipe_names.append(recipe.name)
+    def get_recipe_names(self, search_tags=[]):
+
+        recipe_names = []
+
+        if search_tags == []:
+            for recipe in self.recipe_list:
+                recipe_names.append(recipe.name)
+        else:
+            for recipe in self.recipe_list:
+                if set(search_tags).issubset(recipe.tags):
+                    recipe_names.append(recipe.name)
+
+        if recipe_names == []:
+            recipe_names.append("No recipes match the tags: " + str(search_tags))
+
         return recipe_names
+
+
 
     def sort_ingredient_list(self):
         self.ingredient_list.sort(key=lambda x: x.name)
+
+    def get_all_recipes_in_dir(self, recipe_dir):
+        for file in glob.glob(recipe_dir+"/*.txt"):
+            current_recipe=Recipe(file)
+            self.recipe_list.append(current_recipe)
 
     def make_ingredient_list(self):
         self.ingredient_list=[]
@@ -424,12 +446,12 @@ def check_recipe_format(recipe_dir="..//recipes", verbose=True):
                     print(error_string)
                 errors.append(error_string)
 
-            # check each linein the file
+            # check each line in the file
             # if it is empty, then ignore
             # if it starts with a '#' then check that a valid heading follows and set variable "heading" to new value
             # if the new line is not blank or a heading change then switch based on heading:
             # the ingredient heading needs to be formatted correctly in terms of comma separated values
-            # the tags need to have members of certain tags lists. ie each recipe must have one of :[chicken. beef, vegitarian, etc...]
+            # the tags need to have members of certain tags lists. ie each recipe must have one of :[chicken, beef, vegitarian, etc...]
             for line in recipe_file:
                 if line.strip() == '':
                     pass

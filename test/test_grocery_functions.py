@@ -16,7 +16,8 @@ class TestGroceryFuncs(unittest.TestCase):
         self.assertTrue(recipe_names[4] == 'Kielbasa, Pepper, Onion and Potato Hash')
 
     def test_getIngredientsFromFile(self):
-        list=grocery_functions.get_ingredients_from_recipe_file("test-recipes\Kielbasa, Pepper, Onion and Potato Hash.txt")
+        list=grocery_functions.get_ingredients_from_recipe_file("test-recipes\Kielbasa, Pepper, "
+                                                                "Onion and Potato Hash.txt")
         self.assertTrue(list[0].name == 'turkey kielbasa')
         self.assertTrue(list[0].unit == 'ounce')
         self.assertTrue(list[0].number == '14')
@@ -34,10 +35,12 @@ class TestGroceryFuncs(unittest.TestCase):
         self.assertTrue(list[2] == 'stove')
 
     def test_getRecipeFromFile(self):
-        recipe=grocery_functions.get_recipe_from_recipe_file("test-recipes\Healthy Roasted Chicken and Veggies (one pan).txt")
+        recipe=grocery_functions.get_recipe_from_recipe_file("test-recipes\Healthy Roasted Chicken and Veggies "
+                                                             "(one pan).txt")
         self.assertTrue("1, cup, bell pepper chopped (any colors you like)" in recipe)
         self.assertTrue("1 teaspoon italian seasoning" in recipe)
-        self.assertTrue("Place the chicken and veggies in a medium roasting dish or sheet pan. Add the olive oil, " in recipe)
+        self.assertTrue("Place the chicken and veggies in a medium roasting dish or sheet pan. Add the olive oil, "
+                        in recipe)
 
     def test_condenseList(self):
         recipe_names = grocery_functions.get_recipe_names("test-recipes")
@@ -101,17 +104,21 @@ class TestGroceryFuncs(unittest.TestCase):
         self.assertTrue("1, teaspoon paprika (optional)" in recipe1.get_instructional_text())
         self.assertTrue("Instructions" in recipe1.get_instructional_text())
         self.assertTrue("Preheat oven to 500 degree F. " in recipe1.get_instructional_text())
-        self.assertTrue("Chop all the veggies into large pieces. In another cutting board chop the chicken into cubes. " in recipe1.get_instructional_text())
-        self.assertTrue("Place the chicken and veggies in a medium roasting dish or sheet pan. Add the olive oil, " in recipe1.get_instructional_text())
-        self.assertTrue("salt and pepper, italian seasoning, and paprika. Toss to combine." in recipe1.get_instructional_text())
-        self.assertTrue("Bake for 15 minutes or until the veggies are charred and chicken is cooked. Enjoy with rice, pasta, or a salad." in recipe1.get_instructional_text())
+        self.assertTrue("Chop all the veggies into large pieces. In another cutting board chop the chicken into cubes. "
+                        in recipe1.get_instructional_text())
+        self.assertTrue("Place the chicken and veggies in a medium roasting dish or sheet pan. Add the olive oil, "
+                        in recipe1.get_instructional_text())
+        self.assertTrue("salt and pepper, italian seasoning, and paprika. Toss to combine." in
+                        recipe1.get_instructional_text())
+        self.assertTrue("Bake for 15 minutes or until the veggies are charred and chicken is cooked. Enjoy with rice,"
+                        " pasta, or a salad." in recipe1.get_instructional_text())
         self.assertTrue(recipe1.get_ingredient_list()[0].name == "bell pepper")
         self.assertTrue(recipe1.get_ingredient_list()[3].name == "chicken breast")
         self.assertTrue(recipe1.get_ingredient_list()[5].name == "olive oil")
         self.assertTrue(recipe1.get_ingredient_list()[-2].name == "tomato")
         self.assertTrue(recipe1.get_ingredient_list()[-1].name == "zucchini")
 
-    def test_RecipeCollection_class(self):
+    def test_RecipeCollection_class_individual_add(self):
         recipe1 = grocery_functions.Recipe("test-recipes\Healthy Roasted Chicken and Veggies (one pan).txt")
         recipe2 = grocery_functions.Recipe("test-recipes\Cajun Chicken & Rice.txt")
         recipe3 = grocery_functions.Recipe("test-recipes\Chicken Curry in a Hurry.txt")
@@ -139,6 +146,52 @@ class TestGroceryFuncs(unittest.TestCase):
         self.assertTrue("Chicken Curry in a Hurry" in recipe_collection_1.get_recipe_names())
         self.assertTrue("Chicken_Zucchini_and_Prosciutto" in recipe_collection_1.get_recipe_names())
         self.assertTrue("Kielbasa, Pepper, Onion and Potato Hash" in recipe_collection_1.get_recipe_names())
+
+    def test_RecipeCollection_class_directory_add(self):
+        recipe_collection_2 = grocery_functions.RecipeCollection()
+        recipe_collection_2.get_all_recipes_in_dir("test-recipes\\")
+
+        recipe_collection_2.make_ingredient_list()
+        self.assertTrue("potato: 3 large" in recipe_collection_2.get_grocery_list())
+
+        self.assertTrue("olive oil: 1 , 7.5 tablespoon" in recipe_collection_2.get_grocery_list() or
+                        "olive oil: 7.5 tablespoon, 1 " in recipe_collection_2.get_grocery_list())
+
+        self.assertTrue("chicken breast: 6.0 , 1 lb" in recipe_collection_2.get_grocery_list() or
+                        "chicken breast: 1 lb, 6.0 " in recipe_collection_2.get_grocery_list())
+
+        self.assertTrue("Healthy Roasted Chicken and Veggies (one pan)" in recipe_collection_2.get_recipe_names())
+        self.assertTrue("Cajun Chicken & Rice" in recipe_collection_2.get_recipe_names())
+        self.assertTrue("Chicken Curry in a Hurry" in recipe_collection_2.get_recipe_names())
+        self.assertTrue("Chicken_Zucchini_and_Prosciutto" in recipe_collection_2.get_recipe_names())
+        self.assertTrue("Kielbasa, Pepper, Onion and Potato Hash" in recipe_collection_2.get_recipe_names())
+
+    def test_RecipeCollection_class_filter_by_tag(self):
+        recipe_collection_3 = grocery_functions.RecipeCollection()
+        recipe_collection_3.get_all_recipes_in_dir("test-recipes\\")
+
+        filtered_list=recipe_collection_3.get_recipe_names([])
+        self.assertTrue("Healthy Roasted Chicken and Veggies (one pan)" in filtered_list)
+        self.assertTrue("Cajun Chicken & Rice" in filtered_list)
+        self.assertTrue("Chicken Curry in a Hurry" in filtered_list)
+        self.assertTrue("Chicken_Zucchini_and_Prosciutto" in filtered_list)
+        self.assertTrue("Kielbasa, Pepper, Onion and Potato Hash" in filtered_list)
+        self.assertTrue(len(filtered_list) == 5)
+
+        filtered_list = recipe_collection_3.get_recipe_names(['asian'])
+        self.assertTrue("Chicken Curry in a Hurry" in filtered_list)
+        self.assertTrue(len(filtered_list) == 1)
+
+        filtered_list = recipe_collection_3.get_recipe_names(['pork'])
+        self.assertTrue("No recipes match the tags: ['pork']" in filtered_list)
+        self.assertTrue(len(filtered_list) == 1)
+
+        filtered_list = recipe_collection_3.get_recipe_names(['easy', 'chicken'])
+        self.assertTrue("Cajun Chicken & Rice" in filtered_list)
+        self.assertTrue("Chicken Curry in a Hurry" in filtered_list)
+        self.assertTrue(len(filtered_list) == 2)
+
+
 
     def suite(self):
         return unittest.TestLoader().loadTestsFromTestCase(TestGroceryFuncs)
