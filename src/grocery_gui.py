@@ -21,7 +21,7 @@ def recipeGUI(selected_items):
     ### Configure
     app_title = "Menu Builder"
 
-    section_1_title="Recepies"
+    section_1_title="Recipes"
     section_2_title="Random Suggestion"
     section_3_title="Current Menu"
     section_4_title="Search by Tag"
@@ -83,7 +83,6 @@ def recipeGUI(selected_items):
     def filter_recipes_button_action():
         filter_tag_list=app.getEntry(section_4_title).split()
         a_list = grocery_functions.get_recipe_names(recipe_dir, filter_tag_list)
-#        a_list = grocery_functions.get_recipe_names(recipe_dir, filter_tag_list)
         filtered_recipes = {}
         for item in a_list:
             filtered_recipes[item] = False
@@ -93,8 +92,6 @@ def recipeGUI(selected_items):
 
         app.setProperties(section_1_title, filtered_recipes)
 
-        #suggest_recipes = all_recipes.copy()
-        #rand_suggestion = random.choice(list(suggest_recipes))
 
     def add_selected_button_action():
         all_rec = app.getProperties(section_1_title)
