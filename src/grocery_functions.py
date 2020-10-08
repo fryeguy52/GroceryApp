@@ -17,15 +17,13 @@ class Ingredient():
         if len(input_string.split(",")) == 3:
           self.name   = input_string.split(",")[2].strip().lower().rstrip("s.")
           self.unit   = input_string.split(",")[1].strip().lower().rstrip("s.")
-          self.number = input_string.split(",")[2].strip().lower().rstrip("s.")
+          self.number = input_string.split(",")[0].strip().lower().rstrip("s.")
           if self.name.endswith("oe"):
               self.name = self.name.rstrip("e")
-
-          return True
         else:
-            print("invalid input line:")
-            print(input_string)
-            return False
+            self.name = "invalid input line: " + input_string
+            self.unit = self.name
+            self.number = self.name
 
     def getName(self):
         return self.name
@@ -39,11 +37,105 @@ class Ingredient():
 class Recipe():
     """
     currently not used at all
-    """
-    def __init__(self):
-        self.name = "Default Name"
-        self.last_date="Jan 1, 1945"
 
+    a list of ingredients, a name, a text field for recipe instructions
+    """
+    def __init__(self, recipe_file_name):
+        self.name = recipe_file_name.split("\\")[-1].rstrip(".txt")
+        self.file_name = recipe_file_name
+        self.instructional_text = ""
+        self.ingredient_list = []
+
+        heading = ''
+        ingredient_list = []
+        with open(recipe_file_name, 'r') as recipe_file:
+            for line in recipe_file:
+                if line.strip() == '':
+                    pass
+                elif line[0] == "#":
+                    heading = line.strip("##").strip()
+                elif heading.lower() == "ingredients":
+                    current_ingredient = Ingredient(line)
+                    self.ingredient_list.append(current_ingredient)
+                elif heading.lower() == "recipe":
+                    self.instructional_text += line
+                else:
+                    pass
+
+        self.sort_ingredient_list()
+
+    def add_ingredient(self, new_ingredient):
+        self.ingredient_list.append(new_ingredient)
+        self.sort_ingredient_list()
+
+    def get_name(self):
+        return self.name
+
+    def get_instructional_text(self):
+        return self.instructional_text
+
+    def get_ingredient_list(self):
+        return self.ingredient_list
+
+    def sort_ingredient_list(self):
+        self.ingredient_list.sort(key=lambda x: x.name)
+
+class RecipeCollection():
+    def __init__(self):
+        self.recipe_list=[]
+        self.ingredient_list=[]
+        self.grocery_list=[]
+        self.recipe_names_list=[]
+
+    def add_recipe(self, recipe):
+        self.recipe_list.append(recipe)
+
+    def get_ingredient_list(self):
+        return self.ingredient_list
+
+    def get_grocery_list(self):
+        return self.grocery_list
+
+    def get_recipe_names(self):
+        recipe_names=[]
+        for recipe in self.recipe_list:
+            recipe_names.append(recipe.name)
+        return recipe_names
+
+    def sort_ingredient_list(self):
+        self.ingredient_list.sort(key=lambda x: x.name)
+
+    def make_ingredient_list(self):
+        self.ingredient_list=[]
+
+        # collect all the ingredients from all the recipes into one list
+        for recipe in self.recipe_list:
+            for ingredient in recipe.get_ingredient_list():
+                self.ingredient_list.append(ingredient)
+
+        condensed_list = []
+        condensed_dict = dict()
+        for ingredient in self.ingredient_list:
+            dict_key = ingredient.unit + "-" + ingredient.name
+            if dict_key in condensed_dict:
+                condensed_dict[dict_key].number = str(
+                    float(condensed_dict[dict_key].number) + float(ingredient.number))
+            else:
+                condensed_dict[dict_key] = ingredient
+
+        for item in condensed_dict:
+            condensed_list.append(condensed_dict[item])
+
+        condensed_list.sort(key=lambda x: x.name)
+        condensed_dict = {}
+        for item in condensed_list:
+            if item.name in condensed_dict:
+                condensed_dict[item.name] = condensed_dict[item.name] + ", " + item.number.strip() + " " + item.unit.strip()
+            else:
+                condensed_dict[item.name] = item.name + ": " + item.number.strip() + " " + item.unit.strip()
+        self.grocery_list = []
+        for item in condensed_dict:
+            self.grocery_list.append(condensed_dict[item])
 
 
 def get_recipe_names(recipe_dir, search_tags=[]):
