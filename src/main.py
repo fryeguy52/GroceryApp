@@ -19,17 +19,12 @@ if __name__ == "__main__":
         grocery_gui.recipeGUI(selected_recepes)
         recipes_for_the_week=grocery_functions.RecipeCollection()
         for recipe_name in selected_recepes:
-                #trello_functions.post_recipe_to_trello(recipe)
-                grocery_list += grocery_functions.get_ingredients_from_recipe_file("..\\recipes\\"+recipe_name+".txt")
-                recipes_for_the_week.add_recipe(all_of_the_recipes.get_recipe_by_name(recipe_name))
-        grocery_list=grocery_functions.condense_grocery_list(grocery_list)
-        grocery_list_new=recipes_for_the_week.get_grocery_list_by_store_order("JT_Alb.txt")
-        recipes_for_the_week.write_store_ordered_grocery_list_to_file("test_output.txt")
+            current_recipe = all_of_the_recipes.get_recipe_by_name(recipe_name)
+            recipes_for_the_week.add_recipe(current_recipe)
+            trello_functions.post_recipe_to_trello(current_recipe)
 
-        print(grocery_list)
-        print(grocery_list_new)
-
-        grocery_functions.sort_and_print_grocery_list_file(selected_recepes, grocery_list, "JT_Alb.txt")
+        recipes_for_the_week.sort_grocery_list_by_store_order("JT_Alb.txt")
+        recipes_for_the_week.write_store_ordered_grocery_list_to_file("..\\most_recent_grocery_list.txt")
     else:
         print(grocery_file_errors)
 

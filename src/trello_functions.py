@@ -6,7 +6,7 @@ import grocery_functions
 from trello_settings import trello_token
 from trello_settings import trello_key
 
-def post_recipe_to_trello(recipe_name):
+def post_recipe_to_trello(recipe):
     token=trello_token
     key=trello_key
 
@@ -28,8 +28,8 @@ def post_recipe_to_trello(recipe_name):
             if i["name"] == "This Week":
                 id_list=i["id"]
 
-        name = recipe_name
-        description = grocery_functions.get_recipe_from_recipe_file("..//recipes//"+recipe_name+".txt")
+        name = recipe.get_name()
+        description = recipe.get_instructional_text()
         arguments = {'name': name,
                      'desc': description,
                      'idList' : id_list}

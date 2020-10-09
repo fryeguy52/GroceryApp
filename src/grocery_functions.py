@@ -208,6 +208,11 @@ class RecipeCollection():
             print("grocery_list_by_store_order does not exist yet. skipping.")
         else:
             output_file = open(file_name, "w")
+            output_file.write("*** Recipes this Week ***\n")
+            for recipe in self.recipe_list:
+                output_file.write(recipe.name + "\n")
+            output_file.write("*************************\n\n")
+
             for i in range(0, len(self.grocery_list_by_store_order)):
                 output_file.write(self.grocery_list_by_store_order[i]+"\n")
 
