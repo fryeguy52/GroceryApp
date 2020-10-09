@@ -9,8 +9,11 @@ def recipeGUI(selected_items):
     ### Load data
     filter_tag_list=[]
     recipe_dir="..\\recipes"
-    a_list = grocery_functions.get_recipe_names(recipe_dir, filter_tag_list)
-    all_recipes ={}
+
+    recipe_collection_all = grocery_functions.RecipeCollection()
+    recipe_collection_all.get_all_recipes_in_dir(recipe_dir)
+    a_list = recipe_collection_all.get_recipe_names(filter_tag_list)
+    all_recipes = {}
     for item in a_list:
         all_recipes[item] = False
 
@@ -82,9 +85,9 @@ def recipeGUI(selected_items):
 
     def filter_recipes_button_action():
         filter_tag_list=app.getEntry(section_4_title).split()
-        a_list = grocery_functions.get_recipe_names(recipe_dir, filter_tag_list)
+        recipe_list = recipe_collection_all.get_recipe_names(filter_tag_list)
         filtered_recipes = {}
-        for item in a_list:
+        for item in recipe_list:
             filtered_recipes[item] = False
 
         for item in app.getProperties(section_1_title):
@@ -146,8 +149,8 @@ def recipeGUI(selected_items):
     app.go()
 
 if __name__ == "__main__":
-    all_recipes = ["Cheese", "Tomato", "Bacon", "Corn", "Mushroom"]
+    test_recipes = ["Cheese", "Tomato", "Bacon", "Corn", "Mushroom"]
     selected = []
-    recipeGUI(all_recipes, selected)
+    recipeGUI(test_recipes, selected)
     print(selected)
 

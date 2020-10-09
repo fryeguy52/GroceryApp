@@ -3,11 +3,13 @@ import re
 import glob
 import ntpath
 
+
 class shopping_item():
     number=[]
     unit=[]
     name=[]
     grocery_list_line=[]
+
 
 class Ingredient():
     """
@@ -26,15 +28,15 @@ class Ingredient():
             self.unit = self.name
             self.number = self.name
 
-
-    def getName(self):
+    def get_name(self):
         return self.name
 
-    def getUnit(self):
+    def get_unit(self):
         return self.unit
 
-    def getNumber(self):
+    def get_number(self):
         return self.number
+
 
 class Recipe():
     """
@@ -84,11 +86,13 @@ class Recipe():
     def sort_ingredient_list(self):
         self.ingredient_list.sort(key=lambda x: x.name)
 
+
 class RecipeCollection():
     def __init__(self):
         self.recipe_list=[]
         self.ingredient_list=[]
         self.grocery_list=[]
+        self.grocery_list_by_store_order=[]
         self.recipe_names_list=[]
 
     def add_recipe(self, recipe):
@@ -98,7 +102,18 @@ class RecipeCollection():
         return self.ingredient_list
 
     def get_grocery_list(self):
+        self.make_ingredient_list()
         return self.grocery_list
+
+    def get_grocery_list_by_store_order(self, store_config_file_name):
+        self.sort_grocery_list_by_store_order(store_config_file_name)
+        return self.grocery_list_by_store_order
+
+    def get_recipe_by_name(self, requested_name):
+        for recipe in self.recipe_list:
+            if recipe.get_name() == requested_name:
+                return recipe
+        print(requested_name + " Not Found!")
 
     def get_recipe_names(self, search_tags=[]):
 
@@ -158,6 +173,44 @@ class RecipeCollection():
         self.grocery_list = []
         for item in condensed_dict:
             self.grocery_list.append(condensed_dict[item])
+
+    def sort_grocery_list_by_store_order(self, store_config_file_name):
+        self.make_ingredient_list()
+        self.grocery_list_by_store_order=[]
+        default_store_file_name = "defaultItemDepartments.txt"
+
+        store_specific_output_department_from_ingredient, \
+        store_specific_output__ingredient_list_from_department, \
+        store_specific_print_order, \
+        all_ingredients_from_default_dept_file = get_item_dept_dicts(store_config_file_name)
+
+        default_output_department_from_ingredient,\
+        default_ing_list_from_dept_key, \
+        default_print_order, \
+        all_ingredients_from_default_dept_file = get_item_dept_dicts(default_store_file_name)
+
+        # check to see if an item is listed in the non-default store file and will
+        # write out items in the the order given in the store config file
+        for dept in store_specific_print_order:
+            for item in self.grocery_list:
+                name_of_grocery_item=item.split(':')[0]
+                if name_of_grocery_item in store_specific_output_department_from_ingredient:
+                    if store_specific_output_department_from_ingredient[name_of_grocery_item] == dept:
+                        self.grocery_list_by_store_order.append(dept + " -- " + item)
+                elif name_of_grocery_item in default_output_department_from_ingredient:
+                    if default_output_department_from_ingredient[name_of_grocery_item] == dept:
+                        self.grocery_list_by_store_order.append(dept + " -- " + item)
+                else:
+                    self.grocery_list_by_store_order.append("No Department Listed -- " + item + "\n")
+
+    def write_store_ordered_grocery_list_to_file(self, file_name):
+        if self.grocery_list_by_store_order == []:
+            print("grocery_list_by_store_order does not exist yet. skipping.")
+        else:
+            output_file = open(file_name, "w")
+            for i in range(0, len(self.grocery_list_by_store_order)):
+                output_file.write(self.grocery_list_by_store_order[i]+"\n")
+
 
 
 def get_recipe_names(recipe_dir, search_tags=[]):

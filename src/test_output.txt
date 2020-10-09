@@ -1,0 +1,32 @@
+bread -- hamburger bun: 8 
+bakery -- naan: 1 package
+meat -- ground beef | frozen pattie: 2.5 pound
+meat -- chicken thigh: 2 lb
+cheese -- sliced cheese: 1 pack
+cheese -- grated parmesan: 1 cup
+dairy -- whipping cream: 1 cup
+dairy -- milk: 3 cup
+dairy -- butter: 7.0 tbsp
+fruits -- tomato: 2 large
+vegetables -- lettuce: 1 head
+vegetables -- parsley: 2 tbsp
+roots -- garlic: 10.0 clove
+roots -- onion: 1 
+roots -- potato: 4 large
+roots -- fresh ginger: 2 tsp
+condiments -- pickle: 1 jar
+condiments -- ketchup: 1 bottle
+rice and beans -- rice: 3 cup
+canned veggies -- tomato puree: 1 cup
+canned veggies -- tomato paste: 2 tbsp
+italian -- dry fettuccine: 1 box
+spices -- salt: 1 tsp
+spices -- coriander ground: 1 tbsp
+spices -- turmeric: 1 tsp
+spices -- smoked paprika: 1 tbsp
+spices -- nutmeg: 0.125 tsp
+spices -- cumin: 1 tsp
+spices -- garam masala: 3 tsp
+spices -- mrs. dash: 1 tablespoon
+baking -- all-purpose flour: 4 tbsp
+frozen veggies -- frozen broccoli floret: 2 pound
