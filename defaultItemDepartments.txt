@@ -167,7 +167,6 @@ uncooked shrimp
 ## frozen veggies
 chopped green chile
 frozen broccoli floret
-frozen chopped spinach
 frozen corn
 frozen pea
 frozen peas and carrot
@@ -219,7 +218,6 @@ bacon
 boneless pork roast
 boneless pork shoulder
 brat
-brisket
 chicken
 chicken breast
 chicken thigh
@@ -388,4 +386,5 @@ zucchini
 naan (trader joe's)
 
 ## zzzz no department specified
+frozen chopped spinach
 not a real ingredient

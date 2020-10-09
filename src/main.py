@@ -7,11 +7,11 @@ import grocery_functions
 import trello_functions
 
 if __name__ == "__main__":
-    grocery_file_errors=grocery_functions.check_recipe_format()
     grocery_functions.update_default_ing_dept_file(grocery_functions.get_all_ingredients("..\\recipes"))
 
     all_of_the_recipes = grocery_functions.RecipeCollection()
-    all_of_the_recipes.get_all_recipes_in_dir("..\\recipes")
+    all_of_the_recipes.add_all_recipes_in_dir("..\\recipes")
+    grocery_file_errors=all_of_the_recipes.get_recipe_file_format_errors()
 
     if grocery_file_errors == []:
         selected_recepes = []
@@ -26,5 +26,6 @@ if __name__ == "__main__":
         recipes_for_the_week.sort_grocery_list_by_store_order("JT_Alb.txt")
         recipes_for_the_week.write_store_ordered_grocery_list_to_file("..\\most_recent_grocery_list.txt")
     else:
-        print(grocery_file_errors)
+        for error in grocery_file_errors:
+            print(error)
 
