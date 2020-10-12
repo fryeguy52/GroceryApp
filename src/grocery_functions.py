@@ -2,7 +2,9 @@ __author__ = 'Joe'
 import re
 import glob
 import ntpath
-
+import datetime
+import grocery_gui
+import trello_functions
 
 class Ingredient():
     """
@@ -81,6 +83,9 @@ class Recipe():
         self.ingredient_list.append(new_ingredient)
         self.sort_ingredient_list()
 
+    def add_tag(self, tag):
+        self.tags.append()
+
     def get_name(self):
         return self.name
 
@@ -108,7 +113,7 @@ class Recipe():
 
         for tag_set in list_of_tag_sets:
             if not any(tag in self.tags for tag in tag_set):
-                self.recipe_file_errors.append("Missing one of the following tag: " + str(tag_set))
+                self.recipe_file_errors.append("Missing one of the following tags: " + str(tag_set))
 
 
 class RecipeCollection():
@@ -216,10 +221,9 @@ class RecipeCollection():
         self.unique_ingredient_list.sort()
 
 
-    def sort_grocery_list_by_store_order(self, store_config_file_name):
+    def sort_grocery_list_by_store_order(self, store_config_file_name, default_store_file_name):
         self.make_ingredient_list()
         self.grocery_list_by_store_order=[]
-        default_store_file_name = "defaultItemDepartments.txt"
 
         store_specific_output_department_from_ingredient, \
         store_specific_output__ingredient_list_from_department, \
@@ -262,8 +266,15 @@ class RecipeCollection():
             for error in recipe.recipe_file_errors:
                 self.recipe_file_format_errors.append(recipe.name + ": " + error)
 
+    def mark_recipes_in_date_file(self, date_file):
+        #current_date=datetime.date.year+"-"+datetime.date.
+        #output_file = open(date_file, "a")
+        pass
 
-def get_item_dept_dicts_and_print_order_from_store_config_file(file_name='defaultItemDepartments.txt'):
+
+
+
+def get_item_dept_dicts_and_print_order_from_store_config_file(file_name):
     """
     return two dictionaries from specified file. one takes itmes
     as keys and returns a department one takes a department as a
@@ -308,12 +319,12 @@ def get_all_ingredients_from_store_config_file(file_name):
     return all_ingredients_list
 
 
-def get_all_ingredients(recipe_dir="..//recipes"):
+def get_all_ingredients(recipe_dir, default_item_dept_file_name):
     all_recipes = RecipeCollection()
     all_recipes.add_all_recipes_in_dir(recipe_dir)
     all_ingredients_in_all_recipes = all_recipes.get_unique_ingredient_list()
 
-    default_item_dept_file_name = "defaultItemDepartments.txt"
+    #default_item_dept_file_name = "defaultItemDepartments.txt"
     all_ingredients_from_default_dept_file = get_all_ingredients_from_store_config_file(default_item_dept_file_name)
 
     for ingredient_name in all_ingredients_from_default_dept_file:
@@ -324,15 +335,15 @@ def get_all_ingredients(recipe_dir="..//recipes"):
     return all_ingredients_in_all_recipes
 
 
-def update_default_ing_dept_file(input_list):
-    defaultStoreFileName = "defaultItemDepartments.txt"
+def update_default_ing_dept_file(input_list, default_Store_File_Name):
+    #defaultStoreFileName = "defaultItemDepartments.txt"
 
     default_dept_from_ing_key, \
     default_ing_list_from_dept_key, \
-    print_order = get_item_dept_dicts_and_print_order_from_store_config_file(defaultStoreFileName)
+    print_order = get_item_dept_dicts_and_print_order_from_store_config_file(default_Store_File_Name)
 
     print_order.sort()
-    out_file=open(defaultStoreFileName, "w")
+    out_file=open(default_Store_File_Name, "w")
     out_file.write("## print order\n")
     for dept in print_order:
         out_file.write(dept+"\n")
@@ -352,3 +363,31 @@ def update_default_ing_dept_file(input_list):
 
     out_file.close()
 
+def run_trello_grocery_list_app(
+        recipe_directory,
+        grocery_store_config_file,
+        default_Store_File_Name,
+        grocery_list_output_file_name,
+        post_to_trello
+):
+    update_default_ing_dept_file(get_all_ingredients(recipe_directory, default_Store_File_Name), default_Store_File_Name)
+
+    all_of_the_recipes = RecipeCollection()
+    all_of_the_recipes.add_all_recipes_in_dir(recipe_directory)
+    grocery_file_errors=all_of_the_recipes.get_recipe_file_format_errors()
+
+    if grocery_file_errors == []:
+        selected_recepes = []
+        grocery_gui.recipeGUI(selected_recepes)
+        recipes_for_the_week=RecipeCollection()
+        for recipe_name in selected_recepes:
+            current_recipe = all_of_the_recipes.get_recipe_by_name(recipe_name)
+            recipes_for_the_week.add_recipe(current_recipe)
+            if post_to_trello:
+                trello_functions.post_recipe_to_trello(current_recipe)
+
+        recipes_for_the_week.sort_grocery_list_by_store_order(grocery_store_config_file, default_Store_File_Name)
+        recipes_for_the_week.write_store_ordered_grocery_list_to_file(grocery_list_output_file_name)
+    else:
+        for error in grocery_file_errors:
+            print(error)

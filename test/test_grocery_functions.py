@@ -146,10 +146,9 @@ class TestGroceryFuncs(unittest.TestCase):
         self.assertTrue('broken_recipe: invalid input line: 4, cup bell peppers\n' in all_recipe_file_format_errors)
         self.assertTrue('broken_recipe: wrong_header is not a valid heading' in all_recipe_file_format_errors)
         self.assertTrue('broken_recipe: misspelled is not a valid heading' in all_recipe_file_format_errors)
-        self.assertTrue("poo_sandwich: Missing one of the following tag: ['summer', 'fall', 'winter', 'spring']" in all_recipe_file_format_errors)
-        self.assertTrue("poo_sandwich: Missing one of the following tag: ['breakfast', 'lunch', 'dinner', 'side']" in all_recipe_file_format_errors)
-        self.assertTrue("poo_sandwich: Missing one of the following tag: ['stove', 'grill', 'oven', 'crock pot', 'instant pot', 'no cooking']" in all_recipe_file_format_errors)
-
+        self.assertTrue("poo_sandwich: Missing one of the following tags: ['summer', 'fall', 'winter', 'spring']" in all_recipe_file_format_errors)
+        self.assertTrue("poo_sandwich: Missing one of the following tags: ['breakfast', 'lunch', 'dinner', 'side']" in all_recipe_file_format_errors)
+        self.assertTrue("poo_sandwich: Missing one of the following tags: ['stove', 'grill', 'oven', 'crock pot', 'instant pot', 'no cooking']" in all_recipe_file_format_errors)
 
 
     def suite(self):

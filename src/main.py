@@ -1,31 +1,15 @@
 __author__ = 'Joe'
 
-import datetime
-
-import grocery_gui
 import grocery_functions
-import trello_functions
+
 
 if __name__ == "__main__":
-    grocery_functions.update_default_ing_dept_file(grocery_functions.get_all_ingredients("..\\recipes"))
+    grocery_functions.run_trello_grocery_list_app(
+        recipe_directory="..\\recipes",
+        grocery_store_config_file="JT_Alb.txt",
+        default_Store_File_Name="defaultItemDepartments.txt",
+        grocery_list_output_file_name="..\\most_recent_grocery_list.txt",
+        post_to_trello=False
+    )
 
-    all_of_the_recipes = grocery_functions.RecipeCollection()
-    all_of_the_recipes.add_all_recipes_in_dir("..\\recipes")
-    grocery_file_errors=all_of_the_recipes.get_recipe_file_format_errors()
-
-    if grocery_file_errors == []:
-        selected_recepes = []
-        grocery_list=[]
-        grocery_gui.recipeGUI(selected_recepes)
-        recipes_for_the_week=grocery_functions.RecipeCollection()
-        for recipe_name in selected_recepes:
-            current_recipe = all_of_the_recipes.get_recipe_by_name(recipe_name)
-            recipes_for_the_week.add_recipe(current_recipe)
-            trello_functions.post_recipe_to_trello(current_recipe)
-
-        recipes_for_the_week.sort_grocery_list_by_store_order("JT_Alb.txt")
-        recipes_for_the_week.write_store_ordered_grocery_list_to_file("..\\most_recent_grocery_list.txt")
-    else:
-        for error in grocery_file_errors:
-            print(error)
 
