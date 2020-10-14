@@ -5,13 +5,14 @@ import random
 import grocery_functions
 
 
-def recipeGUI(selected_items):
+def recipeGUI(selected_items, recipe_dir="..\\recipes", recipe_time_stamp_file_name="..\\recipe_time_stamps.tmstmp"):
     ### Load data
     filter_tag_list=[]
-    recipe_dir="..\\recipes"
+    #recipe_dir="..\\recipes"
 
     recipe_collection_all = grocery_functions.RecipeCollection()
     recipe_collection_all.add_all_recipes_in_dir(recipe_dir)
+    recipe_collection_all.read_time_stamp_file(recipe_time_stamp_file_name)
     a_list = recipe_collection_all.get_recipe_names(filter_tag_list)
     all_recipes = {}
     for item in a_list:

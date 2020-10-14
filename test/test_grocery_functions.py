@@ -4,6 +4,7 @@ sys.path.insert(0,'../src/')
 
 import grocery_functions
 import unittest
+import datetime
 
 class TestGroceryFuncs(unittest.TestCase):
 
@@ -149,6 +150,93 @@ class TestGroceryFuncs(unittest.TestCase):
         self.assertTrue("poo_sandwich: Missing one of the following tags: ['summer', 'fall', 'winter', 'spring']" in all_recipe_file_format_errors)
         self.assertTrue("poo_sandwich: Missing one of the following tags: ['breakfast', 'lunch', 'dinner', 'side']" in all_recipe_file_format_errors)
         self.assertTrue("poo_sandwich: Missing one of the following tags: ['stove', 'grill', 'oven', 'crock pot', 'instant pot', 'no cooking']" in all_recipe_file_format_errors)
+
+    def test_RecipeCollection_class_time_stamps_read(self):
+        recipe_collection_3 = grocery_functions.RecipeCollection()
+        recipe_collection_3.add_all_recipes_in_dir("test-recipes\\")
+
+        recipe_collection_3.read_time_stamp_file("test-recipes\\good_recipe_time_stamps.tmstmp", datetime.date(2020,10,13))
+
+        self.assertTrue("recently-used" in recipe_collection_3.get_recipe_by_name("Cajun Chicken & Rice").tags)
+        self.assertTrue("recently-used" in recipe_collection_3.get_recipe_by_name("Chicken Curry in a Hurry").tags)
+        self.assertTrue("recently-used" in recipe_collection_3.get_recipe_by_name("Chicken_Zucchini_and_Prosciutto").tags)
+        self.assertTrue(not "recently-used" in recipe_collection_3.get_recipe_by_name("Healthy Roasted Chicken and Veggies (one pan)").tags)
+        self.assertTrue(not "recently-used" in recipe_collection_3.get_recipe_by_name("Kielbasa, Pepper, Onion and Potato Hash").tags)
+
+        self.assertTrue(not "not-recently-used"
+                            in recipe_collection_3.get_recipe_by_name("Cajun Chicken & Rice").tags)
+
+        self.assertTrue(not "not-recently-used"
+                            in recipe_collection_3.get_recipe_by_name("Chicken Curry in a Hurry").tags)
+
+        self.assertTrue(not "not-recently-used"
+                            in recipe_collection_3.get_recipe_by_name("Chicken_Zucchini_and_Prosciutto").tags)
+
+        self.assertTrue("not-recently-used"
+                        in recipe_collection_3.get_recipe_by_name("Healthy Roasted Chicken and Veggies (one pan)").tags)
+
+        self.assertTrue("not-recently-used"
+                        in recipe_collection_3.get_recipe_by_name("Kielbasa, Pepper, Onion and Potato Hash").tags)
+
+        recipe_collection_3 = grocery_functions.RecipeCollection()
+        recipe_collection_3.add_all_recipes_in_dir("test-recipes\\")
+
+        recipe_collection_3.read_time_stamp_file("test-recipes\\good_recipe_time_stamps.tmstmp",
+                                                 datetime.date(2020, 10, 13), 10)
+
+        self.assertTrue("recently-used" in recipe_collection_3.get_recipe_by_name("Cajun Chicken & Rice").tags)
+        self.assertTrue(not "recently-used" in recipe_collection_3.get_recipe_by_name("Chicken Curry in a Hurry").tags)
+        self.assertTrue(
+            not "recently-used" in recipe_collection_3.get_recipe_by_name("Chicken_Zucchini_and_Prosciutto").tags)
+        self.assertTrue(not "recently-used" in recipe_collection_3.get_recipe_by_name(
+            "Healthy Roasted Chicken and Veggies (one pan)").tags)
+        self.assertTrue(not "recently-used" in recipe_collection_3.get_recipe_by_name(
+            "Kielbasa, Pepper, Onion and Potato Hash").tags)
+
+        self.assertTrue(not "not-recently-used"
+                            in recipe_collection_3.get_recipe_by_name("Cajun Chicken & Rice").tags)
+
+        self.assertTrue("not-recently-used"
+                            in recipe_collection_3.get_recipe_by_name("Chicken Curry in a Hurry").tags)
+
+        self.assertTrue("not-recently-used"
+                            in recipe_collection_3.get_recipe_by_name("Chicken_Zucchini_and_Prosciutto").tags)
+
+        self.assertTrue("not-recently-used"
+                        in recipe_collection_3.get_recipe_by_name("Healthy Roasted Chicken and Veggies (one pan)").tags)
+
+        self.assertTrue("not-recently-used"
+                        in recipe_collection_3.get_recipe_by_name("Kielbasa, Pepper, Onion and Potato Hash").tags)
+
+    def test_RecipeCollection_class_time_stamps_write(self):
+        recipe_collection_3 = grocery_functions.RecipeCollection()
+        recipe_collection_3.add_all_recipes_in_dir("test-recipes\\")
+
+        self.assertTrue(not "recently-used" in recipe_collection_3.get_recipe_by_name("Cajun Chicken & Rice").tags)
+        self.assertTrue(not "recently-used" in recipe_collection_3.get_recipe_by_name("Chicken Curry in a Hurry").tags)
+        self.assertTrue(not "recently-used" in recipe_collection_3.get_recipe_by_name("Chicken_Zucchini_and_Prosciutto").tags)
+        self.assertTrue(not "recently-used" in recipe_collection_3.get_recipe_by_name("Healthy Roasted Chicken and Veggies (one pan)").tags)
+        self.assertTrue(not "recently-used" in recipe_collection_3.get_recipe_by_name("Kielbasa, Pepper, Onion and Potato Hash").tags)
+        self.assertTrue(not "not-recently-used" in recipe_collection_3.get_recipe_by_name("Cajun Chicken & Rice").tags)
+        self.assertTrue(not "not-recently-used" in recipe_collection_3.get_recipe_by_name("Chicken Curry in a Hurry").tags)
+        self.assertTrue(not "not-recently-used" in recipe_collection_3.get_recipe_by_name("Chicken_Zucchini_and_Prosciutto").tags)
+        self.assertTrue(not "not-recently-used" in recipe_collection_3.get_recipe_by_name("Healthy Roasted Chicken and Veggies (one pan)").tags)
+        self.assertTrue(not "not-recently-used" in recipe_collection_3.get_recipe_by_name("Kielbasa, Pepper, Onion and Potato Hash").tags)
+
+        recipe_collection_3.write_recipe_usage_data("write_out_timestamps.tmstmp", read_or_append='w')
+        recipe_collection_3.read_time_stamp_file("write_out_timestamps.tmstmp", datetime.date(2020, 10, 13))
+
+        self.assertTrue("recently-used" in recipe_collection_3.get_recipe_by_name("Cajun Chicken & Rice").tags)
+        self.assertTrue("recently-used" in recipe_collection_3.get_recipe_by_name("Chicken Curry in a Hurry").tags)
+        self.assertTrue("recently-used" in recipe_collection_3.get_recipe_by_name("Chicken_Zucchini_and_Prosciutto").tags)
+        self.assertTrue("recently-used" in recipe_collection_3.get_recipe_by_name("Healthy Roasted Chicken and Veggies (one pan)").tags)
+        self.assertTrue("recently-used" in recipe_collection_3.get_recipe_by_name("Kielbasa, Pepper, Onion and Potato Hash").tags)
+
+        self.assertTrue(not "not-recently-used" in recipe_collection_3.get_recipe_by_name("Cajun Chicken & Rice").tags)
+        self.assertTrue(not "not-recently-used" in recipe_collection_3.get_recipe_by_name("Chicken Curry in a Hurry").tags)
+        self.assertTrue(not "not-recently-used" in recipe_collection_3.get_recipe_by_name("Chicken_Zucchini_and_Prosciutto").tags)
+        self.assertTrue(not "not-recently-used" in recipe_collection_3.get_recipe_by_name("Healthy Roasted Chicken and Veggies (one pan)").tags)
+        self.assertTrue(not "not-recently-used" in recipe_collection_3.get_recipe_by_name("Kielbasa, Pepper, Onion and Potato Hash").tags)
 
 
     def suite(self):

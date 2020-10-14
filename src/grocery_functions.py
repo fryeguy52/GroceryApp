@@ -49,6 +49,10 @@ class Recipe():
         self.ingredient_list = []
         self.recipe_file_errors = []
         self.tags = []
+        self.is_selected=False
+        self.is_grocery_staples_recipe=False
+        if "Grocery Staples" in recipe_file_name:
+            self.is_grocery_staples_recipe=True
 
         # any headings other than the ones defined here will give an error
         acceptable_headings = ["tags", "ingredients", "recipe"]
@@ -84,7 +88,7 @@ class Recipe():
         self.sort_ingredient_list()
 
     def add_tag(self, tag):
-        self.tags.append()
+        self.tags.append(tag)
 
     def get_name(self):
         return self.name
@@ -266,12 +270,42 @@ class RecipeCollection():
             for error in recipe.recipe_file_errors:
                 self.recipe_file_format_errors.append(recipe.name + ": " + error)
 
-    def mark_recipes_in_date_file(self, date_file):
-        #current_date=datetime.date.year+"-"+datetime.date.
-        #output_file = open(date_file, "a")
-        pass
+    def read_time_stamp_file(self,
+                             recipe_time_stamp_file_name,
+                             date_for_timedelta=datetime.date.today(),
+                             days_for_timedelta=21
+                             ):
+
+        recipe_to_time_stamp_dict={}
+        with open(recipe_time_stamp_file_name, 'r') as time_stamp_file:
+            for line in time_stamp_file:
+                recipe_name = line.split(":")[0].strip()
+                time_stamp = line.split(":")[1].strip()
+                date = datetime.date(int(time_stamp.split("-")[0]),
+                                     int(time_stamp.split("-")[1]),
+                                     int(time_stamp.split("-")[2]))
+                if recipe_name in recipe_to_time_stamp_dict:
+                    if date > recipe_to_time_stamp_dict[recipe_name]:
+                        recipe_to_time_stamp_dict[recipe_name] = date
+                else:
+                    recipe_to_time_stamp_dict[recipe_name] = date
+
+            for recipe_name in recipe_to_time_stamp_dict:
+                if recipe_name in self.get_recipe_names():
+                    if date_for_timedelta - recipe_to_time_stamp_dict[recipe_name] < datetime.timedelta(days=days_for_timedelta):
+                        self.get_recipe_by_name(recipe_name).tags.append("recently-used")
+
+        for recipe in self.recipe_list:
+            if not "recently-used" in recipe.tags:
+                recipe.add_tag("not-recently-used")
 
 
+
+    def write_recipe_usage_data(self, recipe_time_stamp_file_name, mark_recipes_with_this_date=datetime.date.today(),read_or_append='a'):
+        with open(recipe_time_stamp_file_name, read_or_append) as time_stamp_file:
+            for recipe in self.recipe_list:
+                if not recipe.is_grocery_staples_recipe:
+                    time_stamp_file.write(recipe.name+": "+str(mark_recipes_with_this_date)+"\n")
 
 
 def get_item_dept_dicts_and_print_order_from_store_config_file(file_name):
@@ -366,28 +400,36 @@ def update_default_ing_dept_file(input_list, default_Store_File_Name):
 def run_trello_grocery_list_app(
         recipe_directory,
         grocery_store_config_file,
-        default_Store_File_Name,
+        default_store_file_name,
+        recipe_time_stamp_file_name,
         grocery_list_output_file_name,
-        post_to_trello
-):
-    update_default_ing_dept_file(get_all_ingredients(recipe_directory, default_Store_File_Name), default_Store_File_Name)
+        post_to_trello,
+        append_time_stamps
+        ):
+
+    update_default_ing_dept_file(get_all_ingredients(recipe_directory, default_store_file_name), default_store_file_name)
 
     all_of_the_recipes = RecipeCollection()
     all_of_the_recipes.add_all_recipes_in_dir(recipe_directory)
+    #all_of_the_recipes.write_recipe_usage_data(recipe_time_stamp_file_name, mark_recipes_with_this_date=datetime.date(2020, 1, 1),read_or_append='w')
+
     grocery_file_errors=all_of_the_recipes.get_recipe_file_format_errors()
 
     if grocery_file_errors == []:
         selected_recepes = []
-        grocery_gui.recipeGUI(selected_recepes)
+        grocery_gui.recipeGUI(selected_recepes, recipe_directory, recipe_time_stamp_file_name)
         recipes_for_the_week=RecipeCollection()
+        recipes_for_the_week.read_time_stamp_file(recipe_time_stamp_file_name)
         for recipe_name in selected_recepes:
             current_recipe = all_of_the_recipes.get_recipe_by_name(recipe_name)
             recipes_for_the_week.add_recipe(current_recipe)
-            if post_to_trello:
+            if post_to_trello and not current_recipe.is_grocery_staples_recipe:
                 trello_functions.post_recipe_to_trello(current_recipe)
 
-        recipes_for_the_week.sort_grocery_list_by_store_order(grocery_store_config_file, default_Store_File_Name)
+        recipes_for_the_week.sort_grocery_list_by_store_order(grocery_store_config_file, default_store_file_name)
         recipes_for_the_week.write_store_ordered_grocery_list_to_file(grocery_list_output_file_name)
+        if append_time_stamps:
+            recipes_for_the_week.write_recipe_usage_data(recipe_time_stamp_file_name)
     else:
         for error in grocery_file_errors:
             print(error)
