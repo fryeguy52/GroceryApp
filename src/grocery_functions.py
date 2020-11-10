@@ -1,15 +1,11 @@
 __author__ = 'Joe'
-import re
 import glob
-import ntpath
 import datetime
 import grocery_gui
 import trello_functions
 
+
 class Ingredient():
-    """
-    Currently unused the idea is to replace code in this file with more OO design
-    """
     def __init__(self, input_string):
         self.original_input_string=input_string
         self.format_error=""
@@ -43,16 +39,43 @@ class Recipe():
     a list of ingredients, a name, a text field for recipe instructions
     """
     def __init__(self, recipe_file_name):
+        # name give to the recipe internally is based on the filename
         self.name = recipe_file_name.split("\\")[-1].rstrip(".txt")
+
+        # the name of the file used to create this recipe
         self.file_name = recipe_file_name
+
+        # the body of the recipe. ie add 1 cup of flour to....
         self.instructional_text = ""
+
+        # a list of ingredient objects
         self.ingredient_list = []
+
+        # a list of strings describing any errors that occured in parsing the file
         self.recipe_file_errors = []
+
+        # list of strings of tags
         self.tags = []
+
+        # a list of strings of each ingredient's name
+        self.list_of_ingredient_names=[]
+
+        # indicate ifthis recipe has been selected for use
+        # TODO
         self.is_selected=False
+
+        # mark if this recipe is a recipe staples list this will prevent it from posting to trello and being
+        # marked with a timestamp
         self.is_grocery_staples_recipe=False
         if "Grocery Staples" in recipe_file_name:
             self.is_grocery_staples_recipe=True
+
+        ### Data about this recipe in relation to other recipes ###
+        # recipe.names as key will map to calculated distances
+        self.distance_to_recipe_dict={}
+
+        # the average distance from this recipe to any other
+        self.average_distance=0
 
         # any headings other than the ones defined here will give an error
         acceptable_headings = ["tags", "ingredients", "recipe"]
@@ -70,6 +93,7 @@ class Recipe():
                 elif heading.lower() == "ingredients":
                     current_ingredient = Ingredient(line)
                     current_ingredient.recipe_name=self.name
+                    self.list_of_ingredient_names.append(current_ingredient.name)
                     self.ingredient_list.append(current_ingredient)
                     if current_ingredient.format_error != "":
                         self.recipe_file_errors.append(current_ingredient.format_error)
@@ -119,16 +143,102 @@ class Recipe():
             if not any(tag in self.tags for tag in tag_set):
                 self.recipe_file_errors.append("Missing one of the following tags: " + str(tag_set))
 
+    def calculate_distance_from_another_recipe(self, other_recipe):
+        print_differences=False
+        print_differences_lists = False
+
+        set_of_this_recipes_ingredients=set(self.list_of_ingredient_names)
+        set_of_this_recipes_tags=set(self.tags)
+
+        set_of_other_recipes_ingredients=set(other_recipe.list_of_ingredient_names)
+        set_of_other_recipes_tags = set(self.tags)
+
+        set_of_common_ingredients=set_of_this_recipes_ingredients.intersection(set_of_other_recipes_ingredients)
+        set_of_different_ingredients=set_of_this_recipes_ingredients.symmetric_difference(set_of_other_recipes_ingredients)
+
+        set_of_common_tags = set_of_this_recipes_tags.intersection(set_of_other_recipes_tags)
+        set_of_different_tags = set_of_this_recipes_tags.symmetric_difference(set_of_other_recipes_tags)
+
+        list_of_common_ingredients=list(set_of_common_ingredients)
+        list_of_different_ingredients=set(set_of_different_ingredients)
+
+        list_of_common_tags = list(set_of_common_tags)
+        list_of_different_tags = set(set_of_different_tags)
+
+        num_common_ingredients = len(list_of_common_ingredients)
+        num_different_ingredients = len(list_of_different_ingredients)
+        num_common_tags = len(list_of_common_tags)
+        num_different_tags = len(list_of_different_tags)
+
+        percent_common_ingredeints=float(num_common_ingredients/(num_common_ingredients+num_different_ingredients))
+        percent_common_tags=float(num_common_tags / (num_common_tags + num_different_tags))
+        percent_of_all_things_in_common=float((num_common_ingredients + num_common_tags)/
+                                              (num_common_ingredients+num_different_ingredients + num_common_tags + num_different_tags))
+
+        if print_differences:
+            print("comparing " +self. name + " and " + other_recipe.name)
+
+            print("common ingredients: " + str(100*percent_common_ingredeints) + "% " + str(num_common_ingredients) +  "/" + str(num_common_ingredients+num_different_ingredients))
+            print("common ingredients: " + str(100 * percent_common_tags) + "% " + str(num_common_tags) + "/" + str(num_common_tags + num_different_tags))
+
+            if print_differences_lists:
+                print("Common ingredients (" + str(num_common_ingredients) + "): ")
+                for ingredient in list_of_common_ingredients:
+                    print(ingredient)
+
+                print("Different ingredients (" + str(num_different_ingredients) + "): ")
+                for ingredient in list_of_different_ingredients:
+                    print(ingredient)
+
+                print("Common tags (" + str(num_common_tags) + "): ")
+                for tag in list_of_common_tags:
+                    print(tag)
+
+                print("Different tags (" + str(num_different_tags) + "): ")
+                for tag in list_of_different_tags:
+                    print(tag)
+
+                print("--------------------------------------------------------------")
+        self.distance_to_recipe_dict[other_recipe.name] =  1 - percent_of_all_things_in_common
+        self.calculate_average_distance()
+        return percent_of_all_things_in_common
+
+    def calculate_average_distance(self):
+        sum_of_dists=0
+        if len(self.distance_to_recipe_dict) > 0:
+            for recipe in self.distance_to_recipe_dict:
+                sum_of_dists=self.distance_to_recipe_dict[recipe] + sum_of_dists
+            self.average_distance = float(sum_of_dists/len(self.distance_to_recipe_dict))
+        else:
+            self.average_distance=0
+
 
 class RecipeCollection():
     def __init__(self):
+        # a list of Recipe() objects
         self.recipe_list=[]
+
+        # TODO
         self.ingredient_list=[]
+
+        # a list of strings formated like this
+        # <ingredient_name>: amount1, unit1, amount2, unit2
         self.grocery_list=[]
+
+        # grocery list above but reordered to match a store configure file
         self.grocery_list_by_store_order=[]
+
+        # a list of stings of the names of the recipes
         self.recipe_names_list=[]
+
+        # a list of strings that describe any format errors from recipe files
         self.recipe_file_format_errors=[]
+
+        # a list strings that is just the names of the ingredients
         self.unique_ingredient_list = []
+
+        # a dictionary taking ingredient namwes as keys and giving out times the ingredient appears in all recipes
+        self.ingredient_count_dict={}
 
     def add_recipe(self, recipe):
         self.recipe_list.append(recipe)
@@ -182,6 +292,19 @@ class RecipeCollection():
         for file in glob.glob(recipe_dir+"/*.txt"):
             current_recipe=Recipe(file)
             self.recipe_list.append(current_recipe)
+
+    def generate_ingredient_count(self):
+        self.ingredient_count_dict={}
+
+        for recipe in self.recipe_list:
+            for ingredient in recipe.ingredient_list:
+                if ingredient.name in self.ingredient_count_dict:
+                    self.ingredient_count_dict[ingredient.name] += 1
+                else:
+                    self.ingredient_count_dict[ingredient.name] = 1
+
+        for ingredient in self.ingredient_count_dict:
+            print(ingredient + ": " + str(self.ingredient_count_dict[ingredient]))
 
     def make_ingredient_list(self):
         self.ingredient_list=[]
@@ -299,6 +422,20 @@ class RecipeCollection():
             if not "recently-used" in recipe.tags:
                 recipe.add_tag("not-recently-used")
 
+    def calculate_recipe_distances(self):
+        for recipe in self.recipe_list:
+            for other_recipe in self.recipe_list:
+                if not recipe.is_grocery_staples_recipe and not other_recipe.is_grocery_staples_recipe:
+                    if not recipe.name == other_recipe.name:
+                        recipe.calculate_distance_from_another_recipe(other_recipe)
+
+    def print_recipe_distances(self):
+        self.calculate_recipe_distances()
+        for recipe in self.recipe_list:
+            print("---------------------------------------")
+            print("Distances from " + recipe.name)
+            for recipe_name in recipe.distance_to_recipe_dict:
+                print(recipe_name+": "+str(recipe.distance_to_recipe_dict[recipe_name]))
 
 
     def write_recipe_usage_data(self, recipe_time_stamp_file_name, mark_recipes_with_this_date=datetime.date.today(),read_or_append='a'):
@@ -306,6 +443,45 @@ class RecipeCollection():
             for recipe in self.recipe_list:
                 if not recipe.is_grocery_staples_recipe:
                     time_stamp_file.write(recipe.name+": "+str(mark_recipes_with_this_date)+"\n")
+
+    def write_recipe_stats_to_files(self, directory="..\\recipes\\"):
+        ingredient_count_sort_by_count_file_name="ing_count_by_count.data"
+        ingredient_count_sort_by_name_file_name = "ing_count_by_ing.data"
+        recipe_usage_count_sort_by_count="recipe_usage_by_usage.data"
+        recipe_usage_count_sort_by_usage="recipe_usage_by_recipe.data"
+        recipe_distances_sort_by_difference="dist_by_dist.data"
+        recipe_distances_sort_by_recipe="dist_by_recipe.data"
+        directory = directory + "data\\"
+
+        self.calculate_recipe_distances()
+        with open(directory+recipe_distances_sort_by_recipe, "w") as output_file:
+            for recipe in self.recipe_list:
+                sorted_distances = sorted(recipe.distance_to_recipe_dict.items(), key=lambda x: x[1], reverse=True)
+                output_file.write("\n\n---------------------------------------\n")
+                output_file.write("Distances from " + recipe.name+"\n")
+                output_file.write("---------------------------------------\n")
+                for i in range(0, len(sorted_distances)):
+                    output_file.write(sorted_distances[i][0] + ": " + str(sorted_distances[i][1])+"\n")
+
+        with open(directory+recipe_distances_sort_by_difference, "w") as output_file:
+            recipe_to_dist_dict={}
+            for recipe in self.recipe_list:
+                for other_recipe in self.recipe_list:
+                    if not recipe.name == other_recipe.name \
+                            and not recipe.is_grocery_staples_recipe \
+                            and not other_recipe.is_grocery_staples_recipe:
+                        if recipe.name > other_recipe.name:
+                            recipe_to_dist_dict[recipe.name + " ----> " +
+                                                other_recipe.name] = recipe.distance_to_recipe_dict[other_recipe.name]
+                        else:
+                            recipe_to_dist_dict[recipe.name + " ----> " +
+                                                other_recipe.name] = recipe.distance_to_recipe_dict[other_recipe.name]
+
+            sorted_distances = sorted(recipe_to_dist_dict.items(), key=lambda x: x[1], reverse=True)
+            for i in range(0, len(sorted_distances)):
+                        output_file.write(sorted_distances[i][0] + ": " + str(sorted_distances[i][1])+"\n")
+
+
 
 
 def get_item_dept_dicts_and_print_order_from_store_config_file(file_name):
@@ -391,8 +567,11 @@ def update_default_ing_dept_file(input_list, default_Store_File_Name):
             else:
                 pass
 
+    print(default_dept_from_ing_key)
     for item in input_list:
+        #print(item)
         if item not in default_dept_from_ing_key:
+            print(item)
             out_file.write(item+"\n")
 
     out_file.close()
