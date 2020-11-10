@@ -238,6 +238,12 @@ class TestGroceryFuncs(unittest.TestCase):
         self.assertTrue(not "not-recently-used" in recipe_collection_3.get_recipe_by_name("Healthy Roasted Chicken and Veggies (one pan)").tags)
         self.assertTrue(not "not-recently-used" in recipe_collection_3.get_recipe_by_name("Kielbasa, Pepper, Onion and Potato Hash").tags)
 
+    def test_Recipe_class_difference(self):
+        recipe_collection_3 = grocery_functions.RecipeCollection()
+        recipe_collection_3.add_all_recipes_in_dir("..\\recipes\\")
+
+        recipe_collection_3.generate_ingredient_count()
+        recipe_collection_3.write_recipe_stats_to_files()
 
     def suite(self):
         return unittest.TestLoader().loadTestsFromTestCase(TestGroceryFuncs)
