@@ -172,6 +172,7 @@ frozen pea
 frozen peas and carrot
 green chile
 roasted chopped medium nm green chile
+frozen chopped spinach
 
 ## fruits
 avocado
@@ -384,7 +385,7 @@ zucchini
 
 ## zzz not at the grocery store
 naan (trader joe's)
+hoagie
 
 ## zzzz no department specified
-frozen chopped spinach
 not a real ingredient

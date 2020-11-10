@@ -8,8 +8,6 @@ import grocery_functions
 def recipeGUI(selected_items, recipe_dir="..\\recipes", recipe_time_stamp_file_name="..\\recipe_time_stamps.tmstmp"):
     ### Load data
     filter_tag_list=[]
-    #recipe_dir="..\\recipes"
-
     recipe_collection_all = grocery_functions.RecipeCollection()
     recipe_collection_all.add_all_recipes_in_dir(recipe_dir)
     recipe_collection_all.read_time_stamp_file(recipe_time_stamp_file_name)
@@ -37,7 +35,8 @@ def recipeGUI(selected_items, recipe_dir="..\\recipes", recipe_time_stamp_file_n
     button_name_no_save_quit = "Quit"
     button_name_remove_items = "Remove Selected"
     button_name_save_quit = "Save and Quit"
-    button_8 = "b8"
+    button_name_show_recent = "Show recently used"
+
 
     ### debug constants
     # rand_suggestion = "poo"
@@ -58,7 +57,7 @@ def recipeGUI(selected_items, recipe_dir="..\\recipes", recipe_time_stamp_file_n
             save_quit_button_action()
         elif button == button_name_filter:
             filter_recipes_button_action()
-        elif button == button_8:
+        elif button == button_name_show_recent:
             print(button)
         else:
             print(button+" is not a recognised button")
@@ -108,6 +107,11 @@ def recipeGUI(selected_items, recipe_dir="..\\recipes", recipe_time_stamp_file_n
                 app.setProperty(section_3_title, item)
                 app.setProperty(section_1_title, item.strip('*'), False)
 
+    # def toggle_recent_button_action():
+    #     app.get
+    #     if button_name_show_recent == "Show recently used":
+    #         button_name_show_recent = "Hide recently used"
+
     def no_save_quit_button_action():
         app.stop()
 
@@ -135,7 +139,7 @@ def recipeGUI(selected_items, recipe_dir="..\\recipes", recipe_time_stamp_file_n
     app.startScrollPane("Pane1", 2, 0)
     app.addProperties(section_1_title, all_recipes)
     app.stopScrollPane()
-    app.addButtons([button_name_add_selected, button_name_filter], press, 3,0)
+    app.addButtons([button_name_add_selected, button_name_show_recent, button_name_filter], press, 3,0)
 
     # random suggestion panel
     app.addLabel(section_2_title, rand_suggestion, 1, 1,)
