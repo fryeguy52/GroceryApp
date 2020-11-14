@@ -567,11 +567,8 @@ def update_default_ing_dept_file(input_list, default_Store_File_Name):
             else:
                 pass
 
-    print(default_dept_from_ing_key)
     for item in input_list:
-        #print(item)
         if item not in default_dept_from_ing_key:
-            print(item)
             out_file.write(item+"\n")
 
     out_file.close()

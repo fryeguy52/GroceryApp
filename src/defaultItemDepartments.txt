@@ -51,14 +51,19 @@ water chestnut
 ## baby food
 
 ## bakery
+hoagie roll
 naan
 roll
 
 ## baking
 all-purpose flour
+bread flour
 brown sugar
+corn oil
 cornbread mix
+dry yeast
 evaporated milk
+extra-virgin olive oil
 flour
 olive oil
 panko bread crumb
@@ -67,6 +72,7 @@ sugar
 toasted sesame oil
 vinegar (balsamic or red wine)
 white vinegar
+yeast
 
 ## beverages
 
@@ -110,11 +116,14 @@ tomato puree
 
 ## cheese
 cheese
+cotija cheese or queso fresco
 grated parmesan
 mexican blend cheese
+mozzarella
 mozzarella cheese
 parmesan
 parmesan cheese
+romano cheese
 shredded cheddar
 shredded cheddar cheese
 shredded cheese
@@ -124,6 +133,7 @@ sliced cheese
 
 ## condiments
 bbq sauce
+black olive
 dijon mustard
 kalamata olive
 ketchup
@@ -155,6 +165,7 @@ whole milk ricotta
 ## deli
 crumbled feta
 lunch meat
+pepperoni
 
 ## frozen desserts
 
@@ -199,6 +210,7 @@ egg noodle
 linguine or fettuccine
 pasta
 pasta (rotini or farfalle)
+pizza sauce
 prepared pesto
 shell pasta
 spaghetti noodle
@@ -213,11 +225,13 @@ poop juice
 
 ## liquor
 beer
+dry red wine
 
 ## meat
 bacon
 boneless pork roast
 boneless pork shoulder
+boneless skinless chicken thigh
 brat
 brisket
 chicken
@@ -239,6 +253,7 @@ pace picante medium salsa
 refried black bean
 salsa
 taco shell
+yellow masarepa
 
 ## pb&j
 honey
@@ -312,12 +327,14 @@ dried basil
 dried oregano
 dried thyme
 fennel seed
+fresh oregano
 fresh thyme
 freshly ground pepper
 garam masala
 garlic powder
 ground clove
 ground ginger
+ground pepper
 italian seasoning
 kosher salt
 mrs. dash
@@ -361,6 +378,7 @@ coleslaw or broccoli slaw mix
 cucumber
 diced tomato
 english or persian cucumber (not regular cucumber!)
+fresh cilantro
 fresh parsley
 fresh spinach
 green bell pepper
@@ -372,6 +390,7 @@ matchstick carrot
 mini bell pepper
 non-green bell pepper
 parsley
+poblano
 pumpkin
 red bell pepper
 red pepper
@@ -381,6 +400,7 @@ salad veg
 shredded carrot
 sliced mixed mushroom
 sliced mushroom
+yellow bell pepper
 yellow pepper
 zucchini
 
@@ -388,12 +408,4 @@ zucchini
 naan (trader joe's)
 
 ## zzzz no department specified
-boneless skinless chicken thigh
-dry red wine
-extra-virgin olive oil
-fresh oregano
-ground pepper
-hoagie roll
 not a real ingredient
-romano cheese
-yellow bell pepper
