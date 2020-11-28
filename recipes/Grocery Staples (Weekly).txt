@@ -33,12 +33,12 @@ side
 
 
 ##Ingredients
-1, gallon, 1% milk
+3, gallon, 1% milk
 1, half gallon, orange juice
 1, dozen, eggs
 1, loaf, oat nut bread
 6, , beer
-7, , banana
+2, , banana
 1, , weekly tree fruit
 1, , weekly berry
 1, , salad veg
@@ -52,7 +52,8 @@ side
 1, container, salad mix
 1, package, butter
 1, , plain yogurt
-1, , poop juice
+1, box, fiber bars
+
 
 ##Recipe
 things to buy weekly
