@@ -53,6 +53,7 @@ side
 1, package, butter
 1, , plain yogurt
 1, box, fiber bars
+1, box, frozen waffles
 
 
 ##Recipe
