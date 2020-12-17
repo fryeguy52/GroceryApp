@@ -51,11 +51,13 @@ water chestnut
 ## baby food
 
 ## bakery
+flatbread
 hoagie roll
 naan
 roll
 
 ## baking
+all purpose flour
 all-purpose flour
 bread flour
 brown sugar
@@ -118,6 +120,8 @@ tomato puree
 cheese
 cotija cheese or queso fresco
 grated parmesan
+gruyere cheese
+medium sharp cheddar cheese
 mexican blend cheese
 mozzarella
 mozzarella cheese
@@ -149,6 +153,7 @@ worchestershire sauce
 butter
 egg
 greek yogurt
+half and half
 heavy cream
 heavy whipping cream
 low-fat sour cream
@@ -160,6 +165,7 @@ sour cream / greek yogurt
 unsalted butter
 whipped cream cheese
 whipping cream
+whole milk
 whole milk ricotta
 
 ## deli
@@ -170,6 +176,7 @@ pepperoni
 ## frozen desserts
 
 ## frozen non-veggies
+frozen meatball
 
 ## frozen sea food
 raw shrimp peeled and deveined
@@ -207,6 +214,7 @@ angel hair pasta
 bowtie pasta
 dry fettuccine
 egg noodle
+elbow pasta
 linguine or fettuccine
 pasta
 pasta (rotini or farfalle)
@@ -226,6 +234,7 @@ poop juice
 ## liquor
 beer
 dry red wine
+guinness beer
 
 ## meat
 bacon
@@ -242,6 +251,7 @@ ground beef
 ground beef | frozen pattie
 ground turkey
 lean ground beef
+stew beef (no bone)
 stew meat
 sweet italian sausage
 turkey kielbasa
@@ -293,6 +303,7 @@ yellow onion
 
 ## snacks
 chopped peanut
+fiber bar
 frito
 mini rice cake
 peanut
@@ -344,6 +355,7 @@ oregano
 paprika
 pepper
 red pepper flake
+red-pepper flake
 rosemary
 sage
 salt
@@ -374,11 +386,13 @@ butternut squash
 carrot
 carrot matchstick
 celery
+celery stalk
 coleslaw or broccoli slaw mix
 cucumber
 diced tomato
 english or persian cucumber (not regular cucumber!)
 fresh cilantro
+fresh dill minced
 fresh parsley
 fresh spinach
 green bell pepper
@@ -406,6 +420,7 @@ zucchini
 
 ## zzz not at the grocery store
 naan (trader joe's)
+potato gnocchi
 
 ## zzzz no department specified
 not a real ingredient
