@@ -1,7 +1,7 @@
 ##Tags
 stove
 easy
-beef
+turkey
 mexican
 dinner
 summer
@@ -10,31 +10,31 @@ winter
 spring
 
 ##Ingredients
-1, pound, ground beef
+1, pound, ground turkey
 1, teaspoon, cumin
 1, box, taco shells
 1, , tomato
 1, can, beans
-1, can, rotel tomatoes and chiles
 1, , rice
 1, , avocado
+1, , tomato
 1, , onion
 4, ounces, cheese
 ##Recipe
-1 pound ground beef
+1 pound ground turkey
 1 teaspoon cumin
 1 box taco shells
 1 tomato
 1 can beans
-1 can rotel
 rice
 2 avocados
+1 tomato
 1 onion
 cheese
 
 
-- Cook rice in rice cooker (add can of rotel if desired).  
-- Brown beef with cumin.  
+- Cook rice in rice cooker.  
+- Brown turkey with cumin.  
 - Warm beans.  
 - Bake shells.  
 - Chop garnish veggies.
