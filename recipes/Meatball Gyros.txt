@@ -14,14 +14,18 @@ dinner
 1, package, Frozen Meatballs
 4, , flatbreads
 1, , red onion
-1, ,tomato
-2, ,cucumber
-.75, cup, Greek yogurt
-.5, cup, sour cream
-2, , lemon
-2, cloves, garlic
-1, tbsp, fresh dill minced
-1, tsp, white vinegar
+2, ,tomato
+1, , cucumber
+0.5, jar, kalamata olives
+1, , green pepper
+1, container, feta
+1, container, tzatziki
+1, clove, garlic
+0.25, cup, olive oil
+1.5, tablespoons, red wine vinegar
+0.5, tablespoon, lemon juice
+0.25, teaspoon, Dijon mustard
+0.5, teaspoon, dried oregano
 
 
 
@@ -29,25 +33,28 @@ dinner
 Ingredients
 ===========
 
-- 1 package (12 oz.) Rosina Turkey Meatballs
+- 1 package (12 oz.) Turkey Meatballs
 - 4 whole wheat flatbreads or pitas
 - 1 red onion, thinly sliced
-- 1 tomato, diced
+- 2 tomato, diced
 - 1 cucumber, thinly sliced
 - 1 container Tzatziki sauce
+- 0.5 jar kalamata olives
+- 1 green pepper, diced
+- 1 container, feta
+- 1 clove garlic, minced
+- 0.25 cup olive oil
+- 1.5 tablespoons red wine vinegar
+- 0.5 tablespoon lemon juice
+- 0.25 teaspoon Dijon mustard
+- 0.5 teaspoon dried oregano
 
-Tzatziki Sauce
-==============
-De-seed and grate the cucumber then mix it with these things:
 
-- 3/4 cup Greek yogurt, plain, fat free
-- 1/2 cup sour cream, light
-- 2 tbsp lemon juice
-- 2 cloves garlic minced
-- 1 tbsp fresh dill minced
-- 1 tsp white vinegar
-- 1 medium seedless cucumber shredded, drained
-- salt and pepper to taste
+Salad
+============
+
+1. Combine dressing ingredients in shaker.
+1. Mix with half of red onion, half of tomato, half of cucmber, green pepper, olives, and feta.
 
 Gyros
 ============
