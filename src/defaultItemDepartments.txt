@@ -70,8 +70,10 @@ flour
 olive oil
 panko bread crumb
 red wine vinegar
+sesame seed oil
 sugar
 toasted sesame oil
+vegetable oil
 vinegar (balsamic or red wine)
 white vinegar
 yeast
@@ -82,6 +84,7 @@ yeast
 bread
 dinner roll
 hamburger bun
+hot dog bun
 hotdog bun
 mini bagel
 oat nut bread
@@ -139,6 +142,7 @@ sliced cheese
 bbq sauce
 black olive
 dijon mustard
+hot sauce
 kalamata olive
 ketchup
 mustard
@@ -170,13 +174,16 @@ whole milk ricotta
 
 ## deli
 crumbled feta
+hot dog
 lunch meat
 pepperoni
 
 ## frozen desserts
+dessert
 
 ## frozen non-veggies
 frozen meatball
+frozen waffle
 
 ## frozen sea food
 raw shrimp peeled and deveined
@@ -204,6 +211,7 @@ lemon juice
 lime
 peaches(optional)
 pineapple
+pineapple piece
 roma tomato
 tomato
 weekly berry
@@ -250,6 +258,7 @@ diced ham
 ground beef
 ground beef | frozen pattie
 ground turkey
+ham
 lean ground beef
 stew beef (no bone)
 stew meat
@@ -282,6 +291,7 @@ dry uncooked black bean
 garbanzo bean
 refried pinto bean
 rice
+white cannellini bean
 wild rice
 
 ## roots
@@ -336,6 +346,7 @@ curry powder (hot or mild)
 dill
 dried basil
 dried oregano
+dried rosemary
 dried thyme
 fennel seed
 fresh oregano

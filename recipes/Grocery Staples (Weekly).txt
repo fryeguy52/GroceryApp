@@ -55,7 +55,8 @@ side
 1, box, fiber bars
 1, box, frozen waffles
 1, , Dessert
-
+1, package, Hot Dogs
+1, package, Hot Dog buns
 
 ##Recipe
 things to buy weekly
