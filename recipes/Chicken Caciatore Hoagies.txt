@@ -29,7 +29,7 @@ spring
 
 http://www.eatingwell.com/recipe/277156/chicken-cacciatore-hoagies/
 
-1 ¼ pounds boneless, skinless chicken thighs, trimmed
+1.25 pounds boneless, skinless chicken thighs, trimmed
 0.5 teaspoon salt
 0.25 teaspoon ground pepper, divided
 2 tablespoons extra-virgin olive oil
