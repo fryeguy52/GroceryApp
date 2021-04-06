@@ -435,6 +435,8 @@ potato gnocchi
 
 ## zzzz no department specified
 feta
+fruit
 green pepper
 not a real ingredient
+shredded italian cheese blend
 tzatziki
