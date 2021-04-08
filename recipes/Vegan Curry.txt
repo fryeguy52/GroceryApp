@@ -1,7 +1,6 @@
 ##tags
 easy
 vegetarian
-crock pot
 american
 summer
 fall
@@ -11,49 +10,44 @@ dinner
 
 ##ingredients
 3, Tbsp, Olive Oil
-1, ,Onion
+1, , Onion
 1, Tbsp, Garlic
 1, Tbsp, Ginger
 4, tsp, Garam Masala
-1, tsp, Paprika
-0.5, tsp, Cayenne Pepper
 1, tsp, Cumin
 0.5, tsp, Coriander Powder
 1, tsp, Turmeric
-2, bags, baby carrots
-1, package, frozen chopped spinach
-3, 15oz Can, Chickpeas
-1 ,14oz Can, Chopped Tomatoes
-1, cup, Vegetable Stock
+1, bag, baby carrots
+5, stalks, celery
+2, 15oz Can, Chickpeas
+1, 14oz Can, Chopped Tomatoes
 1, 14oz Can, Coconut Milk
 2, Tbsp, Brown Sugar
 3, cup, basmati rice
+1, package, naan
 
 ##recipe
 3 Tbsp Olive Oil
-1 Onion (Chopped)
+1 Onion 
 1 Tbsp Crushed Garlic
 1 Tbsp Minced Ginger
-4 tsp Garam Masala (or Curry Powder)
-1 tsp Paprika
-1/2 tsp Cayenne Pepper
+4 tsp Garam Masala
 1 tsp Cumin
-1/2 tsp Coriander Powder
+0.5 tsp Coriander Powder
 1 tsp Turmeric
-2 bags baby carrots
-3 15oz (425g) Can Chickpeas (Drained)
-1 14oz (400g) Can Chopped Tomatoes
-1 cup (240ml) Vegetable Stock
-1 14oz (400ml) Can Coconut Milk (Full Fat)
-1 box frozen spinach
-2 Tbsp Coconut Sugar (or Brown Sugar)
-Sea Salt and Black Pepper (To Taste)
+1 bag baby carrots
+5 stalks celery
+2 15oz cans Chickpeas (Drained)
+1 14oz cans Chopped Tomatoes
+1 14oz can Coconut Milk
+2 Tbsp Brown Sugar
+1 package naan
 
 INSTRUCTIONS
-Thaw spinach.
-Add the olive oil to a pot with the chopped onion, crushed garlic, minced ginger, garam masala, paprika, cayenne pepper, cumin, coriander powder and turmeric and sauté until the onions are slightly softened.
-Add the carrots and chickpeas and toss in the spices until well mixed.
-Add the chopped tomatoes, vegetable stock and coconut milk and stir in.
-Bring to the boil and then reduce heat, cover the pot and simmer until the carrots are cooked. Add the thawed spinach and heat for 1 minute.
-Add coconut sugar, sea salt and black pepper (to taste).
-Serve with rice and/or naan.
+- Cook rice.
+- Add the olive oil to a pot with the chopped onion, crushed garlic, minced ginger, garam masala, cumin, coriander powder and turmeric and sauté until the onions are slightly softened.
+- Halve the baby carrots and roughly chop the celery.  Toss veggies and chickpeas in the spices until well mixed.
+- Add the chopped tomatoes, vegetable stock and coconut milk and stir in.
+- Bring to the boil and then reduce heat, cover the pot and simmer until the carrots are cooked.  Bake naan while curry is cooking.
+- Mix in brown sugar.  Top with salt and cayenne pepper to taste.
+- Serve with rice and naan.
