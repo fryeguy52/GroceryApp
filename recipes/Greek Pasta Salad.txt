@@ -17,7 +17,7 @@ dinner
 1, tsp, dried basil
 2, cups, cherry tomatoes
 1, , English or Persian cucumber (not regular cucumber!)
-.5, can, garbanzo beans
+1, can, garbanzo beans
 4, cloves, garlic
 1.5, tsp, dried oregano
 .5, , red onion
@@ -40,22 +40,26 @@ bread
 1 English cucumber, diced
 .5 red onion, sliced
 .5 jar kalamata olives, halved
-.5 can garbanzo beans
+1 can garbanzo beans
 crumbled feta
-1 tsp Dijon mustard
-3 tbsp fresh lemon juice
-1 tsp dried thyme
-1.5 tsp dried oregano
-1 tsp dried basil
-4 cloves garlic, minced
-1 pepper
-1 tsp salt
-3 tbsp vinegar (Balsamic or red wine)
-6 tbsp olive oil
+chicken marinade:
+2 T olive oil
+2 cloves garlic
+.5 t oregano
+1 T lemon juice
+dressing:
+1 t dijon mustard
+2 T lemon juice
+1 t dried thyme
+1 t dried oregano
+1 t dried basil
+2 cloves garlic
+2 T vinegar (balsamic or red wine)
+3 T olive oil
 
 
-- Marinate chicken with 2 T olive oil, 2 cloves garlic, .5 tsp oregano, and 1 T lemon juice.  Grill.
+- Marinate chicken.  Grill.
 - Cook pasta according to package directions.
 - Chop veggies.
-- Mix remaining ingredients into dressing; combine with pasta and veggies.
+- Mix dressing; combine with pasta and veggies.
 - Serve with bread.
