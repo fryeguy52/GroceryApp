@@ -22,17 +22,21 @@ lunch
 1, large can, baked beans
 
 ##Recipe
-1, package, brats
-1, jar, saurkraut
-4, large, potatoes
-1, jar, pickles
-1, , onions
-8, , hotdog buns
-1, bottle, ketchup
-1, bottle, mustard
-1, large can, baked beans
+Ingredients
+===========
 
+- 1, package, brats
+- 1, jar, saurkraut
+- 4, large, potatoes
+- 1, jar, pickles
+- 1, , onions
+- 8, , hotdog buns
+- 1, bottle, ketchup
+- 1, bottle, mustard
+- 1, large can, baked beans
 
+Directions
+===========
 - preheat over to 425
 - cut potatoes into wedges
 - cover potatoes with olive oil and mrs dash, bake at 425 in pamed cookie sheet for ~25 min

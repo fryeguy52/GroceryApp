@@ -1,6 +1,8 @@
 # generated grocery lists
 *grocery_list_*.txt
 most_recent_grocery_list.txt
+recipe_time_stamps.tmstmp
+*.tmstmp
 
 # Trello API info
 src/trello_settings.py

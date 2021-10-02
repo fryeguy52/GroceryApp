@@ -59,6 +59,7 @@ roll
 ## baking
 all purpose flour
 all-purpose flour
+bread crumb
 bread flour
 brown sugar
 corn oil
@@ -72,6 +73,7 @@ panko bread crumb
 red wine vinegar
 sesame seed oil
 sugar
+swedish meatball mix
 toasted sesame oil
 vegetable oil
 vinegar (balsamic or red wine)
@@ -97,6 +99,7 @@ oatmeal
 ## candy
 
 ## canned non-veggies
+chunk pineapple in juice
 
 ## canned veggies
 artichoke hearts in brine
@@ -122,6 +125,7 @@ tomato puree
 ## cheese
 cheese
 cotija cheese or queso fresco
+feta
 grated parmesan
 gruyere cheese
 medium sharp cheddar cheese
@@ -134,6 +138,7 @@ romano cheese
 shredded cheddar
 shredded cheddar cheese
 shredded cheese
+shredded italian cheese blend
 shredded parmesan
 shreddedcheese
 sliced cheese
@@ -188,6 +193,7 @@ frozen waffle
 ## frozen sea food
 raw shrimp peeled and deveined
 uncooked shrimp
+white fish
 
 ## frozen veggies
 chopped green chile
@@ -205,7 +211,9 @@ banana
 cherry tomato
 fresh lemon juice
 fresh pineapple
+fruit
 fuji apple
+green pepper
 lemon
 lemon juice
 lime
@@ -432,11 +440,7 @@ zucchini
 ## zzz not at the grocery store
 naan (trader joe's)
 potato gnocchi
+tzatziki
 
 ## zzzz no department specified
-feta
-fruit
-green pepper
 not a real ingredient
-shredded italian cheese blend
-tzatziki
