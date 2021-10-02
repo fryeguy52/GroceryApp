@@ -34,10 +34,9 @@ side
 
 ##Ingredients
 3, gallon, 1% milk
-1, half gallon, orange juice
 1, dozen, eggs
 1, loaf, oat nut bread
-6, , beer
+1, package, whole wheat english muffins
 2, , banana
 1, , weekly tree fruit
 1, , weekly berry
@@ -47,16 +46,11 @@ side
 1, , sliced cheese
 1, package, flour tortillas
 2, , lunch meat
-1, bag, mini bagels
-1, container, whipped cream cheese
 1, container, salad mix
 1, package, butter
 1, , plain yogurt
-1, box, fiber bars
-1, box, frozen waffles
-1, , Dessert
-1, package, Hot Dogs
-1, package, Hot Dog buns
+1, , dessert
+
 
 ##Recipe
 things to buy weekly
