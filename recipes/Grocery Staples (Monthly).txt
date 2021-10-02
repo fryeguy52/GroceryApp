@@ -33,7 +33,7 @@ side
 
 
 ##Ingredients
-1, , peanut butter
+1, jar, peanut butter
 1, carton, oatmeal
 1, package, rice cakes
 1, package, mini rice cakes
@@ -45,6 +45,9 @@ side
 2, cans, garbanzo beans
 1, box, black tea
 1, box, green tea
+1, bag, mini bagels
+1, container, whipped cream cheese
+1, jar, salsa (mild and medium)
 
 ##Recipe
 things to buy monthly
