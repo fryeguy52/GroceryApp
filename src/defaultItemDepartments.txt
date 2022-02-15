@@ -90,6 +90,7 @@ hot dog bun
 hotdog bun
 mini bagel
 oat nut bread
+whole wheat english muffin
 
 ## breakfast
 black tea
@@ -189,6 +190,7 @@ dessert
 ## frozen non-veggies
 frozen meatball
 frozen waffle
+potsticker
 
 ## frozen sea food
 raw shrimp peeled and deveined
@@ -197,6 +199,7 @@ white fish
 
 ## frozen veggies
 chopped green chile
+edamame
 frozen broccoli floret
 frozen chopped spinach
 frozen corn
@@ -279,6 +282,7 @@ guajillo chili powder
 pace picante medium salsa
 refried black bean
 salsa
+salsa (mild and medium)
 taco shell
 yellow masarepa
 
@@ -443,4 +447,6 @@ potato gnocchi
 tzatziki
 
 ## zzzz no department specified
+cheddar cheese
 not a real ingredient
+russet potato
