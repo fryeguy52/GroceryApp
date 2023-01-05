@@ -3,6 +3,7 @@ import glob
 import datetime
 import grocery_gui
 import trello_functions
+import todoist_functions
 
 
 class Ingredient():
@@ -580,6 +581,7 @@ def run_trello_grocery_list_app(
         recipe_time_stamp_file_name,
         grocery_list_output_file_name,
         post_to_trello,
+        post_to_todoist,
         append_time_stamps
         ):
 
@@ -601,6 +603,8 @@ def run_trello_grocery_list_app(
             recipes_for_the_week.add_recipe(current_recipe)
             if post_to_trello and not current_recipe.is_grocery_staples_recipe:
                 trello_functions.post_recipe_to_trello(current_recipe)
+            if post_to_todoist and not current_recipe.is_grocery_staples_recipe:
+                todoist_functions.post_recipe_to_todoist(current_recipe)
 
         recipes_for_the_week.sort_grocery_list_by_store_order(grocery_store_config_file, default_store_file_name)
         recipes_for_the_week.write_store_ordered_grocery_list_to_file(grocery_list_output_file_name)

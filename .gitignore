@@ -6,6 +6,7 @@ recipe_time_stamps.tmstmp
 
 # Trello API info
 src/trello_settings.py
+src/todoist_settings.py
 
 # Windows image file caches
 Thumbs.db

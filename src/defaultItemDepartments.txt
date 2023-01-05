@@ -448,6 +448,9 @@ tzatziki
 
 ## zzzz no department specified
 cheddar cheese
+frozen spinach
 not a real ingredient
+penne
+ricotta
 russet potato
 tortilla chip
