@@ -38,8 +38,8 @@ side
 1, loaf, oat nut bread
 1, package, whole wheat english muffins
 2, , banana
-1, , weekly tree fruit
-1, , weekly berry
+1, , misc tree fruit
+1, , misc berry
 1, , salad veg
 2, , avocados
 1, , shredded cheddar
