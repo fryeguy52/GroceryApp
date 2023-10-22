@@ -9,14 +9,13 @@ def post_recipe_to_todoist(recipe):
     description = recipe.get_instructional_text()
 
     api = TodoistAPI(todoist_API_token)
-    target_project_name = "Home"
+    target_project_name = "The Mental Load"
     target_project_id = ""
     target_section_name = "Weekly Menu"
     target_section_id = ""
 
     try:
         todoist_projects = api.get_projects()
-        print(todoist_projects)
         for project in todoist_projects:
             if project.name == target_project_name:
                 target_project_id = project.id
@@ -24,16 +23,12 @@ def post_recipe_to_todoist(recipe):
             print("Error project ", target_project_name, " not found")
 
         todoist_sections = api.get_sections()
-        print(todoist_sections)
         for section in todoist_sections:
             # print(section.name, "  ", section.id, "", section.project_id)
             if section.name == target_section_name:
                 target_section_id = section.id
         if target_section_id == "":
             print("Error section ", target_section_name, " not found")
-
-        print(target_project_name, " Project Id = ", target_project_id)
-        print(target_section_name, " Section Id = ", target_section_id)
 
     except Exception as error:
         print(error)
@@ -45,14 +40,13 @@ def post_recipe_to_todoist(recipe):
             section_id=target_section_id,
             description=recipe.get_instructional_text(),
             due_string="Today")
-        print(task)
     except Exception as error:
         print(error)
 
 
 if __name__ == "__main__":
     api = TodoistAPI(todoist_API_token)
-    target_project_name = "Home"
+    target_project_name = "The Mental Load"
     target_project_id = ""
     target_section_name = "Weekly Menu"
     target_section_id = ""

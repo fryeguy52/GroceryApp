@@ -124,6 +124,7 @@ tomato paste
 tomato puree
 
 ## cheese
+cheddar cheese
 cheese
 cotija cheese or queso fresco
 feta
@@ -135,6 +136,7 @@ mozzarella
 mozzarella cheese
 parmesan
 parmesan cheese
+ricotta
 romano cheese
 shredded cheddar
 shredded cheddar cheese
@@ -205,6 +207,7 @@ frozen chopped spinach
 frozen corn
 frozen pea
 frozen peas and carrot
+frozen spinach
 green chile
 roasted chopped medium nm green chile
 
@@ -220,13 +223,13 @@ green pepper
 lemon
 lemon juice
 lime
+misc berry
+misc tree fruit
 peaches(optional)
 pineapple
 pineapple piece
 roma tomato
 tomato
-weekly berry
-weekly tree fruit
 
 ## italian
 angel hair pasta
@@ -237,6 +240,7 @@ elbow pasta
 linguine or fettuccine
 pasta
 pasta (rotini or farfalle)
+penne
 pizza sauce
 prepared pesto
 shell pasta
@@ -316,6 +320,7 @@ minced garlic
 onion
 potato
 red onion
+russet potato
 shallot
 shallot bulb
 small onion
@@ -330,6 +335,7 @@ frito
 mini rice cake
 peanut
 rice cake
+tortilla chip
 
 ## soup
 broth
@@ -437,6 +443,7 @@ salad veg
 shredded carrot
 sliced mixed mushroom
 sliced mushroom
+super greens mix
 yellow bell pepper
 yellow pepper
 zucchini
@@ -447,10 +454,10 @@ potato gnocchi
 tzatziki
 
 ## zzzz no department specified
-cheddar cheese
-frozen spinach
+gravy mix
+invalid input line: 0.5, jar pepperoncini  peppers
+invalid input line: 0.5, jar pepperoncini peppers
 not a real ingredient
-penne
-ricotta
-russet potato
-tortilla chip
+pepperoncini pepper
+pot roast meat
+ranch mix
