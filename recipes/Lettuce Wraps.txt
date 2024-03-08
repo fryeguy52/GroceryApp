@@ -16,7 +16,7 @@ dinner
 1, bunch, green onions
 2, package, sliced mushrooms
 .5, bag, babycarrots
-3, , cucumbers
+1, , cucumbers
 1, can, water chestnuts
 4, teaspoons, soy sauce
 4, teaspoons, rice vinegar
@@ -26,6 +26,7 @@ dinner
 1, teaspoon, sesame seeds
 1, teaspoon, sugar
 .25, teaspoon, red pepper flakes
+1, bag, edamame
 
 ##Recipe
 
@@ -40,13 +41,14 @@ large handful baby carrots, chopped
 4 Tbsp lower-sodium soy sauce (green top)
 2 Tbsp rice vinegar
 12 Boston lettuce leaves
-2 cucumbers
+1 cucumber
 1 handful peanuts
 1 teaspoon sesame seeds
 1 teaspoon sugar
 .25 teaspoon red pepper flakes
+1 bag edamame
 
 - Heat 1 tablespoon of oil in a large nonstick skillet over medium-high heat. Add turkey, mushrooms, carrots, water chestnuts, garlic and ginger to the pan and cook for about 10 minutes or until turkey is browned. Add soy sauce to taste.
-- Peel and dice 1.5 cucumbers and green onions.  cucumbers.  Mix into in turkey mixture.  
-- Peel and slice 1.5 cucumbers.  Mix together rice vinegar, sugar, sesame seeds, and red pepper flakes.  Pour dressing over sliced cucumber.
+- Peel and dice 1 cucumbers and green onions.  Mix into in turkey mixture.  
+- Boil water, add frozen edamame, remove from heat.
 - Serve in lettuce leaves.  Garnish with peanuts and peanut sauce.
