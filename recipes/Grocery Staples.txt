@@ -33,18 +33,18 @@ side
 
 
 ##Ingredients
-3, gallon, 1% milk
+2, gallon, 1% milk
 1, dozen, eggs
 1, package, whole wheat english muffins
-2, , banana
+5, , banana
 1, , misc tree fruit
 1, , misc berry
 1, bag, baby carrots 
-3, , cucumbers
+2, , cucumbers
 1, , shredded cheddar
 1, , sliced cheese
 1, package, flour tortillas
-2, , lunch meat
+1, , lunch meat
 1, container, super greens mix
 1, package, butter
 1, , plain yogurt
@@ -60,6 +60,7 @@ side
 1, bag, mini bagels
 1, container, whipped cream cheese
 1, jar, salsa (mild and medium)
+1, box, waffles
 
 ##Recipe
 things to always have
