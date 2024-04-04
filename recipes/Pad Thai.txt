@@ -20,6 +20,7 @@ leftovers
 2, cup, carrot matchsticks
 1, , red pepper
 1, , yellow pepper
+1, bag, shelled edamame
 8, , green onions
 0.67, cup, chopped peanuts
 2, , limes
@@ -33,13 +34,14 @@ leftovers
 1 package rice noodles
 2 cup Carrot matchsticks
 1 each red and yellow pepper, sliced
+1 bag shelled edamame
 8 green onions, sliced
 0.67 cup chopped peanuts
 lime
 
 
-- Add olive oil, chicken, garlic, soy sauce, and pad thai sauce to Instant Pot. Set to manual and pressure cook on high for 4 minutes. Instant Pot will take about 10 minutes to pre-heat and then 4 minutes to cook.
-- Cook rice noodles according to package instructions
+- Add olive oil, chicken, garlic, soy sauce, and pad thai sauce to Instant Pot. Set to manual and pressure cook on high for 2 minutes.
+- Cook rice noodles according to package instructions and thaw edamame.
 - When complete, press cancel and do a quick release of the steam, waiting until the pressure gauge drops back down and the lid is safe to open.
-- Add carrot matchsticks, bell peppers and half of peanuts, tossing carefully with tongs. Place lid back on and let sit for 5 minutes.  Add noodles and stir.
+- Add carrot matchsticks, bell peppers and half of peanuts, tossing carefully with tongs. Place lid back on and cook for 1 minute.  Add noodles and edameme and stir.
 - Top with green onions, remaining chopped peanuts, and lime wedges.
