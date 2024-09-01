@@ -68,8 +68,10 @@ dry yeast
 evaporated milk
 extra-virgin olive oil
 flour
+gravy mix
 olive oil
 panko bread crumb
+ranch mix
 red wine vinegar
 sesame seed oil
 sugar
@@ -154,6 +156,7 @@ hot sauce
 kalamata olive
 ketchup
 mustard
+pepperoncini pepper
 pickle
 saurkraut
 sliced black olive
@@ -193,6 +196,7 @@ dessert
 frozen meatball
 frozen waffle
 potsticker
+waffle
 
 ## frozen sea food
 raw shrimp peeled and deveined
@@ -275,6 +279,7 @@ ground beef | frozen pattie
 ground turkey
 ham
 lean ground beef
+pot roast meat
 stew beef (no bone)
 stew meat
 sweet italian sausage
@@ -454,10 +459,4 @@ potato gnocchi
 tzatziki
 
 ## zzzz no department specified
-gravy mix
-invalid input line: 0.5, jar pepperoncini  peppers
-invalid input line: 0.5, jar pepperoncini peppers
-not a real ingredient
-pepperoncini pepper
-pot roast meat
-ranch mix
+ooze
