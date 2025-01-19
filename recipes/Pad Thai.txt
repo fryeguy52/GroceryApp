@@ -20,7 +20,7 @@ leftovers
 2, cup, carrot matchsticks
 1, , red pepper
 1, , yellow pepper
-1, bag, shelled edamame
+1, bag, shelled edamame TJs
 8, , green onions
 0.67, cup, chopped peanuts
 2, , limes
