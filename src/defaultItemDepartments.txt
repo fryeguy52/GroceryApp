@@ -30,6 +30,7 @@ snacks
 soup
 spices
 tortillas
+trader joes
 vegetables
 zzz not at the grocery store
 zzzz no department specified
@@ -129,7 +130,6 @@ tomato puree
 cheddar cheese
 cheese
 cotija cheese or queso fresco
-feta
 grated parmesan
 gruyere cheese
 medium sharp cheddar cheese
@@ -153,7 +153,6 @@ bbq sauce
 black olive
 dijon mustard
 hot sauce
-kalamata olive
 ketchup
 mustard
 pepperoncini pepper
@@ -184,7 +183,6 @@ whole milk
 whole milk ricotta
 
 ## deli
-crumbled feta
 hot dog
 lunch meat
 pepperoni
@@ -205,7 +203,6 @@ white fish
 
 ## frozen veggies
 chopped green chile
-edamame
 frozen broccoli floret
 frozen chopped spinach
 frozen corn
@@ -404,6 +401,17 @@ flour tortilla
 nm red chile powder
 tortilla
 
+## trader joes
+tzatziki
+naan (trader joe's)
+naan
+kalamata olives
+artichoke hearts
+crumbled feta
+feta
+feta cheese
+edamame
+
 ## vegetables
 asparagu
 baby bella mushroom
@@ -454,9 +462,7 @@ yellow pepper
 zucchini
 
 ## zzz not at the grocery store
-naan (trader joe's)
 potato gnocchi
-tzatziki
 
 ## zzzz no department specified
 ooze
