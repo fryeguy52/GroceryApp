@@ -191,7 +191,6 @@ pepperoni
 dessert
 
 ## frozen non-veggies
-frozen meatball
 frozen waffle
 potsticker
 waffle
@@ -411,6 +410,7 @@ crumbled feta
 feta
 feta cheese
 edamame
+frozen meatball
 
 ## vegetables
 asparagu
