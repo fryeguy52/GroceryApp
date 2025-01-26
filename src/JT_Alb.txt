@@ -32,4 +32,5 @@ frozen veggies
 frozen non-veggies
 frozen desserts
 frozen sea food
+Trader Joes
 zzz not at the grocery store

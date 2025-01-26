@@ -54,7 +54,6 @@ water chestnut
 ## bakery
 flatbread
 hoagie roll
-naan
 roll
 
 ## baking
@@ -92,6 +91,7 @@ hamburger bun
 hot dog bun
 hotdog bun
 mini bagel
+multigrain english muffin
 oat nut bread
 whole wheat english muffin
 
@@ -106,7 +106,6 @@ oatmeal
 chunk pineapple in juice
 
 ## canned veggies
-artichoke hearts in brine
 baked bean
 bean
 canned corn
@@ -170,6 +169,7 @@ greek yogurt
 half and half
 heavy cream
 heavy whipping cream
+low fat cottage cheese
 low-fat sour cream
 milk
 plain greek yogurt
@@ -177,6 +177,7 @@ plain yogurt
 sour cream
 sour cream / greek yogurt
 unsalted butter
+unsweetened almond milk
 whipped cream cheese
 whipping cream
 whole milk
@@ -401,16 +402,19 @@ nm red chile powder
 tortilla
 
 ## trader joes
-tzatziki
-naan (trader joe's)
-naan
-kalamata olives
 artichoke hearts
+artichoke hearts in brine
 crumbled feta
+edamame
+english or persian cucumber
 feta
 feta cheese
-edamame
 frozen meatball
+kalamata olive
+naan
+naan (trader joe's)
+shelled edamame
+tzatziki
 
 ## vegetables
 asparagu
@@ -465,8 +469,3 @@ zucchini
 potato gnocchi
 
 ## zzzz no department specified
-low fat cottage cheese
-multigrain english muffin
-ooze
-shelled edamame
-unsweetened almond milk
