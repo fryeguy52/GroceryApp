@@ -11,6 +11,6 @@ if __name__ == "__main__":
         recipe_time_stamp_file_name="..\\recipe_time_stamps.tmstmp",
         grocery_list_output_file_name="..\\most_recent_grocery_list.txt",
         post_to_trello=False,
-        post_to_todoist=False,
+        post_to_todoist=True,
         append_time_stamps=True
     )
