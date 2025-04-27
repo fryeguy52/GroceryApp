@@ -54,12 +54,9 @@ side
 1, carton, oatmeal
 1, jar, spaghetti sauce
 1, package, spaghetti noodles
-2, cans, green beans
-2, cans, corn
+1, can, green beans
+1, can, corn
 2, cans, black beans
-2, cans, garbanzo beans
-1, bag, mini bagels
-1, container, whipped cream cheese
 1, jar, salsa (mild and medium)
 
 ##Recipe
