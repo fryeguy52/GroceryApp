@@ -1,42 +1,41 @@
+"""
+trello_functions.py
+-------------------
+Trello integration: posts selected recipes as cards to the
+"House" board → "This Week" list via the Trello REST API.
+
+Credentials are loaded from trello_settings.py (not committed to git).
+See trello_settings.example.py for the required variables.
+"""
+
 __author__ = 'Joe'
 
-# from trello import TrelloApi
 import requests
-import grocery_functions
-from trello_settings import trello_token
-from trello_settings import trello_key
+
 
 def post_recipe_to_trello(recipe):
-    token=trello_token
-    key=trello_key
+    """Post a Recipe object as a card to the Trello "This Week" list."""
+    from trello_settings import trello_token, trello_key
 
     base = 'https://trello.com/1/'
+    auth = {'key': trello_key, 'token': trello_token}
 
-    boards_url = base + 'members/me/boards'
-    params_key_and_token = {'key':key,'token':token}
-    arguments = {'fields': 'name', 'lists': 'open'}
+    # Find the "House" board
+    boards = requests.get(base + 'members/me/boards', params=auth).json()
+    house_board = next((b for b in boards if b['name'] == 'House'), None)
+    if not house_board:
+        print('Error: "House" board not found on Trello.')
+        return
 
-    response = requests.get(boards_url, params=params_key_and_token, data=arguments)
-    response_array_of_dict = response.json()
+    # Find the "This Week" list on that board
+    lists = requests.get(base + f'boards/{house_board["id"]}/lists', params=auth).json()
+    this_week = next((lst for lst in lists if lst['name'] == 'This Week'), None)
+    if not this_week:
+        print('Error: "This Week" list not found on the House board.')
+        return
 
-    for board in response_array_of_dict:
-      if board['name'] == 'House':
-        lists_url = base + '/boards/'+board['id']+'/lists'
-        list_response=requests.get(lists_url, params=params_key_and_token)
-        response_array_of_dict=list_response.json()
-        for i in response_array_of_dict:
-            if i["name"] == "This Week":
-                id_list=i["id"]
-
-        name = recipe.get_name()
-        description = recipe.get_instructional_text()
-        arguments = {'name': name,
-                     'desc': description,
-                     'idList' : id_list}
-
-        cards_url= base + 'cards'
-        response = requests.post(cards_url, params=params_key_and_token, data=arguments)
-
-
-if __name__ == "__main__":
-    post_recipe_to_trello("Cobb Salad")
+    requests.post(base + 'cards', params=auth, data={
+        'name':   recipe.get_name(),
+        'desc':   recipe.get_instructional_text(),
+        'idList': this_week['id'],
+    })
