@@ -23,13 +23,21 @@ def post_recipe_to_todoist(recipe):
 
     try:
         projects = api.get_projects()
-        project_id = next((p.id for p in projects if p.name == target_project), None)
+        for proj in projects:
+            for p in proj:
+                 if p.name == target_project:
+                    project_id = p.id
+                                        
         if not project_id:
             print(f'Error: project "{target_project}" not found.')
             return
-
+        
         sections = api.get_sections()
-        section_id = next((s.id for s in sections if s.name == target_section), None)
+        for sect in sections:
+            for s in sect:
+                if s.name == target_section:
+                    section_id = s.id
+                                    
         if not section_id:
             print(f'Error: section "{target_section}" not found.')
             return

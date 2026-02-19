@@ -1,6 +1,7 @@
 ##tags
 chicken
 indian
+stove
 dinner
 spring
 summer

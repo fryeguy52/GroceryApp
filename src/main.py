@@ -19,6 +19,6 @@ if __name__ == "__main__":
         recipe_time_stamp_file_name   = _ROOT / "recipe_time_stamps.db",
         grocery_list_output_file_name = _ROOT / "most_recent_grocery_list.txt",
         post_to_trello    = False,
-        post_to_todoist   = False,
+        post_to_todoist   = True,
         append_time_stamps = True,
     )

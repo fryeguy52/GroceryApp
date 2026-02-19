@@ -1,9 +1,12 @@
 # GroceryApp dependencies
 # Install with: pip install -r requirements.txt
 
-appJar>=0.94          # GUI framework for the Menu Builder window
-requests>=2.28        # Trello REST API calls
+requests>=2.28           # Trello REST API calls
 todoist-api-python>=2.1  # Todoist SDK
 
 # Standard-library modules used (no install needed):
-#   pathlib, sqlite3, glob, datetime, random, unittest
+#   tkinter, pathlib, sqlite3, glob, datetime, random, unittest
+#
+# Note: appJar has been removed — it is unmaintained and broken on Python 3.13+.
+# The GUI now uses tkinter, which ships with Python on all platforms.
+# On Debian/Ubuntu you may need: sudo apt install python3-tk
