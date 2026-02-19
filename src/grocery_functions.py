@@ -87,9 +87,14 @@ def run_trello_grocery_list_app(
             from todoist_functions import post_recipe_to_todoist
             post_recipe_to_todoist(recipe)
 
-    # Step 5 — write grocery list
+    # Step 5 — build + write grocery list
     recipes_for_the_week.sort_grocery_list_by_store_order(store_config, default_store)
     recipes_for_the_week.write_store_ordered_grocery_list_to_file(output_file)
+
+    # Step 5b — post grocery list to Todoist as a parent task with subtasks
+    if effective_post_to_todoist:
+        from todoist_functions import post_grocery_list_to_todoist
+        post_grocery_list_to_todoist(recipes_for_the_week.grocery_list_by_store_order)
 
     # Step 6 — record usage
     if append_time_stamps:
