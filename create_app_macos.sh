@@ -4,8 +4,8 @@
 #                 on macOS using AppleScript + osacompile.
 #
 # Run this ONCE from the root of the GroceryApp folder:
-#   chmod +x create_app.sh
-#   ./create_app.sh
+#   chmod +x create_app_macos.sh
+#   ./create_app_macos.sh
 #
 # It will create GroceryApp.app in the same folder.
 # You can then drag it to the Dock or Applications if you like.
@@ -19,13 +19,13 @@ APP_PATH="$SCRIPT_DIR/$APP_NAME.app"
 RUN_SCRIPT="$SCRIPT_DIR/run.sh"
 
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; NC='\033[0m'
-info()  { echo -e "${GREEN}[create_app]${NC} $*"; }
+info()  { echo -e "${GREEN}[create_app_macos]${NC} $*"; }
 warn()  { echo -e "${YELLOW}[warn]      ${NC} $*"; }
 error() { echo -e "${RED}[error]     ${NC} $*"; exit 1; }
 
 # -- Sanity checks ----------------------------------------------
 if [ ! -f "$RUN_SCRIPT" ]; then
-    error "run.sh not found at $SCRIPT_DIR. Make sure create_app.sh is in the GroceryApp root folder."
+    error "run.sh not found at $SCRIPT_DIR. Make sure create_app_macos.sh is in the GroceryApp root folder."
 fi
 
 if ! command -v osacompile &>/dev/null; then
