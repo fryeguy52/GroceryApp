@@ -17,13 +17,19 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 
 _UNIT_ALIASES = {
-    'tablespoon': 'tablespoon', 'tablespoons': 'tablespoon',
-    'tbsp': 'tablespoon', 'tbsps': 'tablespoon', 'tbs': 'tablespoon',
-    'teaspoon': 'teaspoon', 'teaspoons': 'teaspoon',
-    'tsp': 'teaspoon', 'tsps': 'teaspoon',
+    # tablespoons -> canonical 'tbsp'
+    'tablespoon': 'tbsp', 'tablespoons': 'tbsp',
+    'tbsp': 'tbsp', 'tbsps': 'tbsp', 'tbs': 'tbsp',
+    # teaspoons -> canonical 'tsp'
+    'teaspoon': 'tsp', 'teaspoons': 'tsp',
+    'tsp': 'tsp', 'tsps': 'tsp',
+    # cups
     'cup': 'cup', 'cups': 'cup', 'c': 'cup',
+    # ounces
     'ounce': 'oz', 'ounces': 'oz', 'oz': 'oz',
+    # pounds
     'pound': 'lb', 'pounds': 'lb', 'lb': 'lb', 'lbs': 'lb',
+    # containers (non-convertible, kept as-is)
     'can': 'can', 'cans': 'can',
     'package': 'package', 'packages': 'package', 'pkg': 'package',
     'dozen': 'dozen', 'gallon': 'gallon',
@@ -36,13 +42,18 @@ _UNIT_ALIASES = {
 }
 
 # tablespoon as base volume unit; lb as base weight unit
-_TO_TBSP = {'tablespoon': 1.0, 'teaspoon': 1 / 3.0, 'cup': 16.0}
+_TO_TBSP = {'tbsp': 1.0, 'tsp': 1 / 3.0, 'cup': 16.0}
 _TO_LB   = {'lb': 1.0, 'oz': 1 / 16.0}
 
 
 def _normalize_unit(raw: str) -> str:
-    cleaned = raw.strip().lower().rstrip('s').rstrip('.')
-    return _UNIT_ALIASES.get(cleaned, _UNIT_ALIASES.get(raw.strip().lower(), raw.strip().lower()))
+    """Map a raw unit string to its canonical form. Looks up exact match first, then strips trailing 's' for plurals."""
+    key = raw.strip().lower()
+    if key in _UNIT_ALIASES:
+        return _UNIT_ALIASES[key]
+    # Try de-pluralizing
+    stripped = key.rstrip('s').rstrip('.')
+    return _UNIT_ALIASES.get(stripped, key)
 
 
 def _try_combine(amount1: float, unit1: str, amount2: float, unit2: str):
@@ -341,9 +352,9 @@ class RecipeCollection:
     ) -> None:
         """Tag recipes as recently-used / not-recently-used using TimestampDB."""
         from timestamp_db import TimestampDB
-        db = TimestampDB(db_path)
         cutoff = date_for_timedelta - datetime.timedelta(days=days_for_timedelta)
-        recently_used = db.get_recipes_used_since(cutoff)
+        with TimestampDB(db_path) as db:
+            recently_used = db.get_recipes_used_since(cutoff)
         for recipe in self.recipe_list:
             if recipe.name in recently_used:
                 recipe.add_tag("recently-used")
@@ -358,10 +369,10 @@ class RecipeCollection:
     ) -> None:
         """Record selected recipes in the SQLite DB via TimestampDB."""
         from timestamp_db import TimestampDB
-        db = TimestampDB(db_path)
-        for recipe in self.recipe_list:
-            if not recipe.is_grocery_staples_recipe:
-                db.record_usage(recipe.name, mark_recipes_with_this_date)
+        with TimestampDB(db_path) as db:
+            for recipe in self.recipe_list:
+                if not recipe.is_grocery_staples_recipe:
+                    db.record_usage(recipe.name, mark_recipes_with_this_date)
 
     # -- Recipe distance / stats -------------------------------------------
 
