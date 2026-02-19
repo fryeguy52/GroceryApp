@@ -1,91 +1,45 @@
+"""
+todoist_functions.py
+--------------------
+Todoist integration: posts selected recipes as tasks to the
+"The Mental Load" project → "Weekly Menu" section.
+
+Credentials are loaded from todoist_settings.py (not committed to git).
+See todoist_settings.example.py for the required variables.
+"""
+
 __author__ = 'Joe'
 
-from todoist_settings import todoist_API_token
 from todoist_api_python.api import TodoistAPI
-import grocery_functions
+
 
 def post_recipe_to_todoist(recipe):
-    name = recipe.get_name()
-    description = recipe.get_instructional_text()
+    """Add a Recipe as a task in Todoist under the Weekly Menu section."""
+    from todoist_settings import todoist_API_token
 
     api = TodoistAPI(todoist_API_token)
-    target_project_name = "The Mental Load"
-    target_project_id = ""
-    target_section_name = "Weekly Menu"
-    target_section_id = ""
+    target_project = 'The Mental Load'
+    target_section = 'Weekly Menu'
 
     try:
-        todoist_projects = api.get_projects()
-        for project in todoist_projects:
-            if project.name == target_project_name:
-                target_project_id = project.id
-        if target_project_id == "":
-            print("Error project ", target_project_name, " not found")
+        projects = api.get_projects()
+        project_id = next((p.id for p in projects if p.name == target_project), None)
+        if not project_id:
+            print(f'Error: project "{target_project}" not found.')
+            return
 
-        todoist_sections = api.get_sections()
-        for section in todoist_sections:
-            # print(section.name, "  ", section.id, "", section.project_id)
-            if section.name == target_section_name:
-                target_section_id = section.id
-        if target_section_id == "":
-            print("Error section ", target_section_name, " not found")
+        sections = api.get_sections()
+        section_id = next((s.id for s in sections if s.name == target_section), None)
+        if not section_id:
+            print(f'Error: section "{target_section}" not found.')
+            return
 
-    except Exception as error:
-        print(error)
-
-    try:
-        task = api.add_task(
+        api.add_task(
             content=recipe.get_name(),
-            project_id=target_project_id,
-            section_id=target_section_id,
+            project_id=project_id,
+            section_id=section_id,
             description=recipe.get_instructional_text(),
-            due_string="Today")
+            due_string='Today',
+        )
     except Exception as error:
-        print(error)
-
-
-if __name__ == "__main__":
-    api = TodoistAPI(todoist_API_token)
-    target_project_name = "The Mental Load"
-    target_project_id = ""
-    target_section_name = "Weekly Menu"
-    target_section_id = ""
-
-    print("Running todoist_functions.py directly")
-    print("API Key: ", todoist_API_token)
-
-    try:
-        todoist_projects = api.get_projects()
-        print(todoist_projects)
-        for project in todoist_projects:
-            if project.name == target_project_name:
-                target_project_id = project.id
-        if target_project_id == "":
-            print("Error project ", target_project_name," not found")
-
-        todoist_sections = api.get_sections()
-        print(todoist_sections)
-        for section in todoist_sections:
-            #print(section.name, "  ", section.id, "", section.project_id)
-            if section.name == target_section_name:
-                target_section_id = section.id
-        if target_section_id == "":
-            print("Error section ", target_section_name, " not found")
-
-        print(target_project_name, " Project Id = ", target_project_id)
-        print(target_section_name, " Section Id = ", target_section_id)
-
-    except Exception as error:
-        print(error)
-
-    try:
-        task = api.add_task(
-            content="Test Task added automatically",
-            project_id=target_project_id,
-            section_id=target_section_id,
-            description="Test Description",
-            due_string="Today")
-        print(task)
-    except Exception as error:
-        print(error)
-
+        print(f'Todoist error: {error}')

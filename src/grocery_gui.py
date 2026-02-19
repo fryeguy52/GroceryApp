@@ -1,161 +1,134 @@
+"""
+grocery_gui.py
+--------------
+GUI layer for the Menu Builder window, built with appJar.
+
+FIX: Circular import removed. Instead of importing grocery_functions and
+re-instantiating RecipeCollection internally, this module now receives a
+pre-built RecipeCollection as a parameter. The caller (grocery_functions.py)
+is responsible for loading data; the GUI is responsible only for display.
+"""
+
 __author__ = 'Joe'
 
-from appJar import gui
 import random
-import grocery_functions
+from appJar import gui
 
 
-def recipeGUI(selected_items, recipe_dir="..\\recipes", recipe_time_stamp_file_name="..\\recipe_time_stamps.tmstmp"):
-    ### Load data
-    filter_tag_list=[]
-    recipe_collection_all = grocery_functions.RecipeCollection()
-    recipe_collection_all.add_all_recipes_in_dir(recipe_dir)
-    recipe_collection_all.read_time_stamp_file(recipe_time_stamp_file_name)
-    a_list = recipe_collection_all.get_recipe_names(filter_tag_list)
-    all_recipes = {}
-    for item in a_list:
-        all_recipes[item] = False
+def recipeGUI(selected_items: list, recipe_collection, recipe_time_stamp_file_name: str = ''):
+    """
+    Display the Menu Builder window.
 
+    Parameters
+    ----------
+    selected_items : list
+        Output list — recipe names chosen by the user are appended here.
+    recipe_collection : RecipeCollection
+        A fully loaded RecipeCollection (with timestamps already applied).
+        The GUI no longer constructs this itself.
+    recipe_time_stamp_file_name : str
+        Kept for API compatibility; no longer used inside the GUI.
+    """
+    filter_tag_list = []
+    a_list = recipe_collection.get_recipe_names(filter_tag_list)
+    all_recipes = {item: False for item in a_list}
     suggest_recipes = all_recipes.copy()
     menu_recipes = {}
     rand_suggestion = random.choice(list(suggest_recipes))
 
-    ### Configure
-    app_title = "Menu Builder"
+    # --- Labels / button names ---
+    app_title           = 'Menu Builder'
+    section_1_title     = 'Recipes'
+    section_2_title     = 'Random Suggestion'
+    section_3_title     = 'Current Menu'
+    section_4_title     = 'Search by Tag'
 
-    section_1_title="Recipes"
-    section_2_title="Random Suggestion"
-    section_3_title="Current Menu"
-    section_4_title="Search by Tag"
+    BTN_ADD_SELECTED  = 'Add Selected'
+    BTN_NEW_SUGGEST   = 'New Suggestion'
+    BTN_ADD_SUGGEST   = 'Add Suggestion'
+    BTN_FILTER        = 'Filter Recipes'
+    BTN_QUIT          = 'Quit'
+    BTN_REMOVE        = 'Remove Selected'
+    BTN_SAVE_QUIT     = 'Save and Quit'
+    BTN_SHOW_RECENT   = 'Show recently used'
 
-    button_name_add_selected = "Add Selected"
-    button_name_new_selection = "New Suggestion"
-    button_name_add_selection = "Add Suggestion"
-    button_name_filter = "Filter Recipes"
-    button_name_no_save_quit = "Quit"
-    button_name_remove_items = "Remove Selected"
-    button_name_save_quit = "Save and Quit"
-    button_name_show_recent = "Show recently used"
-
-
-    ### debug constants
-    # rand_suggestion = "poo"
-
-    ### Function defs
     def press(button):
-        if button == button_name_add_selected:
-            add_selected_button_action()
-        elif button == button_name_new_selection:
-            new_suggest_button_action()
-        elif button == button_name_add_selection:
-            add_suggestion_button_action()
-        elif button == button_name_no_save_quit:
-            no_save_quit_button_action()
-        elif button == button_name_remove_items:
-            remove_items_button_action()
-        elif button == button_name_save_quit:
-            save_quit_button_action()
-        elif button == button_name_filter:
-            filter_recipes_button_action()
-        elif button == button_name_show_recent:
-            print(button)
+        dispatch = {
+            BTN_ADD_SELECTED: _add_selected,
+            BTN_NEW_SUGGEST:  _new_suggestion,
+            BTN_ADD_SUGGEST:  _add_suggestion,
+            BTN_QUIT:         _quit,
+            BTN_REMOVE:       _remove_items,
+            BTN_SAVE_QUIT:    _save_quit,
+            BTN_FILTER:       _filter_recipes,
+        }
+        action = dispatch.get(button)
+        if action:
+            action()
         else:
-            print(button+" is not a recognised button")
-            app.stop()
+            print(f'{button} is not a recognised button')
 
+    def _new_suggestion():
+        app.setLabel(section_2_title, random.choice(list(suggest_recipes)))
 
-    ###
-    def new_suggest_button_action():
-        rand_sug = random.choice(list(suggest_recipes))
-        app.setLabel(section_2_title, rand_sug)
+    def _add_suggestion():
+        suggestion = app.getLabel(section_2_title)
+        app.setProperty(section_3_title, suggestion)
 
-
-    def add_suggestion_button_action():
-        rand_suggestion = app.getLabel(section_2_title)
-        app.setProperty(section_3_title, rand_suggestion)
-
-
-    def remove_items_button_action():
-        current_menu = app.getProperties(section_3_title)
-        for item in current_menu:
-            if current_menu[item]:
+    def _remove_items():
+        for item, checked in app.getProperties(section_3_title).items():
+            if checked:
                 selected_items.remove(item)
                 app.deleteProperty(section_3_title, item)
 
-
-    def filter_recipes_button_action():
-        filter_tag_list=app.getEntry(section_4_title).split()
-        recipe_list = recipe_collection_all.get_recipe_names(filter_tag_list)
-        filtered_recipes = {}
-        for item in recipe_list:
-            filtered_recipes[item] = False
-
-        for item in app.getProperties(section_1_title):
+    def _filter_recipes():
+        tags = app.getEntry(section_4_title).split()
+        recipe_list = recipe_collection.get_recipe_names(tags)
+        filtered = {item: False for item in recipe_list}
+        for item in list(app.getProperties(section_1_title)):
             app.deleteProperty(section_1_title, item)
+        app.setProperties(section_1_title, filtered)
 
-        app.setProperties(section_1_title, filtered_recipes)
-
-
-    def add_selected_button_action():
-        all_rec = app.getProperties(section_1_title)
-        for item in all_rec:
-            if all_rec[item]:
-                if item in selected_items:
-                    while item in selected_items:
-                        item=item+"*"
-                selected_items.append(item)
-                app.setProperty(section_3_title, item)
+    def _add_selected():
+        for item, checked in app.getProperties(section_1_title).items():
+            if checked:
+                unique_item = item
+                while unique_item in selected_items:
+                    unique_item += '*'
+                selected_items.append(unique_item)
+                app.setProperty(section_3_title, unique_item)
                 app.setProperty(section_1_title, item.strip('*'), False)
 
-    # def toggle_recent_button_action():
-    #     app.get
-    #     if button_name_show_recent == "Show recently used":
-    #         button_name_show_recent = "Hide recently used"
-
-    def no_save_quit_button_action():
+    def _quit():
         app.stop()
 
-    def save_quit_button_action():
+    def _save_quit():
         nonlocal selected_items
-        for i in range(0, len(selected_items)):
-            selected_items[i]=selected_items[i].strip('*')
+        for i in range(len(selected_items)):
+            selected_items[i] = selected_items[i].strip('*')
         app.stop()
 
-
-    ### initialization look and feel
+    # --- Build UI ---
     app = gui()
-    app.setBg("lightBlue")
+    app.setBg('lightBlue')
     app.setFont(12)
 
-    ### add widgets
-    # title
-    app.addLabel("title", app_title, 0, 0,)
-    app.setLabelBg("title", "orange")
-    app.addButton(button_name_no_save_quit, press, 4,0)
-    app.addButton(button_name_save_quit, press, 4,2)
+    app.addLabel('title', app_title, 0, 0)
+    app.setLabelBg('title', 'orange')
+    app.addButton(BTN_QUIT,      press, 4, 0)
+    app.addButton(BTN_SAVE_QUIT, press, 4, 2)
 
-    # select recipe panel
-    app.addEntry(section_4_title,1,0,1,1)
-    app.startScrollPane("Pane1", 2, 0)
+    app.addEntry(section_4_title, 1, 0, 1, 1)
+    app.startScrollPane('Pane1', 2, 0)
     app.addProperties(section_1_title, all_recipes)
     app.stopScrollPane()
-    app.addButtons([button_name_add_selected, button_name_show_recent, button_name_filter], press, 3,0)
+    app.addButtons([BTN_ADD_SELECTED, BTN_SHOW_RECENT, BTN_FILTER], press, 3, 0)
 
-    # random suggestion panel
-    app.addLabel(section_2_title, rand_suggestion, 1, 1,)
-    app.setLabelBg(section_2_title, "orange")
-    app.addButtons([button_name_new_selection, button_name_add_selection], press, 2,1)
+    app.addLabel(section_2_title, rand_suggestion, 1, 1)
+    app.setLabelBg(section_2_title, 'orange')
+    app.addButtons([BTN_NEW_SUGGEST, BTN_ADD_SUGGEST], press, 2, 1)
 
-    # current selection panel
-    app.addProperties(section_3_title, menu_recipes, 1,2)
-    app.addButton(button_name_remove_items, press, 2,2)
+    app.addProperties(section_3_title, menu_recipes, 1, 2)
+    app.addButton(BTN_REMOVE, press, 2, 2)
 
-    ### go
     app.go()
-
-if __name__ == "__main__":
-    test_recipes = ["Cheese", "Tomato", "Bacon", "Corn", "Mushroom"]
-    selected = []
-    recipeGUI(test_recipes, selected)
-    print(selected)
-
