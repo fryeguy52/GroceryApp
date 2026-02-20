@@ -16,7 +16,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 APP_NAME="GroceryApp"
 APP_PATH="$SCRIPT_DIR/$APP_NAME.app"
-RUN_SCRIPT="$SCRIPT_DIR/run.sh"
+RUN_SCRIPT="$SCRIPT_DIR/run_macos.sh"
 
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; NC='\033[0m'
 info()  { echo -e "${GREEN}[create_app_macos]${NC} $*"; }
@@ -25,7 +25,7 @@ error() { echo -e "${RED}[error]     ${NC} $*"; exit 1; }
 
 # -- Sanity checks ----------------------------------------------
 if [ ! -f "$RUN_SCRIPT" ]; then
-    error "run.sh not found at $SCRIPT_DIR. Make sure create_app_macos.sh is in the GroceryApp root folder."
+    error "run_macos.sh not found at $SCRIPT_DIR. Make sure create_app_macos.sh is in the GroceryApp root folder."
 fi
 
 if ! command -v osacompile &>/dev/null; then
@@ -39,17 +39,17 @@ if [ -d "$APP_PATH" ]; then
 fi
 
 # ============================================================
-# Build the AppleScript that will run run.sh in a Terminal window
+# Build the AppleScript that will run run_macos.sh in a Terminal window
 # ============================================================
 #
-# Why Terminal?  run.sh prints status messages and error output.
+# Why Terminal?  run_macos.sh prints status messages and error output.
 # Opening a Terminal window means your wife can see what's
 # happening (and any errors) rather than them disappearing silently.
 #
 APPLESCRIPT=$(cat << ASEOF
 tell application "Terminal"
     activate
-    do script "cd '$SCRIPT_DIR' && bash run.sh; exit"
+    do script "cd '$SCRIPT_DIR' && bash run_macos.sh; exit"
 end tell
 ASEOF
 )

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================
-# run.sh — GroceryApp setup & launcher for macOS
+# run_macos.sh — GroceryApp setup & launcher for macOS
 #
 # First run:  creates a venv, installs dependencies, then starts the app.
 # Later runs: skips setup if the venv already exists, just runs.
