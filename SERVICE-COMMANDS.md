@@ -26,8 +26,25 @@ sudo systemctl status groceryapp --no-pager
 curl -I http://127.0.0.1:8081
 ```
 
-The status should say `active (running)`; the local HTTP request should return a successful
-response, usually `HTTP/1.1 200 OK`.
+## Update the app
+
+The root-level `update.sh` helper updates the current `develop` branch and restarts
+the `groceryapp` systemd service. It refuses to run on another branch or when the working
+tree has local changes. Because the web interface can edit recipe files inside the checkout,
+review and preserve recipe edits before updating.
+
+```bash
+cd ~/GroceryApp
+git status --short
+git fetch origin
+git switch --track origin/develop  # only if you have not checked out develop before
+git pull --ff-only                 # if already on develop
+chmod +x update.sh                 # one time
+./update.sh
+```
+
+If you are already on `develop`, skip the `git switch` line and run `./update.sh`.
+The script itself fetches and pulls the latest `develop` commit before restarting.
 
 ## Start, stop, and restart
 
@@ -43,7 +60,7 @@ Stop GroceryApp:
 sudo systemctl stop groceryapp
 ```
 
-Restart it after updating code:
+Restart it manually:
 
 ```bash
 sudo systemctl restart groceryapp
@@ -83,42 +100,6 @@ sudo systemctl disable groceryapp
 
 The service uses `Restart=on-failure`, so systemd attempts to restart it after a crash.
 It cannot run while the computer is powered off or suspended.
-
-## Update from the `develop` branch
-
-The working branch for changes is `develop`; do not merge it into `master` unless you
-choose to. First commit or stash local changes you want to keep. GroceryApp's web interface
-can edit recipe files inside the checkout, so check `git status` before pulling and preserve
-any recipe edits.
-
-```bash
-cd ~/GroceryApp
-git status
-git fetch origin
-git switch develop
-git pull --ff-only
-sudo systemctl restart groceryapp
-sudo systemctl status groceryapp --no-pager
-```
-
-If the local `develop` branch does not exist yet, create it to track the remote branch once:
-
-```bash
-git fetch origin
-git switch --track origin/develop
-```
-
-After updating, test the web app locally:
-
-```bash
-curl -I http://127.0.0.1:8081
-```
-
-If the service fails to start, inspect its logs:
-
-```bash
-sudo journalctl -u groceryapp -n 100 --no-pager
-```
 
 ## Data and network notes
 
