@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Shopping list · GroceryApp{% endblock %}
+{% block content %}
+<section class="intro">
+  <p class="eyebrow">READY FOR THE STORE</p><h1>Shopping list</h1>
+  <p>{{ checked_count }} of {{ total_count }} items checked.</p>
+  <div class="progress-track"><div class="progress-fill" style="width: {{ (100 * checked_count / total_count) if total_count else 0 }}%"></div></div>
+</section>
+{% if recipes %}
+<section class="panel"><h2>This week's menu</h2><ul class="menu-list">{% for name in recipes %}<li><a href="{{ url_for('recipe_detail', name=name) }}">{{ name }}</a></li>{% endfor %}</ul><a href="{{ url_for('index') }}" class="button secondary full-button">Edit menu</a></section>
+{% endif %}
+{% if groups %}
+  {% for group in groups %}
+  <section class="panel list-section"><h2>{{ group.department }}</h2>
+    <ul class="shopping-items">
+    {% for item in group.items %}
+      <li class="{% if item.checked %}is-checked{% endif %}">
+        <form method="post" action="{{ url_for('toggle_item', item_id=item.id) }}">
+          <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+          <button type="submit" class="check-button" aria-label="{% if item.checked %}Uncheck{% else %}Check{% endif %} {{ item.item }}"><span>{% if item.checked %}✓{% endif %}</span></button>
+          <span class="shopping-item-text">{{ item.item }}</span>
+        </form>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+  <form method="post" action="{{ url_for('reset_checks') }}" class="reset-form"><input type="hidden" name="_csrf_token" value="{{ csrf_token() }}"><button class="button secondary" type="submit">Uncheck all items</button></form>
+{% else %}
+  <div class="empty-state"><h2>Your list is empty</h2><p>Choose some recipes to build a shopping list.</p><a href="{{ url_for('index') }}" class="button">Choose recipes</a></div>
+{% endif %}
+{% endblock %}
