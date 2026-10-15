@@ -5,7 +5,9 @@ This first pass intentionally keeps Todoist/Trello integrations out of web reque
 """
 from __future__ import annotations
 
+import json
 import os
+import re
 import secrets
 import shutil
 import sqlite3
@@ -27,6 +29,9 @@ DEFAULT_STORE_CONFIG = SRC / "defaultItemDepartments.txt"
 DATA_DIR = Path(os.environ.get("GROCERYAPP_DATA_DIR", Path.home() / ".local" / "share" / "groceryapp")).expanduser()
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 APP_DB = DATA_DIR / "groceryapp-web.sqlite3"
+THEME_FILE = DATA_DIR / "web-theme.json"
+DEFAULT_THEME = {"accent": "#245b49", "header": "#173f33", "background": "#f7f7f2", "panel": "#ffffff", "text": "#202820", "muted": "#68756c", "highlight": "#e68a37"}
+ALLOWED_ICONS = ["🥕", "🛒", "🥦", "🍎", "🍋", "🍅", "🧄", "🥑", "🍞", "🧺", "🍽️", "🛍️"]
 TIMESTAMP_DB = DATA_DIR / "recipe_time_stamps.db"
 LEGACY_TIMESTAMP_DB = ROOT / "recipe_time_stamps.db"
 
@@ -40,6 +45,26 @@ if not _secret_file.exists():
 app = Flask(__name__)
 app.secret_key = os.environ.get("GROCERYAPP_SECRET_KEY", _secret_file.read_text(encoding="utf-8").strip())
 app.config.update(SESSION_COOKIE_HTTPONLY=True, SESSION_COOKIE_SAMESITE="Lax")
+
+
+def load_theme():
+    try:
+        saved = json.loads(THEME_FILE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        saved = {}
+    theme = DEFAULT_THEME.copy()
+    for key in DEFAULT_THEME:
+        value = saved.get(key)
+        if isinstance(value, str) and re.fullmatch(r"#[0-9a-fA-F]{6}", value):
+            theme[key] = value.lower()
+    icon = saved.get("icon", "🥕")
+    theme["icon"] = icon if icon in ALLOWED_ICONS else "🥕"
+    return theme
+
+
+@app.context_processor
+def inject_theme():
+    return {"app_theme": load_theme(), "available_icons": ALLOWED_ICONS}
 
 
 def connect_db():
@@ -148,8 +173,24 @@ def history():
     return render_template("history.html", usage=usage)
 
 
-@app.get("/config")
+@app.route("/config", methods=["GET", "POST"])
 def config():
+    if request.method == "POST":
+        theme = DEFAULT_THEME.copy() if request.form.get("reset") == "1" else load_theme()
+        if request.form.get("reset") != "1":
+            for key in DEFAULT_THEME:
+                value = request.form.get(key, "")
+                if re.fullmatch(r"#[0-9a-fA-F]{6}", value):
+                    theme[key] = value.lower()
+            icon = request.form.get("icon", "🥕")
+            theme["icon"] = icon if icon in ALLOWED_ICONS else load_theme()["icon"]
+        else:
+            theme["icon"] = "🥕"
+        temporary = THEME_FILE.with_suffix(".tmp")
+        temporary.write_text(json.dumps(theme, indent=2), encoding="utf-8")
+        temporary.replace(THEME_FILE)
+        flash("App appearance saved." if request.form.get("reset") != "1" else "Default appearance restored.", "success")
+        return redirect(url_for("config"))
     from store_config import get_item_dept_dicts_and_print_order_from_store_config_file
     _, departments, store_order = get_item_dept_dicts_and_print_order_from_store_config_file(STORE_CONFIG)
     _, default_departments, _ = get_item_dept_dicts_and_print_order_from_store_config_file(DEFAULT_STORE_CONFIG)
