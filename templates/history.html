@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}History · GroceryApp{% endblock %}
+{% block content %}
+<section class="intro">
+  <p class="eyebrow">RECIPE ACTIVITY</p>
+  <h1>History</h1>
+  <p>Recipes previously included in a menu, newest dates first.</p>
+</section>
+{% if usage %}
+  <section class="panel">
+    <div class="history-list">
+      {% for name, used_on in usage %}
+      <div class="history-row">
+        <a href="{{ url_for('recipe_detail', name=name) }}">{{ name }}</a>
+        <time datetime="{{ used_on.isoformat() }}">{{ used_on.strftime('%b %-d, %Y') }}</time>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+{% else %}
+  <div class="empty-state"><h2>No history yet</h2><p>Recipe usage will appear here as menus are built.</p></div>
+{% endif %}
+{% endblock %}
