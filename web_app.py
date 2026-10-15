@@ -209,10 +209,29 @@ def recipe_editor_values(recipe=None):
 
 
 def recipe_editor_values_from_form(name, instructions, ingredient_rows):
-    values = {"name": name, "extra_tags": request.form.get("extra_tags", "").strip(), "ingredient_rows": ingredient_rows, "instructions": instructions}
+    values = {"name": name, "extra_tags": request.form.get("extra_tags", "").strip(), "ingredient_rows": ingredient_rows, "instructions": instructions, "import_source": request.form.get("import_source", ""), "import_note": request.form.get("import_note", "")}
     for field, _label, _choices in TAG_GROUPS:
         values[field] = request.form.get(field, "").strip().casefold()
     return values
+
+
+
+@app.route("/recipes/import", methods=["GET", "POST"])
+def import_recipe():
+    if request.method == "GET":
+        return render_template("recipe_import.html")
+    source_url = request.form.get("url", "").strip()
+    try:
+        from recipe_importer import validate_public_url, fetch_html, extract_recipe
+        validate_public_url(source_url)
+        html, final_url = fetch_html(source_url)
+        values = extract_recipe(html, final_url, TAG_GROUPS, recipe_editor_values())
+    except (ValueError, requests.RequestException) as exc:
+        return render_template("recipe_import.html", error=str(exc), url=source_url), 400
+    return render_template(
+        "recipe_edit.html", values=values, is_new=True, original_name="",
+        tag_groups=TAG_GROUPS, import_review=True,
+    )
 
 
 @app.get("/recipes")
