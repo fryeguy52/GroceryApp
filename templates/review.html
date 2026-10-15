@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Review menu · GroceryApp{% endblock %}
+{% block content %}
+<section class="intro">
+  <p class="eyebrow">REVIEW BEFORE SENDING</p>
+  <h1>Your weekly menu</h1>
+  <p>Check the recipes and grocery list below. Nothing will be sent to Todoist until you tap the button at the bottom.</p>
+</section>
+
+<section class="panel">
+  <div class="section-heading"><div><h2>Menu</h2><p class="muted">{{ recipes|length }} recipe(s) selected</p></div></div>
+  {% if recipes %}
+    <ul class="menu-list">{% for name in recipes %}<li><a href="{{ url_for('recipe_detail', name=name) }}">{{ name }}</a></li>{% endfor %}</ul>
+  {% else %}
+    <p class="muted">No recipes selected.</p>
+  {% endif %}
+  <a href="{{ url_for('index') }}" class="button secondary full-button">Edit menu</a>
+</section>
+
+<section>
+  <div class="section-heading"><div><h2>Grocery list</h2><p class="muted">{{ total_count }} item(s), in store order</p></div></div>
+  {% if groups %}
+    {% for group in groups %}
+    <section class="panel list-section">
+      <h2>{{ group.department }}</h2>
+      <ul class="shopping-items">
+        {% for item in group['items'] %}
+        <li><div class="shopping-item-text" style="padding:.65rem 0">{{ item.item }}</div></li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  {% else %}
+    <div class="empty-state"><p>Your grocery list is empty. Go back and select some recipes.</p></div>
+  {% endif %}
+</section>
+
+<form method="post" action="{{ url_for('submit_to_todoist') }}" class="sticky-actions">
+  <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+  <span>Ready to send?</span>
+  <button type="submit" class="button">Submit to Todoist</button>
+</form>
+{% endblock %}
