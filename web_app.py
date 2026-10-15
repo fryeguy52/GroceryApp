@@ -242,8 +242,8 @@ def validate_recipe_fields(name, tags, ingredients, instructions, original_name=
                 if "/" in amount:
                     pieces = amount.split()
                     numeric = sum(float(part.split("/")[0]) / float(part.split("/")[1]) for part in pieces if "/" in part) + sum(float(part) for part in pieces if "/" not in part)
-                elif re.search(r"\s(?:to|-)\s", amount, re.IGNORECASE):
-                    numeric = float(re.split(r"\s(?:to|-)\s", amount, flags=re.IGNORECASE)[0])
+                elif re.search(r"to|-", amount, re.IGNORECASE):
+                    numeric = float(re.split(r"\s*to\s*|\s*-\s*", amount, maxsplit=1, flags=re.IGNORECASE)[0])
                 else:
                     numeric = float(amount)
                 if numeric <= 0:
