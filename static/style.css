@@ -119,3 +119,17 @@ footer { padding: 1.2rem; color: var(--muted); text-align: center; font-size: .7
 .icon-option.selected, .icon-option:has(input:checked) { border-color: var(--green); background: var(--green-soft); box-shadow: inset 0 0 0 1px var(--green); }
 .appearance-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
 @media (max-width: 500px) { .color-grid { grid-template-columns: 1fr; } }
+
+.recipe-manager-row { display:flex; align-items:center; justify-content:space-between; gap:.8rem; padding:.8rem 0; border-bottom:1px solid var(--line); }
+.recipe-manager-row:last-child { border-bottom:0; }
+.recipe-manager-row > div:first-child { min-width:0; }
+.recipe-manager-row strong { display:block; overflow-wrap:anywhere; }
+.recipe-manager-actions { display:flex; flex-wrap:wrap; gap:.4rem; flex:0 0 auto; }
+.recipe-edit-form { display:grid; gap:1rem; }
+.recipe-edit-form label { display:grid; gap:.35rem; font-weight:700; }
+.recipe-edit-form input[type="text"], .recipe-edit-form textarea { width:100%; min-width:0; padding:.75rem; border:1px solid #cbd6cb; border-radius:9px; background:var(--panel-bg); color:var(--ink); font:inherit; }
+.recipe-edit-form textarea { min-height:9rem; resize:vertical; }
+.recipe-edit-form .ingredients-field { min-height:13rem; font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:.9rem; }
+.recipe-edit-form .instructions-field { min-height:16rem; }
+.danger-button { display:inline-flex; justify-content:center; align-items:center; padding:.6rem .8rem; border:1px solid #c54b4b; border-radius:9px; background:transparent; color:#a32d2d; font:inherit; font-weight:700; cursor:pointer; }
+@media (max-width:520px) { .recipe-manager-row { align-items:flex-start; flex-direction:column; } .recipe-manager-actions { width:100%; } }
