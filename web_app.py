@@ -498,7 +498,7 @@ def reset_menu():
         db.execute("DELETE FROM menu_recipes")
         db.execute("DELETE FROM grocery_items")
     flash("All recipe selections have been cleared.", "success")
-    return redirect(url_for("index", tags=request.args.get("tags", "")))
+    return redirect(url_for("index", tags=request.form.get("tags", "")))
 
 @app.get("/review")
 def review_menu():
