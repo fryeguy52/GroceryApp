@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Recipes · GroceryApp{% endblock %}
 {% block content %}
-<section class="intro"><p class="eyebrow">RECIPE LIBRARY</p><h1>Recipes</h1><p>Add new recipes, update ingredients and instructions, or remove recipes you no longer use.</p><a href="{{ url_for('new_recipe') }}" class="button">+ Add recipe</a></section>
+<section class="intro"><p class="eyebrow">RECIPE LIBRARY</p><h1>Recipes</h1><p>Add new recipes, update ingredients and instructions, or remove recipes you no longer use.</p><div class="appearance-actions"><a href="{{ url_for('new_recipe') }}" class="button">+ Add recipe</a><a href="{{ url_for('import_recipe') }}" class="button secondary">Import from website</a></div></section>
 <section class="panel">
   <div class="filter-row"><input id="recipe-search" type="text" placeholder="Search recipes…" aria-label="Search recipes"></div>
   <p class="hint">{{ recipes|length }} recipes in your library.</p>
