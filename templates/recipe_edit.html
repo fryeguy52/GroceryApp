@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{ 'Add recipe' if is_new else 'Edit ' ~ values.name }} · GroceryApp{% endblock %}
 {% block content %}
-<section class="intro"><p class="eyebrow">RECIPE LIBRARY</p><h1>{{ 'Add recipe' if is_new else 'Edit recipe' }}</h1><p>One ingredient per line, formatted as amount, unit, ingredient name. Use a blank unit when needed, e.g. <code>2, , eggs</code>.</p></section>
+<section class="intro"><p class="eyebrow">RECIPE LIBRARY</p><h1>{{ 'Add recipe' if is_new else 'Edit recipe' }}</h1><p>Choose one tag from each category. Ingredients are entered in separate fields; GroceryApp will format them for the recipe file.</p></section>
 <section class="panel">
 {% if validation_errors %}
   <div class="validation-summary" role="alert"><h2>Please fix these issues before saving</h2><ul>{% for error in validation_errors %}<li>{{ error }}</li>{% endfor %}</ul></div>
@@ -9,9 +9,61 @@
 <form method="post" action="{{ url_for('new_recipe') if is_new else url_for('edit_recipe', name=original_name) }}" class="recipe-edit-form">
 <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
 <label>Recipe name<input type="text" name="name" value="{{ values.name }}" required maxlength="120"></label>
-<label>Tags <span class="hint">One tag per line. Include food type, season, difficulty, cuisine, cooking method and meal type for best filtering.</span><textarea name="tags" rows="8" required>{{ values.tags }}</textarea></label>
-<label>Ingredients <span class="hint">One ingredient per line: amount, unit, ingredient name</span><textarea class="ingredients-field" name="ingredients" required>{{ values.ingredients }}</textarea></label>
-<label>Instructions <span class="hint">Plain text; line breaks are preserved.</span><textarea class="instructions-field" name="instructions">{{ values.instructions }}</textarea></label>
+<fieldset class="tag-picker">
+  <legend>Recipe tags</legend><p class="hint">Select one option in each category.</p>
+  <div class="tag-picker-grid">
+    {% for field, label, choices in tag_groups %}
+    <label>{{ label }}<select name="{{ field }}" required>
+      <option value="">Choose {{ label|lower }}…</option>
+      {% for choice in choices %}<option value="{{ choice }}" {% if values[field] == choice %}selected{% endif %}>{{ choice|title }}</option>{% endfor %}
+    </select></label>
+    {% endfor %}
+  </div>
+  <label>Additional tags <span class="hint">Optional; separate extra tags with commas.</span><input type="text" name="extra_tags" value="{{ values.extra_tags }}" placeholder="e.g. quick, family favorite"></label>
+</fieldset>
+<fieldset class="ingredient-editor">
+  <legend>Ingredients</legend>
+  <p class="hint">Enter one ingredient per row. Leave unit blank if not needed. Each saved row needs an amount and ingredient name.</p>
+  <div class="ingredient-row-head" aria-hidden="true"><span>Amount</span><span>Unit</span><span>Ingredient</span><span></span></div>
+  <div id="ingredient-rows">
+    {% for ingredient in values.ingredient_rows %}
+    <div class="ingredient-row">
+      <input type="text" name="ingredient_amount" aria-label="Ingredient {{ loop.index }} amount" value="{{ ingredient.amount }}" placeholder="e.g. 2 or 1/2">
+      <input type="text" name="ingredient_unit" aria-label="Ingredient {{ loop.index }} unit" value="{{ ingredient.unit }}" placeholder="cups">
+      <input type="text" name="ingredient_name" aria-label="Ingredient {{ loop.index }} name" value="{{ ingredient.name }}" placeholder="eggs">
+      <button type="button" class="remove-ingredient" aria-label="Remove ingredient {{ loop.index }}">×</button>
+    </div>
+    {% endfor %}
+  </div>
+  <button type="button" class="button secondary add-ingredient" id="add-ingredient">+ Add ingredient</button>
+</fieldset>
+<label>Instructions <span class="hint">Plain text; line breaks are preserved.</span><textarea class="instructions-field" name="instructions" required>{{ values.instructions }}</textarea></label>
 <div class="appearance-actions"><button class="button" type="submit">Save recipe</button><a href="{{ url_for('recipe_manager') }}" class="button secondary">Cancel</a></div>
 </form></section>
+<script>
+(() => {
+  const rows = document.getElementById('ingredient-rows');
+  const addButton = document.getElementById('add-ingredient');
+  function updateLabels() {
+    [...rows.querySelectorAll('.ingredient-row')].forEach((row, index) => {
+      row.querySelectorAll('input').forEach((input, fieldIndex) => input.setAttribute('aria-label', 'Ingredient ' + (index + 1) + ' ' + ['amount', 'unit', 'name'][fieldIndex]));
+      row.querySelector('.remove-ingredient').setAttribute('aria-label', 'Remove ingredient ' + (index + 1));
+    });
+  }
+  function addRow() {
+    const row = document.createElement('div'); row.className = 'ingredient-row';
+    [['ingredient_amount','amount','e.g. 2 or 1/2'],['ingredient_unit','unit','cups'],['ingredient_name','name','eggs']].forEach(([field,label,placeholder]) => {
+      const input = document.createElement('input'); input.type='text'; input.name=field; input.placeholder=placeholder; input.setAttribute('aria-label','Ingredient ' + (rows.children.length + 1) + ' ' + label); row.appendChild(input);
+    });
+    const remove = document.createElement('button'); remove.type='button'; remove.className='remove-ingredient'; remove.textContent='×'; remove.setAttribute('aria-label','Remove ingredient');
+    remove.addEventListener('click', () => { row.remove(); if (!rows.children.length) addRow(); updateLabels(); });
+    row.appendChild(remove); rows.appendChild(row); updateLabels();
+  }
+  rows.querySelectorAll('.remove-ingredient').forEach(button => button.addEventListener('click', () => {
+    button.closest('.ingredient-row').remove(); if (!rows.children.length) addRow(); updateLabels();
+  }));
+  addButton.addEventListener('click', addRow);
+  if (!rows.children.length) addRow();
+})();
+</script>
 {% endblock %}
