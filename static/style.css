@@ -157,3 +157,23 @@ footer { padding: 1.2rem; color: var(--muted); text-align: center; font-size: .7
 .validation-summary h2 { margin-bottom:.4rem; }
 .validation-summary ul { margin:.3rem 0 0; padding-left:1.25rem; }
 .validation-summary li { margin:.25rem 0; }
+
+/* Structured recipe tag and ingredient controls */
+.recipe-edit-form select { width:100%; min-width:0; padding:.72rem; border:1px solid #cbd6cb; border-radius:9px; background:var(--panel-bg); color:var(--ink); font:inherit; }
+.tag-picker, .ingredient-editor { min-width:0; margin:0; padding:1rem; border:1px solid var(--line); border-radius:12px; }
+.tag-picker legend, .ingredient-editor legend { padding:0 .35rem; font-weight:800; }
+.tag-picker-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.8rem; margin:.8rem 0; }
+.tag-picker-grid label { min-width:0; }
+.ingredient-editor > .hint { margin:.2rem 0 .8rem; }
+.ingredient-row-head, .ingredient-row { display:grid; grid-template-columns:minmax(4rem,.8fr) minmax(4rem,.8fr) minmax(8rem,2fr) 2rem; gap:.4rem; align-items:center; }
+.ingredient-row-head { padding:0 .1rem .3rem; color:var(--muted); font-size:.78rem; font-weight:750; }
+.ingredient-row { margin-bottom:.45rem; }
+.ingredient-row input { min-width:0; width:100%; padding:.65rem .5rem; border:1px solid #cbd6cb; border-radius:8px; background:var(--panel-bg); color:var(--ink); font:inherit; }
+.remove-ingredient { width:2rem; height:2.5rem; padding:0; border:1px solid #d7a6a0; border-radius:8px; background:#fff5f3; color:#8e3025; font-size:1.35rem; line-height:1; cursor:pointer; }
+.add-ingredient { margin-top:.3rem; }
+@media (max-width:520px) {
+  .tag-picker-grid { grid-template-columns:1fr; }
+  .ingredient-row-head { display:none; }
+  .ingredient-row { grid-template-columns:minmax(0,.85fr) minmax(0,.85fr) minmax(0,1.8fr) 2rem; gap:.3rem; }
+  .ingredient-row input { padding:.6rem .35rem; font-size:.9rem; }
+}
