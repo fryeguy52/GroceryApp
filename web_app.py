@@ -547,6 +547,12 @@ def submit_to_todoist():
         app.logger.exception("Unexpected error while submitting menu to Todoist")
         flash("The menu was kept locally, but the Todoist submission failed. Check the server log.", "warning")
 
+    # Show a blocking browser confirmation after returning to the list. Any detailed
+    # success/warning messages remain visible on the page as well.
+    session["todoist_submission_alert"] = (
+        "Todoist submission attempt finished. Click OK to continue; check any messages "
+        "on the page for details."
+    )
     return redirect(url_for("shopping_list"))
 
 
@@ -564,10 +570,10 @@ def shopping_list():
         if not grouped or grouped[-1]["department"] != item["department"]:
             grouped.append({"department": item["department"], "items": []})
         grouped[-1]["items"].append(item)
-    checked_count = sum(item["checked"] for item in items)
+    submission_alert = session.pop("todoist_submission_alert", None)
     return render_template(
         "list.html", recipes=recipes, groups=grouped,
-        checked_count=checked_count, total_count=len(items),
+        total_count=len(items), submission_alert=submission_alert,
     )
 
 
