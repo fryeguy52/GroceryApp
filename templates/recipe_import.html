@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Import recipe · GroceryApp{% endblock %}
+{% block content %}
+<section class="intro"><p class="eyebrow">RECIPE LIBRARY</p><h1>Import recipe</h1><p>Paste a recipe webpage URL. GroceryApp will look for standard Schema.org recipe data and prepare a draft for you to review.</p></section>
+<section class="panel">
+{% if error %}<div class="validation-summary" role="alert"><h2>Couldn't import this page</h2><p>{{ error }}</p></div>{% endif %}
+<form method="post" action="{{ url_for('import_recipe') }}" class="recipe-edit-form">
+<input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+<label>Recipe website URL<input type="url" name="url" value="{{ url or '' }}" placeholder="https://example.com/recipe" required></label>
+<p class="hint">Only public websites are supported. Pages without structured recipe data may not import.</p>
+<div class="appearance-actions"><button class="button" type="submit">Fetch recipe draft</button><a href="{{ url_for('recipe_manager') }}" class="button secondary">Cancel</a></div>
+</form></section>
+{% endblock %}

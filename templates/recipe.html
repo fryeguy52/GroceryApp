@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ recipe.name }} · GroceryApp{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('index') }}">← Back to recipes</a>
+<section class="intro"><p class="eyebrow">RECIPE</p><h1>{{ recipe.name }}</h1><div class="tag-line">{{ recipe.tags|join(' · ') }}</div></section>
+<section class="panel">
+  <h2>Ingredients</h2>
+  {% if recipe.ingredient_list %}
+  <ul class="ingredient-list">{% for ingredient in recipe.ingredient_list %}<li><span>{{ ingredient.name }}</span><strong>{{ ingredient.number }} {{ ingredient.unit }}</strong></li>{% endfor %}</ul>
+  {% else %}<p class="muted">No ingredients listed.</p>{% endif %}
+</section>
+<section class="panel instructions"><h2>Instructions</h2><pre>{{ recipe.instructional_text }}</pre></section>
+{% endblock %}

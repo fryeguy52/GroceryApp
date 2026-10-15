@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Config · GroceryApp{% endblock %}
+{% block content %}
+<section class="intro">
+  <p class="eyebrow">APP SETTINGS</p>
+  <h1>Config</h1>
+  <p>Personalize GroceryApp's colors and the icon in the top-left corner. These settings are saved on this Ubuntu server and apply to every device using the app.</p>
+</section>
+<section class="panel">
+  <h2>App appearance</h2>
+  <form method="post" action="{{ url_for('config') }}" class="appearance-form">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+    <div class="appearance-preview" style="--preview-accent: {{ app_theme.accent }}; --preview-header: {{ app_theme.header }}; --preview-bg: {{ app_theme.background }}; --preview-panel: {{ app_theme.panel }}; --preview-text: {{ app_theme.text }};">
+      <div class="preview-top"><span>{{ app_theme.icon }} GroceryApp</span><span>Menu　 Shopping List</span></div>
+      <div class="preview-body"><strong>Preview your theme</strong><div class="preview-card">Recipe cards and shopping list items</div><span class="preview-button">Sample button</span></div>
+    </div>
+    <div class="color-grid">
+      <label>Button & link color <span><input type="color" name="accent" value="{{ app_theme.accent }}"><code>{{ app_theme.accent }}</code></span></label>
+      <label>Top navigation <span><input type="color" name="header" value="{{ app_theme.header }}"><code>{{ app_theme.header }}</code></span></label>
+      <label>Page background <span><input type="color" name="background" value="{{ app_theme.background }}"><code>{{ app_theme.background }}</code></span></label>
+      <label>Panel background <span><input type="color" name="panel" value="{{ app_theme.panel }}"><code>{{ app_theme.panel }}</code></span></label>
+      <label>Main text <span><input type="color" name="text" value="{{ app_theme.text }}"><code>{{ app_theme.text }}</code></span></label>
+      <label>Muted text <span><input type="color" name="muted" value="{{ app_theme.muted }}"><code>{{ app_theme.muted }}</code></span></label>
+      <label>Highlight color <span><input type="color" name="highlight" value="{{ app_theme.highlight }}"><code>{{ app_theme.highlight }}</code></span></label>
+    </div>
+    <fieldset class="icon-picker"><legend>Top-left icon</legend>
+      <div class="icon-options">
+      {% for icon in available_icons %}
+        <label class="icon-option {% if app_theme.icon == icon %}selected{% endif %}">
+          <input type="radio" name="icon" value="{{ icon }}" {% if app_theme.icon == icon %}checked{% endif %}>
+          <span>{{ icon }}</span>
+        </label>
+      {% endfor %}
+      </div>
+    </fieldset>
+    <div class="appearance-actions"><button class="button" type="submit">Save appearance</button><button class="button secondary" type="submit" name="reset" value="1">Reset defaults</button></div>
+  </form>
+  <p class="hint">Color changes apply across all tabs after saving. Icon choices include produce, grocery, and kitchen symbols.</p>
+</section>
+<section class="panel">
+  <h2>Store ordering</h2>
+  <p class="muted">Store department order: {{ store_department_count }} departments configured.</p>
+  <p class="muted">Default ingredient mapping: {{ default_department_count }} departments configured.</p>
+  <ol class="department-order">{% for department in store_order %}<li>{{ department }}</li>{% endfor %}</ol>
+  <p class="hint">These values currently come from <code>src/JT_Alb.txt</code> and <code>src/defaultItemDepartments.txt</code>.</p>
+</section>
+<section class="panel">
+  <h2>Todoist</h2>
+  {% if todoist_configured %}
+    <p>Settings file found. Your API token is not displayed here.</p>
+  {% else %}
+    <p>Settings file not found at <code>src/todoist_settings.py</code>. Todoist submission may fail until the existing integration settings are available.</p>
+  {% endif %}
+</section>
+<section class="panel">
+  <h2>Local data</h2>
+  <p>Web app data is stored on this Ubuntu machine, not in the source checkout.</p>
+  <code class="path-value">{{ data_dir }}</code>
+</section>
+{% endblock %}

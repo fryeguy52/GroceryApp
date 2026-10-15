@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Plan menu · GroceryApp{% endblock %}
+{% block content %}
+<section class="intro">
+  <p class="eyebrow">WEEKLY MEAL PLANNING</p>
+  <h1>What sounds good?</h1>
+  <p>Choose recipes for the week. Next, review the menu and store-ordered grocery list before sending anything to Todoist.</p>
+</section>
+<section class="panel">
+  <form method="get" action="{{ url_for('index') }}" class="filter-form">
+    <label for="tags">Filter by tags</label>
+    <div class="filter-row"><input id="tags" name="tags" value="{{ tags }}" placeholder="e.g. chicken easy dinner"><button type="submit" class="button secondary">Filter</button></div>
+    <p class="hint">Use tags separated by spaces. Every entered tag must match.</p>
+  </form>
+</section>
+<form method="post" action="{{ url_for('save_menu') }}" class="recipe-form">
+  <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+  <div class="section-heading">
+    <div><h2>Recipes</h2><p class="muted">{{ names|length }} shown · <span id="selected-count">{{ selected|length }}</span> selected</p></div>
+    <a class="text-link" href="{{ url_for('shopping_list') }}">View list →</a>
+  </div>
+  {% if no_matches %}<div class="empty-state">No recipes match those tags. Try a broader filter.</div>{% endif %}
+  <div class="recipe-grid">
+  {% for recipe in recipes if recipe.name in names %}
+    <label class="recipe-card">
+      <input type="checkbox" name="recipe" value="{{ recipe.name }}" {% if recipe.name in selected %}checked{% endif %}>
+      <span class="recipe-card-main"><strong>{{ recipe.name }}</strong><span class="tag-line">{{ recipe.tags|join(' · ') }}</span></span>
+      <a class="details-link" href="{{ url_for('recipe_detail', name=recipe.name) }}" onclick="event.stopPropagation()">Details</a>
+    </label>
+  {% endfor %}
+  </div>
+  {% for name in selected if name not in names %}
+    <input type="hidden" name="recipe" value="{{ name }}">
+  {% endfor %}
+  <div class="sticky-actions"><span><strong id="selected-count-bottom">{{ selected|length }}</strong> recipes selected</span><div class="button-row"><button type="submit" formaction="{{ url_for('reset_menu') }}" class="button secondary" formnovalidate>Reset selections</button><button type="submit" class="button">Review menu & list</button></div></div>
+</form>
+<script>
+  (() => {
+    const form = document.querySelector('.recipe-form');
+    if (!form) return;
+    const topCount = document.getElementById('selected-count');
+    const bottomCount = document.getElementById('selected-count-bottom');
+    const updateCount = () => {
+      const checkedVisible = form.querySelectorAll('input[type="checkbox"][name="recipe"]:checked').length;
+      const selectedHidden = form.querySelectorAll('input[type="hidden"][name="recipe"]').length;
+      const count = checkedVisible + selectedHidden;
+      if (topCount) topCount.textContent = count;
+      if (bottomCount) bottomCount.textContent = count;
+    };
+    form.querySelectorAll('input[type="checkbox"][name="recipe"]').forEach(input => input.addEventListener('change', updateCount));
+    updateCount();
+  })();
+</script>
+{% endblock %}

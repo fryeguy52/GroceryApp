@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Recipes · GroceryApp{% endblock %}
+{% block content %}
+<section class="intro"><p class="eyebrow">RECIPE LIBRARY</p><h1>Recipes</h1><p>Add new recipes, update ingredients and instructions, or remove recipes you no longer use.</p><div class="appearance-actions"><a href="{{ url_for('new_recipe') }}" class="button">+ Add recipe</a><a href="{{ url_for('import_recipe') }}" class="button secondary">Import from website</a></div></section>
+<section class="panel">
+  <div class="filter-row"><input id="recipe-search" type="text" placeholder="Search recipes…" aria-label="Search recipes"></div>
+  <p class="hint">{{ recipes|length }} recipes in your library.</p>
+  {% for recipe in recipes %}
+  <div class="recipe-manager-row" data-recipe-name="{{ recipe.name|lower }}">
+    <div><strong>{{ recipe.name }}</strong><span class="tag-line">{{ recipe.tags|join(' · ') }}</span></div>
+    <div class="recipe-manager-actions">
+      <a class="button secondary" href="{{ url_for('edit_recipe', name=recipe.name) }}">Edit</a>
+      <form method="post" action="{{ url_for('delete_recipe', name=recipe.name) }}" onsubmit="return confirm('Permanently delete this recipe?');">
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}"><button class="danger-button" type="submit">Delete</button>
+      </form>
+    </div>
+  </div>
+  {% else %}<div class="empty-state">No recipes yet. Add your first recipe.</div>{% endfor %}
+</section>
+<script>
+(() => { const input = document.getElementById('recipe-search'); input?.addEventListener('input', () => { const term = input.value.trim().toLowerCase(); document.querySelectorAll('.recipe-manager-row').forEach(row => row.hidden = !row.dataset.recipeName.includes(term)); }); })();
+</script>
+{% endblock %}
