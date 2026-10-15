@@ -1,4 +1,6 @@
 # generated grocery lists
+# Local recipe usage timestamps database
+recipetimestamps.db
 *grocery_list_*.txt
 most_recent_grocery_list.txt
 recipe_time_stamps.tmstmp
