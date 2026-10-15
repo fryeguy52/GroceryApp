@@ -1,19 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Plan menu · GroceryApp<script>
-  (() => {
-    const form = document.querySelector('.recipe-form');
-    if (!form) return;
-    const updateCount = () => {
-      const count = form.querySelectorAll('input[name="recipe"]:checked').length
-        + Array.from(form.querySelectorAll('input[type="hidden"][name="recipe"]')).length;
-      document.getElementById('selected-count').textContent = count;
-      document.getElementById('selected-count-bottom').textContent = count;
-    };
-    form.querySelectorAll('input[type="checkbox"][name="recipe"]').forEach(input => input.addEventListener('change', updateCount));
-    updateCount();
-  })();
-</script>
-{% endblock %}
+{% block title %}Plan menu · GroceryApp{% endblock %}
 {% block content %}
 <section class="intro">
   <p class="eyebrow">WEEKLY MEAL PLANNING</p>
@@ -48,4 +34,21 @@
   {% endfor %}
   <div class="sticky-actions"><span><strong id="selected-count-bottom">{{ selected|length }}</strong> recipes selected</span><button type="submit" class="button">Review menu & list</button></div>
 </form>
+<script>
+  (() => {
+    const form = document.querySelector('.recipe-form');
+    if (!form) return;
+    const topCount = document.getElementById('selected-count');
+    const bottomCount = document.getElementById('selected-count-bottom');
+    const updateCount = () => {
+      const checkedVisible = form.querySelectorAll('input[type="checkbox"][name="recipe"]:checked').length;
+      const selectedHidden = form.querySelectorAll('input[type="hidden"][name="recipe"]').length;
+      const count = checkedVisible + selectedHidden;
+      if (topCount) topCount.textContent = count;
+      if (bottomCount) bottomCount.textContent = count;
+    };
+    form.querySelectorAll('input[type="checkbox"][name="recipe"]').forEach(input => input.addEventListener('change', updateCount));
+    updateCount();
+  })();
+</script>
 {% endblock %}
