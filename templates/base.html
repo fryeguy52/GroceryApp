@@ -10,7 +10,12 @@
 <body>
   <header class="topbar">
     <a class="brand" href="{{ url_for('index') }}">🥕 GroceryApp</a>
-    <nav><a href="{{ url_for('index') }}">Plan menu</a><a href="{{ url_for('shopping_list') }}">Shopping list</a></nav>
+    <nav class="tab-nav">
+      <a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active{% endif %}">Menu</a>
+      <a href="{{ url_for('shopping_list') }}" class="{% if request.endpoint in ['shopping_list', 'review_menu'] %}active{% endif %}">Shopping List</a>
+      <a href="{{ url_for('history') }}" class="{% if request.endpoint == 'history' %}active{% endif %}">History</a>
+      <a href="{{ url_for('config') }}" class="{% if request.endpoint == 'config' %}active{% endif %}">Config</a>
+    </nav>
   </header>
   <main class="container">
     {% with messages = get_flashed_messages(with_categories=true) %}
