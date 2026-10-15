@@ -15,6 +15,7 @@
 </section>
 <form method="post" action="{{ url_for('save_menu') }}" class="recipe-form">
   <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+  <input type="hidden" name="tags" value="{{ tags }}">
   <div class="section-heading">
     <div><h2>Recipes</h2><p class="muted">{{ names|length }} shown · <span id="selected-count">{{ selected|length }}</span> selected</p></div>
     <a class="text-link" href="{{ url_for('shopping_list') }}">View list →</a>
@@ -32,7 +33,7 @@
   {% for name in selected if name not in names %}
     <input type="hidden" name="recipe" value="{{ name }}">
   {% endfor %}
-  <div class="sticky-actions"><span><strong id="selected-count-bottom">{{ selected|length }}</strong> recipes selected</span><div class="button-row"><button type="submit" formaction="{{ url_for('reset_menu') }}" class="button secondary" formnovalidate>Reset selections</button><button type="submit" class="button">Review menu & list</button></div></div>
+  <div class="sticky-actions"><span><strong id="selected-count-bottom">{{ selected|length }}</strong> recipes selected</span><div class="appearance-actions"><button type="submit" formaction="{{ url_for('reset_menu') }}" class="button secondary" formnovalidate>Reset selections</button><button type="submit" class="button">Review menu & list</button></div></div>
 </form>
 <script>
   (() => {
