@@ -491,6 +491,15 @@ def save_menu():
     return redirect(url_for("review_menu"))
 
 
+@app.post("/menu/reset")
+def reset_menu():
+    """Clear the selected recipes and the generated shopping-list review."""
+    with db_session() as db:
+        db.execute("DELETE FROM menu_recipes")
+        db.execute("DELETE FROM grocery_items")
+    flash("All recipe selections have been cleared.", "success")
+    return redirect(url_for("index", tags=request.args.get("tags", "")))
+
 @app.get("/review")
 def review_menu():
     with db_session() as db:
