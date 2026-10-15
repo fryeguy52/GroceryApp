@@ -115,20 +115,40 @@ def _instructions(value):
 
 
 def _ingredient_fields(raw):
+    """Best-effort split of common recipe ingredient strings into amount/unit/name."""
     text = str(raw).strip().lstrip("•*- ").strip()
-    quantity = r"(?:\d+\s+\d+\s*/\s*\d+|\d+\s*/\s*\d+|\d+(?:\.\d+)?|[½¼¾⅓⅔⅛⅜⅝⅞])"
-    match = re.match(rf"^({quantity}(?:\s*(?:-|–|to)\s*{quantity})?)(?:\s+|$)(.*)$", text, re.IGNORECASE)
+    # Normalize unicode fractions because the recipe editor validates ASCII fractions.
+    fraction_chars = {
+        "½": "1/2", "¼": "1/4", "¾": "3/4", "⅓": "1/3", "⅔": "2/3",
+        "⅛": "1/8", "⅜": "3/8", "⅝": "5/8", "⅞": "7/8",
+    }
+    for symbol, fraction in fraction_chars.items():
+        text = text.replace(symbol, f" {fraction}")
+    text = re.sub(r"\s+", " ", text).strip()
+
+    quantity = r"(?:\d+\s+\d+\s*/\s*\d+|\d+\s*/\s*\d+|\d+(?:\.\d+)?|\.\d+)"
+    quantity_range = rf"{quantity}(?:\s*(?:-|–|to)\s*{quantity})?"
+    # Accept both "1/2 teaspoon oil" and structured strings like "1/2, teaspoon of oil".
+    match = re.match(rf"^({quantity_range})(?:\s*,\s*|\s+)(.*)$", text, re.IGNORECASE)
     if not match:
         return {"amount": "", "unit": "", "name": text}
-    amount, remainder = match.group(1).strip(), match.group(2).strip()
-    unit_match = re.match(
-        r"^(cups?|c|tablespoons?|tbsp|tbsps|teaspoons?|tsp|tsps|ounces?|oz|pounds?|lbs?|grams?|g|kilograms?|kg|milliliters?|ml|liters?|l|cloves?|cans?|packages?|pkg|bags?|boxes|large|medium|small|pinches?|slices?|pieces?)\b\s*(.*)$",
-        remainder, re.IGNORECASE,
-    )
-    if unit_match:
-        return {"amount": amount, "unit": unit_match.group(1).strip(), "name": unit_match.group(2).strip()}
-    return {"amount": amount, "unit": "", "name": remainder}
+    amount, remainder = match.group(1).strip(), match.group(2).strip().lstrip(",").strip()
 
+    unit_pattern = (
+        r"^(cups?|c|tablespoons?|tbsp|tbsps|tbs|teaspoons?|tsp|tsps|ounces?|oz|"
+        r"pounds?|lbs?|grams?|g|kilograms?|kg|milliliters?|ml|liters?|l|"
+        r"cloves?|cans?|packages?|pkg|bags?|boxes|large|medium|small|"
+        r"pinches?|slices?|pieces?|sticks?|sprigs?|heads?|bunches?|"
+        r"jars?|cartons?|containers?|pints?|quarts?|gallons?)\b"
+    )
+    unit_match = re.match(rf"{unit_pattern}\s*(?:,\s*|\s+)?(.*)$", remainder, re.IGNORECASE)
+    if unit_match:
+        unit = unit_match.group(1).strip()
+        ingredient_name = unit_match.group(2).strip()
+        ingredient_name = re.sub(r"^(?:of)\s+", "", ingredient_name, flags=re.IGNORECASE)
+        return {"amount": amount, "unit": unit, "name": ingredient_name}
+    # The amount is clear, but the next word may be an ingredient (e.g. "2 eggs").
+    return {"amount": amount, "unit": "", "name": re.sub(r"^(?:of)\s+", "", remainder, flags=re.IGNORECASE)}
 
 def extract_recipe(html, source_url, tag_groups, base_values):
     soup = BeautifulSoup(html, "html.parser")
@@ -152,6 +172,7 @@ def extract_recipe(html, source_url, tag_groups, base_values):
     values = dict(base_values)
     values.update({
         "name": name[:120], "ingredient_rows": ingredient_rows, "instructions": instructions,
+        "source_ingredients": [_text(item) for item in raw_ingredients if _text(item)],
         "import_source": source_url,
         "import_note": "Imported fields are a best-effort conversion. Review every ingredient and choose the correct tags before saving.",
     })
