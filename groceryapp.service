@@ -1,0 +1,17 @@
+[Unit]
+Description=GroceryApp LAN web app
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=clegane
+WorkingDirectory=/home/clegane/GroceryApp
+ExecStart=/home/clegane/GroceryApp/.venv/bin/python /home/clegane/GroceryApp/web_app.py
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+Environment=PORT=8081
+
+[Install]
+WantedBy=multi-user.target
