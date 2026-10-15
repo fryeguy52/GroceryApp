@@ -24,6 +24,7 @@ sys.path.insert(0, str(SRC))
 from models import RecipeCollection  # noqa: E402
 
 RECIPE_DIR = ROOT / "recipes"
+RECIPE_DIR.mkdir(parents=True, exist_ok=True)
 STORE_CONFIG = SRC / "JT_Alb.txt"
 DEFAULT_STORE_CONFIG = SRC / "defaultItemDepartments.txt"
 DATA_DIR = Path(os.environ.get("GROCERYAPP_DATA_DIR", Path.home() / ".local" / "share" / "groceryapp")).expanduser()
@@ -163,6 +164,90 @@ def recipe_detail(name):
     if recipe is None:
         abort(404)
     return render_template("recipe.html", recipe=recipe)
+
+
+
+def recipe_editor_values(recipe=None):
+    if recipe is None:
+        return {"name": "", "tags": "", "ingredients": "", "instructions": ""}
+    return {"name": recipe.name, "tags": "\n".join(tag for tag in recipe.tags if tag not in ("recently-used", "not-recently-used")), "ingredients": "\n".join(i.original_input_string for i in recipe.ingredient_list), "instructions": recipe.instructional_text.rstrip()}
+
+
+@app.get("/recipes")
+def recipe_manager():
+    recipes = get_recipes(include_usage=False)
+    return render_template("recipes.html", recipes=sorted(recipes.recipe_list, key=lambda r: r.name.lower()))
+
+
+@app.route("/recipes/new", methods=["GET", "POST"])
+def new_recipe():
+    if request.method == "POST":
+        return save_recipe_file(None)
+    return render_template("recipe_edit.html", values=recipe_editor_values(), is_new=True, original_name="")
+
+
+@app.route("/recipes/<path:name>/edit", methods=["GET", "POST"])
+def edit_recipe(name):
+    if not name or "/" in name or "\\" in name:
+        abort(404)
+    path = RECIPE_DIR / f"{name}.txt"
+    if not path.is_file() or path.resolve().parent != RECIPE_DIR.resolve():
+        abort(404)
+    recipe = get_recipes(include_usage=False).get_recipe_by_name(name)
+    if recipe is None:
+        abort(404)
+    if request.method == "POST":
+        return save_recipe_file(name)
+    return render_template("recipe_edit.html", values=recipe_editor_values(recipe), is_new=False, original_name=name)
+
+
+def save_recipe_file(original_name):
+    name = request.form.get("name", "").strip()
+    tags = [x.strip() for x in request.form.get("tags", "").splitlines() if x.strip()]
+    ingredients = [x.strip() for x in request.form.get("ingredients", "").splitlines() if x.strip()]
+    instructions = request.form.get("instructions", "").strip()
+    values = {"name": name, "tags": "\n".join(tags), "ingredients": "\n".join(ingredients), "instructions": instructions}
+    if not name or name in {".", ".."} or any(c in name for c in ("/", "\\", "\0")):
+        flash("Enter a valid recipe name without slashes.", "warning")
+        return render_template("recipe_edit.html", values=values, is_new=original_name is None, original_name=original_name or ""), 400
+    if not tags:
+        flash("Add at least one tag.", "warning")
+        return render_template("recipe_edit.html", values=values, is_new=original_name is None, original_name=original_name or ""), 400
+    bad = [line for line in ingredients if len(line.split(",")) != 3]
+    if bad:
+        flash("Each ingredient must use amount, unit, ingredient name. Fix: " + "; ".join(bad[:3]), "warning")
+        return render_template("recipe_edit.html", values=values, is_new=original_name is None, original_name=original_name or ""), 400
+    target = RECIPE_DIR / f"{name}.txt"
+    if target.exists() and name != original_name:
+        flash("A recipe with that name already exists.", "warning")
+        return render_template("recipe_edit.html", values=values, is_new=original_name is None, original_name=original_name or ""), 409
+    target.write_text("\n".join(["## tags", *tags, "", "## ingredients", *ingredients, "", "## recipe", instructions, ""]), encoding="utf-8")
+    if original_name and original_name != name:
+        (RECIPE_DIR / f"{original_name}.txt").unlink(missing_ok=True)
+        with db_session() as db:
+            db.execute("UPDATE menu_recipes SET recipe_name = ? WHERE recipe_name = ?", (name, original_name))
+    flash(f"Recipe {'created' if original_name is None else 'saved'}: {name}.", "success")
+    return redirect(url_for("recipe_manager"))
+
+
+@app.post("/recipes/<path:name>/delete")
+def delete_recipe(name):
+    if not name or "/" in name or "\\" in name:
+        abort(404)
+    path = RECIPE_DIR / f"{name}.txt"
+    if not path.is_file() or path.resolve().parent != RECIPE_DIR.resolve():
+        abort(404)
+    path.unlink()
+    with db_session() as db:
+        selected = db.execute("SELECT 1 FROM menu_recipes WHERE recipe_name = ?", (name,)).fetchone()
+        db.execute("DELETE FROM menu_recipes WHERE recipe_name = ?", (name,))
+        if selected:
+            db.execute("DELETE FROM menu_recipes")
+            db.execute("DELETE FROM grocery_items")
+    flash(f"Deleted recipe: {name}.", "success")
+    if selected:
+        flash("That recipe was on the current menu, so the saved menu and shopping list were cleared to prevent stale items.", "warning")
+    return redirect(url_for("recipe_manager"))
 
 
 @app.get("/history")
