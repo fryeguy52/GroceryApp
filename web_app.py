@@ -10,6 +10,7 @@ import secrets
 import shutil
 import sqlite3
 import sys
+from contextlib import contextmanager
 from pathlib import Path
 
 from flask import Flask, abort, flash, redirect, render_template, request, session, url_for
@@ -47,8 +48,22 @@ def connect_db():
     return db
 
 
+@contextmanager
+def db_session():
+    """Commit successful operations and always close the SQLite connection."""
+    db = connect_db()
+    try:
+        yield db
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise
+    finally:
+        db.close()
+
+
 def init_db():
-    with connect_db() as db:
+    with db_session() as db:
         db.execute("""
             CREATE TABLE IF NOT EXISTS menu_recipes (
                 position INTEGER PRIMARY KEY,
@@ -107,7 +122,7 @@ def index():
         no_matches = True
     else:
         no_matches = False
-    with connect_db() as db:
+    with db_session() as db:
         selected = [row["recipe_name"] for row in db.execute(
             "SELECT recipe_name FROM menu_recipes ORDER BY position"
         )]
