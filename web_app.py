@@ -227,12 +227,17 @@ def import_recipe():
         validate_public_url(source_url)
         html, final_url = fetch_html(source_url)
         values = extract_recipe(html, final_url, TAG_GROUPS, recipe_editor_values())
-        # The recipe format has no separate description field, so preserve the
-        # original website link in the saved recipe's instruction/description text.
+        # The recipe format has no separate description field. Keep the source's
+        # ingredient strings at the top for reference, followed by directions and source URL.
         instructions = values.get("instructions", "").rstrip()
-        source_line = f"Source: {final_url}"
-        if source_line not in instructions:
-            values["instructions"] = f"{instructions}\n\n{source_line}".strip()
+        source_ingredients = values.get("source_ingredients", [])
+        description_parts = []
+        if source_ingredients:
+            description_parts.append("Ingredients as listed on source:\n" + "\n".join(f"- {item}" for item in source_ingredients))
+        if instructions:
+            description_parts.append(instructions)
+        description_parts.append(f"Source: {final_url}")
+        values["instructions"] = "\n\n".join(description_parts).strip()
     except (ValueError, requests.RequestException) as exc:
         return render_template("recipe_import.html", error=str(exc), url=source_url), 400
     return render_template(
