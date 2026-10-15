@@ -137,7 +137,7 @@ def _ingredient_fields(raw):
     unit_pattern = (
         r"^(cups?|c|tablespoons?|tbsp|tbsps|tbs|teaspoons?|tsp|tsps|ounces?|oz|"
         r"pounds?|lbs?|grams?|g|kilograms?|kg|milliliters?|ml|liters?|l|"
-        r"cloves?|cans?|packages?|pkg|bags?|boxes|large|medium|small|"
+        r"cloves?|cans?|packages?|pkg|bags?|box(?:es)?|large|medium|small|"
         r"pinches?|slices?|pieces?|sticks?|sprigs?|heads?|bunches?|"
         r"jars?|cartons?|containers?|pints?|quarts?|gallons?)\b"
     )
