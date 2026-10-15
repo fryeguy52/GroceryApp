@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#245b49">
+  <meta name="theme-color" content="{{ app_theme.header }}">
   <title>{% block title %}GroceryApp{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body style="--green: {{ app_theme.accent }}; --green-dark: {{ app_theme.header }}; --cream: {{ app_theme.background }}; --ink: {{ app_theme.text }}; --muted: {{ app_theme.muted }}; --orange: {{ app_theme.highlight }}; --panel-bg: {{ app_theme.panel }}">
   <header class="topbar">
-    <a class="brand" href="{{ url_for('index') }}">🥕 GroceryApp</a>
+    <a class="brand" href="{{ url_for('index') }}">{{ app_theme.icon }} GroceryApp</a>
     <nav class="tab-nav">
       <a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active{% endif %}">Menu</a>
       <a href="{{ url_for('shopping_list') }}" class="{% if request.endpoint in ['shopping_list', 'review_menu'] %}active{% endif %}">Shopping List</a>
