@@ -1,5 +1,21 @@
 {% extends "base.html" %}
-{% block title %}Review menu · GroceryApp{% endblock %}
+{% block title %}Review menu · GroceryApp<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("todoist-submit-form");
+    const button = document.getElementById("todoist-submit-button");
+    const status = document.getElementById("todoist-submit-status");
+    if (!form || !button) return;
+
+    form.addEventListener("submit", () => {
+      // Give immediate feedback and prevent repeat clicks while the request is processing.
+      button.disabled = true;
+      button.textContent = "Submitting to Todoist…";
+      button.setAttribute("aria-busy", "true");
+      if (status) status.textContent = "Please wait. Do not press submit again.";
+    });
+  });
+</script>
+{% endblock %}
 {% block content %}
 <section class="intro">
   <p class="eyebrow">REVIEW BEFORE SENDING</p>
@@ -35,9 +51,10 @@
   {% endif %}
 </section>
 
-<form method="post" action="{{ url_for('submit_to_todoist') }}" class="sticky-actions">
+<form id="todoist-submit-form" method="post" action="{{ url_for('submit_to_todoist') }}" class="sticky-actions">
   <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
   <span>Ready to send?</span>
-  <button type="submit" class="button">Submit to Todoist</button>
+  <button id="todoist-submit-button" type="submit" class="button">Submit to Todoist</button>
+  <span id="todoist-submit-status" role="status" aria-live="polite"></span>
 </form>
 {% endblock %}
