@@ -491,6 +491,16 @@ def save_menu():
     return redirect(url_for("review_menu"))
 
 
+@app.post("/menu/reset")
+def reset_menu():
+    """Clear the selected recipes and the generated shopping-list review."""
+    with db_session() as db:
+        db.execute("DELETE FROM menu_recipes")
+        db.execute("DELETE FROM grocery_items")
+    flash("All recipe selections have been cleared.", "success")
+    return redirect(url_for("index", tags=request.form.get("tags", "")))
+
+
 @app.get("/review")
 def review_menu():
     with db_session() as db:
@@ -547,6 +557,12 @@ def submit_to_todoist():
         app.logger.exception("Unexpected error while submitting menu to Todoist")
         flash("The menu was kept locally, but the Todoist submission failed. Check the server log.", "warning")
 
+    # Show a blocking browser confirmation after returning to the list. Any detailed
+    # success/warning messages remain visible on the page as well.
+    session["todoist_submission_alert"] = (
+        "Todoist submission attempt finished. Click OK to continue; check any messages "
+        "on the page for details."
+    )
     return redirect(url_for("shopping_list"))
 
 
@@ -565,9 +581,11 @@ def shopping_list():
             grouped.append({"department": item["department"], "items": []})
         grouped[-1]["items"].append(item)
     checked_count = sum(item["checked"] for item in items)
+    submission_alert = session.pop("todoist_submission_alert", None)
     return render_template(
         "list.html", recipes=recipes, groups=grouped,
         checked_count=checked_count, total_count=len(items),
+        submission_alert=submission_alert,
     )
 
 
