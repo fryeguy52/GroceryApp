@@ -1,5 +1,10 @@
 {% extends "base.html" %}
-{% block title %}Shopping list · GroceryApp{% endblock %}
+{% block title %}Shopping list · GroceryApp{% if submission_alert %}
+<script>
+  window.alert({{ submission_alert|tojson }});
+</script>
+{% endif %}
+{% endblock %}
 {% block content %}
 <section class="intro">
   <p class="eyebrow">READY FOR THE STORE</p><h1>Shopping list</h1>
