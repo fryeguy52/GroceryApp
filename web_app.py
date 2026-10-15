@@ -227,6 +227,8 @@ def validate_recipe_fields(name, tags, ingredients, instructions, original_name=
             errors.append(f"Add a {label} tag (for example: {', '.join(sorted(choices))}).")
     if not ingredients:
         errors.append("Add at least one ingredient.")
+    if not instructions.strip():
+        errors.append("Recipe instructions are required.")
     for index, line in enumerate(ingredients, start=1):
         parts = [part.strip() for part in line.split(",")]
         if len(parts) != 3:
@@ -258,7 +260,7 @@ def validate_recipe_fields(name, tags, ingredients, instructions, original_name=
 
 def save_recipe_file(original_name):
     name = request.form.get("name", "").strip()
-    tags = [x.strip() for x in request.form.get("tags", "").splitlines() if x.strip()]
+    tags = [x.strip().lower() for x in request.form.get("tags", "").splitlines() if x.strip()]
     ingredients = [x.strip() for x in request.form.get("ingredients", "").splitlines() if x.strip()]
     instructions = request.form.get("instructions", "").strip()
     values = {"name": name, "tags": "\n".join(tags), "ingredients": "\n".join(ingredients), "instructions": instructions}
