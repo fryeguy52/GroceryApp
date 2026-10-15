@@ -17,6 +17,17 @@
       <a href="{{ url_for('history') }}" class="{% if request.endpoint == 'history' %}active{% endif %}">History</a>
       <a href="{{ url_for('config') }}" class="{% if request.endpoint == 'config' %}active{% endif %}">Config</a>
     </nav>
+    <form class="quick-nav" aria-label="Quick navigation" onsubmit="return false">
+      <label class="visually-hidden" for="quick-nav-select">Go to page</label>
+      <select id="quick-nav-select">
+        <option value="{{ url_for('index') }}" {% if request.endpoint == 'index' %}selected{% endif %}>Menu</option>
+        <option value="{{ url_for('shopping_list') }}" {% if request.endpoint == 'shopping_list' %}selected{% endif %}>Shopping List</option>
+        <option value="{{ url_for('recipe_manager') }}" {% if request.endpoint in ['recipe_manager', 'new_recipe', 'edit_recipe'] %}selected{% endif %}>Recipes</option>
+        <option value="{{ url_for('history') }}" {% if request.endpoint == 'history' %}selected{% endif %}>History</option>
+        <option value="{{ url_for('config') }}" {% if request.endpoint == 'config' %}selected{% endif %}>Config</option>
+      </select>
+      <button class="quick-nav-go" type="button" id="quick-nav-go">Go</button>
+    </form>
   </header>
   <main class="container">
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -24,6 +35,13 @@
     {% endwith %}
     {% block content %}{% endblock %}
   </main>
+  <script>
+    (() => {
+      const select = document.getElementById('quick-nav-select');
+      document.getElementById('quick-nav-go')?.addEventListener('click', () => { if (select?.value) window.location.href = select.value; });
+      select?.addEventListener('change', () => { if (select.value) window.location.href = select.value; });
+    })();
+  </script>
   <footer>Home network edition · Your data stays on this server</footer>
 </body>
 </html>
