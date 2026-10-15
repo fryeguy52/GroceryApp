@@ -167,10 +167,52 @@ def recipe_detail(name):
 
 
 
+TAG_GROUPS = [
+    ("tag_food_type", "Food type", ["chicken", "turkey", "beef", "pork", "fish", "shrimp", "vegetarian"]),
+    ("tag_season", "Season", ["summer", "fall", "winter", "spring"]),
+    ("tag_difficulty", "Difficulty", ["easy", "medium", "hard"]),
+    ("tag_cuisine", "Cuisine", ["asian", "italian", "mexican", "american", "indian", "greek", "european", "middle eastern", "mediterranean"]),
+    ("tag_cooking_method", "Cooking method", ["stove", "grill", "oven", "crock pot", "instant pot", "no cooking"]),
+    ("tag_meal_type", "Meal type", ["breakfast", "lunch", "dinner", "side"]),
+]
+TAG_GROUP_CHOICES = {field: set(choices) for field, _label, choices in TAG_GROUPS}
+ALL_CATEGORY_TAGS = set().union(*TAG_GROUP_CHOICES.values())
+
+
+def ingredient_rows_from_lines(lines):
+    rows = []
+    for line in lines:
+        parts = line.split(",", 2)
+        if len(parts) == 3:
+            rows.append({"amount": parts[0].strip(), "unit": parts[1].strip(), "name": parts[2].strip()})
+        else:
+            rows.append({"amount": "", "unit": "", "name": line.strip()})
+    return rows
+
+
 def recipe_editor_values(recipe=None):
+    values = {"name": "", "extra_tags": "", "ingredient_rows": [{"amount": "", "unit": "", "name": ""}], "instructions": ""}
+    for field, _label, _choices in TAG_GROUPS:
+        values[field] = ""
     if recipe is None:
-        return {"name": "", "tags": "", "ingredients": "", "instructions": ""}
-    return {"name": recipe.name, "tags": "\n".join(tag for tag in recipe.tags if tag not in ("recently-used", "not-recently-used")), "ingredients": "\n".join(i.original_input_string for i in recipe.ingredient_list), "instructions": recipe.instructional_text.rstrip()}
+        return values
+    tags = [tag.strip().casefold() for tag in recipe.tags if tag not in ("recently-used", "not-recently-used")]
+    for field, _label, _choices in TAG_GROUPS:
+        values[field] = next((tag for tag in tags if tag in TAG_GROUP_CHOICES[field]), "")
+    values.update({
+        "name": recipe.name,
+        "extra_tags": ", ".join(tag for tag in tags if tag not in ALL_CATEGORY_TAGS),
+        "ingredient_rows": ingredient_rows_from_lines([i.original_input_string for i in recipe.ingredient_list]) or [{"amount": "", "unit": "", "name": ""}],
+        "instructions": recipe.instructional_text.rstrip(),
+    })
+    return values
+
+
+def recipe_editor_values_from_form(name, instructions, ingredient_rows):
+    values = {"name": name, "extra_tags": request.form.get("extra_tags", "").strip(), "ingredient_rows": ingredient_rows, "instructions": instructions}
+    for field, _label, _choices in TAG_GROUPS:
+        values[field] = request.form.get(field, "").strip().casefold()
+    return values
 
 
 @app.get("/recipes")
@@ -183,7 +225,7 @@ def recipe_manager():
 def new_recipe():
     if request.method == "POST":
         return save_recipe_file(None)
-    return render_template("recipe_edit.html", values=recipe_editor_values(), is_new=True, original_name="")
+    return render_template("recipe_edit.html", values=recipe_editor_values(), is_new=True, original_name="", tag_groups=TAG_GROUPS)
 
 
 @app.route("/recipes/<path:name>/edit", methods=["GET", "POST"])
@@ -198,7 +240,7 @@ def edit_recipe(name):
         abort(404)
     if request.method == "POST":
         return save_recipe_file(name)
-    return render_template("recipe_edit.html", values=recipe_editor_values(recipe), is_new=False, original_name=name)
+    return render_template("recipe_edit.html", values=recipe_editor_values(recipe), is_new=False, original_name=name, tag_groups=TAG_GROUPS)
 
 
 def validate_recipe_fields(name, tags, ingredients, instructions, original_name=None):
@@ -260,13 +302,33 @@ def validate_recipe_fields(name, tags, ingredients, instructions, original_name=
 
 def save_recipe_file(original_name):
     name = request.form.get("name", "").strip()
-    tags = [x.strip().lower() for x in request.form.get("tags", "").splitlines() if x.strip()]
-    ingredients = [x.strip() for x in request.form.get("ingredients", "").splitlines() if x.strip()]
+    selected_tags = [request.form.get(field, "").strip().casefold() for field, _label, _choices in TAG_GROUPS]
+    extra_tags = [tag.strip().casefold() for tag in request.form.get("extra_tags", "").split(",") if tag.strip()]
+    tags = [tag for tag in selected_tags if tag] + extra_tags
+
+    amounts = request.form.getlist("ingredient_amount")
+    units = request.form.getlist("ingredient_unit")
+    ingredient_names = request.form.getlist("ingredient_name")
+    row_count = max(len(amounts), len(units), len(ingredient_names))
+    ingredient_rows, ingredients = [], []
+    for index in range(row_count):
+        amount = amounts[index].strip() if index < len(amounts) else ""
+        unit = units[index].strip() if index < len(units) else ""
+        ingredient_name = ingredient_names[index].strip() if index < len(ingredient_names) else ""
+        if not (amount or unit or ingredient_name):
+            continue
+        ingredient_rows.append({"amount": amount, "unit": unit, "name": ingredient_name})
+        ingredients.append(f"{amount}, {unit}, {ingredient_name}")
+
     instructions = request.form.get("instructions", "").strip()
-    values = {"name": name, "tags": "\n".join(tags), "ingredients": "\n".join(ingredients), "instructions": instructions}
+    values = recipe_editor_values_from_form(name, instructions, ingredient_rows)
     errors = validate_recipe_fields(name, tags, ingredients, instructions, original_name)
-    # Run the same parser used by the rest of GroceryApp against a temporary file,
-    # so malformed sections/ingredients are rejected before touching the real recipe.
+    for field, label, choices in TAG_GROUPS:
+        if request.form.get(field, "").strip().casefold() not in choices:
+            errors.append(f"Choose a valid {label.lower()} tag.")
+    for tag in extra_tags:
+        if tag in ALL_CATEGORY_TAGS:
+            errors.append(f"'{tag}' belongs in its tag dropdown, not Additional tags.")
     if not errors:
         import tempfile
         from models import Recipe
@@ -285,7 +347,8 @@ def save_recipe_file(original_name):
     if errors:
         for error in errors:
             flash(error, "warning")
-        return render_template("recipe_edit.html", values=values, is_new=original_name is None, original_name=original_name or "", validation_errors=errors), 400
+        return render_template("recipe_edit.html", values=values, is_new=original_name is None,
+                               original_name=original_name or "", validation_errors=errors, tag_groups=TAG_GROUPS), 400
     target = RECIPE_DIR / f"{name}.txt"
     sections = ["## tags", *tags, "", "## ingredients", *ingredients, "", "## recipe", instructions, ""]
     temporary = target.with_suffix(".txt.tmp")
