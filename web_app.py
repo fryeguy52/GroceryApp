@@ -174,49 +174,65 @@ def save_menu():
             "INSERT INTO grocery_items(position, department, item) VALUES (?, ?, ?)", rows
         )
 
-    flash(f"Saved {len(chosen)} recipe(s) and rebuilt the shopping list.", "success")
+    flash(f"Saved {len(chosen)} recipe(s) and built the review.", "success")
+    return redirect(url_for("review_menu"))
 
-    # Match the desktop workflow: post each selected non-staples recipe to
-    # Todoist's Weekly Menu section, then post the grocery list to Shopping.
+
+@app.get("/review")
+def review_menu():
+    with db_session() as db:
+        recipes = [row["recipe_name"] for row in db.execute(
+            "SELECT recipe_name FROM menu_recipes ORDER BY position"
+        )]
+        items = [dict(row) for row in db.execute(
+            "SELECT id, position, department, item, checked FROM grocery_items ORDER BY position"
+        )]
+    grouped = []
+    for item in items:
+        if not grouped or grouped[-1]["department"] != item["department"]:
+            grouped.append({"department": item["department"], "items": []})
+        grouped[-1]["items"].append(item)
+    return render_template("review.html", recipes=recipes, groups=grouped, total_count=len(items))
+
+
+@app.post("/submit-todoist")
+def submit_to_todoist():
+    with db_session() as db:
+        names = [row["recipe_name"] for row in db.execute(
+            "SELECT recipe_name FROM menu_recipes ORDER BY position"
+        )]
+        items = [row for row in db.execute(
+            "SELECT department, item FROM grocery_items ORDER BY position"
+        )]
+
+    recipes = get_recipes()
+    recipe_failures = []
     try:
         from todoist_functions import post_recipe_to_todoist, post_grocery_list_to_todoist
-        recipe_failures = []
-        for recipe in selected_collection.recipe_list:
-            if recipe.is_grocery_staples_recipe:
+        for name in names:
+            recipe = recipes.get_recipe_by_name(name)
+            if recipe is None or recipe.is_grocery_staples_recipe:
                 continue
             if not post_recipe_to_todoist(recipe):
-                recipe_failures.append(recipe.get_name())
-        if recipe_failures:
-            flash(
-                "Some recipes were not confirmed in Todoist: "
-                + ", ".join(recipe_failures)
-                + ". Check todoist_settings.py and src/todoist_errors.log.",
-                "warning",
-            )
-        elif any(not recipe.is_grocery_staples_recipe for recipe in selected_collection.recipe_list):
-            flash("Recipes sent to Todoist's Weekly Menu section.", "success")
-    except Exception:
-        app.logger.exception("Unexpected error while sending recipes to Todoist")
-        flash("The menu was saved, but sending recipes to Todoist failed. Check the server log.", "warning")
+                recipe_failures.append(name)
 
-    # Match the desktop workflow: send the store-ordered grocery list to Todoist.
-    if selected_collection.grocery_list_by_store_order:
-        try:
-            if post_grocery_list_to_todoist(selected_collection.grocery_list_by_store_order):
-                flash("Grocery list sent to Todoist.", "success")
-            else:
-                flash(
-                    "The shopping list was built, but Todoist did not confirm the upload. "
-                    "Check todoist_settings.py and src/todoist_errors.log.",
-                    "warning",
-                )
-        except Exception:
-            app.logger.exception("Unexpected error while sending grocery list to Todoist")
-            flash(
-                "The shopping list was built, but sending it to Todoist failed. "
-                "Check the server log.",
-                "warning",
-            )
+        grocery_lines = [f'{row["department"]} -- {row["item"]}' for row in items]
+        grocery_ok = post_grocery_list_to_todoist(grocery_lines) if grocery_lines else False
+
+        if recipe_failures:
+            flash("Some recipe tasks could not be confirmed in Todoist: " + ", ".join(recipe_failures) + ".", "warning")
+        if grocery_ok:
+            flash("Grocery list sent to Todoist.", "success")
+        elif grocery_lines:
+            flash("Todoist did not confirm the grocery-list upload. Check todoist_settings.py and src/todoist_errors.log.", "warning")
+        if not recipe_failures and any(
+            (recipes.get_recipe_by_name(name) is not None and not recipes.get_recipe_by_name(name).is_grocery_staples_recipe)
+            for name in names
+        ):
+            flash("Recipe tasks sent to Todoist's Weekly Menu section.", "success")
+    except Exception:
+        app.logger.exception("Unexpected error while submitting menu to Todoist")
+        flash("The menu was kept locally, but the Todoist submission failed. Check the server log.", "warning")
 
     return redirect(url_for("shopping_list"))
 
