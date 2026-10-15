@@ -1,5 +1,19 @@
 {% extends "base.html" %}
-{% block title %}Plan menu · GroceryApp{% endblock %}
+{% block title %}Plan menu · GroceryApp<script>
+  (() => {
+    const form = document.querySelector('.recipe-form');
+    if (!form) return;
+    const updateCount = () => {
+      const count = form.querySelectorAll('input[name="recipe"]:checked').length
+        + Array.from(form.querySelectorAll('input[type="hidden"][name="recipe"]')).length;
+      document.getElementById('selected-count').textContent = count;
+      document.getElementById('selected-count-bottom').textContent = count;
+    };
+    form.querySelectorAll('input[type="checkbox"][name="recipe"]').forEach(input => input.addEventListener('change', updateCount));
+    updateCount();
+  })();
+</script>
+{% endblock %}
 {% block content %}
 <section class="intro">
   <p class="eyebrow">WEEKLY MEAL PLANNING</p>
@@ -16,7 +30,7 @@
 <form method="post" action="{{ url_for('save_menu') }}" class="recipe-form">
   <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
   <div class="section-heading">
-    <div><h2>Recipes</h2><p class="muted">{{ names|length }} shown · {{ selected|length }} currently in menu</p></div>
+    <div><h2>Recipes</h2><p class="muted">{{ names|length }} shown · <span id="selected-count">{{ selected|length }}</span> selected</p></div>
     <a class="text-link" href="{{ url_for('shopping_list') }}">View list →</a>
   </div>
   {% if no_matches %}<div class="empty-state">No recipes match those tags. Try a broader filter.</div>{% endif %}
@@ -32,6 +46,6 @@
   {% for name in selected if name not in names %}
     <input type="hidden" name="recipe" value="{{ name }}">
   {% endfor %}
-  <div class="sticky-actions"><span>{{ selected|length }} selected now</span><button type="submit" class="button">Save menu & build list</button></div>
+  <div class="sticky-actions"><span><strong id="selected-count-bottom">{{ selected|length }}</strong> recipes selected</span><button type="submit" class="button">Review menu & list</button></div>
 </form>
 {% endblock %}
