@@ -173,7 +173,29 @@ def save_menu():
         db.executemany(
             "INSERT INTO grocery_items(position, department, item) VALUES (?, ?, ?)", rows
         )
+
     flash(f"Saved {len(chosen)} recipe(s) and rebuilt the shopping list.", "success")
+
+    # Match the desktop workflow: send the store-ordered grocery list to Todoist.
+    if selected_collection.grocery_list_by_store_order:
+        try:
+            from todoist_functions import post_grocery_list_to_todoist
+            if post_grocery_list_to_todoist(selected_collection.grocery_list_by_store_order):
+                flash("Grocery list sent to Todoist.", "success")
+            else:
+                flash(
+                    "The shopping list was built, but Todoist did not confirm the upload. "
+                    "Check todoist_settings.py and src/todoist_errors.log.",
+                    "warning",
+                )
+        except Exception:
+            app.logger.exception("Unexpected error while sending grocery list to Todoist")
+            flash(
+                "The shopping list was built, but sending it to Todoist failed. "
+                "Check the server log.",
+                "warning",
+            )
+
     return redirect(url_for("shopping_list"))
 
 
