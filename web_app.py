@@ -156,7 +156,7 @@ def save_menu():
     selected_collection.sort_grocery_list_by_store_order(STORE_CONFIG, DEFAULT_STORE_CONFIG)
     selected_collection.write_recipe_usage_data(TIMESTAMP_DB)
 
-    with connect_db() as db:
+    with db_session() as db:
         db.execute("DELETE FROM menu_recipes")
         db.execute("DELETE FROM grocery_items")
         db.executemany(
@@ -179,7 +179,7 @@ def save_menu():
 
 @app.get("/list")
 def shopping_list():
-    with connect_db() as db:
+    with db_session() as db:
         recipes = [row["recipe_name"] for row in db.execute(
             "SELECT recipe_name FROM menu_recipes ORDER BY position"
         )]
@@ -200,7 +200,7 @@ def shopping_list():
 
 @app.post("/list/check/<int:item_id>")
 def toggle_item(item_id):
-    with connect_db() as db:
+    with db_session() as db:
         row = db.execute("SELECT checked FROM grocery_items WHERE id = ?", (item_id,)).fetchone()
         if row is None:
             abort(404)
@@ -210,7 +210,7 @@ def toggle_item(item_id):
 
 @app.post("/list/reset")
 def reset_checks():
-    with connect_db() as db:
+    with db_session() as db:
         db.execute("UPDATE grocery_items SET checked = 0")
     flash("All shopping-list items are unchecked.", "success")
     return redirect(url_for("shopping_list"))
