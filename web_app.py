@@ -153,7 +153,7 @@ def config():
     from store_config import get_item_dept_dicts_and_print_order_from_store_config_file
     _, departments, store_order = get_item_dept_dicts_and_print_order_from_store_config_file(STORE_CONFIG)
     _, default_departments, _ = get_item_dept_dicts_and_print_order_from_store_config_file(DEFAULT_STORE_CONFIG)
-    todoist_settings = ROOT / "todoist_settings.py"
+    todoist_settings = SRC / "todoist_settings.py"
     return render_template(
         "config.html",
         store_order=store_order,
