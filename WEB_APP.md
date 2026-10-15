@@ -17,6 +17,7 @@ This adds a mobile-friendly Flask interface alongside the existing Tkinter deskt
 From the directory where you want to keep the app:
 
 ```bash
+mkdir -p ~/apps
 sudo apt update
 sudo apt install -y python3-venv
 git clone https://github.com/fryeguy52/GroceryApp.git ~/apps/GroceryApp
