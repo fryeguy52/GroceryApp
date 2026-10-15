@@ -3,11 +3,13 @@
 {% block content %}
 <section class="intro"><p class="eyebrow">RECIPE LIBRARY</p><h1>{{ 'Add recipe' if is_new else 'Edit recipe' }}</h1><p>Choose one tag from each category. Ingredients are entered in separate fields; GroceryApp will format them for the recipe file.</p></section>
 <section class="panel">
+{% if import_review or values.import_source %}<div class="validation-summary"><h2>Imported draft — review before saving</h2><p>{{ values.import_note }}</p><p>Source: <a href="{{ values.import_source }}" target="_blank" rel="noopener noreferrer">{{ values.import_source }}</a></p></div>{% endif %}
 {% if validation_errors %}
   <div class="validation-summary" role="alert"><h2>Please fix these issues before saving</h2><ul>{% for error in validation_errors %}<li>{{ error }}</li>{% endfor %}</ul></div>
 {% endif %}
 <form method="post" action="{{ url_for('new_recipe') if is_new else url_for('edit_recipe', name=original_name) }}" class="recipe-edit-form">
 <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+{% if values.import_source %}<input type="hidden" name="import_source" value="{{ values.import_source }}"><input type="hidden" name="import_note" value="{{ values.import_note }}">{% endif %}
 <label>Recipe name<input type="text" name="name" value="{{ values.name }}" required maxlength="120"></label>
 <fieldset class="tag-picker">
   <legend>Recipe tags</legend><p class="hint">Select one option in each category.</p>
