@@ -13,7 +13,7 @@
   {% for group in groups %}
   <section class="panel list-section"><h2>{{ group.department }}</h2>
     <ul class="shopping-items">
-    {% for item in group.items %}
+    {% for item in group['items'] %}
       <li class="{% if item.checked %}is-checked{% endif %}">
         <form method="post" action="{{ url_for('toggle_item', item_id=item.id) }}">
           <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
