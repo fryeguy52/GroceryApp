@@ -49,18 +49,24 @@
     if (!form || !button) return;
 
     let submitting = false;
-    const acknowledgeClick = () => {
-      if (submitting) return;
+
+    // Show feedback on click, but don't disable the submit button until the
+    // browser has started the form submission. Disabling it in the click
+    // handler can prevent submission in some browsers.
+    button.addEventListener("click", () => {
+      button.textContent = "Submitting to Todoist…";
+      if (status) status.textContent = "Submission started. Please wait and do not press again.";
+    });
+
+    form.addEventListener("submit", (event) => {
+      if (submitting) {
+        event.preventDefault();
+        return;
+      }
       submitting = true;
       button.disabled = true;
-      button.textContent = "Submitting to Todoist…";
       button.setAttribute("aria-busy", "true");
-      if (status) status.textContent = "Submission started. Please wait and do not press again.";
-    };
-
-    // Acknowledge the click immediately, before the browser starts navigating.
-    button.addEventListener("click", acknowledgeClick);
-    form.addEventListener("submit", acknowledgeClick);
+    });
   });
 </script>
 {% endblock %}
