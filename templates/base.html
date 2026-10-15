@@ -13,6 +13,7 @@
     <nav class="tab-nav">
       <a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active{% endif %}">Menu</a>
       <a href="{{ url_for('shopping_list') }}" class="{% if request.endpoint in ['shopping_list', 'review_menu'] %}active{% endif %}">Shopping List</a>
+      <a href="{{ url_for('recipe_manager') }}" class="{% if request.endpoint in ['recipe_manager', 'new_recipe', 'edit_recipe'] %}active{% endif %}">Recipes</a>
       <a href="{{ url_for('history') }}" class="{% if request.endpoint == 'history' %}active{% endif %}">History</a>
       <a href="{{ url_for('config') }}" class="{% if request.endpoint == 'config' %}active{% endif %}">Config</a>
     </nav>
