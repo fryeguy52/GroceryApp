@@ -176,10 +176,32 @@ def save_menu():
 
     flash(f"Saved {len(chosen)} recipe(s) and rebuilt the shopping list.", "success")
 
+    # Match the desktop workflow: post each selected non-staples recipe to
+    # Todoist's Weekly Menu section, then post the grocery list to Shopping.
+    try:
+        from todoist_functions import post_recipe_to_todoist, post_grocery_list_to_todoist
+        recipe_failures = []
+        for recipe in selected_collection.recipe_list:
+            if recipe.is_grocery_staples_recipe:
+                continue
+            if not post_recipe_to_todoist(recipe):
+                recipe_failures.append(recipe.get_name())
+        if recipe_failures:
+            flash(
+                "Some recipes were not confirmed in Todoist: "
+                + ", ".join(recipe_failures)
+                + ". Check todoist_settings.py and src/todoist_errors.log.",
+                "warning",
+            )
+        elif any(not recipe.is_grocery_staples_recipe for recipe in selected_collection.recipe_list):
+            flash("Recipes sent to Todoist's Weekly Menu section.", "success")
+    except Exception:
+        app.logger.exception("Unexpected error while sending recipes to Todoist")
+        flash("The menu was saved, but sending recipes to Todoist failed. Check the server log.", "warning")
+
     # Match the desktop workflow: send the store-ordered grocery list to Todoist.
     if selected_collection.grocery_list_by_store_order:
         try:
-            from todoist_functions import post_grocery_list_to_todoist
             if post_grocery_list_to_todoist(selected_collection.grocery_list_by_store_order):
                 flash("Grocery list sent to Todoist.", "success")
             else:
