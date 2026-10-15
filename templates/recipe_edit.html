@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Add recipe' if is_new else 'Edit ' ~ values.name }} · GroceryApp{% endblock %}
+{% block content %}
+<section class="intro"><p class="eyebrow">RECIPE LIBRARY</p><h1>{{ 'Add recipe' if is_new else 'Edit recipe' }}</h1><p>One ingredient per line, formatted as amount, unit, ingredient name. Use a blank unit when needed, e.g. <code>2, , eggs</code>.</p></section>
+<section class="panel"><form method="post" action="{{ url_for('new_recipe') if is_new else url_for('edit_recipe', name=original_name) }}" class="recipe-edit-form">
+<input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+<label>Recipe name<input type="text" name="name" value="{{ values.name }}" required maxlength="120"></label>
+<label>Tags <span class="hint">One tag per line. Include food type, season, difficulty, cuisine, cooking method and meal type for best filtering.</span><textarea name="tags" rows="8" required>{{ values.tags }}</textarea></label>
+<label>Ingredients <span class="hint">One ingredient per line: amount, unit, ingredient name</span><textarea class="ingredients-field" name="ingredients" required>{{ values.ingredients }}</textarea></label>
+<label>Instructions <span class="hint">Plain text; line breaks are preserved.</span><textarea class="instructions-field" name="instructions">{{ values.instructions }}</textarea></label>
+<div class="appearance-actions"><button class="button" type="submit">Save recipe</button><a href="{{ url_for('recipe_manager') }}" class="button secondary">Cancel</a></div>
+</form></section>
+{% endblock %}
