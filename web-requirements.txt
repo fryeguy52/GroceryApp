@@ -1,0 +1,3 @@
+# Dependencies for the LAN web interface; desktop requirements remain unchanged.
+Flask>=3.0,<4.0
+gunicorn>=22.0
