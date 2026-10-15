@@ -32,7 +32,7 @@
   {% for name in selected if name not in names %}
     <input type="hidden" name="recipe" value="{{ name }}">
   {% endfor %}
-  <div class="sticky-actions"><span><strong id="selected-count-bottom">{{ selected|length }}</strong> recipes selected</span><button type="submit" class="button">Review menu & list</button></div>
+  <div class="sticky-actions"><span><strong id="selected-count-bottom">{{ selected|length }}</strong> recipes selected</span><div class="button-row"><button type="submit" formaction="{{ url_for('reset_menu') }}" class="button secondary" formnovalidate>Reset selections</button><button type="submit" class="button">Review menu & list</button></div></div>
 </form>
 <script>
   (() => {
