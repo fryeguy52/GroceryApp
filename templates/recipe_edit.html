@@ -2,7 +2,11 @@
 {% block title %}{{ 'Add recipe' if is_new else 'Edit ' ~ values.name }} · GroceryApp{% endblock %}
 {% block content %}
 <section class="intro"><p class="eyebrow">RECIPE LIBRARY</p><h1>{{ 'Add recipe' if is_new else 'Edit recipe' }}</h1><p>One ingredient per line, formatted as amount, unit, ingredient name. Use a blank unit when needed, e.g. <code>2, , eggs</code>.</p></section>
-<section class="panel"><form method="post" action="{{ url_for('new_recipe') if is_new else url_for('edit_recipe', name=original_name) }}" class="recipe-edit-form">
+<section class="panel">
+{% if validation_errors %}
+  <div class="validation-summary" role="alert"><h2>Please fix these issues before saving</h2><ul>{% for error in validation_errors %}<li>{{ error }}</li>{% endfor %}</ul></div>
+{% endif %}
+<form method="post" action="{{ url_for('new_recipe') if is_new else url_for('edit_recipe', name=original_name) }}" class="recipe-edit-form">
 <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
 <label>Recipe name<input type="text" name="name" value="{{ values.name }}" required maxlength="120"></label>
 <label>Tags <span class="hint">One tag per line. Include food type, season, difficulty, cuisine, cooking method and meal type for best filtering.</span><textarea name="tags" rows="8" required>{{ values.tags }}</textarea></label>
