@@ -201,27 +201,94 @@ def edit_recipe(name):
     return render_template("recipe_edit.html", values=recipe_editor_values(recipe), is_new=False, original_name=name)
 
 
+def validate_recipe_fields(name, tags, ingredients, instructions, original_name=None):
+    errors = []
+    if not name:
+        errors.append("Recipe name is required.")
+    elif len(name) > 120:
+        errors.append("Recipe name must be 120 characters or fewer.")
+    elif name in {".", ".."} or any(c in name for c in ("/", "\\", "\0")):
+        errors.append("Recipe name cannot contain slashes or be a path.")
+    if not tags:
+        errors.append("Add at least one tag.")
+    normalized_tags = [tag.casefold() for tag in tags]
+    if len(normalized_tags) != len(set(normalized_tags)):
+        errors.append("Tags must be unique; remove duplicate tags.")
+    required_tag_groups = [
+        ({"chicken", "turkey", "beef", "pork", "fish", "shrimp", "vegetarian"}, "food type"),
+        ({"summer", "fall", "winter", "spring"}, "season"),
+        ({"easy", "medium", "hard"}, "difficulty"),
+        ({"asian", "italian", "mexican", "american", "indian", "greek", "european", "middle eastern", "mediterranean"}, "cuisine"),
+        ({"stove", "grill", "oven", "crock pot", "instant pot", "no cooking"}, "cooking method"),
+        ({"breakfast", "lunch", "dinner", "side"}, "meal type"),
+    ]
+    for choices, label in required_tag_groups:
+        if not any(tag.casefold() in choices for tag in tags):
+            errors.append(f"Add a {label} tag (for example: {', '.join(sorted(choices))}).")
+    if not ingredients:
+        errors.append("Add at least one ingredient.")
+    for index, line in enumerate(ingredients, start=1):
+        parts = [part.strip() for part in line.split(",")]
+        if len(parts) != 3:
+            errors.append(f"Ingredient line {index} must have three comma-separated fields: amount, unit, ingredient name.")
+            continue
+        amount, unit, ingredient_name = parts
+        if not amount or not re.fullmatch(r"(?:\d+(?:\.\d+)?|\.\d+|\d+\s*/\s*\d+|\d+\s+\d+\s*/\s*\d+|\d+(?:\.\d+)?\s*(?:to|-)\s*\d+(?:\.\d+)?)", amount, re.IGNORECASE):
+            errors.append(f"Ingredient line {index} has an invalid amount '{amount}'. Use a positive number, fraction, or range.")
+        else:
+            try:
+                if "/" in amount:
+                    pieces = amount.split()
+                    numeric = sum(float(part.split("/")[0]) / float(part.split("/")[1]) for part in pieces if "/" in part) + sum(float(part) for part in pieces if "/" not in part)
+                elif re.search(r"\s(?:to|-)\s", amount, re.IGNORECASE):
+                    numeric = float(re.split(r"\s(?:to|-)\s", amount, flags=re.IGNORECASE)[0])
+                else:
+                    numeric = float(amount)
+                if numeric <= 0:
+                    errors.append(f"Ingredient line {index} amount must be greater than zero.")
+            except (ValueError, ZeroDivisionError):
+                errors.append(f"Ingredient line {index} has an invalid amount '{amount}'.")
+        if not ingredient_name:
+            errors.append(f"Ingredient line {index} is missing the ingredient name.")
+    target = RECIPE_DIR / f"{name}.txt" if name else None
+    if target and target.exists() and name != original_name:
+        errors.append("A recipe with that name already exists.")
+    return errors
+
+
 def save_recipe_file(original_name):
     name = request.form.get("name", "").strip()
     tags = [x.strip() for x in request.form.get("tags", "").splitlines() if x.strip()]
     ingredients = [x.strip() for x in request.form.get("ingredients", "").splitlines() if x.strip()]
     instructions = request.form.get("instructions", "").strip()
     values = {"name": name, "tags": "\n".join(tags), "ingredients": "\n".join(ingredients), "instructions": instructions}
-    if not name or name in {".", ".."} or any(c in name for c in ("/", "\\", "\0")):
-        flash("Enter a valid recipe name without slashes.", "warning")
-        return render_template("recipe_edit.html", values=values, is_new=original_name is None, original_name=original_name or ""), 400
-    if not tags:
-        flash("Add at least one tag.", "warning")
-        return render_template("recipe_edit.html", values=values, is_new=original_name is None, original_name=original_name or ""), 400
-    bad = [line for line in ingredients if len(line.split(",")) != 3]
-    if bad:
-        flash("Each ingredient must use amount, unit, ingredient name. Fix: " + "; ".join(bad[:3]), "warning")
-        return render_template("recipe_edit.html", values=values, is_new=original_name is None, original_name=original_name or ""), 400
+    errors = validate_recipe_fields(name, tags, ingredients, instructions, original_name)
+    # Run the same parser used by the rest of GroceryApp against a temporary file,
+    # so malformed sections/ingredients are rejected before touching the real recipe.
+    if not errors:
+        import tempfile
+        from models import Recipe
+        candidate_text = "\n".join(["## tags", *tags, "", "## ingredients", *ingredients, "", "## recipe", instructions, ""])
+        try:
+            with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", suffix=".txt", delete=False) as handle:
+                handle.write(candidate_text)
+                candidate_path = Path(handle.name)
+            try:
+                parsed = Recipe(candidate_path)
+                errors.extend(parsed.recipe_file_errors)
+            finally:
+                candidate_path.unlink(missing_ok=True)
+        except (OSError, ValueError) as exc:
+            errors.append(f"Recipe could not be parsed: {exc}")
+    if errors:
+        for error in errors:
+            flash(error, "warning")
+        return render_template("recipe_edit.html", values=values, is_new=original_name is None, original_name=original_name or "", validation_errors=errors), 400
     target = RECIPE_DIR / f"{name}.txt"
-    if target.exists() and name != original_name:
-        flash("A recipe with that name already exists.", "warning")
-        return render_template("recipe_edit.html", values=values, is_new=original_name is None, original_name=original_name or ""), 409
-    target.write_text("\n".join(["## tags", *tags, "", "## ingredients", *ingredients, "", "## recipe", instructions, ""]), encoding="utf-8")
+    sections = ["## tags", *tags, "", "## ingredients", *ingredients, "", "## recipe", instructions, ""]
+    temporary = target.with_suffix(".txt.tmp")
+    temporary.write_text("\n".join(sections), encoding="utf-8")
+    temporary.replace(target)
     if original_name and original_name != name:
         (RECIPE_DIR / f"{original_name}.txt").unlink(missing_ok=True)
         with db_session() as db:
