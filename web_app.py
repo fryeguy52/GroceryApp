@@ -140,6 +140,30 @@ def recipe_detail(name):
     return render_template("recipe.html", recipe=recipe)
 
 
+@app.get("/history")
+def history():
+    from timestamp_db import TimestampDB
+    with TimestampDB(TIMESTAMP_DB) as db:
+        usage = db.get_all_usage()
+    return render_template("history.html", usage=usage)
+
+
+@app.get("/config")
+def config():
+    from store_config import get_item_dept_dicts_and_print_order_from_store_config_file
+    _, departments, store_order = get_item_dept_dicts_and_print_order_from_store_config_file(STORE_CONFIG)
+    _, default_departments, _ = get_item_dept_dicts_and_print_order_from_store_config_file(DEFAULT_STORE_CONFIG)
+    todoist_settings = ROOT / "todoist_settings.py"
+    return render_template(
+        "config.html",
+        store_order=store_order,
+        store_department_count=len(departments),
+        default_department_count=len(default_departments),
+        todoist_configured=todoist_settings.exists(),
+        data_dir=DATA_DIR,
+    )
+
+
 @app.post("/menu")
 def save_menu():
     names = request.form.getlist("recipe")
