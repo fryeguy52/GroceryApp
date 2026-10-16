@@ -79,6 +79,207 @@ def _resolve_project_and_section(api, target_project: str, target_section: str):
         return None, None
 
 
+# ------------------------------------------------------------------ batched web-app submission
+def _iter_resources(paged_result):
+    """Flatten the SDK's paginated resource results into individual objects."""
+    for page in paged_result:
+        if isinstance(page, (list, tuple)):
+            yield from page
+        else:
+            yield page
+
+
+def _resolve_target_ids(api):
+    """Fetch projects and sections once and resolve both web-app destinations."""
+    projects = list(_iter_resources(api.get_projects()))
+    sections = list(_iter_resources(api.get_sections()))
+    project_ids = {project.name: project.id for project in projects}
+    section_ids = {section.name: section.id for section in sections}
+
+    targets = {
+        ("The Mental Load", "Weekly Menu"): (
+            project_ids.get("The Mental Load"), section_ids.get("Weekly Menu")
+        ),
+        ("The Mental Load", "Shopping"): (
+            project_ids.get("The Mental Load"), section_ids.get("Shopping")
+        ),
+    }
+    for (project_name, section_name), (project_id, section_id) in targets.items():
+        if not project_id or not section_id:
+            log.error(
+                'Could not resolve Todoist project/section "%s" / "%s". '
+                'Projects available: %s; sections available: %s',
+                project_name, section_name,
+                [project.name for project in projects],
+                [section.name for section in sections],
+            )
+            return None
+    return targets
+
+
+def _sync_commands(token, commands):
+    """Submit one batch of up to 100 Todoist Sync API commands."""
+    import json
+    import requests
+
+    if not commands:
+        return {}
+    if len(commands) > 100:
+        raise ValueError("Todoist Sync API batches are limited to 100 commands.")
+
+    response = requests.post(
+        "https://api.todoist.com/api/v1/sync",
+        headers={"Authorization": f"Bearer {token}"},
+        data={"commands": json.dumps(commands)},
+        timeout=(5, 45),
+    )
+    response.raise_for_status()
+    payload = response.json()
+    statuses = payload.get("sync_status", {})
+    for command in commands:
+        command_uuid = command["uuid"]
+        status = statuses.get(command_uuid)
+        if status != "ok":
+            log.error("Todoist command %s failed or was not confirmed: %r", command_uuid, status)
+    return payload
+
+
+def _new_command(command_type, args, *, temp_id=None):
+    """Build a Sync API command with unique IDs for idempotency and dependencies."""
+    import uuid
+
+    command = {
+        "type": command_type,
+        "uuid": str(uuid.uuid4()),
+        "args": args,
+    }
+    if temp_id is not None:
+        command["temp_id"] = temp_id
+    return command
+
+
+def post_menu_to_todoist(recipes: list, grocery_list_by_store_order: list) -> tuple[list, bool]:
+    """
+    Submit recipe tasks and the grocery checklist using Todoist Sync API batches.
+
+    Recipe tasks are batched together. The grocery parent and its first subtasks
+    are created in one batch using a temporary parent ID; larger lists continue
+    in batches referencing the confirmed parent ID. Returns (failed_recipe_names,
+    grocery_success). Existing single-task functions remain available to the
+    desktop app.
+    """
+    failed_recipes = []
+    grocery_success = False
+
+    try:
+        from todoist_settings import todoist_API_token
+    except ImportError:
+        log.error("todoist_settings.py not found — cannot submit menu.")
+        return [recipe.get_name() for recipe in recipes], False
+
+    api = _get_api()
+    if api is None:
+        return [recipe.get_name() for recipe in recipes], False
+
+    try:
+        targets = _resolve_target_ids(api)
+    except Exception:
+        log.exception("Could not resolve Todoist project and section IDs")
+        return [recipe.get_name() for recipe in recipes], False
+    if targets is None:
+        return [recipe.get_name() for recipe in recipes], False
+
+    weekly_project_id, weekly_section_id = targets[("The Mental Load", "Weekly Menu")]
+    shopping_project_id, shopping_section_id = targets[("The Mental Load", "Shopping")]
+
+    recipe_commands = []
+    recipe_by_uuid = {}
+    for recipe in recipes:
+        command = _new_command("item_add", {
+            "content": recipe.get_name(),
+            "project_id": weekly_project_id,
+            "section_id": weekly_section_id,
+            "description": recipe.get_instructional_text(),
+            "due": {"string": "Today"},
+        })
+        recipe_commands.append(command)
+        recipe_by_uuid[command["uuid"]] = recipe.get_name()
+
+    for offset in range(0, len(recipe_commands), 100):
+        batch = recipe_commands[offset:offset + 100]
+        try:
+            result = _sync_commands(todoist_API_token, batch)
+            statuses = result.get("sync_status", {})
+            for command in batch:
+                if statuses.get(command["uuid"]) != "ok":
+                    failed_recipes.append(recipe_by_uuid[command["uuid"]])
+            log.info("Submitted recipe batch: %d task(s).", len(batch))
+        except Exception:
+            log.exception("Error submitting batched recipe tasks to Todoist")
+            failed_recipes.extend(recipe_by_uuid[command["uuid"]] for command in batch)
+
+    grocery_items = [item.strip() for item in grocery_list_by_store_order if item and item.strip()]
+    if not grocery_items:
+        return failed_recipes, False
+
+    import uuid
+    timestamp = datetime.now().strftime("%a %d %b %Y %H:%M")
+    parent_name = f"Groceries - {timestamp}"
+    parent_temp_id = str(uuid.uuid4())
+    parent_command = _new_command("item_add", {
+        "content": parent_name,
+        "project_id": shopping_project_id,
+        "section_id": shopping_section_id,
+        "due": {"string": "Today"},
+    }, temp_id=parent_temp_id)
+
+    # Keep the parent in the first batch so its temporary ID can be resolved.
+    first_commands = [parent_command]
+    for item in grocery_items[:99]:
+        first_commands.append(_new_command("item_add", {
+            "content": item,
+            "project_id": shopping_project_id,
+            "parent_id": parent_temp_id,
+        }, temp_id=str(uuid.uuid4())))
+
+    try:
+        result = _sync_commands(todoist_API_token, first_commands)
+        statuses = result.get("sync_status", {})
+        parent_ok = statuses.get(parent_command["uuid"]) == "ok"
+        parent_id = result.get("temp_id_mapping", {}).get(parent_temp_id)
+        items_ok = all(statuses.get(command["uuid"]) == "ok" for command in first_commands[1:])
+
+        if parent_ok and parent_id:
+            remaining = grocery_items[99:]
+            for offset in range(0, len(remaining), 100):
+                batch = [
+                    _new_command("item_add", {
+                        "content": item,
+                        "project_id": shopping_project_id,
+                        "parent_id": parent_id,
+                    }, temp_id=str(uuid.uuid4()))
+                    for item in remaining[offset:offset + 100]
+                ]
+                result_more = _sync_commands(todoist_API_token, batch)
+                more_statuses = result_more.get("sync_status", {})
+                items_ok = items_ok and all(
+                    more_statuses.get(command["uuid"]) == "ok" for command in batch
+                )
+        else:
+            log.error("Todoist did not confirm the grocery parent task or return its ID.")
+            items_ok = False
+
+        grocery_success = parent_ok and bool(parent_id) and items_ok
+        if grocery_success:
+            log.info("Submitted grocery parent and %d subtask(s) to Todoist.", len(grocery_items))
+        else:
+            log.warning("Todoist grocery submission was only partially confirmed.")
+    except Exception:
+        log.exception("Error submitting batched grocery list to Todoist")
+
+    return failed_recipes, grocery_success
+
+
 # ------------------------------------------------------------------ public API
 def post_recipe_to_todoist(recipe) -> bool:
     """
