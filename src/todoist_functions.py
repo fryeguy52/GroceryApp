@@ -94,14 +94,23 @@ def _resolve_target_ids(api):
     projects = list(_iter_resources(api.get_projects()))
     sections = list(_iter_resources(api.get_sections()))
     project_ids = {project.name: project.id for project in projects}
-    section_ids = {section.name: section.id for section in sections}
+    mental_load_project_id = project_ids.get("The Mental Load")
+    # Section names are not globally unique in Todoist. Resolve each section
+    # within its intended project so a same-named section elsewhere cannot
+    # send tasks to the wrong destination.
+    section_ids = {
+        (section.project_id, section.name): section.id
+        for section in sections
+    }
 
     targets = {
         ("The Mental Load", "Weekly Menu"): (
-            project_ids.get("The Mental Load"), section_ids.get("Weekly Menu")
+            mental_load_project_id,
+            section_ids.get((mental_load_project_id, "Weekly Menu"))
         ),
         ("The Mental Load", "Shopping"): (
-            project_ids.get("The Mental Load"), section_ids.get("Shopping")
+            mental_load_project_id,
+            section_ids.get((mental_load_project_id, "Shopping"))
         ),
     }
     for (project_name, section_name), (project_id, section_id) in targets.items():
