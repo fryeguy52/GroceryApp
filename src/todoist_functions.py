@@ -17,6 +17,7 @@ __author__ = 'Joe'
 
 import logging
 import sys
+import uuid
 from datetime import datetime
 from pathlib import Path
 
@@ -212,7 +213,7 @@ def post_menu_to_todoist(recipes: list, grocery_list_by_store_order: list) -> tu
             "section_id": weekly_section_id,
             "description": recipe.get_instructional_text(),
             "due": {"string": "Today"},
-        }, temp_id=str(__import__("uuid").uuid4()))
+        }, temp_id=str(uuid.uuid4()))
         recipe_commands.append(command)
         recipe_by_uuid[command["uuid"]] = recipe.get_name()
 
@@ -233,7 +234,6 @@ def post_menu_to_todoist(recipes: list, grocery_list_by_store_order: list) -> tu
     if not grocery_items:
         return failed_recipes, False
 
-    import uuid
     timestamp = datetime.now().strftime("%a %d %b %Y %H:%M")
     parent_name = f"Groceries - {timestamp}"
     parent_temp_id = str(uuid.uuid4())
