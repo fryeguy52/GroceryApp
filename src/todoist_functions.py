@@ -204,13 +204,15 @@ def post_menu_to_todoist(recipes: list, grocery_list_by_store_order: list) -> tu
     recipe_commands = []
     recipe_by_uuid = {}
     for recipe in recipes:
+        # The Todoist Sync API requires a temp_id for every item_add
+        # command, including standalone recipe tasks.
         command = _new_command("item_add", {
             "content": recipe.get_name(),
             "project_id": weekly_project_id,
             "section_id": weekly_section_id,
             "description": recipe.get_instructional_text(),
             "due": {"string": "Today"},
-        })
+        }, temp_id=str(__import__("uuid").uuid4()))
         recipe_commands.append(command)
         recipe_by_uuid[command["uuid"]] = recipe.get_name()
 
