@@ -71,7 +71,9 @@
       }
       submitting = true;
       showSubmitting();
-      button.disabled = true;
+      // Keep the submit control enabled for Safari/iOS. The guard above
+      // prevents duplicate form submissions without interfering with native
+      // form navigation on touch browsers.
     });
   })();
 </script>
