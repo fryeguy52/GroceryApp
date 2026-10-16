@@ -531,16 +531,16 @@ def submit_to_todoist():
     recipes = get_recipes()
     recipe_failures = []
     try:
-        from todoist_functions import post_recipe_to_todoist, post_grocery_list_to_todoist
+        from todoist_functions import post_menu_to_todoist
+
+        selected_recipes = []
         for name in names:
             recipe = recipes.get_recipe_by_name(name)
-            if recipe is None or recipe.is_grocery_staples_recipe:
-                continue
-            if not post_recipe_to_todoist(recipe):
-                recipe_failures.append(name)
+            if recipe is not None and not recipe.is_grocery_staples_recipe:
+                selected_recipes.append(recipe)
 
         grocery_lines = [f'{row["department"]} -- {row["item"]}' for row in items]
-        grocery_ok = post_grocery_list_to_todoist(grocery_lines) if grocery_lines else False
+        recipe_failures, grocery_ok = post_menu_to_todoist(selected_recipes, grocery_lines)
 
         if recipe_failures:
             flash("Some recipe tasks could not be confirmed in Todoist: " + ", ".join(recipe_failures) + ".", "warning")
@@ -548,10 +548,7 @@ def submit_to_todoist():
             flash("Grocery list sent to Todoist.", "success")
         elif grocery_lines:
             flash("Todoist did not confirm the grocery-list upload. Check todoist_settings.py and src/todoist_errors.log.", "warning")
-        if not recipe_failures and any(
-            (recipes.get_recipe_by_name(name) is not None and not recipes.get_recipe_by_name(name).is_grocery_staples_recipe)
-            for name in names
-        ):
+        if selected_recipes and not recipe_failures:
             flash("Recipe tasks sent to Todoist's Weekly Menu section.", "success")
     except Exception:
         app.logger.exception("Unexpected error while submitting menu to Todoist")
