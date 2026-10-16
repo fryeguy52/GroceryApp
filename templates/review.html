@@ -42,21 +42,27 @@
   <span id="todoist-submit-status" role="status" aria-live="polite"></span>
 </form>
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+  (() => {
     const form = document.getElementById("todoist-submit-form");
     const button = document.getElementById("todoist-submit-button");
     const status = document.getElementById("todoist-submit-status");
     if (!form || !button) return;
 
     let submitting = false;
+    const showSubmitting = () => {
+      button.textContent = "Sending…";
+      button.classList.add("is-submitting");
+      button.setAttribute("aria-busy", "true");
+      if (status) {
+        status.textContent = "Sending to Todoist. Please wait…";
+        status.classList.add("is-visible");
+      }
+    };
 
-    // Show feedback on click, but don't disable the submit button until the
-    // browser has started the form submission. Disabling it in the click
-    // handler can prevent submission in some browsers.
-    button.addEventListener("click", () => {
-      button.textContent = "Submitting to Todoist…";
-      if (status) status.textContent = "Submission started. Please wait and do not press again.";
-    });
+    // Give touch users feedback on contact, then repeat it on submit as a
+    // fallback for browser-specific form behavior and keyboard submission.
+    button.addEventListener("pointerdown", showSubmitting, { passive: true });
+    button.addEventListener("click", showSubmitting);
 
     form.addEventListener("submit", (event) => {
       if (submitting) {
@@ -64,9 +70,9 @@
         return;
       }
       submitting = true;
+      showSubmitting();
       button.disabled = true;
-      button.setAttribute("aria-busy", "true");
     });
-  });
+  })();
 </script>
 {% endblock %}
