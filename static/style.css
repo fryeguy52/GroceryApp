@@ -177,3 +177,14 @@ footer { padding: 1.2rem; color: var(--muted); text-align: center; font-size: .7
   .ingredient-row { grid-template-columns:minmax(0,.85fr) minmax(0,.85fr) minmax(0,1.8fr) 2rem; gap:.3rem; }
   .ingredient-row input { padding:.6rem .35rem; font-size:.9rem; }
 }
+
+
+/* High-visibility feedback while submitting to Todoist, including touch screens */
+#todoist-submit-status { display:none; flex-basis:100%; font-size:.95rem; font-weight:750; color:var(--green-dark); }
+#todoist-submit-status.is-visible { display:block; padding:.7rem .85rem; border-radius:9px; background:var(--green-soft); }
+#todoist-submit-button.is-submitting { background:var(--green-dark); opacity:.9; }
+#todoist-submit-button:disabled { cursor:wait; }
+@media (max-width:620px) {
+  #todoist-submit-status.is-visible { text-align:center; }
+  #todoist-submit-button { min-height:3rem; }
+}
