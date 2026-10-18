@@ -141,21 +141,54 @@ def protect_post_requests():
 
 @app.get("/")
 def index():
-    tags = request.args.get("tags", "").strip().lower().split()
+    # Accept repeated filter rows from the recipe-filter form. Multiple active
+    # rules are combined with AND; each rule searches tags or ingredient names.
+    filter_types = request.args.getlist("filter_type")
+    filter_operators = request.args.getlist("filter_operator")
+    filter_texts = request.args.getlist("filter_text")
+    filters = []
+    for i in range(max(len(filter_types), len(filter_operators), len(filter_texts))):
+        kind = filter_types[i] if i < len(filter_types) else "tag"
+        operator = filter_operators[i] if i < len(filter_operators) else "includes"
+        value = filter_texts[i].strip() if i < len(filter_texts) else ""
+        if kind not in {"tag", "ingredient"}:
+            kind = "tag"
+        if operator not in {"includes", "excludes"}:
+            operator = "includes"
+        if value:
+            filters.append({"type": kind, "operator": operator, "text": value})
+
+    # Preserve support for old bookmarked URLs that use ?tags=...
+    legacy_tags = request.args.get("tags", "").strip().casefold().split()
     recipes = get_recipes()
-    names = recipes.get_recipe_names(tags)
-    if names and names[0].startswith("No recipes match"):
-        names = []
-        no_matches = True
-    else:
-        no_matches = False
+    matched_recipes = []
+    for recipe in recipes.recipe_list:
+        matches_all = True
+        for rule in filters:
+            needle = rule["text"].casefold()
+            if rule["type"] == "tag":
+                found = any(needle in tag.casefold() for tag in recipe.tags)
+            else:
+                found = any(needle in ingredient.name.casefold() for ingredient in recipe.ingredient_list)
+            if (rule["operator"] == "includes" and not found) or (rule["operator"] == "excludes" and found):
+                matches_all = False
+                break
+        if matches_all and legacy_tags and not set(legacy_tags).issubset({tag.casefold() for tag in recipe.tags}):
+            matches_all = False
+        if matches_all:
+            matched_recipes.append(recipe.name)
+
+    names = set(matched_recipes)
+    filtering_active = bool(filters or legacy_tags)
+    no_matches = filtering_active and not matched_recipes
     with db_session() as db:
         selected = [row["recipe_name"] for row in db.execute(
             "SELECT recipe_name FROM menu_recipes ORDER BY position"
         )]
     return render_template(
-        "index.html", recipes=recipes.recipe_list, names=set(names),
-        tags=" ".join(tags), selected=selected, no_matches=no_matches,
+        "index.html", recipes=recipes.recipe_list, names=names,
+        filters=filters or ([{"type": "tag", "operator": "includes", "text": " ".join(legacy_tags)}] if legacy_tags else [{"type": "tag", "operator": "includes", "text": ""}]),
+        selected=selected, no_matches=no_matches,
     )
 
 
@@ -498,7 +531,11 @@ def reset_menu():
         db.execute("DELETE FROM menu_recipes")
         db.execute("DELETE FROM grocery_items")
     flash("All recipe selections have been cleared.", "success")
-    return redirect(url_for("index", tags=request.form.get("tags", "")))
+    return redirect(url_for("index", **{
+        "filter_type": request.form.getlist("filter_type"),
+        "filter_operator": request.form.getlist("filter_operator"),
+        "filter_text": request.form.getlist("filter_text"),
+    }))
 
 
 @app.get("/review")
