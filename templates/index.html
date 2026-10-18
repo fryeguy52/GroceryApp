@@ -7,20 +7,62 @@
   <p>Choose recipes for the week. Next, review the menu and store-ordered grocery list before sending anything to Todoist.</p>
 </section>
 <section class="panel">
-  <form method="get" action="{{ url_for('index') }}" class="filter-form">
-    <label for="tags">Filter by tags</label>
-    <div class="filter-row"><input id="tags" name="tags" value="{{ tags }}" placeholder="e.g. chicken easy dinner"><button type="submit" class="button secondary">Filter</button></div>
-    <p class="hint">Use tags separated by spaces. Every entered tag must match.</p>
+  <form method="get" action="{{ url_for('index') }}" class="filter-form" id="recipe-filter-form">
+    <div class="section-heading filter-heading">
+      <div><h2>Recipe filters</h2><p class="muted">Combine filters to narrow the list.</p></div>
+    </div>
+    <div id="filter-rows">
+      {% for filter in filters %}
+      <div class="filter-row filter-rule">
+        <label class="visually-hidden" for="filter-type-{{ loop.index }}">Filter by</label>
+        <select id="filter-type-{{ loop.index }}" name="filter_type" aria-label="Filter by">
+          <option value="tag" {% if filter.type == 'tag' %}selected{% endif %}>Tag</option>
+          <option value="ingredient" {% if filter.type == 'ingredient' %}selected{% endif %}>Ingredient</option>
+        </select>
+        <label class="visually-hidden" for="filter-operator-{{ loop.index }}">Matching rule</label>
+        <select id="filter-operator-{{ loop.index }}" name="filter_operator" aria-label="Matching rule">
+          <option value="includes" {% if filter.operator == 'includes' %}selected{% endif %}>Includes</option>
+          <option value="excludes" {% if filter.operator == 'excludes' %}selected{% endif %}>Does not include</option>
+        </select>
+        <label class="visually-hidden" for="filter-text-{{ loop.index }}">Search text</label>
+        <input id="filter-text-{{ loop.index }}" name="filter_text" value="{{ filter.text }}" placeholder="e.g. chicken" aria-label="Search text">
+        <button type="button" class="remove-filter" aria-label="Remove this filter" title="Remove filter">×</button>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="filter-actions">
+      <button type="button" id="add-filter" class="button secondary">+ Add new filter</button>
+      <button type="submit" class="button">Apply filters</button>
+      <a class="text-link" href="{{ url_for('index') }}">Clear all</a>
+    </div>
+    <p class="hint">All filters must match. Ingredient searches look at ingredient names; tag searches match any part of a tag.</p>
+    <template id="filter-row-template">
+      <div class="filter-row filter-rule">
+        <label class="visually-hidden">Filter by</label>
+        <select name="filter_type" aria-label="Filter by">
+          <option value="tag">Tag</option>
+          <option value="ingredient">Ingredient</option>
+        </select>
+        <label class="visually-hidden">Matching rule</label>
+        <select name="filter_operator" aria-label="Matching rule">
+          <option value="includes">Includes</option>
+          <option value="excludes">Does not include</option>
+        </select>
+        <label class="visually-hidden">Search text</label>
+        <input name="filter_text" placeholder="e.g. chicken" aria-label="Search text">
+        <button type="button" class="remove-filter" aria-label="Remove this filter" title="Remove filter">×</button>
+      </div>
+    </template>
   </form>
 </section>
 <form method="post" action="{{ url_for('save_menu') }}" class="recipe-form">
   <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
-  <input type="hidden" name="tags" value="{{ tags }}">
+  {% for filter in filters %}<input type="hidden" name="filter_type" value="{{ filter.type }}"><input type="hidden" name="filter_operator" value="{{ filter.operator }}"><input type="hidden" name="filter_text" value="{{ filter.text }}">{% endfor %}
   <div class="section-heading">
     <div><h2>Recipes</h2><p class="muted">{{ names|length }} shown · <span id="selected-count">{{ selected|length }}</span> selected</p></div>
     <a class="text-link" href="{{ url_for('shopping_list') }}">View list →</a>
   </div>
-  {% if no_matches %}<div class="empty-state">No recipes match those tags. Try a broader filter.</div>{% endif %}
+  {% if no_matches %}<div class="empty-state">No recipes match those filters. Try removing a rule or broadening your search.</div>{% endif %}
   <div class="recipe-grid">
   {% for recipe in recipes if recipe.name in names %}
     <label class="recipe-card">
@@ -36,6 +78,36 @@
   <div class="sticky-actions"><span><strong id="selected-count-bottom">{{ selected|length }}</strong> recipes selected</span><div class="appearance-actions"><button type="submit" formaction="{{ url_for('reset_menu') }}" class="button secondary" formnovalidate>Reset selections</button><button type="submit" class="button">Review menu & list</button></div></div>
 </form>
 <script>
+  (() => {
+    const filterRows = document.getElementById("filter-rows");
+    const addFilter = document.getElementById("add-filter");
+    const rowTemplate = document.getElementById("filter-row-template");
+    if (filterRows && addFilter && rowTemplate) {
+      const updateRemoveButtons = () => {
+        filterRows.querySelectorAll(".remove-filter").forEach(button => {
+          button.onclick = () => {
+            const rows = filterRows.querySelectorAll(".filter-rule");
+            if (rows.length > 1) button.closest(".filter-rule").remove();
+            else {
+              const row = button.closest(".filter-rule");
+              row.querySelector("select[name='filter_type']").value = "tag";
+              row.querySelector("select[name='filter_operator']").value = "includes";
+              row.querySelector("input[name='filter_text']").value = "";
+            }
+            updateRemoveButtons();
+          };
+        });
+      };
+      addFilter.addEventListener("click", () => {
+        const row = rowTemplate.content.firstElementChild.cloneNode(true);
+        filterRows.appendChild(row);
+        updateRemoveButtons();
+        row.querySelector("input[name='filter_text']").focus();
+      });
+      updateRemoveButtons();
+    }
+  })();
+
   (() => {
     const form = document.querySelector('.recipe-form');
     if (!form) return;
