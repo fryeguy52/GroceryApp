@@ -1,63 +1,35 @@
-##Tags
-hide
-summer
-fall
-winter
-spring
+## tags
 chicken
-turkey
-beef
-pork
-fish
-shrimp
-vegetarian
+summer
 easy
-medium
-hard
 asian
-italian
-mexican
-american
-indian
-greek
-european
 stove
-grill
-oven
-crock pot
-instant pot
 breakfast
-lunch
-dinner
-side
+hide
 
-
-##Ingredients
-2, gallon, 1% milk
-1, half gallon, unsweetened almond milk
-1, dozen, eggs
-1, package, multigrain english muffins
+## ingredients
+.5, gallon, 1% milk
+1, bag, baby carrots
 5, , banana
-1, , misc tree fruit
+2, cans, black beans
+1, package, butter
+1, can, corn
+1, , dessert
+1, dozen, eggs
+1, package, flour tortillas
+1, can, green beans
+1, , low fat cottage cheese
 1, , misc berry
-1, bag, baby carrots 
+1, , misc tree fruit
+1, carton, oatmeal
+1, jar, peanut butter
+1, , plain yogurt
+1, jar, salsa
 1, , shredded cheddar
 1, , sliced cheese
-1, package, flour tortillas
-1, , lunch meat
-1, container, super greens mix
-1, package, butter
-1, , plain yogurt
-1, , low fat cottage cheese
-1, , dessert
-1, jar, peanut butter
-1, carton, oatmeal
-1, jar, spaghetti sauce
 1, package, spaghetti noodles
-1, can, green beans
-1, can, corn
-2, cans, black beans
-1, jar, salsa (mild and medium)
+1, jar, spaghetti sauce
+1, container, super greens mix
 
-##Recipe
+## recipe
 things to always have
